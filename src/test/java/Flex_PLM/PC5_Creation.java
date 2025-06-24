@@ -30,8 +30,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups = { "Flex_Plm" })
 public class PC5_Creation extends WMS_TestBase {

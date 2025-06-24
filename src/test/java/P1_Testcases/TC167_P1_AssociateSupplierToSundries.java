@@ -17,7 +17,7 @@ import com.WMS_ApplicationPages.MaterialPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC167_P1_AssociateSupplierToSundries extends WMS_TestBase {

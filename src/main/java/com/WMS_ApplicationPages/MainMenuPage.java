@@ -19,10 +19,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
+import com.PLM_Utilities.ExtentUtility;
+import com.PLM_Utilities.ReadDataSheet;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
-import com.plm.Utilities.ExtentUtility;
-
-import com.plm.Utilities.ReadDataSheet;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class MainMenuPage extends WMS_WebDriverUtilities {

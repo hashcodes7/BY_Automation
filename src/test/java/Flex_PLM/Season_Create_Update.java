@@ -29,9 +29,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups = { "Single_Orders" })
 public class Season_Create_Update extends WMS_TestBase {

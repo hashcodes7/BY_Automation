@@ -17,8 +17,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
 public class TC29_P3_BomAPP_Search_UsingAllAttributes extends WMS_TestBase {

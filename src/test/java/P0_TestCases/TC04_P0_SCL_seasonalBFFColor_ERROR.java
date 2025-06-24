@@ -14,8 +14,7 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P0_TC"})
 public class TC04_P0_SCL_seasonalBFFColor_ERROR extends WMS_TestBase{

@@ -25,11 +25,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.By;
+
+import com.PLM_Utilities.ExtentUtility;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.plm.Utilities.ExtentUtility;
-
 import com.relevantcodes.extentreports.LogStatus;
 
 public class ProductPage extends WMS_WebDriverUtilities {

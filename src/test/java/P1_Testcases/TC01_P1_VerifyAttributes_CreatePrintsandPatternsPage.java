@@ -17,9 +17,8 @@ import com.WMS_ApplicationPages.MainMenuPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 import junit.framework.Assert;
-import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC01_P1_VerifyAttributes_CreatePrintsandPatternsPage extends WMS_TestBase{

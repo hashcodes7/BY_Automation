@@ -38,8 +38,7 @@ import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups = { "E2E_TC" })
 public class TC302_P0_E2E_Colorway_Activation_LSA extends WMS_TestBase {

@@ -17,8 +17,7 @@ import com.WMS_ApplicationPages.ProductPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
 public class TC18_P2_CopyCarryover_CopyProduct_DifferentHierarchy extends WMS_TestBase{

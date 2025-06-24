@@ -26,9 +26,8 @@ import com.WMS_ApplicationPages.SeasonPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 import junit.framework.Assert;
-import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
 public class TC01_P3_Staging_CreateColor_VerifyStagingId extends WMS_TestBase {

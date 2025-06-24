@@ -23,8 +23,7 @@ import com.WMS_ApplicationPages.Set_Up_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P0_TC"})
 public class TC18_P0_SetUpLSUS extends WMS_TestBase {

@@ -22,8 +22,7 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
 public class TC167_P2_Colorway_CreatePC9_withBFFcolor extends WMS_TestBase {

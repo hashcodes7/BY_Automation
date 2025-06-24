@@ -20,9 +20,8 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 import junit.framework.Assert;
-import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P0_TC"})
 public class TC02_P0_Measurements_CreateTemplate extends WMS_TestBase {

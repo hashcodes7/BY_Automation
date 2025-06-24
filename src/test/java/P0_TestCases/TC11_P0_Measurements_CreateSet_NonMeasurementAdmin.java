@@ -18,8 +18,7 @@ import com.WMS_ApplicationPages.Measurements_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P0_TC"})
 public class TC11_P0_Measurements_CreateSet_NonMeasurementAdmin extends WMS_TestBase{

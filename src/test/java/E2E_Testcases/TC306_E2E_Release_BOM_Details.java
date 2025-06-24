@@ -29,11 +29,10 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 
 import org.openqa.selenium.JavascriptExecutor;
 import junit.framework.Assert;
-import resources.DataProviders;
 
 @Test(enabled = true, groups = { "E2E_TC" })
 public class TC306_E2E_Release_BOM_Details extends WMS_TestBase {

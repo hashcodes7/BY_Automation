@@ -23,8 +23,7 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups = { "Color_Scenarios" })
 public class TC20_P1_Verify_SampleDestroyIndicator extends WMS_TestBase {

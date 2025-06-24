@@ -19,8 +19,7 @@ import com.WMS_ApplicationPages.MaterialPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC05_P1_AssociateSolidColorsToFabrics extends WMS_TestBase {

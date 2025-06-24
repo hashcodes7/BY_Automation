@@ -1,4 +1,4 @@
-package resources;
+package Excel_Utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import com.WMS_Utilities.WMS_GlobalProperties;
 
-public class WMS_ExcelUtilities implements WMS_GlobalProperties{
+public class Exceltools implements WMS_GlobalProperties{
 
 	
 	public static XSSFWorkbook workbook = null;

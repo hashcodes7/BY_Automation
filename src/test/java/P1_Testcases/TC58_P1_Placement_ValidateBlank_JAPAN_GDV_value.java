@@ -19,8 +19,7 @@ import com.WMS_ApplicationPages.MainMenuPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC58_P1_Placement_ValidateBlank_JAPAN_GDV_value extends WMS_TestBase {

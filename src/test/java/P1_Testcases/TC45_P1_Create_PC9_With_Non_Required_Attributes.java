@@ -25,8 +25,7 @@ import com.WMS_ApplicationPages.ProductDetailsPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBase {

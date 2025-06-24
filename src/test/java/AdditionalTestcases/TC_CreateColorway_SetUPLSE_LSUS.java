@@ -22,8 +22,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 public class TC_CreateColorway_SetUPLSE_LSUS extends WMS_TestBase {
 	WebDriver driver;

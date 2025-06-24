@@ -18,7 +18,7 @@ import com.WMS_ApplicationPages.MaterialPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC143_P1_UpdateMaterialSupplierAttributes extends WMS_TestBase {

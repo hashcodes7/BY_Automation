@@ -25,7 +25,7 @@ import com.WMS_ApplicationPages.SeasonPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
 public class TC_P3_CreateMultipleMaterialSupplier_CheckLogEntry extends WMS_TestBase {

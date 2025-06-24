@@ -26,11 +26,10 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 
 import org.openqa.selenium.JavascriptExecutor;
 import junit.framework.Assert;
-import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public class TC_008_CopyColorway extends WMS_TestBase {

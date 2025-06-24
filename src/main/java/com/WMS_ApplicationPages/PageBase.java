@@ -65,7 +65,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import com.plm.Utilities.ExtentUtility;
+import com.PLM_Utilities.ExtentUtility;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class PageBase {

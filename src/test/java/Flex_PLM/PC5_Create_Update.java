@@ -31,9 +31,8 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 import junit.framework.Assert;
-import resources.DataProviders;
 
 @Test(enabled = true, groups = { "Single_Orders" })
 public class PC5_Create_Update extends WMS_TestBase {

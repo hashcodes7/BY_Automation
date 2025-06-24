@@ -20,8 +20,7 @@ import com.WMS_ApplicationPages.Measurements_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
 public  class TC191_P1_Measurements_Update_POM extends WMS_TestBase{

@@ -27,8 +27,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 public class TC_SetUP_And_Activate_LSE_Linesheet extends WMS_TestBase {
 	WebDriver driver;

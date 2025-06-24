@@ -26,8 +26,7 @@ import com.WMS_ApplicationPages.Techpack_pages;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 	WebDriver driver;

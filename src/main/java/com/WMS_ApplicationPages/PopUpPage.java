@@ -19,10 +19,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.PLM_Utilities.ExtentUtility;
+import com.PLM_Utilities.ReadDataSheet;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.ExtentTest;
-import com.plm.Utilities.ExtentUtility;
-import com.plm.Utilities.ReadDataSheet;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class PopUpPage extends WMS_WebDriverUtilities {

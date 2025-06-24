@@ -50,8 +50,7 @@ import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-
-import resources.DataProviders;
+import Excel_Utilities.DataProviders;
 
 @Test(enabled = true, groups = { "P3_TC" })
 public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_TestBase {

@@ -1,4 +1,4 @@
-package com.plm.Utilities;
+package com.PLM_Utilities;
 
 public class MPException extends Exception {
 

@@ -18,9 +18,8 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 import junit.framework.Assert;
-import resources.DataProviders;
 @Test(enabled = true, groups = { "Color_Scenarios" })
 public class TC01_P1_Search_PrintsandPatterns  extends WMS_TestBase{
 	WebDriver driver;

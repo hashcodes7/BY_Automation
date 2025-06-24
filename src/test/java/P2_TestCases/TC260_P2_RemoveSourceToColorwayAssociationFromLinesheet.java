@@ -28,10 +28,9 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-
+import Excel_Utilities.DataProviders;
 
 import org.openqa.selenium.JavascriptExecutor;
-import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
 public class TC260_P2_RemoveSourceToColorwayAssociationFromLinesheet extends WMS_TestBase {
