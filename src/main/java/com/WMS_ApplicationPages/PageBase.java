@@ -66,7 +66,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.plm.Utilities.ExtentUtility;
-import com.plm.Utilities.PlmUtills;
+
 import com.plm.Utilities.PropertyReader;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -1897,28 +1897,6 @@ public class PageBase {
 		}
 	}
 
-	/**
-	 * @param dropdownSelect
-	 * @param type
-	 * @param expectDDValues
-	 * @throws Exception
-	 */
-	public void verifyProductDynamicDropdownValidation(String dropdownAttribute, String dropdowntype,
-			String[] expectDDValues) throws Exception {
-		this.moveToElement(this.getElement("//div[contains(text(),'" + dropdownAttribute + "')]/following::span[1]"),
-				dropdowntype);
-		this.click("//div[contains(text(),'" + dropdownAttribute + "')]/following::span[1]", dropdowntype);
-		Thread.sleep(2000);
-		List<String> ddValues = remoteDriver
-				.findElements(By.xpath("//div[contains(text(),'" + dropdownAttribute + "')]/following::li")).stream()
-				.map(WebElement::getText).collect(Collectors.toList());
-		System.out.println(ddValues);
-		boolean result = PlmUtills.compareTwoList(expectDDValues, ddValues);
-//		this.assertThat(result,
-//				dropdowntype + "drop down values are matched with expected " + Arrays.toString(expectDDValues),
-//				dropdowntype + "drop down values are not matched with expected " + Arrays.toString(expectDDValues),
-//				true);
-	}
 
 	/**
 	 * @param values
