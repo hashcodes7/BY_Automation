@@ -66,11 +66,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.plm.Utilities.ExtentUtility;
-
-import com.plm.Utilities.PropertyReader;
 import com.relevantcodes.extentreports.LogStatus;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class PageBase {
 	File targetFile;
@@ -81,8 +77,6 @@ public class PageBase {
 	protected static String appType;
 	//TestBase t;
 	String text;
-	PropertyReader reader = new PropertyReader("PLM/propertyStore/PLMApplicationPOC.properties");
-
 	public int count3 = 1, imagewidth1, imageheight1, imagewidth2, imageheight2;
 	public static int n = 0;
 	public String text1 = null;
