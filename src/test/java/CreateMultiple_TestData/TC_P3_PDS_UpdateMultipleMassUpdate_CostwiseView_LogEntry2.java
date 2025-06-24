@@ -24,7 +24,7 @@ import com.WMS_ApplicationPages.Techpack_pages;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
@@ -43,7 +43,7 @@ public class TC_P3_PDS_UpdateMultipleMassUpdate_CostwiseView_LogEntry2 extends W
 	
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

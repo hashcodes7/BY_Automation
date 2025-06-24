@@ -32,7 +32,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
@@ -45,7 +45,7 @@ public class TC19_P1_Seasonal_Look_Update_and_Derived_Attribute extends WMS_Test
 	Color_Page color_Page;
 
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 

@@ -22,7 +22,7 @@ import com.WMS_ApplicationPages.MainMenuPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 
 import org.openqa.selenium.JavascriptExecutor;
 import junit.framework.Assert;
@@ -39,7 +39,7 @@ public class TC_10_ComponentSelectionView extends WMS_TestBase {
 	SpecificationPage specificationPage;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 	
 	String batchNo;

@@ -27,7 +27,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 public class TC_SetUP_And_Activate_LSE_Linesheet extends WMS_TestBase {
@@ -45,7 +45,7 @@ public class TC_SetUP_And_Activate_LSE_Linesheet extends WMS_TestBase {
 	E2E_Pages E2EPages;
 	boolean Capture = true;
 	
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -14,7 +14,7 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups = { "E2E_TC" })
@@ -27,7 +27,7 @@ public class TC292_P0_E2E_CreateColors_Solid extends WMS_TestBase{
 	CreateNewColorPage CNCP;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	
 	@BeforeMethod
 	public void setUp() throws InterruptedException {

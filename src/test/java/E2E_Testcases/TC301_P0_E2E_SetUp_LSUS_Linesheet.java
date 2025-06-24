@@ -20,7 +20,7 @@ import com.WMS_ApplicationPages.Techpack_pages;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups = { "E2E_TC" })
@@ -34,7 +34,7 @@ public class TC301_P0_E2E_SetUp_LSUS_Linesheet extends WMS_TestBase {
 	Measurements_Page MeasurementsPage;
 	E2E_Pages E2EPages;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -34,7 +34,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
@@ -52,7 +52,7 @@ public class TC289_P2_Create_Source_For_Duplicate_Vendor extends WMS_TestBase {
 	CreateNewProductPage createNewProductPage;
 
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 

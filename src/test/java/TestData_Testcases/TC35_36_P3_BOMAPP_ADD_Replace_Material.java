@@ -32,7 +32,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 
 import org.openqa.selenium.JavascriptExecutor;
 import resources.DataProviders;
@@ -51,7 +51,7 @@ public class TC35_36_P3_BOMAPP_ADD_Replace_Material extends WMS_TestBase {
 
 	boolean Capture = true;
 	private String adimin_URL;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -25,7 +25,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 
 import org.openqa.selenium.JavascriptExecutor;
 import resources.DataProviders;
@@ -42,7 +42,7 @@ public class TC25_P0_RemoveSourcefromSeason extends WMS_TestBase {
 	MainMenuPage mainMenuPage;
 
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	@BeforeMethod

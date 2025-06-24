@@ -18,7 +18,7 @@ import com.WMS_ApplicationPages.MainMenuPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
@@ -30,7 +30,7 @@ public class TC16_P2_Placment_IncorrectColorwayCode extends WMS_TestBase {
 	CustomLoaders_page customLoadersPage;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

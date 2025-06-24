@@ -26,7 +26,7 @@ import com.WMS_ApplicationPages.Techpack_pages;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
@@ -39,7 +39,7 @@ public class TC05_P2_Linesheet_Adoption_DropGB_LH extends WMS_TestBase {
 	Techpack_pages Techpackpages;
 	Colorway_page Colorwaypage;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

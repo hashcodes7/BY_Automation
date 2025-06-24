@@ -23,7 +23,7 @@ import com.WMS_ApplicationPages.Techpack_pages;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
@@ -39,7 +39,7 @@ public class TC33_P1_Specifications_carryoverColorway extends WMS_TestBase {
 	Colorway_page Colorwaypage;
 	Set_Up_Page SetUpPage;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

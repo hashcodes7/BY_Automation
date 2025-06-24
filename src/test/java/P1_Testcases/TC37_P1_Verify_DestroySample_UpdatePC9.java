@@ -22,7 +22,7 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
@@ -37,7 +37,7 @@ public class TC37_P1_Verify_DestroySample_UpdatePC9 extends WMS_TestBase {
 	LineSheetPage lineSheetPage;
 	LineSheet_Edit_Page LineSheetEditPage;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -20,7 +20,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
@@ -33,7 +33,7 @@ public class TC01_P2_TechPack_MassEditable_PDView extends WMS_TestBase {
 	Techpack_pages Techpackpages;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

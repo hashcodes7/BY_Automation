@@ -17,7 +17,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
@@ -28,7 +28,7 @@ public class TC29_P3_BomAPP_Search_UsingAllAttributes extends WMS_TestBase {
 	BOM_Page BOMPage;
 
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

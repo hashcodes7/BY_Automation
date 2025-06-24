@@ -23,7 +23,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 
 import resources.DataProviders;
 
@@ -38,7 +38,7 @@ public class TC35_P1_CopyCarryover_ValidateAttributes extends WMS_TestBase {
 	LineSheet_Edit_Page LineSheetEditPage;
 	Copy_carryover_page CCP;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 	
 	String batchNo;

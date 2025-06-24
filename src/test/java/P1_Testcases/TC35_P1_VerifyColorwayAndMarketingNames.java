@@ -41,7 +41,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
@@ -68,7 +68,7 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 	LineSheet_Edit_Page LineSheetEditPage;
 
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 

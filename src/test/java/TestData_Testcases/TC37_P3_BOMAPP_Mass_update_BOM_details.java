@@ -29,7 +29,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 
 import org.openqa.selenium.JavascriptExecutor;
 import junit.framework.Assert;
@@ -44,7 +44,7 @@ public class TC37_P3_BOMAPP_Mass_update_BOM_details extends WMS_TestBase {
 
 	boolean Capture = true;
 	private String adimin_URL;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 	
 	String batchNo;

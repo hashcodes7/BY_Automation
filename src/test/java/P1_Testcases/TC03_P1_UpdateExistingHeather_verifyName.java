@@ -16,7 +16,7 @@ import com.WMS_ApplicationPages.MainMenuPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 @Test(enabled = true, groups = { "Color_Scenarios" })
 public class TC03_P1_UpdateExistingHeather_verifyName extends WMS_TestBase{
@@ -26,7 +26,7 @@ public class TC03_P1_UpdateExistingHeather_verifyName extends WMS_TestBase{
 	Colorway_page Colorwaypage;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -18,7 +18,7 @@ import com.WMS_ApplicationPages.Palette_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import junit.framework.Assert;
 import resources.DataProviders;
 
@@ -30,7 +30,7 @@ public class TC285_P0_E2E_CreateNewPalette extends WMS_TestBase {
 	CreateNewColorPage CNCP;
 
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -21,7 +21,7 @@ import com.WMS_ApplicationPages.Techpack_pages;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P1_TC"})
@@ -35,7 +35,7 @@ public class TC03_P1_setUPLSUS_usingLinesheet extends WMS_TestBase {
 	Measurements_Page MeasurementsPage;
 	E2E_Pages E2EPages;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

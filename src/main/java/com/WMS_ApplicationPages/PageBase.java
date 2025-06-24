@@ -83,19 +83,6 @@ public class PageBase {
 	String text;
 	PropertyReader reader = new PropertyReader("PLM/propertyStore/PLMApplicationPOC.properties");
 
-	/*
-	 * public PageBase(ChromeDriver chromeDriver) { this.chromeDriver = driver;
-	 * ElementLocatorFactory factory = new
-	 * CustomElementLocatoryFactory(remoteDriver); PageFactory.initElements(factory,
-	 * this); toolName = "Selenium"; }
-	 * 
-	 * public PageBase() { try { this.remoteDriver = remoteDriver;
-	 * ElementLocatorFactory factory = new
-	 * CustomElementLocatoryFactory(remoteDriver); PageFactory.initElements(factory,
-	 * this); toolName = "Selenium"; } catch (Exception e) { // TODO Auto-generated
-	 * catch block e.printStackTrace(); } }
-	 */
-
 	public int count3 = 1, imagewidth1, imageheight1, imagewidth2, imageheight2;
 	public static int n = 0;
 	public String text1 = null;
@@ -202,14 +189,7 @@ public class PageBase {
 		long s = cal.getTimeInMillis();
 		File screen = null;
 		try {
-			switch (toolName) {
-//			case "Appium":
-//				screen = (File) ((TakesScreenshot) appiumDriver).getScreenshotAs(OutputType.FILE);
-//				break;
-			case "Selenium":
-				screen = (File) ((TakesScreenshot) remoteDriver).getScreenshotAs(OutputType.FILE);
-				break;
-			}
+			screen = (File) ((TakesScreenshot) remoteDriver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(screen,
 					new File("ReportGenerator/" + ExtentUtility.reportFolder + "/Screenshots/image" + s + ".png"));
 		} catch (Exception e) {
@@ -334,11 +314,6 @@ public class PageBase {
 
 	}
 
-	public void hideKeyboard() throws Exception {
-//		appiumDriver.hideKeyboard();
-		System.out.println("back over");
-	}
-
 	public void enterUrl(String url) throws Exception {
 		try {
 			remoteDriver.get(url);
@@ -362,17 +337,8 @@ public class PageBase {
 
 	public void clickSave(WebElement e, String elementName) throws Exception {
 		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.elementToBeClickable(e));
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 500);
-				waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
-				break;
-			}
+			WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 500);
+			waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
 			Thread.sleep(3000);
 			e.click();
 			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on to the Element " + elementName + " successful",
@@ -388,29 +354,11 @@ public class PageBase {
 
 	public void click(WebElement e, String elementName) throws Exception {
 		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 80, 500);
-//				wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(e)));
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 80, 500);
-				waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
-				break;
-			}
+			WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 80, 500);
+			waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
 			Thread.sleep(2000);
 			e.click();
 			Thread.sleep(1000);
-//			if (CustomElementLocators.flag) {
-//
-//				File file = new File("ReportGenerator/" + ExtentUtility.reportFolder + "/HealedReport.html");
-//				ExtentUtility.getTest().log(LogStatus.INFO, "Clicked on element (" + elementName + ") successfully");
-//				CustomElementLocators.flag = false;
-//			} else
-//
-//				ExtentUtility.getTest().log(LogStatus.INFO, "Clicked on element (" + elementName + ") successfully");
-
 		} catch (Exception exc) {
 			ExtentUtility.getTest().log(LogStatus.FAIL, elementName + "::-> Element not clickable at this moment "
 					+ ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
@@ -422,23 +370,9 @@ public class PageBase {
 
 	public boolean clickforverify(WebElement e, String elementName) throws Exception {
 		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 80, 500);
-//				wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(e)));
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 80, 500);
-				waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
-				break;
-			}
+			WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 80, 500);
+			waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
 			Thread.sleep(2000);
-			/*
-			 * JavascriptExecutor js = (JavascriptExecutor)remoteDriver; js.
-			 * executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');"
-			 * , e);
-			 */
 			e.click();
 			Thread.sleep(1000);
 			System.out.println("Clicked on element (" + elementName + ") successfully");
@@ -453,20 +387,9 @@ public class PageBase {
 
 	public void clickByJse(WebElement e, String elementName) throws Exception {
 		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				// WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				JavascriptExecutor jse = (JavascriptExecutor) appiumDriver;
-//				jse.executeScript("arguments[0].click();", e);
-//				Thread.sleep(3000);
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 250);
-				JavascriptExecutor jse1 = (JavascriptExecutor) remoteDriver;
-				jse1.executeScript("arguments[0].click();", e);
-				break;
-			}
+			WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 250);
+			JavascriptExecutor jse1 = (JavascriptExecutor) remoteDriver;
+			jse1.executeScript("arguments[0].click();", e);
 			ExtentUtility.getTest().log(LogStatus.INFO, "Clicked on element (" + elementName + ") successfully",
 					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
 			System.out.println(elementName + " is clicked");
@@ -486,302 +409,11 @@ public class PageBase {
 		jse.executeScript("arguments[0].value='" + value + "';", element);
 	}
 
-	public void clickWithoutSS(WebElement e) throws Exception {
-		try {
-			switch (toolName) {
 
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.visibilityOf(e));
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 250);
-				waitSelenium.until(ExpectedConditions.elementToBeClickable(e));
-				break;
-			}
-			e.click();
 
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, e + " not found",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(e + " not found");
-
-		}
-
-	}
-
-	public void clickHiddentElement(WebElement e, String elementName) throws Exception {
-		try {
-			switch (toolName) {
-//
-//			case "Appium":
-//				JavascriptExecutor executor = (JavascriptExecutor) appiumDriver;
-//				executor.executeScript("arguments[0].click();", e);
-//				break;
-			case "Selenium":
-				JavascriptExecutor executor1 = (JavascriptExecutor) remoteDriver;
-				executor1.executeScript("arguments[0].click();", e);
-				break;
-			}
-
-			ExtentUtility.getTest().log(LogStatus.INFO, "Clicked on element (" + e + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, elementName + " not found",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(elementName + " not found");
-
-		}
-
-	}
-
-	public void navigateToToC(String strToCLayer, String strToCItem) {
-		try {
-			switch (toolName) {
-
-			case "Selenium":
-				WebElement testElement = remoteDriver.findElement(By.cssSelector(
-						"div[id='tocItemContainer" + strToCLayer + "'] > div > div > div[title='" + strToCItem + "']"));
-				if (!testElement.isDisplayed()) {
-					scrollTo(remoteDriver, testElement);
-				}
-				testElement.click();
-				break;
-//			case "Appium":
-//				WebElement testElement1 = appiumDriver.findElement(By.cssSelector(
-//						"div[id='tocItemContainer" + strToCLayer + "'] > div > div > div[title='" + strToCItem + "']"));
-//				if (!testElement1.isDisplayed()) {
-//					scrollTo(appiumDriver, testElement1);
-//				}
-//				testElement1.click();
-//				break;
-
-			}
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-	}
-
-	public List<WebElement> getList_ByClassName(WebElement element, String byValue) {
-		try {
-			switch (toolName) {
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 30, 500);
-//				wait.until(ExpectedConditions.visibilityOf(element));
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 250);
-				waitSelenium.until(ExpectedConditions.visibilityOf(element));
-				break;
-
-			}
-
-		} catch (Exception exc) {
-
-		}
-		try {
-			if (element.isDisplayed()) {
-				List<WebElement> getList = element.findElements(By.className(byValue));
-
-				return getList;
-			} else
-				return null;
-		} catch (Exception exc) {
-
-			return null;
-
-		}
-	}
-
-	public void takeScreenshot_Native(WebElement ele, String screenshotName) throws IOException {
-//		if (ele.isDisplayed()) {
-//			File screen = (File) ((TakesScreenshot) appiumDriver).getScreenshotAs(OutputType.FILE);
-//
-//			int ImageWidth = ele.getSize().getWidth();
-//			int ImageHeight = ele.getSize().getHeight();
-//			Point point = ele.getLocation();
-//			int xcord = point.getX();
-//			int ycord = point.getY();
-//			BufferedImage img = ImageIO.read(screen);
-//			BufferedImage dest = img.getSubimage(xcord, ycord, ImageWidth, ImageHeight);
-//			ImageIO.write(dest, "png", screen);
-//			FileUtils.copyFile(screen, new File("NativeApp_Screenshots/" + screenshotName + ".png"));
-//		}
-	}
 
 	public void scrollTo(WebDriver driver, WebElement element) {
 		((JavascriptExecutor) driver).executeScript("document.getElementById('container id').scrollTop += 250;", "");
-	}
-
-	public String getCurrentUrl() throws Exception {
-		String url = null;
-		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				url = appiumDriver.getCurrentUrl();
-//				break;
-			case "Selenium":
-				url = remoteDriver.getCurrentUrl();
-				break;
-			}
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on getting Current Url ",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-
-		}
-		return url;
-
-	}
-
-	public String fetchContentFromWebUI(String strCss) throws Exception {
-		String strText = "";
-		switch (toolName) {
-		case "Selenium":
-			System.out.println("Fetch content from web page");
-			WebElement element = remoteDriver.findElement(By.cssSelector(strCss));
-			WebElement testElement = remoteDriver.findElement(By.cssSelector("p[id^='p26']>span[id='word1']"));
-			System.out.println("Font face/family in eBook for the text - The Language of Reaching Out: "
-					+ testElement.getCssValue("font-family"));
-			String UIfontface = testElement.getCssValue("font-family");
-			assertTrue("Font face/family in eBook for the text - The Language of Reaching Out: "
-					+ testElement.getCssValue("font-family"), true);
-			System.out.println("Font size in eBook for the text - The Language of Reaching Out: "
-					+ testElement.getCssValue("font-size"));
-			String UIfontSize = testElement.getCssValue("font-size");
-			assertTrue("Font size in eBook for the text - The Language of Reaching Out: "
-					+ testElement.getCssValue("font-size"), true);
-			strText = element.getText();
-			break;
-//		case "Appium":
-//			System.out.println("Fetch content from web page");
-////			WebElement element1 = appiumDriver.findElement(By.cssSelector(strCss));
-////			WebElement testElement1 = appiumDriver.findElement(By.cssSelector("p[id^='p26']>span[id='word1']"));
-//			System.out.println("Font face/family in eBook for the text - The Language of Reaching Out: "
-//					+ testElement1.getCssValue("font-family"));
-//			UIfontface = testElement1.getCssValue("font-family");
-//			assertTrue("Font face/family in eBook for the text - The Language of Reaching Out: "
-//					+ testElement1.getCssValue("font-family"), true);
-//			System.out.println("Font size in eBook for the text - The Language of Reaching Out: "
-//					+ testElement1.getCssValue("font-size"));
-//			UIfontSize = testElement1.getCssValue("font-size");
-//			assertTrue("Font size in eBook for the text - The Language of Reaching Out: "
-//					+ testElement1.getCssValue("font-size"), true);
-//			strText = element1.getText();
-//			break;
-		}
-		return strText;
-	}
-
-	public void clickByCSS(String e, String text) throws Exception {
-		try {
-			switch (toolName) {
-//			case "Appium":
-//
-//				List<WebElement> li = appiumDriver.findElementsByCssSelector(e);
-//
-//				break;
-			case "Selenium":
-				remoteDriver.findElementByCssSelector(e).click();
-				break;
-			}
-			ExtentUtility.getTest().log(LogStatus.INFO, "Clicked on element (" + e + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-
-		}
-
-	}
-
-	public void clickWithoutWait(WebElement e, String elementName) throws Exception {
-		try {
-
-			switch (toolName) {
-
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.visibilityOf(e));
-//				break;
-			case "Selenium":
-				break;
-			}
-			e.click();
-			ExtentUtility.getTest().log(LogStatus.INFO, "Clicked on element (" + e + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-
-		}
-
-	}
-
-	public void clickWithoutWait(String xpath, String elementName) throws Exception {
-		try {
-
-			switch (toolName) {
-
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.visibilityOf(appiumDriver.findElementByXPath(xpath)));
-//				appiumDriver.findElementByXPath(xpath).click();
-//				break;
-			case "Selenium":
-				Thread.sleep(3000);
-				remoteDriver.findElementByXPath(xpath).click();
-				break;
-			}
-
-			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on element (" + elementName + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-		}
-
-	}
-
-	public void clickLinkTest(String xpath, String elementName) throws Exception {
-		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-//				appiumDriver.findElementByXPath(xpath).click();
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 500);
-
-				waitSelenium.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-
-				remoteDriver.findElementByLinkText(xpath).click();
-				break;
-			}
-			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on element (" + elementName + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-		}
 	}
 
 	public void click(String xpath, String elementName) throws Exception {
@@ -802,99 +434,6 @@ public class PageBase {
 
 			assertFalse(false, elementName + "--->> element is not clickable at this moment due to ::-"
 					+ exc.getStackTrace()[0].getMethodName());
-		}
-	}
-
-	public void scrollbar() {
-		EventFiringWebDriver event = new EventFiringWebDriver(remoteDriver);
-		event.executeScript("document.querySelector('#contentDiv').scrollTop=600");
-	}
-
-	public void scrollRight() throws Exception {
-//		PlmUtills.switchContentFrame(remoteDriver);
-//		this.scrollTo("//a[contains(text(),'New')]", "");
-//		this.click("//a[contains(text(),'New')]", "New");
-//		PlmUtills.switchMeasurementFrame(remoteDriver);
-//		this.scrollTo("//input[@name='ptc_str_9']", "input feild");
-	}
-
-	public void clickbyid(String id, String elementName) throws Exception {
-		try {
-			switch (toolName) {
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				appiumDriver.findElementById(id).click();
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 100, 1000);
-				remoteDriver.findElementById(id).click();
-				break;
-			}
-			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on element (" + elementName + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-
-		}
-	}
-
-	public void clickbyClassName(String className, String elementName) throws Exception {
-		try {
-			switch (toolName) {
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(className)));
-//				appiumDriver.findElementByClassName(className).click();
-//
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 100, 1000);
-				remoteDriver.findElementByClassName(className).click();
-				break;
-			}
-			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on element (" + elementName + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-
-		}
-	}
-
-	public void clickByElementName(String name, String elementName) throws Exception {
-
-		try {
-			switch (toolName) {
-//			case "Appium":
-//				WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//				wait.until(ExpectedConditions.elementToBeClickable(By.name(name)));
-//				appiumDriver.findElementByName(name).click();
-//				break;
-			case "Selenium":
-				WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 500);
-				waitSelenium.until(ExpectedConditions.elementToBeClickable(By.name(name)));
-				remoteDriver.findElementByName(name).click();
-				break;
-			}
-
-			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on element (" + elementName + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-
 		}
 	}
 
@@ -942,22 +481,6 @@ public class PageBase {
 			throw new Exception(exc);
 
 		}
-	}
-
-	public String getPageTitle() throws Exception {
-
-		String pageTitle = "";
-		if (toolName.equalsIgnoreCase("Selenium")) {
-			pageTitle = remoteDriver.getTitle();
-		} 
-//		else {
-//			Thread.sleep(5000);
-//			pageTitle = appiumDriver.getTitle();
-//
-//		}
-
-		return pageTitle;
-
 	}
 
 	public String getText(WebElement e, String elementName) throws Exception {
@@ -1039,129 +562,6 @@ public class PageBase {
 		return text;
 	}
 
-	public void clickMultipleButtons(WebElement tab, WebElement pause, String elementName) throws Exception {
-
-		try {
-			Thread.sleep(20000);
-			if (elementIsDisplayed(pause, "pausebutton")) {
-				pause.click();
-			} else {
-				tab.click();
-				pause.click();
-			}
-			Thread.sleep(10000);
-
-			ExtentUtility.getTest().log(LogStatus.PASS, "Clicked on element (" + elementName + ") successfully",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-
-		} catch (Exception exc) {
-			exc.printStackTrace();
-			ExtentUtility.getTest().log(LogStatus.FAIL, exc + "Exception on clicking webelement",
-					exc.toString() + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc);
-		}
-
-	}
-
-	public void switchToCurrentWindowTitle() throws InterruptedException {
-		try {
-
-			switch (toolName) {
-//			case "Appium":
-//				Thread.sleep(10000);
-//				int size = appiumDriver.getWindowHandles().size();
-//				for (String winHandle : appiumDriver.getWindowHandles()) {
-//					appiumDriver.switchTo().window(winHandle);
-//				}
-
-//				break;
-			case "Selenium":
-				for (String winHandle : remoteDriver.getWindowHandles()) {
-					remoteDriver.switchTo().window(winHandle);
-					Thread.sleep(5000);
-				}
-				break;
-			}
-		}
-
-		catch (org.openqa.selenium.NoSuchWindowException exc) {
-			exc.printStackTrace();
-		}
-
-	}
-
-	public String sendPostRequest(String apiName, String cookie, String payload) {
-		StringBuffer jsonString = new StringBuffer();
-
-		try {
-			URL url = new URL(
-					"https://disneydev7.service-now.com/api/x_wadm_wdpr_cast_c/v1/wdpr_cp_svc_castchoir/" + apiName);
-			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-			connection.setDoInput(true);
-			connection.setDoOutput(true);
-			connection.setRequestMethod("POST");
-			connection.setRequestProperty("Content-Type", "application/json");
-			connection.setRequestProperty("Cookie", cookie);
-			OutputStreamWriter writer = new OutputStreamWriter(connection.getOutputStream(), "UTF-8");
-			writer.write(payload);
-			writer.close();
-			BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-			String line;
-			while ((line = br.readLine()) != null) {
-				jsonString.append(line);
-			}
-			br.close();
-			connection.disconnect();
-		} catch (Exception e) {
-			throw new RuntimeException(e.getMessage());
-		}
-		return jsonString.toString();
-	}
-
-	public StringBuffer getServiceResponse(String serviceUrl) throws Exception {
-		String output = null;
-		StringBuffer outputResponse = null;
-		try {
-			Thread.sleep(5000);
-			URL url = new URL(serviceUrl);
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-			conn.setRequestMethod("GET");
-			conn.setRequestProperty("Content-Type", "application/json");
-			conn.setRequestProperty("source-appl-id", "6");
-			conn.setRequestProperty("Cache-Control", "no-cache");
-			conn.setRequestProperty("Accept-Resolution", "thumb, medium, high");
-			if (conn.getResponseCode() != 200) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
-			} else {
-
-			}
-
-			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
-
-			// String output;
-			System.out.println("Response from Server .... \n");
-			PrintWriter out = new PrintWriter("Response/" + "response.txt");
-			while ((output = br.readLine()) != null) {
-				System.out.println(output);
-				if (output.contains("mediaThumb")) {
-				}
-				if (output.contains("width")) {
-				}
-
-				if (output.contains("height")) {
-				}
-				out.println(output);
-			}
-
-			conn.disconnect();
-		} catch (Exception ex) {
-		}
-
-		return outputResponse;
-
-	}
-
 	public void selectOPtionByVisibleText(WebElement e, String text, String elementName) throws Exception {
 		Thread.sleep(5000);
 
@@ -1196,14 +596,6 @@ public class PageBase {
 		}
 	}
 
-	public List<String> getAllOptionsInDropDown(WebElement dropDown) {
-		Select dropDownValue = new Select(dropDown);
-		dropDownValue.getOptions();
-		List<String> dropDownVal = dropDownValue.getOptions().stream().map(dd -> dd.getText())
-				.collect(Collectors.toList());
-		return dropDownVal;
-	}
-
 	public void switchToWindowTitle() throws Exception {
 
 		try {
@@ -1234,144 +626,12 @@ public class PageBase {
 
 	}
 
-	public void switchToParentWindowTitle() throws Exception {
-
-		try {
-
-			switch (toolName) {
-//			case "Appium":
-//				Thread.sleep(10000);
-//				appiumDriver.close();
-//				appiumDriver.switchTo().window(ParentWinhadleMob);
-//
-//				break;
-			case "Selenium":
-				remoteDriver.close();
-				remoteDriver.switchTo().window(ParentWinhadle);
-				break;
-			}
-		}
-
-		catch (org.openqa.selenium.NoSuchWindowException exc) {
-			exc.printStackTrace();
-		}
-
-	}
-
 	public void selectOPtionByVisibleText(WebElement e, String text) throws InterruptedException {
 		Thread.sleep(5000);
 		e.click();
 		Select sl = new Select(e);
 		sl.selectByVisibleText(text);
 
-	}
-
-	public void selectOPtionByIndex(WebElement e, int value) throws InterruptedException {
-		Thread.sleep(3000);
-		Select sl = new Select(e);
-		sl.selectByIndex(value);
-
-	}
-
-	public void selectOPtionByValue(WebElement e, String value) throws InterruptedException {
-		Thread.sleep(3000);
-		Select sl = new Select(e);
-		sl.selectByValue(value);
-	}
-
-	public void switchToFrame(String frameId) throws Exception {
-
-		try {
-
-			switch (toolName) {
-//			case "Appium":
-//				Thread.sleep(5000);
-//				appiumDriver.switchTo().frame(frameId);
-//
-//				break;
-			case "Selenium":
-
-				remoteDriver.switchTo().frame(frameId);
-				break;
-			}
-		}
-
-		catch (org.openqa.selenium.NoSuchWindowException exc) {
-			exc.printStackTrace();
-		}
-
-	}
-
-	public void switchToFrame(int frameId) throws Exception {
-
-		try {
-
-			switch (toolName) {
-//			case "Appium":
-//				Thread.sleep(5000);
-//				appiumDriver.switchTo().frame(frameId);
-//
-//				break;
-			case "Selenium":
-
-				remoteDriver.switchTo().frame(frameId);
-				break;
-			}
-		}
-
-		catch (org.openqa.selenium.NoSuchWindowException exc) {
-			exc.printStackTrace();
-		}
-
-	}
-
-	public void switchToParentFrame() throws Exception {
-
-		try {
-
-			switch (toolName) {
-//			case "Appium":
-//				Thread.sleep(5000);
-//				appiumDriver.switchTo().parentFrame();
-//
-//				break;
-			case "Selenium":
-
-				remoteDriver.switchTo().parentFrame();
-				break;
-
-			}
-		}
-
-		catch (org.openqa.selenium.NoSuchWindowException exc) {
-			exc.printStackTrace();
-		}
-
-	}
-
-	public String getParentWindow() throws Exception {
-		String parentWindow = null;
-
-		if (toolName.equalsIgnoreCase("Selenium")) {
-			parentWindow = remoteDriver.getWindowHandle();
-		}
-//		else if (toolName.equalsIgnoreCase("Appium")) {
-//			parentWindow = appiumDriver.getWindowHandle();
-//		} 
-		return parentWindow;
-	}
-
-	public void switchToParentWindow(String parentWindow) throws Exception {
-
-
-		if (toolName.equalsIgnoreCase("Selenium")) {
-			remoteDriver.close();
-			remoteDriver.switchTo().window(parentWindow);
-		}
-//		else if (toolName.equalsIgnoreCase("Appium")) {
-//			appiumDriver.close();
-//			appiumDriver.switchTo().window(parentWindow);
-//		}
 	}
 
 	public WebElement getElement(String xpath) throws Exception {
@@ -1401,34 +661,6 @@ public class PageBase {
 		ExtentUtility.getTest().log(LogStatus.PASS, " Get text on webelement successful");
 		return weSelenium;
 
-	}
-
-	public boolean verifyText(WebElement e, String value) throws Exception {
-		switch (toolName) {
-//		case "Appium":
-//			WebDriverWait wait = new WebDriverWait(appiumDriver, 60, 500);
-//			wait.until(ExpectedConditions.visibilityOf(e));
-//			break;
-		case "Selenium":
-			WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 60, 500);
-			waitSelenium.until(ExpectedConditions.visibilityOf(e));
-			break;
-		}
-		if (e.getText().contains(value)) {
-			ExtentUtility.getTest().log(LogStatus.PASS, "  Verified Element successful ",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			return true;
-		} else {
-			ExtentUtility.getTest().log(LogStatus.FAIL, "Exception on Verified webelement",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			return false;
-		}
-
-	}
-
-	public String getTextValue(String xpath) throws Exception {
-		WebElement element = this.getElement(xpath);
-		return element.getText();
 	}
 
 	public void enterText(WebElement element, String data, String elementName) throws Exception {
@@ -1475,12 +707,6 @@ public class PageBase {
 
 	}
 
-	public void clearText(WebElement element) {
-		WebDriverWait waitSelenium = new WebDriverWait(remoteDriver, 100, 250);
-		waitSelenium.until(ExpectedConditions.visibilityOf(element));
-		element.clear();
-	}
-
 	public void assertTrue(String message) throws Exception {
 		ExtentUtility.getTest().log(LogStatus.PASS,
 				message + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
@@ -1491,63 +717,12 @@ public class PageBase {
 				message + ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
 	}
 
-	public boolean navToSubMenu(String subMenu) throws Exception {
-		try {
-			switch (toolName) {
-
-//			case "Appium":
-//				System.out.println("Navigate to" + subMenu + "menu.");
-//				appiumDriver.findElement(By.cssSelector("div[title='" + subMenu + "']")).click();
-//				System.out.println("Navigated to sub-menu '" + subMenu + "'");
-//				break;
-			case "Selenium":
-				System.out.println("Navigate to" + subMenu + "menu.");
-				remoteDriver.findElement(By.cssSelector("div[title='" + subMenu + "']")).click();
-				System.out.println("Navigated to sub-menu '" + subMenu + "'");
-				break;
-			}
-
-		} catch (Exception exc) {
-			System.out.println("Unable to navigate to the sub menu, due to - " + exc.getMessage());
-			exc.printStackTrace();
-			return false;
-		}
-		return true;
-	}
-
 	public void switchFrame() {
 		if (remoteDriver.toString().contains("chrome")) {
 			remoteDriver.switchTo().frame(2);
 		} else {
 			remoteDriver.switchTo().frame(0);
 		}
-	}
-
-	public void switchToFrame() {
-		System.out.println("remoteDriver.toString()" + remoteDriver.toString());
-		if (remoteDriver.toString().contains("ie")) {
-			remoteDriver.switchTo().frame(2);
-		} else {
-			remoteDriver.switchTo().frame(0);
-		}
-	}
-
-	public void clearSystemCache() throws Exception {
-		try {
-			switch (toolName) {
-//			case "Appium":
-//				appiumDriver.manage().deleteAllCookies();
-//				break;
-			case "Selenium":
-				remoteDriver.manage().deleteAllCookies();
-				break;
-			}
-		} catch (Exception exc) {
-			ExtentUtility.getTest().log(LogStatus.FAIL, " Clear Cookies ",
-					ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			throw new Exception(exc + " Clear Cookies ");
-		}
-
 	}
 
 	public boolean elementIsDisplayed(WebElement e, String ElementName) throws Exception {

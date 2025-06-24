@@ -20,7 +20,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 
 import resources.DataProviders;
 
@@ -34,7 +34,7 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 	VendorPortalPage vendorPortalPage;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 	
 	String batchNo;

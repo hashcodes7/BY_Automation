@@ -24,7 +24,7 @@ import com.WMS_ApplicationPages.SeasonPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
@@ -40,7 +40,7 @@ public class TC_P3_CreateMultipleSeason_CheckLogEntry extends WMS_TestBase {
 	LogEntry_page LogEntrypage ;
 	Colorway_page Colorwaypage;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 

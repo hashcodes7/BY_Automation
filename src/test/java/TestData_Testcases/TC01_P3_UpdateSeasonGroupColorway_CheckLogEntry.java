@@ -50,7 +50,7 @@ import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P3_TC"})
@@ -69,7 +69,7 @@ public class TC01_P3_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_TestBas
 	private String localHub_URL;
 	private String affiliate_URL;
 	private String admin_URL;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 

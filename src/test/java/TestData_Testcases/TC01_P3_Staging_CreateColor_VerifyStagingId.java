@@ -26,7 +26,7 @@ import com.WMS_ApplicationPages.SeasonPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import junit.framework.Assert;
 import resources.DataProviders;
 
@@ -45,7 +45,7 @@ public class TC01_P3_Staging_CreateColor_VerifyStagingId extends WMS_TestBase {
 	CreateNewColorPage CNCP;
 	
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 

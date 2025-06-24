@@ -17,7 +17,7 @@ import com.WMS_ApplicationPages.ProductPage;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P2_TC"})
@@ -32,7 +32,7 @@ public class TC18_P2_CopyCarryover_CopyProduct_DifferentHierarchy extends WMS_Te
 	LineSheet_Edit_Page LineSheetEditPage;
 	ProductPage productPage;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	
 	@BeforeMethod
 	public void setUp() throws InterruptedException {

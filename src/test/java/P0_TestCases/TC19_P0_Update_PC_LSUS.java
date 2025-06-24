@@ -23,7 +23,7 @@ import com.WMS_ApplicationPages.Set_Up_Page;
 import com.WMS_Utilities.WMS_TestBase;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups= {"P0_TC"})
@@ -39,7 +39,7 @@ public class TC19_P0_Update_PC_LSUS extends WMS_TestBase {
 	Set_Up_Page SetUpPage;
 	LineSheet_Edit_Page LineSheetEditPage;
 	boolean Capture = true;
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 	List<HashMap<String, String>> data_ItemTable = null;
 
 	String batchNo;

@@ -38,7 +38,7 @@ import com.WMS_Utilities.WMS_TestBase;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
 import com.aventstack.extentreports.Status;
 
-import Test_Rail.Test_Rail_Actions;
+
 import resources.DataProviders;
 
 @Test(enabled = true, groups = { "E2E_TC" })
@@ -61,7 +61,7 @@ public class TC299_P0_E2E_SizingAttributes_Local extends WMS_TestBase {
 	boolean Capture = true;
 	private String localHub_URL; 
 
-	public Test_Rail_Actions testactions = new Test_Rail_Actions();
+
 
 	List<HashMap<String, String>> data_ItemTable = null;
 
