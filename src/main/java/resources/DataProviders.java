@@ -2124,7 +2124,6 @@ public class DataProviders implements WMS_GlobalProperties {
 				colorcode, providercolorname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
 			if ("TC01_P0_Palette_CreateColor".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				actionvalue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2156,7 +2155,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, palettename;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC285_P0_E2E_Create_new_palette".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				palettename = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2180,7 +2179,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				colorcombo, developer, colortype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P0_Create_PrintsAndPatterns_color".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				redvalue = sheet.getRow(i).getCell(3).getStringCellValue();
@@ -2213,7 +2212,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, brand, productcategory, consumergroup_1, productsegLSEvalue, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P0_Validate_ProductSegmentationLSE".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2242,7 +2241,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, brand, productcategory, consumer_PH, productsegLSUSvalue, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P0_Validate_ProductSegmentationLSUS".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2272,7 +2271,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				createdfrom;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC04_P0_SCL_Create_seasonalBFFcolor".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -2305,7 +2304,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colortype, redvalue, bluevalue, greenvalue, facode, createdfrom;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC04_P0_SCL_seasonalBFFColor_ERROR".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -2336,7 +2335,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				classification, producttype, hubofferedto, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC04_P0_Create_PC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -2375,7 +2374,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				destroysampleInd, collectionType, capsule, sizeGridCode, currentPlannedLifecycle, primaryfabric;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_CreateColorway_SetUPLSE_LSUS".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -2431,7 +2430,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC14_P0_Validate_ProductDevCenter".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2455,7 +2454,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC16_P0_Validate_ProfitCenter_EUROPE".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2480,7 +2479,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC32_P0_SCL_UpdateSeasonalColorLookName".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2504,7 +2503,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, colorname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC04_P0_SCL_UpdateColorLookName".equalsIgnoreCase(TestType)) {
 				colorname = sheet.getRow(i).getCell(1).getStringCellValue();
 				myData.add(new Object[] { TestType, colorname });
@@ -2526,7 +2525,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P0_SetUpLSE".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2549,7 +2548,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC18_P0_SetUpLSUS".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2572,7 +2571,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, productsegLSEvalue, productsegLSUSvalue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC19_P0_Update_PC_LSUS".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2598,7 +2597,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, product, newseason, filtervalue, newname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P0_CopyProduct".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				product = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2626,7 +2625,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				hubofferedto;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC21_P0_CopyExistingColorway".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				product = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2655,7 +2654,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC10_P0_CL_Placement_Part2".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2679,7 +2678,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC11_P0_CL_CreateBulkColorway".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2703,7 +2702,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, affiliate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P0_AdoptionLH".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2730,7 +2729,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, affiliate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_P0_AdoptionAFF".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2758,7 +2757,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, affiliate, lastElement;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P0_Views_ValidateLinesheet_Adoption".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2787,7 +2786,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, affiliate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P0_Views_ValidateLinesheet_FLA_finalizeDetails".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2815,7 +2814,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterValue, expectedAttributes;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC07_P0_Linesheet_ValidateFilters_FLA".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2841,7 +2840,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterValue, expectedAttributes;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P0_Linesheet_ValidateFilters_Merch".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2867,7 +2866,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterValue, expectedAttributes;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC14_P0_Linesheet_ValidateFilters_techpack".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2894,7 +2893,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_01_P0_CS_SeasonalGroupsValidations_Male".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 
@@ -2919,7 +2918,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_04_P0_CS_SeasonalGroupsValidations_Female".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 
@@ -2943,7 +2942,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_02_P0_Placements_Results_BlankSeason".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2969,7 +2968,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_03_P0_Placements_Results_Blank_Brand".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -2996,7 +2995,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				resultfilepath_update;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC36_P0_Placements_UpdatingMultiplePlacementValue".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3025,7 +3024,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, template, measurement_name, measurement_type;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P0_Measurements_CreateTemplate".equalsIgnoreCase(TestType)) {
 				template = sheet.getRow(i).getCell(1).getStringCellValue();
 				measurement_name = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3050,7 +3049,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, template, pomdescription, pomId;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_P0_Measurements_Create_POM".equalsIgnoreCase(TestType)) {
 				template = sheet.getRow(i).getCell(1).getStringCellValue();
 				pomdescription = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3077,7 +3076,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				template_name, sizevalue, measurementtype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC10_P0_CreateMeasureSet_UsingTemplate".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3110,7 +3109,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, filterproduct, source, specifications;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC11_P0_Measurements_CreateSet_NonMeasurementAdmin".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3137,7 +3136,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P0_TechPack_PDView".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3161,7 +3160,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P0_TechPack_GarmentView".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3185,7 +3184,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC15_P0_GD_Generate_TP_BOMOnly".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3211,7 +3210,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P0_Techpack_GenerateBOMOnly_MultipleColorway_SingleSource".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3236,7 +3235,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC05_P0_TechPack_DownloadBOMTechpack".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3261,7 +3260,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, productname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC06_P0_Download_TechpackOnly_File".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3286,7 +3285,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, to_season, from_season, linesheetview, productname, colorwayname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC286_P0_E2E_caryyover_PC5_PC9".equalsIgnoreCase(TestType)) {
 				to_season = sheet.getRow(i).getCell(1).getStringCellValue();
 				from_season = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3313,7 +3312,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				classification, producttype, hubofferedto, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC288_E2E_create_colorway".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -3349,7 +3348,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colortype, redvalue, bluevalue, greenvalue, colorfamily, color, finishtype, lookname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC290_P0_E2E_CreateColors_SL_FG".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -3382,7 +3381,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				createdfrom;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC291_P0_E2E_CreateColors_BFF".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -3416,7 +3415,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				colorname, providercolorname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC292_P0_E2E_CreateColors_Solid".equalsIgnoreCase(TestType)) {
 				colortype = sheet.getRow(i).getCell(1).getStringCellValue();
 				redvalue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3447,7 +3446,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, filtercolorway;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC293_P0_E2E_Change_AdoptionGBValue".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3472,7 +3471,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC294_P0_E2E_Change_AdoptedLHValue".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3498,7 +3497,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, affiliate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC295_P0_E2E_Change_AdoptedAFFValue".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3525,7 +3524,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, affiliate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC296_P0_E2E_FLAFinalizeView".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3553,7 +3552,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				template_name, sizevalue, measurementtype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC297_P0_E2E_Create_MeasurementSet".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3585,7 +3584,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview, localhub, affiliate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC301_P0_E2E_SetUp_LSUS_Linesheet".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3611,7 +3610,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview, uploadFilepath;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC303_P0_E2E_UploadThumbnail".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(4).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(8).getStringCellValue();
@@ -3637,7 +3636,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC318_P0_E2E_BulkBOMURL".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3662,7 +3661,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, productname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC317_P0_E2E_TechPackONLY_URL".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3688,7 +3687,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				materialcode, millsapcode, usagevalue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC324_P0_E2E_PlacementLoadFile".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3720,7 +3719,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC320_P0_E2E_UploadPlacementFile".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3745,7 +3744,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				pagelayout;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC315_P0_E2E_Specifications_AddImage".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3777,7 +3776,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, filterproduct, source, specifications;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC34_P0_Specifications_CarryoverAttributes".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3804,7 +3803,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, vendorId, material, color, materialCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_02_vendor_Master_Update".equalsIgnoreCase(TestType)) {
 				vendorId = sheet.getRow(i).getCell(1).getStringCellValue();
 				material = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3830,7 +3829,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				template_name, productsize, gradetemplate, measurementtype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC30_P0_ADD_POMtoMeasurementTable".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -3864,7 +3863,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				template_name, productsize, gradetemplate, measurementtype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC49_P0_CreateMultipleMesurementSet".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -4260,7 +4259,7 @@ public class DataProviders implements WMS_GlobalProperties {
 
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P0_Palette_CreateNewFilter".equalsIgnoreCase(TestType)) {
 				mySeasonType = sheet.getRow(i).getCell(1).getStringCellValue();
 				inputName = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5443,7 +5442,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, classification, producttype, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC06_P1_Verify_ReUse_PrintsandPatternsColor".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -5478,7 +5477,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview, hubofferedto, secondseason, secondproduct;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC10_P1_VerifyLookdetails_InCreatePC9".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				product = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5515,7 +5514,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview, hubofferedto, secondseason, secondproduct, createddate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC12_P1_VerifySeasonalLook_InCreatePC9".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				product = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5551,7 +5550,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P1_VerifyProfitCenter_US".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5575,7 +5574,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC18_P1_Verify_SeasonFirstIntroduced".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5599,7 +5598,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC19_P1_Verify_ConsumerGroupExt_1_2".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5624,7 +5623,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC20_P1_Verify_SampleDestroyIndicator".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5649,7 +5648,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, linesheetview, hubofferedto;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC24_P1_Verify_updatePC9_thumbnail".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -5682,7 +5681,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, linesheetview, hubofferedto, secondseason, secondcolorway;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC30_P1_VerifyLookDetails_UpdatePC9".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5718,7 +5717,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview, consumergroupext1, consumergroupext2;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC36_P1_Verify_ConsumerExt1_2_UpdatePC9".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5747,7 +5746,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, linesheetview, createddate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC33_P1_Verify_ReuseSeasonalLook_updatePC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -5781,7 +5780,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview, productsegLSUSvalue, productsegLSEvalue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC37_P1_Verify_DestroySample_UpdatePC9".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5808,7 +5807,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC40_P1_Verify_BrandHierarchyValue".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5832,7 +5831,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC41_P1_Verify_StagingId".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5857,7 +5856,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				classification, producttype, linesheetview, hubofferedto, rigidindicator, createddate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC165_P1_CreatePC9_SeasonalBFF".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -5896,7 +5895,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorway, merchant, PDS, garmentdeveloper, designer;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC181_P1_addPD_GD_PM_newproduct_Linesheet".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -5928,7 +5927,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorway, merchant, fieldPDS, garmentdeveloper, designer;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC182_P1_addPD_GD_Designer_UpdateColorway".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -5959,7 +5958,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview, productsegLSUSvalue, productsegLSEvalue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC183_UpdatePC9_BFFcolor".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -5987,7 +5986,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				producttype, hubofferedto, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC191_P1_CreatePC9_usingPaletteColor".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6021,7 +6020,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				producttype, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC195_P1_UpdatePC9_paletteColor".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6055,7 +6054,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				specifications, pagetype, pagedescription, pagelayout;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC33_Specifications_carryoverColorway".equalsIgnoreCase(TestType)) {
 
 				to_season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6090,7 +6089,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, product, linesheetview, finalseason, copiedproduct;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC19_P1_CopyCarryover_VerifyPC5Attributes".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6119,7 +6118,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC25_P1__CopyCarryover_SetUpLSE_LSUS_CopiedProduct".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6146,7 +6145,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P1_UpdateRigidIndicator_AfterSetupLSE".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6172,7 +6171,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC09_P1_CustomLoaders_MaterialPrice".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6199,7 +6198,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, linesheetview, colorway, profitcenterAPD;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC08_P1_CustomLoaders_ProfitCenterAPD".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6231,7 +6230,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P1_ValidateFilters_BFF".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6262,7 +6261,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterValue, expectedAttributes, activate;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC06_P1_ValidateFilters_DataValidation".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6288,7 +6287,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterValue, expectedAttributes, colorwayname, colorwaycode, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC08_P1_ValidateFilters_GlobalFilter".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6317,7 +6316,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview, merchant, PDS, vendorId;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC12_P1_ValidateFilter_PDS_SSM".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6353,7 +6352,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productdevcenter, colorwaycode, sizegridcode, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC15_P1_validateFilters_SizeSelection".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6389,7 +6388,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productcode, carryover, available, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC16_P1_ValidateFilter_SSM".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6425,7 +6424,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productcode, available, PDS, garmentdeveloper, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P1_ValidateFilters_Techpackgrouping".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6460,7 +6459,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterValue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC12_P1_ValidateFilters_Placement".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6484,7 +6483,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_setUPLSUS_usingLinesheet".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6510,7 +6509,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC57_P1_Placement_ValidateBlank_MX_GDV_value".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6541,7 +6540,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC58_P1_Placement_ValidateBlank_JAPAN_GDV_value".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6572,7 +6571,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC59_P1_Placement_ValidateBlank_CHINA_GDV_value".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6603,7 +6602,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC60_P1_Placement_ValidateBlank_CA_GDV_value".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6634,7 +6633,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC62_P1_Placement_ValidateBlank_MALA_GDV_Value".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -6665,7 +6664,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview, filepath;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_P1_Upload_ThumbnailTo_PrintsandPatternColor".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				colorway = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6691,7 +6690,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P1_Techpack_MassEditable_PDView".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6716,7 +6715,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, filterproduct, source, specifications, requestType;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC06_P1_Techpack_GenerateTechpack_usingMeasurementsPage".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6746,7 +6745,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorwayCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC35_P1_CopyCarryover_ValidateAttributes".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(3).getStringCellValue();
@@ -6771,7 +6770,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorwayCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC37_P1_CopyCarryOver_moveCarryoverAttributes".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(3).getStringCellValue();
@@ -6796,7 +6795,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				patterntype, colorcombo, developer, colortype, material, printColor, sundryColor, descriptionValue, UOM;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P1_Create_Sundry_PrintPatterns_color".equalsIgnoreCase(TestType)) {
 				name = sheet.getRow(i).getCell(1).getStringCellValue();
 				redvalue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6836,7 +6835,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, product;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P1_component_selection_view".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6861,7 +6860,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview1, colorwayCode, colorCode, linesheetview2, linesheetview3, colorwayCode2;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC08_P1_copyColorway".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview1 = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6890,7 +6889,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview1, linesheetview2, productCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC11_P1_MultipleSources_Colorways".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview1 = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6915,7 +6914,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview1, productCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC20_P1_delink_colorway".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview1 = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6940,7 +6939,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview3;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC007_P1_Caryyover_Colorway".equalsIgnoreCase(TestType)) {
 				toSeason = sheet.getRow(i).getCell(1).getStringCellValue();
 				fromSeason = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6969,7 +6968,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorwayCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_P1_Download_TechPack".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -6993,7 +6992,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorwayCode;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC35_P1_Attributes_Validation".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -7017,7 +7016,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, Season, PC9_1, Component, ComponentLoc, Remarks, Material, PC9_2, Qty, NewRemarks;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC_05_BOM_Details_Update".equalsIgnoreCase(TestType)) {
 				Season = sheet.getRow(i).getCell(1).getStringCellValue();
 				PC9_1 = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -8312,7 +8311,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, classification, producttype, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC11_P2_Colorwway_VerifyReuseLook_CreatePC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8347,7 +8346,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, classification, producttype, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC13_P2_Colorway_VerifySeasonalLook_CreatePC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8383,7 +8382,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC31_P2_Colorway_VerifyReuseLook_UpdatePC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8417,7 +8416,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				productsegLSEvalue, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC26_P2_Colorway_VerifyReusePrintsandPatterns_Update_different_PC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8451,7 +8450,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview, hubofferedto;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC167_P2_Colorway_CreatePC9_withBFFcolor".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8650,7 +8649,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, linesheetview, colorway, targetFOB;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC05_P2_CustomLoaders_Verify_Taget_FOB".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8773,7 +8772,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, globalValue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC05_P2_Linesheet_Adoption_DropGB_LH".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8802,7 +8801,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, localhub, filtercolorway, globalValue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC15_P2_Linesheet_AdoptionLH_SetNO_Verify_Available".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8832,7 +8831,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				changereason_value, changecomments_value;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC69_P2_Placement_VerifyPlacementAttributes_Carryover".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8865,7 +8864,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename, specstatus, techpackoptions;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC24_P2_Techpack_ProtoTechpack".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8894,7 +8893,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename, specstatus, techpackoptions;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC24_P2_Techpack_CSTeschpack_download".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -8922,7 +8921,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, sourcename, specstatus, techpackoptions;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P2_TechPack_MassEditable_PDView".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9120,7 +9119,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, lookname;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P2_CustomLoaders_CreateLooks_usingLoaders".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9146,7 +9145,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC02_P3_UpdateColorway_AfterSetUpLSE".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9177,7 +9176,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				LogEntryObject, event;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_P3_CreateColorway_CheckLogEntry".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9243,7 +9242,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				LogEntryObject, event;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC03_P3_CreateColorwaySeason_CheckLogEntry".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9310,7 +9309,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview_LSUS, primaryfabric;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P3_CreateProduct_Colorway_SetUpLSE".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9417,7 +9416,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				hierarchyValue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P3_Staging_CreateColor_VerifyStagingId".equalsIgnoreCase(TestType)) {
 				redvalue = sheet.getRow(i).getCell(1).getStringCellValue();
 				bluevalue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -9462,7 +9461,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				businessObjectType, actionType, messageTableValue, hierarchyValue;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC19_P3_Staging_CreateColorway_VerifyStagingId".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9526,7 +9525,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				event;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC01_P3_CostwiseView_MassUpdate_CheckLogEntry".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9560,7 +9559,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				event;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC04_P3_Costwise_Massupdate_PDS_CheckLogEntry".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9593,7 +9592,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, filterdata, linesheetview, vendor, createddate, LogEntryObject, event;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC06_P3_SKUSourcing_update_CheckLogEntry".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -9626,7 +9625,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				createddate, LogEntryObject, event;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC07_P3_TargetFOBLoadersFile_CheckLogEntry".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -11134,7 +11133,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				classification, producttype, hubofferedto, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC12_P3_CreatePC9ForFemaleAcc_CheckPC9Code".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -11171,7 +11170,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				classification, producttype, hubofferedto, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC13_P3_CreatePC9ForMaleAcc_CheckPC9Code".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -11207,7 +11206,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				classification, producttype, hubofferedto, linesheetview, filtercolor2;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC11_P3_VerifyCodeSequencePC9".equalsIgnoreCase(TestType)) {
 
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
@@ -11248,7 +11247,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				linesheetview, carryover, available, consumerGroup1, productdevcenter;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC010_P2_VerifyFilters_IndiaKids".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				filterValue = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -11287,7 +11286,7 @@ public class DataProviders implements WMS_GlobalProperties {
 			XSSFRow row = sheet.getRow(i);
 			if (row != null) {
 				TestType = getCellValue(row.getCell(0));
-				System.out.println("Output for testType --->" + TestType);
+	
 				if ("TC018_P2_VerifyFilters_TP_Bangalore".equalsIgnoreCase(TestType)) {
 					season = getCellValue(row.getCell(1));
 					filterValue = getCellValue(row.getCell(2));
@@ -11331,7 +11330,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				resultfilepath_update;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC09_P2_Upload_MillSapCode".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -11361,7 +11360,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				resultfilepath_update;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC16_P2_Placment_IncorrectColorwayCode".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -11390,7 +11389,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				resultfilepath_update;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC18_P2_Placement_IncorrectMillCode".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -11417,7 +11416,7 @@ public class DataProviders implements WMS_GlobalProperties {
 				resultfilepath_update;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC17_P2_Placment_IncorectMaterialCode".equalsIgnoreCase(TestType)) {
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
 				resultFilepath = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -11446,7 +11445,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, season, linesheetview, colorway;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC036_P2_AttributesForCarryoverScenario".equalsIgnoreCase(TestType)) {
 				season = sheet.getRow(i).getCell(1).getStringCellValue();
 				linesheetview = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -11471,7 +11470,7 @@ public class DataProviders implements WMS_GlobalProperties {
 		String TestType, uploadFilepath, resultFilepath, filetype, season, colorway, linesheetview;
 		for (int i = 1; i <= numOfRows; i++) {
 			TestType = sheet.getRow(i).getCell(0).getStringCellValue();
-			System.out.println("Output for testType --->" + TestType);
+
 			if ("TC10_P2_Placement_ValidateBlank_USAGE_YIELD_value".equalsIgnoreCase(TestType)) {
 
 				uploadFilepath = sheet.getRow(i).getCell(1).getStringCellValue();
