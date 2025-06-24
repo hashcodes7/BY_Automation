@@ -1,0 +1,176 @@
+name: Batch testing
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Choose Environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
+          - staging
+      mode:
+        description: 'Select run mode:'
+        required: true
+        default: 'batch'
+        type: choice
+        options:
+          - batch
+          - single
+      test_class:
+        description: 'Full test class name (used only in single mode)'
+        required: false
+      suite_file_name:
+        description: 'Name of the test suite XML file (used in batch mode). Example: testingbatch.xml'
+        required: false
+      email_addresses:
+        description: 'Comma-separated list of email addresses'
+        required: false
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Set CurrentURL based on environment
+        id: seturl
+        run: |
+          case "${{ github.event.inputs.environment }}" in
+            dev)
+              echo "url=https://wcadmin:wcadmindev12@flexplmdev3.levi.com/Windchill/rfa/jsp/main/Main.jsp" >> $GITHUB_OUTPUT
+              ;;
+            qa)
+              echo "url=https://wcadmin:wcadminqa12@flexplmqa.levi.com/Windchill/rfa/jsp/main/Main.jsp" >> $GITHUB_OUTPUT
+              ;;
+            staging)
+              echo "url=https://wcadmin:wcadminps11@flexplmstg.levi.com/Windchill/rfa/jsp/main/Main.jsp" >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+      - name: Run TestNG (batch or single)
+        run: |
+          if [[ "${{ github.event.inputs.mode }}" == "batch" ]]; then
+            FILE="Batch_Test_Scripts/${{ github.event.inputs.suite_file_name }}"
+            if [[ ! -f "$FILE" ]]; then
+              echo "❌ Suite file '$FILE' not found!"
+              echo "Available files:"
+              ls Batch_Test_Scripts/
+              exit 1
+            fi
+            echo "✅ Running batch suite: $FILE"
+            mvn test -DCurrentURL="${{ steps.seturl.outputs.url }}" -Dsurefire.suiteXmlFiles="$FILE"
+          else
+            echo "✅ Running single test class: ${{ github.event.inputs.test_class }}"
+            mvn -DCurrentURL="${{ steps.seturl.outputs.url }}" -Dtest=${{ github.event.inputs.test_class }} test
+          fi
+
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExtentReport
+          path: Reports/
+          if-no-files-found: warn
+
+      - name: Commit HTML report to repository
+        if: success()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git pull origin main
+          git add Reports/*.html
+          git commit -m "Add test report [skip ci]" || echo "No changes to commit"
+          git push origin main
+
+      - name: Wait for GitHub Pages Deployment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Waiting for pages-build-deployment to complete..."
+          for i in {1..30}; do
+            RUN=$(gh run list --workflow="pages-build-deployment" --branch=main --limit=1 --json databaseId,status,conclusion -q '.[0]')
+            STATUS=$(echo "$RUN" | jq -r '.status')
+            CONCLUSION=$(echo "$RUN" | jq -r '.conclusion')
+            echo "Status: $STATUS | Conclusion: $CONCLUSION"
+            if [[ "$STATUS" == "completed" ]]; then
+              if [[ "$CONCLUSION" == "success" ]]; then
+                echo "✅ Pages deployment successful!"
+                break
+              else
+                echo "❌ Pages deployment failed!"
+                exit 1
+              fi
+            fi
+            echo "⏳ Waiting..."
+            sleep 10
+          done
+
+      - name: Print Report Link
+        run: |
+          REPORT_PATH=$(find Reports -name "*.html" -type f -exec stat --format='%Y %n' {} \; | sort -n | tail -n 1 | cut -d' ' -f2-)
+          REPORT_NAME=$(basename "$REPORT_PATH" | sed -E 's/\.html.*/.html/')
+          ENCODED_REPORT_NAME=$(printf "%s" "$REPORT_NAME" | jq -sRr @uri)
+          echo "Final Report Name: $REPORT_NAME"
+          echo "Encoded Report Name: $ENCODED_REPORT_NAME"
+          echo "live_report_url=https://hashcodes7.github.io/Levi_Automation/Reports/$ENCODED_REPORT_NAME" >> $GITHUB_ENV
+
+      - name: Find Latest Report
+        id: report_path
+        run: |
+          LATEST_REPORT=$(find Reports -name "*.html" -type f -exec stat --format='%Y %n' {} \; | sort -n | tail -n 1 | cut -d' ' -f2-)
+          echo "latest_report=$LATEST_REPORT" >> $GITHUB_OUTPUT
+
+      - name: Set email flag
+        run: |
+          if [[ -n "${{ github.event.inputs.email_addresses }}" ]]; then
+            echo "send_email=true" >> $GITHUB_ENV
+          else
+            echo "send_email=false" >> $GITHUB_ENV
+          fi
+
+      - name: Send Email with Test Report (with attachment)
+        if: env.send_email == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: WMS Automation Test Report
+          body: |
+            Hello,
+
+            Please find the attached HTML test report generated by GitHub Actions.
+
+            🔗 Live Report URL: ${{ env.live_report_url }}
+
+            Regards,  
+            GitHub Actions
+          to: ${{ github.event.inputs.email_addresses }}
+          from: GitHub Actions <${{ secrets.EMAIL_USERNAME }}>
+          attachments: ${{ steps.report_path.outputs.latest_report }}

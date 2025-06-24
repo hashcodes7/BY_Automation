@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="E2ETestCases_Suite" verbose="1">
+  <test name="E2E_TestCases">
+    <classes>
+      <class name="E2E_Testcases.TC292_P0_E2E_CreateColors_Solid" />
+      <class name="E2E_Testcases.TC307_P0_E2E_MaterialCreation_YarnFabri" />
+    </classes>
+  </test>
+</suite>
