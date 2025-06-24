@@ -114,48 +114,6 @@ public class PageBase {
 		return port;
 	}
 
-	public void checkVideoPlaying(String videoPlayerPath) throws Exception {
-		Thread.sleep(1000);
-		takeScreenshotVideo("Image1", videoPlayerPath);
-		Thread.sleep(3000);
-		takeScreenshotVideo("Image2", videoPlayerPath);
-
-		String file1 = "VideoComparison\\Image1.png";
-		String file2 = "VideoComparison\\Image2.png";
-
-		processImage(file1, file2);
-	}
-
-	public void takeScreenshotVideo(String screenshotName, String videoPlayerPath) {
-
-		try {
-			WebElement ele = remoteDriver.findElement(By.xpath(videoPlayerPath));
-			if (ele.isDisplayed()) {
-				File screen = (File) ((TakesScreenshot) remoteDriver).getScreenshotAs(OutputType.FILE);
-
-				int ImageWidth = ele.getSize().getWidth();
-				int ImageHeight = ele.getSize().getHeight();
-				Point point = ele.getLocation();
-				int xcord = point.getX();
-				int ycord = point.getY();
-				BufferedImage img = ImageIO.read(screen);
-				BufferedImage dest = img.getSubimage(xcord, ycord, ImageWidth, ImageHeight);
-				ImageIO.write(dest, "png", screen);
-				FileUtils.copyFile(screen, new File("VideoComparison\\" + screenshotName + ".png"));
-			}
-		} catch (Exception e) {
-
-			try {
-				System.out.println("e" + e);
-				// rg.logException("Taking Screenshots Fails", e);
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-
-			e.printStackTrace();
-		}
-	}
 
 	public ArrayList<Integer> getResolution(WebElement videoPlayerPathWE) {
 
@@ -183,28 +141,6 @@ public class PageBase {
 		return size;
 	}
 
-	public void waitForVisibilityOfElement(String xpath) throws Exception {
-
-//		try {
-//
-//			switch (toolName) {
-//
-//			case "Selenium":
-//
-//				WebDriverWait waitSelenium = new WebDriverWait(chromeDriver, 120, 500);
-//
-//				waitSelenium.until(ExpectedConditions.presenceOfElementLocated((By.xpath(xpath))));
-//
-//				break;
-//
-//			}
-//
-//		} catch (Exception exc) {
-//			assertFalse(false, " element not yet loaded in the webpage " + exc);
-//			Assert.assertEquals(false, true);
-//		}
-
-	}
 
 	public void takeScreenshot(String screenshotName, String videoPlayerPath) {
 
@@ -291,50 +227,6 @@ public class PageBase {
 		ImageIO.write(image1, "png", new File("PhotoPassScreenshots/" + screenshotName + ".png"));
 	}
 
-	public void processImage(String file1, String file2) throws Exception {
-
-		try {
-			Image image1 = Toolkit.getDefaultToolkit().getImage(file1);
-			Image image2 = Toolkit.getDefaultToolkit().getImage(file2);
-
-			PixelGrabber grab1 = new PixelGrabber(image1, 0, 0, -1, -1, false);
-			PixelGrabber grab2 = new PixelGrabber(image2, 0, 0, -1, -1, false);
-
-			int[] data1 = null;
-
-			if (grab1.grabPixels()) {
-				int width = grab1.getWidth();
-				int height = grab1.getHeight();
-				data1 = new int[width * height];
-				data1 = (int[]) grab1.getPixels();
-			}
-
-			int[] data2 = null;
-
-			if (grab2.grabPixels()) {
-				int width = grab2.getWidth();
-				int height = grab2.getHeight();
-				data2 = new int[width * height];
-				data2 = (int[]) grab2.getPixels();
-			}
-
-			boolean result = java.util.Arrays.equals(data1, data2);
-
-			if (result == false) {
-				System.out.println("Result = Video is playing - PASS ");
-
-			} else {
-				System.out.println("Result = Video is not Playing - FALSE");
-				ExtentUtility.getTest().log(LogStatus.FAIL, " Result = Video is not Playing - FALSE ",
-						ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-				throw new Exception(" Result = Video is not Playing - FALSE ");
-
-			}
-
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
-		}
-	}
 
 	public void validateImage(String imageName1, String imageName2) throws Exception {
 
