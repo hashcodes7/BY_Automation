@@ -25,8 +25,6 @@ public class ReadDataSheet {
 	public String colName;
 	public String value;
 
-	List<TestParameter> list;
-
 	public int getRownumber(String testCaseName, String colHeader) throws MPException {
 		int rownumber = 0;
 		rowCount = ws.getLastRowNum();
