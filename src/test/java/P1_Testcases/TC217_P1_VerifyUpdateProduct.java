@@ -93,32 +93,32 @@ public class TC217_P1_VerifyUpdateProduct extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: - URL-" + Global_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2023 Male Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			try {
 
@@ -126,16 +126,16 @@ public class TC217_P1_VerifyUpdateProduct extends WMS_TestBase {
 				lineSheetPage.filterProductByName(productName, test);
 				System.out.println("Clicked on product name");
 				test.log(Status.INFO, "Clicked on product name: " + productName);
-				addSrceenShot("Clicked on product name", test, Capture);
+				addScreenShot("Clicked on product name", test, Capture);
 
 				Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 				System.out.println("PC5 Details Page is displayed");
 				test.log(Status.PASS, "PC5 Details Page is displayed: " + productName);
-				addSrceenShot("PC5 Details Page is displayed", test, Capture);
+				addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 				productPage.editProduct();
 				test.log(Status.INFO, "Clicked on Update Product from the Actions dropdown");
-				addSrceenShot("Clicked on Update Product from the Actions dropdown", test, Capture);
+				addScreenShot("Clicked on Update Product from the Actions dropdown", test, Capture);
 				WaitforPage(5000);
 
 //				String updatedProductName = "New_Test_Aum_03";
@@ -153,12 +153,12 @@ public class TC217_P1_VerifyUpdateProduct extends WMS_TestBase {
 						updatedSubClassValue, updatedProSubCat1, updatedProSubCat2, updatedConsumer,
 						updatedConsumerGrp1, updatedConsumerGrp2, updatedCustomsClassification, test);
 				test.log(Status.INFO, "Updated product details");
-				addSrceenShot("Updated product details", test, Capture);
+				addScreenShot("Updated product details", test, Capture);
 				WaitforPage(4000);
 
 				productPage.clikOnSaveBtn();
 				test.log(Status.INFO, "Clicked on save button successfully");
-				addSrceenShot("Clicked on save button successfully", test, Capture);
+				addScreenShot("Clicked on save button successfully", test, Capture);
 				WaitforPage(2000);
 
 				// Verify product update
@@ -168,26 +168,26 @@ public class TC217_P1_VerifyUpdateProduct extends WMS_TestBase {
 						updatedCustomsClassification, test);
 				if (isUpdated) {
 					test.log(Status.PASS, "Product update verification--- Product is updated with updated attributes.");
-					addSrceenShot("Product update verification", test, Capture);
+					addScreenShot("Product update verification", test, Capture);
 				} else {
 					test.log(Status.FAIL, "Product update verification: Failed");
-					addSrceenShot("Product update verification", test, Capture);
+					addScreenShot("Product update verification", test, Capture);
 				}
 				WaitforPage(4000);
 
 				dashboardPage.closeLeftPanel();
 				System.out.println("Clicked on close Left plane");
 				test.log(Status.INFO, "Clicked on close Left plane");
-				addSrceenShot("Clicked on close Left plane", test, Capture);
+				addScreenShot("Clicked on close Left plane", test, Capture);
 
 				dashboardPage.Logout();
 				System.out.println("Logout successful");
 				test.log(Status.INFO, "Logout successful");
-				addSrceenShot("Logout successful", test, Capture);
+				addScreenShot("Logout successful", test, Capture);
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 
 			}
@@ -196,7 +196,7 @@ public class TC217_P1_VerifyUpdateProduct extends WMS_TestBase {
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

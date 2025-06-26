@@ -69,55 +69,55 @@ public class TC18_P2_CopyCarryover_CopyProduct_DifferentHierarchy extends WMS_Te
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			CCP.SeasonDropdown(season);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(filtervalue,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+filtervalue);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			CCP.openProduct(product);
 			test.log(Status.INFO, "Product details got displayed");
-			addSrceenShot("Product details got displayed", test, Capture);
+			addScreenShot("Product details got displayed", test, Capture);
 			
 //			String newname=product+"_"+String.valueOf(Math.random()*5);
 			CCP.CopyProduct(newname,newseason,test);
 			test.log(Status.INFO, "New Season selected and all the Attributes are selected");
-			addSrceenShot("New Season selected and all the Attributes are selected", test, Capture);
+			addScreenShot("New Season selected and all the Attributes are selected", test, Capture);
 			WaitforPage(5000);
 			
 			CCP.UpdateAllMandatoryFields(newname, updatedBrandHierarchy,  updatedClassValue, updatedSubClassValue,  updatedProSubCat1,
 					 updatedProSubCat2,  updatedConsumer, updatedConsumerGrp1,  updatedConsumerGrp2,  updatedCustomsClassification,test);
 			test.log(Status.INFO, "Product Name Updated and copied to a new season");
-			addSrceenShot("Product Name Updated and copied to a new season", test, Capture);
+			addScreenShot("Product Name Updated and copied to a new season", test, Capture);
 			WaitforPage(5000);
 	
 			CCP.Validate_CopyProduct(newname,test);
 			test.log(Status.PASS, "Validated copied product");
-			addSrceenShot("Validated copied product", test, Capture);
+			addScreenShot("Validated copied product", test, Capture);
 			System.out.println("Validated copied product");
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		}catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

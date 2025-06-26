@@ -138,85 +138,85 @@ public class TC_P3_CreateMultipleProduct_CheckLogEntry extends WMS_TestBase {
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched", test, Capture);
+				addScreenShot("Browser Launched", test, Capture);
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully: - URL -" + global_URL);
-				addSrceenShot("Login successful", test, Capture);
+				addScreenShot("Login successful", test, Capture);
 
 				Thread.sleep(5000);
 
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.clickOnMySeasons();
 				test.log(Status.INFO, "Clicked on MySeasons");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				mainMenuPage.chooseMySeasonType(season);
 				System.out.println("season type is choosen");
 				test.log(Status.INFO, "season type is choosen: " + season);
-				addSrceenShot("Season type is choosen", test, Capture);
+				addScreenShot("Season type is choosen", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 				lineSheetPage.createProduct();
 				test.log(Status.INFO, "Clicked on Create New product");
-				addSrceenShot("Clicked on Create New product", test, Capture);
+				addScreenShot("Clicked on Create New product", test, Capture);
 				WaitforPage(4000);
 
 				productPage.enterProductName(productName);
 				test.log(Status.INFO, "Entered product Name successfully: "+productName);
-				addSrceenShot("Entered product Name successfully", test, Capture);
+				addScreenShot("Entered product Name successfully", test, Capture);
 				WaitforPage(4000);
 
 				productPage.selectBrandHierarchy(brandHierarchy);
 				test.log(Status.INFO, "Entered Brand Hierarchy value successfully: " + brandHierarchy);
-				addSrceenShot("Entered Brand Hierarchy value successfully", test, Capture);
+				addScreenShot("Entered Brand Hierarchy value successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectProSubCat1(proSubCat1);
 				test.log(Status.INFO, "Entered product Sub Cat 1 successfully: " + proSubCat1);
-				addSrceenShot("Entered product Sub Cat 1 successfully", test, Capture);
+				addScreenShot("Entered product Sub Cat 1 successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectProSubCat2(proSubCat2);
 				test.log(Status.INFO, "Entered product Sub Cat 2 successfully: " + proSubCat2);
-				addSrceenShot("Entered product Sub Cat 2 successfully", test, Capture);
+				addScreenShot("Entered product Sub Cat 2 successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectClass(classValue);
 				test.log(Status.INFO, "Entered class product Hierarchy successfully: " + classValue);
-				addSrceenShot("Entered class product Hierarchy successfully", test, Capture);
+				addScreenShot("Entered class product Hierarchy successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectSubClass(subClassValue);
 				test.log(Status.INFO, "Entered sub class product Hierarchy successfully: " + subClassValue);
-				addSrceenShot("Entered sub class product Hierarchy successfully", test, Capture);
+				addScreenShot("Entered sub class product Hierarchy successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectConsumer(consumer);
 				test.log(Status.INFO, "Entered consumer successfully: " + consumer);
-				addSrceenShot("Entered consumer successfully", test, Capture);
+				addScreenShot("Entered consumer successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectConsumerGrp1(consumerGrp1);
 				test.log(Status.INFO, "Entered consumer Group 1 successfully: " + consumerGrp1);
-				addSrceenShot("Entered consumer Group 1 successfully", test, Capture);
+				addScreenShot("Entered consumer Group 1 successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.selectConsumerGrp2(consumerGrp2);
 				test.log(Status.INFO, "Entered consumer Group 2 successfully: " + consumerGrp2);
-				addSrceenShot("Entered consumer Group 2 successfully", test, Capture);
+				addScreenShot("Entered consumer Group 2 successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.clikOnSaveBtn();
 				test.log(Status.INFO, "Clicked on save button successfully");
-				addSrceenShot("Clicked on save button successfully", test, Capture);
+				addScreenShot("Clicked on save button successfully", test, Capture);
 				WaitforPage(2000);
 
 				// Capture the current time in GMT after click on save button
@@ -226,53 +226,53 @@ public class TC_P3_CreateMultipleProduct_CheckLogEntry extends WMS_TestBase {
 
 				productPage.clikViewProduct();
 				test.log(Status.INFO, "Clicked on View Product successfully");
-				addSrceenShot("Clicked on View Product successfully", test, Capture);
+				addScreenShot("Clicked on View Product successfully", test, Capture);
 				WaitforPage(2000);
 
 				// Verify product name
 				String product_Name = productPage.getProductName();
 				if (product_Name.equals(productName)) {
 					test.log(Status.PASS, "Product name verification--- PC5 is created: " + productName);
-					addSrceenShot("Product name verification", test, Capture);
+					addScreenShot("Product name verification", test, Capture);
 				} else {
 					test.log(Status.FAIL, "Product name verification: Failed");
-					addSrceenShot("Product name verification", test, Capture);
+					addScreenShot("Product name verification", test, Capture);
 				}
 
 				// Log the exact date
 				test.log(Status.INFO, "PC5 created on date: " + createddate);
 				System.out.println("PC5 created on date: " + createddate);
-				addSrceenShot("PC5 created on date", test, Capture);
+				addScreenShot("PC5 created on date", test, Capture);
 
 				WaitforPage(4000);
 				driver.manage().deleteAllCookies();
 				openNewTabAndSwitch();
 				navigateToAdministratorURL();
 				test.log(Status.INFO, "Open new tab and Navigate to the Administrative User for checking Log Entry: - URL - " + admin_URL);
-				addSrceenShot("Navigate to the Administrative User", test, Capture);
+				addScreenShot("Navigate to the Administrative User", test, Capture);
 				Thread.sleep(4000);
 
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_LOG_ENTRY.menu());
 				test.log(Status.INFO, "Clicked on Libraries menu");
-				addSrceenShot("Clicked on Libraries menu", test, Capture);
+				addScreenShot("Clicked on Libraries menu", test, Capture);
 
 				Thread.sleep(2000);
 
 				LogEntrypage.select_LogEntryObject(LogEntryObject, test);
 				System.out.println("Log Entry Object is selected ");
 				test.log(Status.INFO, "Log Entry Object is selected");
-				addSrceenShot("Log Entry Object is selected", test, Capture);
+				addScreenShot("Log Entry Object is selected", test, Capture);
 				Thread.sleep(2000);
 
 				LogEntrypage.Add_criteria(event, createddate, test);
 				System.out.println("Criteria is added ");
 				test.log(Status.INFO, "Criteria is added");
-				addSrceenShot("Criteria is added", test, Capture);
+				addScreenShot("Criteria is added", test, Capture);
 				Thread.sleep(2000);
 
 				LogEntrypage.clickedFirst_viewdetails();
@@ -283,19 +283,19 @@ public class TC_P3_CreateMultipleProduct_CheckLogEntry extends WMS_TestBase {
 				LogEntrypage.validate_Logdetails(event, LogEntryObject, test);
 				System.out.println("Validation successful for Log Entry details ");
 				test.log(Status.PASS, "Validation successful for Log Entry details");
-				addSrceenShot("Validation successful for Log Entry details", test, Capture);
+				addScreenShot("Validation successful for Log Entry details", test, Capture);
 
 				if (i == testData.length - 1) {
 					// Last iteration, perform logout
 					dashboardPage.closeLeftPanel();
 					System.out.println("Clicked on close Left plane");
 					test.log(Status.INFO, "Clicked on close Left plane");
-					addSrceenShot("Clicked on close Left plane", test, Capture);
+					addScreenShot("Clicked on close Left plane", test, Capture);
 
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 				} else {
 				    // Not the last iteration, switch to the first tab, close the second tab, and refresh the browser
 					switchToFirstTabAndCloseSecond();
@@ -307,7 +307,7 @@ public class TC_P3_CreateMultipleProduct_CheckLogEntry extends WMS_TestBase {
 
 			Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 			} 
 		}

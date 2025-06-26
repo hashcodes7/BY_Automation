@@ -81,75 +81,75 @@ public class TC04_P0_Create_PC9 extends WMS_TestBase {
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view is "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view is "+linesheetview, test, Capture);
 			
 			Colorwaypage.SelectProduct(product,test);
 			test.log(Status.INFO, "product selected");
-			addSrceenShot("product selected", test, Capture);
+			addScreenShot("product selected", test, Capture);
 
 			Colorwaypage.Create_colorwayLink();
 			System.out.println("Colorway page displayed");
 			test.log(Status.INFO, "Colorway page displayed");
-			addSrceenShot("Colorway page displayed", test, Capture);
+			addScreenShot("Colorway page displayed", test, Capture);
 			
 //          if colorsubmenu element is not there just keep blank string ----------------------			
 			String thumbnail=Colorwaypage.selectcolour(colormenu,colorsubmenu,filtercolor,test);
 			System.out.println("color/look Selected ");
 			test.log(Status.INFO, " color/look Selected");
-			addSrceenShot("color/look Selected ", test, Capture);
+			addScreenShot("color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			Colorwaypage.MandatoryDetails(productsegLSUSvalue,productsegLSEvalue,classification,producttype,test);
 			System.out.println("All mandatory fields filled");
 			test.log(Status.INFO, "All mandatory fields filled");
-			addSrceenShot("All mandatory fields filled", test, Capture);
+			addScreenShot("All mandatory fields filled", test, Capture);
 			WaitforPage(4000);
 			
 			Colorwaypage.colorwayseasonfield(hubofferedto,test);
 			System.out.println("Colorway season fields selected and view product clicked");
 			test.log(Status.INFO, "Colorway season fields selected and view product clicked");
-			addSrceenShot("Colorway season fields selected and view product clicked", test, Capture);
+			addScreenShot("Colorway season fields selected and view product clicked", test, Capture);
 			
 			Thread.sleep(2000);
 			Colorwaypage.validateColorway_creation( filtercolor, test);
 			System.out.println("Validated Colorway creation");
 			test.log(Status.PASS, "Validated Colorway creation");
-			addSrceenShot("Validated Colorway creation", test, Capture);
+			addScreenShot("Validated Colorway creation", test, Capture);
 			
 			Colorwaypage.thumbnailValidations(test,thumbnail);
 			System.out.println("Thumbnail Validation is Successful ");
 			test.log(Status.PASS, "Thumbnail Validation is Successful");
-			addSrceenShot("Thumbnail Validation is Successful", test, Capture);
+			addScreenShot("Thumbnail Validation is Successful", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

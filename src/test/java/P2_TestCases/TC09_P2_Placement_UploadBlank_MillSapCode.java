@@ -72,21 +72,21 @@ public class TC09_P2_Placement_UploadBlank_MillSapCode extends WMS_TestBase {
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.REPORTS.menu(), MainMenuEnum.REPORTS_LoadFile.menu());
 			test.log(Status.INFO, "Clicked on Reports Load file ");
-			addSrceenShot("Clicked on Reports Load file ", test, Capture);
+			addScreenShot("Clicked on Reports Load file ", test, Capture);
 			
 			WaitforPage(2000);
 			customLoadersPage.selectFileType(filetype);
 			test.log(Status.INFO, "File type selected is:   "+filetype);
-			addSrceenShot("File type selected ", test, Capture);
+			addScreenShot("File type selected ", test, Capture);
 			
 			customLoadersPage.uploadFile(uploadFilepath);
 			System.out.println("file uploaded");
 			test.log(Status.INFO, "File uploaded");
-			addSrceenShot("File uploaded", test, Capture);
+			addScreenShot("File uploaded", test, Capture);
 			Thread.sleep(5000);
 			
 			String result=customLoadersPage.ValidatePlacementLoaderResult(resultFilepath);
@@ -101,15 +101,15 @@ public class TC09_P2_Placement_UploadBlank_MillSapCode extends WMS_TestBase {
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

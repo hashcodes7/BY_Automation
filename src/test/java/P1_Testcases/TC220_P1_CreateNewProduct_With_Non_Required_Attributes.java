@@ -94,23 +94,23 @@ public class TC220_P1_CreateNewProduct_With_Non_Required_Attributes extends WMS_
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			// URL : LEVIS_GLOBAL
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: - URL -" + Global_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2023 Male Accessories";
 			//qa//season//Levi's S1 2023 Male Accessories
@@ -118,78 +118,78 @@ public class TC220_P1_CreateNewProduct_With_Non_Required_Attributes extends WMS_
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			try {
 
 				lineSheetPage.createProduct();
 				test.log(Status.INFO, "Clicked on Create New product");
-				addSrceenShot("Clicked on Create New product", test, Capture);
+				addScreenShot("Clicked on Create New product", test, Capture);
 				WaitforPage(4000);
 
 //				String productName = "New_Test_Aum_04";
 				productPage.enterProductName(productName);
 				test.log(Status.INFO, "Entered product Name successfully");
-				addSrceenShot("Entered product Name successfully", test, Capture);
+				addScreenShot("Entered product Name successfully", test, Capture);
 				WaitforPage(4000);
 
 //				String brandHierarchy = "Red Tab Global";
 				productPage.selectBrandHierarchy(brandHierarchy);
 				test.log(Status.INFO, "Entered Brand Hierarchy value successfully: " + brandHierarchy);
-				addSrceenShot("Entered Brand Hierarchy value successfully", test, Capture);
+				addScreenShot("Entered Brand Hierarchy value successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String classValue = "Belts";
 				productPage.selectClass(classValue);
 				test.log(Status.INFO, "Entered class product Hierarchy successfully: " + classValue);
-				addSrceenShot("Entered class product Hierarchy successfully", test, Capture);
+				addScreenShot("Entered class product Hierarchy successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String subClassValue = "Reversible";
 				productPage.selectSubClass(subClassValue);
 				test.log(Status.INFO, "Entered sub class product Hierarchy successfully: " + subClassValue);
-				addSrceenShot("Entered sub class product Hierarchy successfully", test, Capture);
+				addScreenShot("Entered sub class product Hierarchy successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String proSubCat1 = "Bags";
 				productPage.selectProSubCat1(proSubCat1);
 				test.log(Status.INFO, "Entered product Sub Cat 1 successfully: " + proSubCat1);
-				addSrceenShot("Entered product Sub Cat 1 successfully", test, Capture);
+				addScreenShot("Entered product Sub Cat 1 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String proSubCat2 = "Backpack";
 				productPage.selectProSubCat2(proSubCat2);
 				test.log(Status.INFO, "Entered product Sub Cat 2 successfully: " + proSubCat2);
-				addSrceenShot("Entered product Sub Cat 2 successfully", test, Capture);
+				addScreenShot("Entered product Sub Cat 2 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String consumer = "Boys";
 				productPage.selectConsumer(consumer);
 				test.log(Status.INFO, "Entered consumer successfully: " + consumer);
-				addSrceenShot("Entered consumer successfully", test, Capture);
+				addScreenShot("Entered consumer successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String consumerGrp1 = "Boys Infant";
 				productPage.selectConsumerGrp1(consumerGrp1);
 				test.log(Status.INFO, "Entered consumer Group 1 successfully: " + consumerGrp1);
-				addSrceenShot("Entered consumer Group 1 successfully", test, Capture);
+				addScreenShot("Entered consumer Group 1 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String consumerGrp2 = "Regular";
 				productPage.selectConsumerGrp2(consumerGrp2);
 				test.log(Status.INFO, "Entered consumer Group 2 successfully: " + consumerGrp2);
-				addSrceenShot("Entered consumer Group 2 successfully", test, Capture);
+				addScreenShot("Entered consumer Group 2 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String customsClassification = "Accessories";
 				productPage.selectcustomsClassification(customsClassification);
 				test.log(Status.INFO, "Entered Customs Classification successfully: " + customsClassification);
 				test.log(Status.INFO, "Filled All Mandatory Fields");
-				addSrceenShot("Entered Customs Classification successfully", test, Capture);
+				addScreenShot("Entered Customs Classification successfully", test, Capture);
 				WaitforPage(5000);
 
 				// All non mandatory feilds
@@ -206,27 +206,27 @@ public class TC220_P1_CreateNewProduct_With_Non_Required_Attributes extends WMS_
 						productReportCharacteristics, dimensions, typeOfClosure, fitReference, capacity, test);
 				System.out.println("Filled All NonMandatory Fields");
 				test.log(Status.INFO, "Filled All NonMandatory Fields");
-				addSrceenShot("Filled All NonMandatory Fields", test, Capture);
+				addScreenShot("Filled All NonMandatory Fields", test, Capture);
 				WaitforPage(4000);
 
 				productPage.clikOnSaveBtn();
 				test.log(Status.INFO, "Clicked on save button successfully");
-				addSrceenShot("Clicked on save button successfully", test, Capture);
+				addScreenShot("Clicked on save button successfully", test, Capture);
 				WaitforPage(2000);
 
 				productPage.clikViewProduct();
 				test.log(Status.INFO, "Clicked on View Product successfully");
-				addSrceenShot("Clicked on View Product successfully", test, Capture);
+				addScreenShot("Clicked on View Product successfully", test, Capture);
 				WaitforPage(2000);
 
 				// Verify product name
 				String product_Name = productPage.getProductName();
 				if (product_Name.equals(productName)) {
 					test.log(Status.PASS, "Product name verification--- PC5 is created: " + productName);
-					addSrceenShot("Product name verification", test, Capture);
+					addScreenShot("Product name verification", test, Capture);
 				} else {
 					test.log(Status.FAIL, "Product name verification: Failed");
-					addSrceenShot("Product name verification", test, Capture);
+					addScreenShot("Product name verification", test, Capture);
 				}
 				WaitforPage(4000);
 
@@ -236,21 +236,21 @@ public class TC220_P1_CreateNewProduct_With_Non_Required_Attributes extends WMS_
 						"Non-required attributes were not filled in successfully.");
 				System.out.println("Non-required attributes were filled successfully.");
 				test.log(Status.PASS, "Verification: Non-required attributes were filled successfully.");
-				addSrceenShot("Non-required attributes were filled successfully.", test, Capture);
+				addScreenShot("Non-required attributes were filled successfully.", test, Capture);
 
 				dashboardPage.closeLeftPanel();
 				System.out.println("Clicked on close Left plane");
 				test.log(Status.INFO, "Clicked on close Left plane");
-				addSrceenShot("Clicked on close Left plane", test, Capture);
+				addScreenShot("Clicked on close Left plane", test, Capture);
 
 				dashboardPage.Logout();
 				System.out.println("Logout successful");
 				test.log(Status.INFO, "Logout successful");
-				addSrceenShot("Logout successful", test, Capture);
+				addScreenShot("Logout successful", test, Capture);
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 
 			}
@@ -259,7 +259,7 @@ public class TC220_P1_CreateNewProduct_With_Non_Required_Attributes extends WMS_
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -84,20 +84,20 @@ public class TC304_305_E2E_Update_BOM_Details extends WMS_TestBase {
 
 			BOMPage.openBomApp(test);
 			test.log(Status.PASS, "BOM App is opened");
-			addSrceenShot("BOM App is opened", test, Capture); 
+			addScreenShot("BOM App is opened", test, Capture); 
 			
 			BOMPage.updateBomDetails(test,Season,PC9_1,Component,ComponentLoc,Remarks,Material);
 			test.log(Status.PASS, "BOM Details are updated and validated");
-			addSrceenShot("BOM Details are updated and validated", test, Capture); 
+			addScreenShot("BOM Details are updated and validated", test, Capture); 
 			
 			BOMPage.MassUpdateBomDetails(test,Season,PC9_2,Qty,NewRemarks);
 			test.log(Status.PASS, "BOM Details are updated and validated for bulk data");
-			addSrceenShot("BOM Details are updated and validated for bulk data", test, Capture); 
+			addScreenShot("BOM Details are updated and validated for bulk data", test, Capture); 
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

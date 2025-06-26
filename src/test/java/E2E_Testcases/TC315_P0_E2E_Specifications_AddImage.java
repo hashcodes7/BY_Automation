@@ -86,69 +86,69 @@ public class TC315_P0_E2E_Specifications_AddImage  extends WMS_TestBase {
 					
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			MeasurementsPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			Thread.sleep(1000); 
 
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 
 			Colorwaypage.SelectProduct(filterproduct, test);
 			test.log(Status.INFO, "clicked on product "+filterproduct);
-			addSrceenShot("clicked on product ", test, Capture);
+			addScreenShot("clicked on product ", test, Capture);
 			
 			MeasurementsPage.selectSource(source,test);
 			test.log(Status.INFO, "Selected source "+source);
-			addSrceenShot("Selected source "+source, test, Capture);
+			addScreenShot("Selected source "+source, test, Capture);
 			System.out.println("Selected source "+source);
 
 			MeasurementsPage.selectSpecifications(specifications,test);
 			test.log(Status.INFO, "Selected specifications "+specifications);
-			addSrceenShot("Selected specifications "+specifications, test, Capture);
+			addScreenShot("Selected specifications "+specifications, test, Capture);
 			System.out.println("Selected specifications "+specifications);
 			
 			MeasurementsPage.NavigateTo_VisualAssets();
 			test.log(Status.INFO, "Navigated to visual Assets page ");
-			addSrceenShot("Navigated to visual Assets page ", test, Capture);
+			addScreenShot("Navigated to visual Assets page ", test, Capture);
 			System.out.println("Navigated to visual Assets page ");
 			
 			MeasurementsPage.create_VisualAssets_images(pagetype, pagedescription, pagelayout, test);
 			test.log(Status.INFO, "Created Image  through visual Assets page ");
-			addSrceenShot("Created Image  through visual Assets page ", test, Capture);
+			addScreenShot("Created Image  through visual Assets page ", test, Capture);
 			System.out.println("Created Image  through visual Assets page");
 			
 			Thread.sleep(4000);
 			MeasurementsPage.verify_VisualAssets_Image(pagedescription,test);
 			test.log(Status.PASS, "Verified created Image");
-			addSrceenShot("Verified created Image ", test, Capture);
+			addScreenShot("Verified created Image ", test, Capture);
 			System.out.println("Verified created Image");
 
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}	

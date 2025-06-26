@@ -334,7 +334,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 							+ "  and colortype is: " + colortype.get(i).getText());
 					test.log(Status.INFO, " The Look/SeasonalLook name present in UI is: " + colorname
 							+ "  and colortype is: " + colortype.get(i).getText());
-					addSrceenShot(" The Look/SeasonalLook name present in UI is: " + colorname + "  and colortype is: "
+					addScreenShot(" The Look/SeasonalLook name present in UI is: " + colorname + "  and colortype is: "
 							+ colortype.get(i).getText(), test, Capture);
 					
 				}
@@ -498,7 +498,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 							+ " and profit center APD value in UI is " + lscoprofitcenter.getText() + " are matching");
 					test.log(Status.INFO, "Profit Center APD value in loaderfile sheet is:  " + profitcenterAPD
 							+ " and profit center APD value in UI is " + lscoprofitcenter.getText() + " are matching");
-					addSrceenShot("Profit Center APD value in loaderfile sheet is:  " + profitcenterAPD
+					addScreenShot("Profit Center APD value in loaderfile sheet is:  " + profitcenterAPD
 							+ " and profit center APD value in UI is " + lscoprofitcenter.getText() + " are matching",
 							test, Capture);
 				}
@@ -533,7 +533,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 							+ " and Target FOB value in UI is " + TargetFOBValue.getText() + " are matching");
 					test.log(Status.INFO, "Target FOB value in loaderfile sheet is:  " + targetFOB
 							+ " and Target FOB value in UI is " + TargetFOBValue.getText() + " are matching");
-					addSrceenShot("Target FOB value in loaderfile sheet is:  " + targetFOB
+					addScreenShot("Target FOB value in loaderfile sheet is:  " + targetFOB
 							+ " and Target FOB value in UI is " + TargetFOBValue.getText() + " are matching", test,
 							Capture);
 				}
@@ -560,7 +560,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 						+ "  after sending blank MX_GDV in placement loader file");
 				test.log(Status.INFO, "MX_GDV value in Linesheet is:  " + MX_GDV_value.getText()
 						+ "  after sending blank MX_GDV in placement loader file");
-				addSrceenShot("MX_GDV value in Linesheet is:  " + MX_GDV_value.getText()
+				addScreenShot("MX_GDV value in Linesheet is:  " + MX_GDV_value.getText()
 						+ "  after sending blank MX_GDV in placement loader file", test, Capture);
 			}
 		}
@@ -586,7 +586,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 							+ Carryover_value.getText());
 					test.log(Status.INFO, "Prerequisite validated and the value for carryover/new is :  "
 							+ Carryover_value.getText());
-					addSrceenShot(
+					addScreenShot(
 							"Prerequisite validated and the value for carryover/new is :  " + Carryover_value.getText(),
 							test, Capture);
 				}
@@ -738,7 +738,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 						+ "  after sending blank JAPAN_GDV in placement loader file");
 				test.log(Status.INFO, "JAPAN_GDV value in Linesheet is:  " + JAPAN_GDV_value.getText()
 						+ "  after sending blank JAPAN_GDV in placement loader file");
-				addSrceenShot("JAPAN_GDV value in Linesheet is:  " + JAPAN_GDV_value.getText()
+				addScreenShot("JAPAN_GDV value in Linesheet is:  " + JAPAN_GDV_value.getText()
 						+ "  after sending blank JAPAN_GDV in placement loader file", test, Capture);
 			}
 		}
@@ -763,7 +763,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 						+ "  after sending blank CHINA_GDV in placement loader file");
 				test.log(Status.INFO, "CHINA_GDV value in Linesheet is:  " + CHINA_GDV_value.getText()
 						+ "  after sending blank CHINA_GDV in placement loader file");
-				addSrceenShot("CHINA_GDV value in Linesheet is:  " + CHINA_GDV_value.getText()
+				addScreenShot("CHINA_GDV value in Linesheet is:  " + CHINA_GDV_value.getText()
 						+ "  after sending blank CHINA_GDV in placement loader file", test, Capture);
 			}
 		}
@@ -788,7 +788,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 						+ "  after sending blank CA_GDV in placement loader file");
 				test.log(Status.INFO, "CA_GDV value in Linesheet is:  " + CA_GDV_value.getText()
 						+ "  after sending blank CA_GDV in placement loader file");
-				addSrceenShot("CA_GDV value in Linesheet is:  " + CA_GDV_value.getText()
+				addScreenShot("CA_GDV value in Linesheet is:  " + CA_GDV_value.getText()
 						+ "  after sending blank CA_GDV in placement loader file", test, Capture);
 			}
 		}
@@ -813,7 +813,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 						+ "  after sending blank MALA_GDV in placement loader file");
 				test.log(Status.INFO, "MALA_GDV value in Linesheet is:  " + MALA_GDV_value.getText()
 						+ "  after sending blank MALA_GDV in placement loader file");
-				addSrceenShot("MALA_GDV value in Linesheet is:  " + MALA_GDV_value.getText()
+				addScreenShot("MALA_GDV value in Linesheet is:  " + MALA_GDV_value.getText()
 						+ "  after sending blank MALA_GDV in placement loader file", test, Capture);
 			}
 		}
@@ -948,7 +948,7 @@ public class CustomLoaders_page extends WMS_WebDriverUtilities {
 			if (ColumnHeader.equals("Yield/Usage")) {
 				System.out.println("USAGE/ YIELD value in Linesheet is:  "+usage_value.getText()+"  after sending blank USAGE/ YIELD value in placement loader file");
 				test.log(Status.INFO,"USAGE/ YIELD value in Linesheet is:  "+usage_value.getText()+"  after sending blank USAGE/ YIELD value in placement loader file");
-				addSrceenShot("USAGE/ YIELD value in Linesheet is:  "+usage_value.getText()+"  after sending blank USAGE/ YIELD value in placement loader file", test, Capture);
+				addScreenShot("USAGE/ YIELD value in Linesheet is:  "+usage_value.getText()+"  after sending blank USAGE/ YIELD value in placement loader file", test, Capture);
 			}
 		}	
 	}

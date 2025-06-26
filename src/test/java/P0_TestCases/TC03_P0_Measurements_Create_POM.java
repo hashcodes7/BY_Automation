@@ -69,44 +69,44 @@ public  class TC03_P0_Measurements_Create_POM extends WMS_TestBase{
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MEASUREMENTS.menu());
 			test.log(Status.INFO, "Clicked on Measurements menu ");
-			addSrceenShot("Clicked on Measurements menu ", test, Capture);
+			addScreenShot("Clicked on Measurements menu ", test, Capture);
 			
 			Thread.sleep(5000);
 
 			MeasurementsPage.SelectTemplate(template);
 			test.log(Status.INFO, "Template is selected: "+template);
-			addSrceenShot("Template is selected ", test, Capture);
+			addScreenShot("Template is selected ", test, Capture);
 
 			MeasurementsPage.Create_New_POMpoints(pomdescription,pomId,test);
 			test.log(Status.INFO, "New POM template created with name:  "+pomdescription);
-			addSrceenShot("New POM template created  ", test, Capture);
+			addScreenShot("New POM template created  ", test, Capture);
 			
 			Thread.sleep(5000);
 			MeasurementsPage.POM_Template_Validation(pomdescription,test);
 			test.log(Status.PASS, "Validated New POM template "+pomdescription);
-			addSrceenShot("Validated New POM template  ", test, Capture);
+			addScreenShot("Validated New POM template  ", test, Capture);
 			
 			MeasurementsPage.Delete_pom(pomdescription, test);
 			test.log(Status.PASS, "Deleted POM template "+pomdescription);
-			addSrceenShot("POM template deleted ", test, Capture);
+			addScreenShot("POM template deleted ", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 						
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

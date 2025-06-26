@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="E2E_Testcases.TC292_P0_E2E_CreateColors_Solid">
+      <class name="E2E_Testcases.TC287_P0_E2E_ProductCreation">
         <methods>
-          <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
           <include name="setUpend"/>
+          <include name="P0_TC02_E2E_ProductCreation" invocation-numbers="0"/>
           <include name="CreateSummary"/>
-          <include name="P0_TC_292_E2E_CreateColors_Solid"/>
         </methods>
-      </class> <!-- E2E_Testcases.TC292_P0_E2E_CreateColors_Solid -->
+      </class> <!-- E2E_Testcases.TC287_P0_E2E_ProductCreation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

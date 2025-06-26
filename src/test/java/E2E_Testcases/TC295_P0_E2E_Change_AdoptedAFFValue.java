@@ -72,59 +72,59 @@ public class TC295_P0_E2E_Change_AdoptedAFFValue extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "left panel opened");
-			addSrceenShot("left panel opened", test, Capture);
+			addScreenShot("left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Thread.sleep(10000);
 			LineSheetEditPage.changeLocalHub_Value(filtercolorway,localhub,test);
 			test.log(Status.INFO, "value for Seasonal groups Local hub selected is: "+localhub);
 			test.log(Status.INFO, "colorway value filtered: "+filtercolorway);
-			addSrceenShot("local hub selected and colorway value filtered", test, Capture);
+			addScreenShot("local hub selected and colorway value filtered", test, Capture);
 			Thread.sleep(5000);
 			
 			LineSheetEditPage.Affiliate_selection(affiliate,test);
 			test.log(Status.INFO, " Affiliate Selected: "+affiliate);
 			System.out.println(" Affiliate Selected: "+affiliate);
-			addSrceenShot("Affiliate Selected", test, Capture);
+			addScreenShot("Affiliate Selected", test, Capture);
 			Thread.sleep(5000);
 			
 			LineSheetEditPage.Change_AdoptedAFF_Value(test);
 			test.log(Status.PASS, "Adopted AFF value is changed to Yes");
 			System.out.println("Adopted AFF value is changed to Yes");
-			addSrceenShot("Adopted AFF value is changed to Yes", test, Capture);
+			addScreenShot("Adopted AFF value is changed to Yes", test, Capture);
 	
 //			dashboardPage.closeLeftPanel();
 //			System.out.println("Clicked on close Left plane");
-//			addSrceenShot("Clicked on close Left plane", test, Capture);
+//			addScreenShot("Clicked on close Left plane", test, Capture);
 //			
 //			dashboardPage.Logout();
 //			System.out.println("Logout successful");
-//			addSrceenShot("Clicked on Logout successful", test, Capture);
+//			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

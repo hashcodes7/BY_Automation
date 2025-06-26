@@ -87,7 +87,7 @@ public class TC10_P0_Material_CreateFinishRecordsTest extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers material module from 145 to 148");
 
@@ -96,54 +96,54 @@ public class TC10_P0_Material_CreateFinishRecordsTest extends WMS_TestBase {
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Material");
 			test.log(Status.INFO, "Clicked on Material");
-			addSrceenShot("Clicked on Material", test, Capture);
+			addScreenShot("Clicked on Material", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.createNewMaterial();
 			System.out.println("Clicked on Create New Material");
 			test.log(Status.INFO, "Clicked on Create New Material");
-			addSrceenShot("Clicked on Create New Material", test, Capture);
+			addScreenShot("Clicked on Create New Material", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.chooseFinishRecipeType(typeOfFinishRecipe);
 			System.out.println("Fabric type was choosen");
 			test.log(Status.INFO, "Fabric type was choosen: " + typeOfFinishRecipe);
-			addSrceenShot("Fabric type was choosen", test, Capture);
+			addScreenShot("Fabric type was choosen", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.enterFinishRecipeDescription(finishRecipeDescription);
 			System.out.println("Entered Finish Recipe Description: " + finishRecipeDescription);
 			test.log(Status.INFO, "Entered Finish Recipe Description: " + finishRecipeDescription);
-			addSrceenShot("Entered Finish Recipe Description: ", test, Capture);
+			addScreenShot("Entered Finish Recipe Description: ", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.enterSeasonFirstIntroduced(seasonFirstIntroduced);
 			System.out.println("Entered Season First Introduced: " + seasonFirstIntroduced);
 			test.log(Status.INFO, "Entered Season First Introduced: " + seasonFirstIntroduced);
-			addSrceenShot("Entered Season First Introduced", test, Capture);
+			addScreenShot("Entered Season First Introduced", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.enterUOM(uom);
 			System.out.println("Entered UOM: " + uom);
 			test.log(Status.INFO, "Entered UOM: " + uom);
-			addSrceenShot("Entered UOM", test, Capture);
+			addScreenShot("Entered UOM", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.saveMaterial();
 			System.out.println("Clicked on Save");
 			test.log(Status.INFO, "Clicked on Save");
-			addSrceenShot("Clicked on Save", test, Capture);
+			addScreenShot("Clicked on Save", test, Capture);
 			WaitforPage(4000);
 
 			// Verify that the new finish record is created
@@ -151,26 +151,26 @@ public class TC10_P0_Material_CreateFinishRecordsTest extends WMS_TestBase {
 			if (isRecordCreated) {
 				System.out.println("New finish record is created successfully.");
 				test.log(Status.PASS, "New finish record is created successfully.");
-				addSrceenShot("New finish record is created successfully", test, Capture);
+				addScreenShot("New finish record is created successfully", test, Capture);
 			} else {
 				System.out.println("Failed to create new finish record.");
 				test.log(Status.FAIL, "Failed to create new finish record.");
-				addSrceenShot("Failed to create new finish record", test, Capture);
+				addScreenShot("Failed to create new finish record", test, Capture);
 			}
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

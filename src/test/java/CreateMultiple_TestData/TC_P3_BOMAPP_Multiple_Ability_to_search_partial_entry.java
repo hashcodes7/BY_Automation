@@ -97,47 +97,47 @@ public class TC_P3_BOMAPP_Multiple_Ability_to_search_partial_entry extends WMS_T
 					dashboardPage.openLeftPanel();
 					System.out.println("Clicked on open Left panel");
 					test.log(Status.INFO, "Clicked on open Left panel");
-					addSrceenShot("Clicked on open Left panel", test, Capture);
+					addScreenShot("Clicked on open Left panel", test, Capture);
 
 					// Navigate to BOM App
 					BOMPage.navigateToBOMApp();
 					test.log(Status.INFO, "Navigated to BOM App");
-					addSrceenShot("Navigated to BOM App", test, Capture);
+					addScreenShot("Navigated to BOM App", test, Capture);
 
 					// Login to BOM App
 					BOMPage.login(username, password,test);
-					addSrceenShot("Logged into BOM App", test, Capture);
+					addScreenShot("Logged into BOM App", test, Capture);
 				}
 
 				// Select Season and Search for PC9 code
 				BOMPage.selectSeason(season);
 				test.log(Status.INFO, "Season selected: " + season);
-				addSrceenShot("Season selected", test, Capture);
+				addScreenShot("Season selected", test, Capture);
 
 				BOMPage.searchForPC9(PC9Code, test);
 				test.log(Status.INFO, "Searched for partial entry: " + PC9Code);
-				addSrceenShot("Searched for partial entry", test, Capture);
+				addScreenShot("Searched for partial entry", test, Capture);
 
 				// Verify search results
 				boolean isSearchSuccessful = BOMPage.verifySearchResults(PC9Code, test);
 				if (isSearchSuccessful) {
 					test.log(Status.PASS, "Search results are displayed correctly for partial entry: " + PC9Code);
-					addSrceenShot("Search results displayed", test, Capture);
+					addScreenShot("Search results displayed", test, Capture);
 				} else {
 					test.log(Status.FAIL, "No results found for partial entry: " + PC9Code);
-					addSrceenShot("No results found", test, Capture);
+					addScreenShot("No results found", test, Capture);
 				}
 
 				if (i == testData.length - 1) {
 					// Last iteration, perform logout
 					BOMPage.logout(test);
 					test.log(Status.INFO, "Logged out of BOM App");
-					addSrceenShot("Logged out of BOM App", test, Capture);
+					addScreenShot("Logged out of BOM App", test, Capture);
 				}
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-				test.log(Status.FAIL, "Test case failed due to application slowness");
+				test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 				throw e;
 			}
 

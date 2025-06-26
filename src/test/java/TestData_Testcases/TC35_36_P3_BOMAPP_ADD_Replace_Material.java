@@ -96,41 +96,41 @@ public class TC35_36_P3_BOMAPP_ADD_Replace_Material extends WMS_TestBase {
 			
 			System.out.println("Login to flex PLM application successfully ");
 			test.log(Status.INFO, "Login to flex PLM application successfully " + adimin_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			BOMPage.navigateToBOMApp();
 			test.log(Status.INFO, "Navigated to BOM App");
-			addSrceenShot("Navigated to BOM App", test, Capture);
+			addScreenShot("Navigated to BOM App", test, Capture);
 
 			BOMPage.login(username, password, test);
-			addSrceenShot("Logged into BOM App", test, Capture);
+			addScreenShot("Logged into BOM App", test, Capture);
 
 			// Select Season and Search for PC9 code
 			BOMPage.selectSeason(season);
 			test.log(Status.INFO, "Season selected: " + season);
-			addSrceenShot("Season selected", test, Capture);
+			addScreenShot("Season selected", test, Capture);
 
 //			String PC9Code = "0WPOB-0001";
 			BOMPage.searchForPC9(PC9Code, test);
 			test.log(Status.INFO, "Searched for PC9: " + PC9Code);
-			addSrceenShot("Searched for PC9", test, Capture);
+			addScreenShot("Searched for PC9", test, Capture);
 
 			// Choose Material Type
 //			String materialType = "Fabric";
 			BOMPage.selectMaterialType(materialType, test);
 			test.log(Status.INFO, "Material type selected: " + materialType);
-			addSrceenShot("Material type selected", test, Capture);
+			addScreenShot("Material type selected", test, Capture);
 
 			// Add Material Type Subsection
 			BOMPage.addMaterialSubsection(test);
 			test.log(Status.INFO, "Added  " + materialType + " subsection");
-			addSrceenShot("Added " + materialType + " subsection", test, Capture);
+			addScreenShot("Added " + materialType + " subsection", test, Capture);
 
 			// Fill in Component Details
 //			String component = "biasTape";
@@ -140,44 +140,44 @@ public class TC35_36_P3_BOMAPP_ADD_Replace_Material extends WMS_TestBase {
 
 			BOMPage.fillComponentDetails(component, componentLocation, remarks, quantity, test);
 			test.log(Status.INFO, "Filled component details");
-			addSrceenShot("Filled component details", test, Capture);
+			addScreenShot("Filled component details", test, Capture);
 
 			// Add Subsection
 			BOMPage.clickAddSubsection(test);
 			test.log(Status.INFO, "Clicked on Add Subsection");
-			addSrceenShot("Clicked on Add Subsection", test, Capture);
+			addScreenShot("Clicked on Add Subsection", test, Capture);
 
 			// Find Material by Name
 //			String newMaterial = "FA118683";
 			BOMPage.findMaterialByName(newMaterial, test);
 			test.log(Status.INFO, "Searched for the new material: " + newMaterial);
-			addSrceenShot("Searched for the new material", test, Capture);
+			addScreenShot("Searched for the new material", test, Capture);
 
 			// Drag Material into Subsection
 			BOMPage.dragMaterialIntoSubsection(newMaterial, test);
 			test.log(Status.INFO, "Dragged material into subsection");
 			test.log(Status.PASS, "New material was Added to the BOM successfully");
-			addSrceenShot("material was Added successfully", test, Capture);
+			addScreenShot("material was Added successfully", test, Capture);
 
 			// Find Material by Name
 //			String replaceMaterial = "FA167434";
 			BOMPage.findReplaceMaterialByName(replaceMaterial, test);
 			test.log(Status.INFO, "Searched for the replace material: " + replaceMaterial);
-			addSrceenShot("Searched for replace material", test, Capture);
+			addScreenShot("Searched for replace material", test, Capture);
 
 			// Drag Material into Subsection
 			BOMPage.replaceMaterialIntoDropZonelistItem(replaceMaterial, test);
 			test.log(Status.INFO, "material was replaced to the BOM successfully");
 			test.log(Status.PASS, "material was replaced to the BOM successfully");
-			addSrceenShot("material was replaced to the BOM successfully", test, Capture);
+			addScreenShot("material was replaced to the BOM successfully", test, Capture);
 
 			BOMPage.logout(test);
 			test.log(Status.INFO, "Logged out of BOM App");
-			addSrceenShot("Logged out of BOM App", test, Capture);
+			addScreenShot("Logged out of BOM App", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

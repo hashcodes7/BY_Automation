@@ -835,7 +835,7 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 		if(Actual_colorname.equals(Expected_colorname)) {
 			System.out.println("Actual color Name is:  "+Actual_colorname+"  and the Expected color name is : " +Expected_colorname+" Both  are Matching ");
 			test.log(Status.INFO,"Actual color Name is:  "+Actual_colorname+"  and the Expected color name is : " +Expected_colorname+" Both   are Matching ");
-			addSrceenShot("Actual color Name is:  "+Actual_colorname+"  and the Expected color name is : " +Expected_colorname+" Both are Matching ", test, Capture);
+			addScreenShot("Actual color Name is:  "+Actual_colorname+"  and the Expected color name is : " +Expected_colorname+" Both are Matching ", test, Capture);
 		
 		}
 		
@@ -858,7 +858,7 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 		if(filtered_Color.getText().contains(Expected_colorname)) {
 			System.out.println("The copied color is present in Solid colors list");
 			test.log(Status.INFO,"The copied color is present in Solid colors list");
-			addSrceenShot("The copied color is present in Solid colors list ", test, Capture);
+			addScreenShot("The copied color is present in Solid colors list ", test, Capture);
 		
 		}
 		
@@ -915,7 +915,7 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 		int seasonalcountlook=seasonalLooklist.size()-1;
 		System.out.println("After deleting Count of row in seasonal look MOA table is: "+ seasonalcountlook);
 		test.log(Status.INFO,"After deleting Count of row in seasonal look MOA table is: "+ seasonalcountlook);
-		addSrceenShot("After deleting Count of row in seasonal look MOA table is: "+ seasonalcountlook, test, Capture);
+		addScreenShot("After deleting Count of row in seasonal look MOA table is: "+ seasonalcountlook, test, Capture);
 		
 		Looklink.click();
 		
@@ -923,12 +923,12 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 		int countlook=Looklist.size()-1;
 		System.out.println("After deleting looks  Count of row in look MOA table is: "+ countlook);
 		test.log(Status.INFO,"After deleting looks Count of row in  look MOA table is: "+ countlook);
-		addSrceenShot("After deleting looks Count of row in  look MOA table is: "+ countlook, test, Capture);
+		addScreenShot("After deleting looks Count of row in  look MOA table is: "+ countlook, test, Capture);
 		
 		if(countlook==seasonalcountlook) {
 			System.out.println("For both seasonal look and Look MOA table the count is same after deleting");
 			test.log(Status.INFO,"For both seasonal look and Look MOA table the count is same after deleting");
-			addSrceenShot("For both seasonal look and Look MOA table the count is same after deleting ", test, Capture);
+			addScreenShot("For both seasonal look and Look MOA table the count is same after deleting ", test, Capture);
 		}
 		
 	}
@@ -974,7 +974,7 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 				PrimaryIndicator_checkbox.click();
 				System.out.println("for all look Primary Indicator is set to NO");
 				test.log(Status.INFO,"for all look Primary Indicator is set to NO");
-				addSrceenShot("for all look Primary Indicator is set to NO", test, Capture);		
+				addScreenShot("for all look Primary Indicator is set to NO", test, Capture);		
 			}
 		}
 		SaveButton.click();
@@ -985,12 +985,12 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 			PrimaryIndicator_checkbox.click();
 			System.out.println("Primary Indicator is set to Yes");
 			test.log(Status.INFO,"Primary Indicator is set to Yes");
-			addSrceenShot("Primary Indicator is set to Yes", test, Capture);
+			addScreenShot("Primary Indicator is set to Yes", test, Capture);
 			
 		}else {
 			System.out.println("Primary Indicator is already Yes");
 			test.log(Status.INFO,"Primary Indicator is already Yes");
-			addSrceenShot("Primary Indicator is already Yes", test, Capture);
+			addScreenShot("Primary Indicator is already Yes", test, Capture);
 		}
 		Thread.sleep(3000);
 		
@@ -1005,7 +1005,7 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 		if(!FabricMillfield.getText().isEmpty()) {
 			System.out.println("Fabric mill value is auto populating and the value is : "+FabricMillfield.getText());
 			test.log(Status.INFO,"Fabric mill value is auto populating and the value is : "+FabricMillfield.getText());
-			addSrceenShot("Fabric mill value is auto populating and the value is : "+FabricMillfield.getText(), test, Capture);
+			addScreenShot("Fabric mill value is auto populating and the value is : "+FabricMillfield.getText(), test, Capture);
 		}
 		
 		

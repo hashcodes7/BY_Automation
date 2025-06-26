@@ -93,13 +93,13 @@ public class TC03_P0_Creation_Of_Size_Grid_In_Library extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers Sizing module from 231 to 235");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully" + Administrator_URL);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -107,79 +107,79 @@ public class TC03_P0_Creation_Of_Size_Grid_In_Library extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_SIZEGRID.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Size Grid");
 			test.log(Status.INFO, "Clicked on Size Grid");
 			WaitforPage(4000);
 
 			sizePage.clikOnNewBtn();
 			test.log(Status.INFO, "Clicked on New button to create New Size Grid");
-			addSrceenShot("New Size Grid creation started", test, Capture);
+			addScreenShot("New Size Grid creation started", test, Capture);
 
 //			String sizeGridName = "Demo_sizeGrid02";
 			sizePage.enterSizeGridName(sizeGridName, test);
 			test.log(Status.INFO, "Entered Size Scale Name: "+sizeGridName);
-			addSrceenShot("Entered Size Scale Name", test, Capture);
+			addScreenShot("Entered Size Scale Name", test, Capture);
 
 //			String code = "Code123";
 			sizePage.enterCode(code, test);
 			test.log(Status.INFO, "Entered Code: "+code);
-			addSrceenShot("Entered Code", test, Capture);
+			addScreenShot("Entered Code", test, Capture);
 
 //			String sampleSize = "22";
 			sizePage.enterSampleSize(sampleSize, test);
 			test.log(Status.INFO, "Entered Sample Size: "+sampleSize);
-			addSrceenShot("Entered Sample Size", test, Capture);
+			addScreenShot("Entered Sample Size", test, Capture);
 
 //			String coreOrSeasonal = "Core";
 			sizePage.selectCoreOrSeasonal(coreOrSeasonal, test);
 			test.log(Status.INFO, "Selected Core/Seasonal: "+coreOrSeasonal);
-			addSrceenShot("Selected Core/Seasonal", test, Capture);
+			addScreenShot("Selected Core/Seasonal", test, Capture);
 
 			sizePage.clickOnSizeScale();
 			test.log(Status.INFO, "Clicked On SizeScale");
-			addSrceenShot("Clicked On SizeScale", test, Capture);
+			addScreenShot("Clicked On SizeScale", test, Capture);
 
 //			String SizeScale = "26X29-44X32";
 			sizePage.selectSizeScale(SizeScale, test);
 			test.log(Status.INFO, "Selected SizeScale: "+SizeScale);
-			addSrceenShot("Selected SizeScale", test, Capture);
+			addScreenShot("Selected SizeScale", test, Capture);
 
 //			String sizeGridStatus = "Active";
 			sizePage.selectSizeGridStatus(sizeGridStatus, test);
 			test.log(Status.INFO, "Selected Size Grid Status: "+sizeGridStatus);
-			addSrceenShot("Selected Size Grid Status", test, Capture);
+			addScreenShot("Selected Size Grid Status", test, Capture);
 
 			// Save the new size grid
 			sizePage.clickSaveBtn(test);
 			test.log(Status.INFO, "Clicked Save button to save the new Size Grid");
-			addSrceenShot("New Size Grid saved", test, Capture);
+			addScreenShot("New Size Grid saved", test, Capture);
 		    test.log(Status.PASS, "New Size Grid '" + sizeGridName + "' created successfully");
 
 
 			String actiondpdwnValue = "View / Update Size Grid";
 			sizePage.viewAndUpdateSizeGrid(actiondpdwnValue, sizeGridName, test);
 			test.log(Status.INFO, "Sizes attribute showed sizes you selected on View/Update Size Grid page.");
-			addSrceenShot("Viewed and updated Size Grid", test, Capture);
+			addScreenShot("Viewed and updated Size Grid", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

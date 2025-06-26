@@ -85,27 +85,27 @@ public class TC06_P0_seasonGroupAssociationsLevisFemaleAccessories extends WMS_T
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers season module from 223 to 224");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: "+Administrator_URL);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 			Thread.sleep(5000);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(),
 					MainMenuEnum.LIBRARIES_SEASONGROUPASSOCIATION.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on season group association");
 			test.log(Status.INFO, "Clicked on season group association");
 			WaitforPage(4000);
@@ -113,36 +113,36 @@ public class TC06_P0_seasonGroupAssociationsLevisFemaleAccessories extends WMS_T
 //			String searchValue = "Levi's S1 2022 Female Accessories";
 			seasonPage.quickSearchText(searchValue, test);
 			test.log(Status.INFO, "Performed quick search with value: " + searchValue);
-			addSrceenShot("Performed quick search", test, Capture);
+			addScreenShot("Performed quick search", test, Capture);
 
 			seasonPage.verifyAffiliatevalues(test);
 			System.out.println("Verified affiliate values");
 			test.log(Status.PASS, "Verified affiliate values");
-			addSrceenShot("Verified affiliate values", test, Capture);
+			addScreenShot("Verified affiliate values", test, Capture);
 
 			seasonPage.verifyLocalHubvalues(test);
 			System.out.println("Verified local hub values");
 			test.log(Status.PASS, "Verified local hub values");
-			addSrceenShot("Verified local hub values", test, Capture);
+			addScreenShot("Verified local hub values", test, Capture);
 
 			seasonPage.verifyGlobalvalues(test);
 			System.out.println("Verified global values");
 			test.log(Status.PASS, "Verified global values");
-			addSrceenShot("Verified global values", test, Capture);
+			addScreenShot("Verified global values", test, Capture);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

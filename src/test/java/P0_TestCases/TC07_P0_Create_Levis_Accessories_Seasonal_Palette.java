@@ -90,83 +90,83 @@ public class TC07_P0_Create_Levis_Accessories_Seasonal_Palette extends WMS_TestB
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 			
 			test.log(Status.INFO, "This test case covers season module 225");
 
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully");
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 
 			Thread.sleep(5000);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PALETTE.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on palette");
 			test.log(Status.INFO, "Clicked on palette");
 			WaitforPage(4000);
 
 			palettePage.clikOnNewBtn();
 			test.log(Status.INFO, "Clicked on New button to create Palette");
-			addSrceenShot("New palette creation started", test, Capture);
+			addScreenShot("New palette creation started", test, Capture);
 
 //			String seasonType = "Dockers S3 2021 Female Bottoms";
 			palettePage.selectSeason(seasonType, test);
 			test.log(Status.INFO, "Season is chosen: " + seasonType);
-			addSrceenShot("Selected the season", test, Capture);
+			addScreenShot("Selected the season", test, Capture);
 
 			palettePage.enterName(seasonType, test);
 			test.log(Status.INFO, "Entered name: " + seasonType);
-			addSrceenShot("Entered name", test, Capture);
+			addScreenShot("Entered name", test, Capture);
 
 //			String prodCat1 = "Cold Winter";
 			palettePage.selectProdCat1(prodCat1, test);
 			test.log(Status.INFO, "Product Category 1 is chosen: " + prodCat1);
-			addSrceenShot("Selected Product Category 1", test, Capture);
+			addScreenShot("Selected Product Category 1", test, Capture);
 
 //			String prodCat2 = "Blouses";
 			palettePage.selectProdCat2(prodCat2, test);
 			test.log(Status.INFO, "Product Category 2 is chosen: " + prodCat2);
-			addSrceenShot("Selected Product Category 2", test, Capture);
+			addScreenShot("Selected Product Category 2", test, Capture);
 
 //			String brand = "Dockers";
 			palettePage.selectBrand(brand, test);
 			test.log(Status.INFO, "Brand is chosen: " + brand);
-			addSrceenShot("Selected Brand", test, Capture);
+			addScreenShot("Selected Brand", test, Capture);
 
 //			String capsule = "501";
 			palettePage.selectCapsule(capsule, test);
 			test.log(Status.INFO, "Capsule is chosen: " + capsule);
-			addSrceenShot("Selected Capsule", test, Capture);
+			addScreenShot("Selected Capsule", test, Capture);
 
 //			String gender = "Female";
 			palettePage.selectGender(gender, test);
 			test.log(Status.INFO, "Gender is chosen: " + gender);
-			addSrceenShot("Selected Gender", test, Capture);
+			addScreenShot("Selected Gender", test, Capture);
 
 //			String category = "Tops";
 			palettePage.selectCategory(category, test);
 			test.log(Status.INFO, "Category is chosen: " + category);
-			addSrceenShot("Selected Category", test, Capture);
+			addScreenShot("Selected Category", test, Capture);
 
 //			String reverseSeason = "Yes";
 			palettePage.selectreverseSeason(reverseSeason, test);
 			test.log(Status.INFO, "Reverse Season is chosen: " + reverseSeason);
-			addSrceenShot("Selected Reverse Season", test, Capture);
+			addScreenShot("Selected Reverse Season", test, Capture);
 
 			palettePage.clikOnCreateBtn(test);
 			test.log(Status.INFO, "Clicked on Create button");
-			addSrceenShot("Clicked on Create button", test, Capture);
+			addScreenShot("Clicked on Create button", test, Capture);
 
 			// Verify New Palette Page is created
             boolean isPalettePageDisplayed = palettePage.isNewPalettePageDisplayed(test);
@@ -175,16 +175,16 @@ public class TC07_P0_Create_Levis_Accessories_Seasonal_Palette extends WMS_TestB
             dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

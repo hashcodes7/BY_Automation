@@ -83,33 +83,33 @@ public class TC_02_vendor_Master_Update extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_SUPPLIER.menu());
 			test.log(Status.INFO, "Clicked on Vendor menu ");
-			addSrceenShot("Clicked on Vendor menu ", test, Capture);
+			addScreenShot("Clicked on Vendor menu ", test, Capture);
 			Thread.sleep(4000);
 			
 //			String vendorId = "ACCESORIOS GLOBALES, S.A.  4965   GT";
 			vendorPage.vendorPage(test,vendorId);
 			test.log(Status.INFO, "Vendor page is opened");
-			addSrceenShot("Vendor page opened", test, Capture);
+			addScreenShot("Vendor page opened", test, Capture);
 			
 			vendorPage.vendorNameValidation(test);
 			test.log(Status.PASS, "Validation of vendor name is done");
-			addSrceenShot("Vendor name validation is done", test, Capture); 
+			addScreenShot("Vendor name validation is done", test, Capture); 
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

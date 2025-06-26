@@ -91,7 +91,7 @@ public class TC01_P0_Sourcing_PrimarySourceCreation extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers Product module from 236 to 238");
 
@@ -100,16 +100,16 @@ public class TC01_P0_Sourcing_PrimarySourceCreation extends WMS_TestBase {
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PRODUCT.menu(), true);
 			test.log(Status.INFO, "Clicked on Main menu of Libraries");
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on product ");
 			test.log(Status.INFO, "Clicked on product");
 			WaitforPage(4000);
@@ -118,7 +118,7 @@ public class TC01_P0_Sourcing_PrimarySourceCreation extends WMS_TestBase {
 			productPage.filterProductByName(productName);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			String primarySourceText = productPage.isPrimarySourceCreated(test);
 			if (primarySourceText != null) {
@@ -128,26 +128,26 @@ public class TC01_P0_Sourcing_PrimarySourceCreation extends WMS_TestBase {
 				test.log(Status.PASS, successMessage);
 				test.log(Status.PASS,
 						"Primary source is created with name as 'PC5Code - Primary' : " + primarySourceText);
-				addSrceenShot(successMessage, test, Capture);
+				addScreenShot(successMessage, test, Capture);
 
 			} else {
 				String failureMessage = "Primary source is NOT created";
 				System.out.println(failureMessage);
 				test.log(Status.FAIL, failureMessage);
-				addSrceenShot(failureMessage, test, Capture);
+				addScreenShot(failureMessage, test, Capture);
 			}
 			WaitforPage(4000);
 
 			productPage.selectSourcingTab();
 			System.out.println("Selected Sourcing tab");
 			test.log(Status.INFO, "Selected Sourcing tab");
-			addSrceenShot("Selected Sourcing tab", test, Capture);
+			addScreenShot("Selected Sourcing tab", test, Capture);
 			WaitforPage(4000);
 
 			productPage.clickOnSummary();
 			System.out.println("Clicked on Samples");
 			test.log(Status.INFO, "Clicked on Samples");
-			addSrceenShot("Clicked on Samples", test, Capture);
+			addScreenShot("Clicked on Samples", test, Capture);
 			WaitforPage(4000);
 
 			// Verify additional attributes
@@ -157,16 +157,16 @@ public class TC01_P0_Sourcing_PrimarySourceCreation extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

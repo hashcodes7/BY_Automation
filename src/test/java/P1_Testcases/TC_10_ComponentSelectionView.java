@@ -82,46 +82,46 @@ public class TC_10_ComponentSelectionView extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected:"+season, test, Capture);
+			addScreenShot("Season selected:"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			specificationPage.SelectColorway(test);
 			test.log(Status.INFO, "colorway selected");
-			addSrceenShot("colorway selected", test, Capture);
+			addScreenShot("colorway selected", test, Capture);
 			
 			specificationPage.SelectIncludeAllSources(test);
 			test.log(Status.INFO, "Include All Sources is selected");
-			addSrceenShot("Include All Sources selected", test, Capture); 
+			addScreenShot("Include All Sources selected", test, Capture); 
 			
 			specificationPage.clickOnApply(test);
-			addSrceenShot("colorway selected", test, Capture);
+			addScreenShot("colorway selected", test, Capture);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			specificationPage.validateLineSheet(test);
 			test.log(Status.PASS, "line sheet is loaded for the selected season");
-			addSrceenShot("line sheet is loaded for the selected season", test, Capture);
+			addScreenShot("line sheet is loaded for the selected season", test, Capture);
 			
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

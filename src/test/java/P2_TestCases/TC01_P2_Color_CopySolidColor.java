@@ -82,51 +82,51 @@ public class TC01_P2_Color_CopySolidColor extends WMS_TestBase {
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(2000);
 			
 			CNCP.SelectColorLook_colorpage(colormenu ,colorsubmenu,filtercolor, test);
 			System.out.println("color/look Selected ");
 			test.log(Status.INFO, " color/look Selected");
-			addSrceenShot("color/look Selected ", test, Capture);
+			addScreenShot("color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			CNCP.Click_Solids_Color();
 			System.out.println("Solid color page opened");
 			test.log(Status.INFO, " Solid color page opened");
-			addSrceenShot("Solid color page opened ", test, Capture);
+			addScreenShot("Solid color page opened ", test, Capture);
 			
 			Thread.sleep(2000);
 			CNCP.NavigateTo_CopyColorPage();
 			System.out.println("Navigated to copy color page");
 			test.log(Status.INFO, " Navigated to copy color page");
-			addSrceenShot("Navigated to copy color page", test, Capture);
+			addScreenShot("Navigated to copy color page", test, Capture);
 
 			Thread.sleep(2000);
 			CNCP.Copy_SolidColor(newcolorname);
 			System.out.println("Solid color copied");
 			test.log(Status.INFO, " Solid color copied");
-			addSrceenShot("Solid color copied", test, Capture);
+			addScreenShot("Solid color copied", test, Capture);
 		
 			Thread.sleep(2000);
 			CNCP.Validate_CopiedColor(newcolorname, test);
 			System.out.println("Validation successful for copy Solid color");
 			test.log(Status.PASS, " Validation successful for copy Solid color");
-			addSrceenShot("Validation successful for copy Solid color", test, Capture);
+			addScreenShot("Validation successful for copy Solid color", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

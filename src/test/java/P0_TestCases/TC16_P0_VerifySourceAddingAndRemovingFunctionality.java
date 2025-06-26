@@ -116,132 +116,132 @@ public class TC16_P0_VerifySourceAddingAndRemovingFunctionality extends WMS_Test
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			test.log(Status.INFO, "This test case covers sourcing module from 242 to 245");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + Administrator_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 			WaitforPage(4000);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(4000);
 
 //			String viewType1 = "Source Config - Link Source to Colorway";
 			lineSheetPage.selectViewDropdown(viewType1);
 			System.out.println("View type is choosen");
 			test.log(Status.INFO, "View type is choosen: " + viewType1);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 			WaitforPage(4000);
 
 //			String colorWayName = "SEASONAL BUCKET HAT";
 			lineSheetPage.filterProduct(colorWayName, test);
 			System.out.println("Filtred By Colorway name");
 			test.log(Status.INFO, "Filtred By Colorway name: " + colorWayName);
-			addSrceenShot("Filtred By Colorway name", test, Capture);
+			addScreenShot("Filtred By Colorway name", test, Capture);
 			WaitforPage(4000);
 
 //			List<String> vendorNames = Arrays.asList("ACCESORIOS GLOBALES, S.A.", "ACCESSORIES BAGS & COSMETICS",
 //					"DBL LEATHERS SA DE CV");
 			sourcingPage.selectVendors_FromList(vendorNames, test);
 			test.log(Status.INFO, "Selected vendors from Vendor List");
-			addSrceenShot("Selected vendors from Vendor List", test, Capture);
+			addScreenShot("Selected vendors from Vendor List", test, Capture);
 			WaitforPage(4000);
 
 			sourcingPage.clickOnSaveBtn();
 			System.out.println("Clicked On save button");
 			test.log(Status.INFO, "Clicked On Save button");
-			addSrceenShot("Clicked On Save button", test, Capture);
+			addScreenShot("Clicked On Save button", test, Capture);
 			WaitforPage(4000);
 
 			// Verify the view page after saving the linesheet
 			boolean isVendorListBlank = sourcingPage.isVendorListBlank();
 			test.log(Status.PASS, "Verification: Vendor List is blank: " + isVendorListBlank);
-			addSrceenShot("Vendor List is blank", test, Capture);
+			addScreenShot("Vendor List is blank", test, Capture);
 			WaitforPage(4000);
 
 			// Verify success message
 			sourcingPage.verifySuccessMessage(test);
 			test.log(Status.PASS, "Verified 'Source to Colorway Association Status' set as 'Success'.");
-			addSrceenShot("'Source to Colorway Association Status' set as 'Success'", test, Capture);
+			addScreenShot("'Source to Colorway Association Status' set as 'Success'", test, Capture);
 
 			sourcingPage.isNewSourceToColorwayAssociationCreated(vendorNames, test);
 			test.log(Status.PASS, "Verification: New source to colorway associations created");
-			addSrceenShot("New source to colorway associations created", test, Capture);
+			addScreenShot("New source to colorway associations created", test, Capture);
 			WaitforPage(4000);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(4000);
 
 			// Delink Source to Colorway
 //			String viewType2 = "Source Config - View/Edit/Remove Source to Colorway Link";
 			lineSheetPage.selectViewDropdown(viewType2);
 			test.log(Status.INFO, "Selected 'Source Config - View/Edit/Remove Source to Colorway Link' view");
-			addSrceenShot("Selected 'Source Config - View/Edit/Remove Source to Colorway Link' view", test, Capture);
+			addScreenShot("Selected 'Source Config - View/Edit/Remove Source to Colorway Link' view", test, Capture);
 			WaitforPage(4000);
 
 			lineSheetPage.filterProduct(colorWayName, test);
 			System.out.println("Filtred By Colorway name");
 			test.log(Status.INFO, "Filtred By Colorway name: " + colorWayName);
-			addSrceenShot("Filtred By Colorway name", test, Capture);
+			addScreenShot("Filtred By Colorway name", test, Capture);
 			
 //			String delinkSourceToColorway = "Yes";
 			sourcingPage.setDelinkSourceToColorway(vendorNames, test);
 			test.log(Status.PASS, "Verification:source to colorway associations removed");
-			addSrceenShot("Set 'Delink Source to Colorway' to Yes", test, Capture);
+			addScreenShot("Set 'Delink Source to Colorway' to Yes", test, Capture);
 			WaitforPage(4000);
 
 			lineSheetPage.selectViewDropdown(viewType1);
 			System.out.println("View type is choosen");
 			test.log(Status.INFO, "View type is choosen: " + viewType1);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 			WaitforPage(4000);
 			
 			lineSheetPage.clickOncolorwayNameLinkInLSC_View();
 			test.log(Status.INFO, "Clicked On colorway link" + viewType1);
-			addSrceenShot("Clicked On colorway link", test, Capture);
+			addScreenShot("Clicked On colorway link", test, Capture);
 			WaitforPage(4000);
 			
 			sourcingPage.isDelinkedSourceToColorwayAssociation(vendorNames, test);
 			test.log(Status.PASS, "Verification: Selected Vendors successfully delinked to Colorway");
-			addSrceenShot("Verification: Selected Vendors successfully delinked to Colorway", test, Capture);
+			addScreenShot("Verification: Selected Vendors successfully delinked to Colorway", test, Capture);
 			WaitforPage(4000);
 				
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

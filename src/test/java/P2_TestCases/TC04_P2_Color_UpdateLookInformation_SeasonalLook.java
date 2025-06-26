@@ -80,45 +80,45 @@ public class TC04_P2_Color_UpdateLookInformation_SeasonalLook extends WMS_TestBa
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(2000);
 			
 			CNCP.SelectSeasonalColorLook_colorpage(colormenu ,colorsubmenu,filtercolor, test);
 			System.out.println("Seasonal color/look Selected ");
 			test.log(Status.INFO, "Seasonal color/look Selected");
-			addSrceenShot("Seasonal color/look Selected ", test, Capture);
+			addScreenShot("Seasonal color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			CNCP.NavigateTo_EditLookInformationPage();
 			System.out.println("Navigated to Edit Look Information page");
 			test.log(Status.INFO, "Navigated to Edit Look Information page");
-			addSrceenShot("Navigated to Edit Look Information page", test, Capture);
+			addScreenShot("Navigated to Edit Look Information page", test, Capture);
 			Thread.sleep(2000);
 			
 			CNCP.Edit_LookInformation(finishformulaname,test);
 			System.out.println("Look Information is Added");
 			test.log(Status.INFO, "Look Information is Added");
-			addSrceenShot("Look Information is Added", test, Capture);
+			addScreenShot("Look Information is Added", test, Capture);
 			Thread.sleep(3000);
 			
 			CNCP.Validate_FabricMillvalue_LookInformation(test);
 			System.out.println("Validation successful for Fabricmill");
 			test.log(Status.PASS, "Validation successful for Fabricmill");
-			addSrceenShot("Validation successful for Fabricmill", test, Capture);
+			addScreenShot("Validation successful for Fabricmill", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

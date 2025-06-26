@@ -312,7 +312,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		Thread.sleep(3000);
 		FilteredProductName.click();
 		test.log(Status.INFO, "Filtered product by name: " + productName);
-		addSrceenShot("Filtered product by name", test, Capture);
+		addScreenShot("Filtered product by name", test, Capture);
 
 	}
 	public boolean isPC5DetailsPageDisplayed(ExtentTest test) throws InterruptedException {
@@ -331,7 +331,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 
 		boolean isDisplayed = driver.findElement(By.xpath("//span[normalize-space()='Product Details']")).isDisplayed();
 		test.log(Status.PASS, "PC5 Details Page displayed: " + isDisplayed);
-		addSrceenShot("PC5 Details Page displayed", test, Capture);
+		addScreenShot("PC5 Details Page displayed", test, Capture);
 
 		return isDisplayed;
 //		return driver.findElement(By.xpath("//span[normalize-space()='Product Details']")).isDisplayed();
@@ -347,7 +347,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		filterInput.sendKeys(productName);
 		Thread.sleep(3000);
 //		test.log(Status.INFO, "Filtered product by name: " + productName);
-//		addSrceenShot("Filtered product by name", test, Capture);
+//		addScreenShot("Filtered product by name", test, Capture);
 
 	}
 
@@ -358,31 +358,31 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(settingsIcon));
 		settingsIcon.click();
 		test.log(Status.INFO, "Clicked on Settings icon");
-		addSrceenShot("Clicked on Settings icon", test, Capture);
+		addScreenShot("Clicked on Settings icon", test, Capture);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(filterDropDown));
 		System.out.println("filterDropDown visibled");
 		test.log(Status.INFO, "Filter dropdown is visible");
-		addSrceenShot("Filter dropdown is visible", test, Capture);
+		addScreenShot("Filter dropdown is visible", test, Capture);
 
 		Actions actions = new Actions(driver);
 		actions.moveToElement(filterDropDown).click().perform();
 		System.out.println("filterDropDown clicked");
 		test.log(Status.INFO, "Clicked on Filter dropdown");
-		addSrceenShot("Clicked on Filter dropdown", test, Capture);
+		addScreenShot("Clicked on Filter dropdown", test, Capture);
 		Thread.sleep(5000);
 
 		actions.moveToElement(searchBox).click().sendKeys(filterName).perform();
 		System.out.println("Data entered in searchBox");
 		test.log(Status.INFO, "Entered data in searchBox: " + filterName);
-		addSrceenShot("Entered data in searchBox", test, Capture);
+		addScreenShot("Entered data in searchBox", test, Capture);
 
 		WebElement itemToSelect = new WebDriverWait(driver, 60)
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@role='option']")));
 		actions.moveToElement(itemToSelect).click().perform();
 		System.out.println("Item selected");
 		test.log(Status.INFO, "Item selected from dropdown");
-		addSrceenShot("Item selected from dropdown", test, Capture);
+		addScreenShot("Item selected from dropdown", test, Capture);
 	}
 
 	public void clickOnEditIcon(ExtentTest test) throws Exception {
@@ -392,7 +392,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(editFilterButton));
 		editFilterButton.click();
 		test.log(Status.INFO, "Clicked on Edit Icon");
-		addSrceenShot("Clicked on Edit Icon", test, Capture);
+		addScreenShot("Clicked on Edit Icon", test, Capture);
 
 	}
 
@@ -439,17 +439,17 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		Select selectvalue = new Select(staticDropDown);
 		selectvalue.selectByVisibleText(attributeValue);
 		test.log(Status.INFO, "Selected Attribute: " + attributeValue);
-		addSrceenShot("Selected Attribute", test, Capture);
+		addScreenShot("Selected Attribute", test, Capture);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colorwayNameTextBox));
 		colorwayNameTextBox.sendKeys(colorwayName);
 		test.log(Status.INFO, "Entered Colorway Name: " + colorwayName);
-		addSrceenShot("Entered Colorway Name", test, Capture);
+		addScreenShot("Entered Colorway Name", test, Capture);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(addButton));
 		addButton.click();
 		test.log(Status.INFO, "Clicked on Add button");
-		addSrceenShot("Clicked on Add button", test, Capture);
+		addScreenShot("Clicked on Add button", test, Capture);
 
 	}
 
@@ -459,7 +459,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(updateButton));
 		clickElement(updateButton);
 		test.log(Status.INFO, "Clicked on Update button");
-		addSrceenShot("Clicked on Update button", test, Capture);
+		addScreenShot("Clicked on Update button", test, Capture);
 
 	}
 
@@ -469,7 +469,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(returnButton));
 		clickElement(returnButton);
 		test.log(Status.INFO, "Clicked on Return button");
-		addSrceenShot("Clicked on Return button", test, Capture);
+		addScreenShot("Clicked on Return button", test, Capture);
 
 	}
 
@@ -480,20 +480,20 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(settingsIcon));
 		settingsIcon.click();
 		test.log(Status.INFO, "Clicked on Settings icon");
-		addSrceenShot("Clicked on Settings icon", test, Capture);
+		addScreenShot("Clicked on Settings icon", test, Capture);
 
 		Thread.sleep(4000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(filterDropDown));
 		System.out.println("filterDropDown visible");
 		test.log(Status.INFO, "Filter dropdown is visible");
-		addSrceenShot("Filter dropdown is visible", test, Capture);
+		addScreenShot("Filter dropdown is visible", test, Capture);
 
 		Thread.sleep(4000);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(filterDropDown).click().perform();
 		System.out.println("filterDropDown clicked");
 		test.log(Status.INFO, "Clicked on Filter dropdown");
-		addSrceenShot("Clicked on Filter dropdown", test, Capture);
+		addScreenShot("Clicked on Filter dropdown", test, Capture);
 
 	}
 
@@ -505,10 +505,10 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		boolean isPresent = searchCriteriaContainer.getText().contains(filterName);
 		if (isPresent) {
 			test.log(Status.PASS, "Filter is present in search criteria: " + filterName);
-			addSrceenShot("Filter is present in search criteria", test, Capture);
+			addScreenShot("Filter is present in search criteria", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Filter is not present in search criteria: " + filterName);
-			addSrceenShot("Filter is not present in search criteria", test, Capture);
+			addScreenShot("Filter is not present in search criteria", test, Capture);
 		}
 		return isPresent;
 
@@ -521,10 +521,10 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		boolean isPresent = searchCriteriaContainer.getText().contains(copyFilterName);
 		if (isPresent) {
 			test.log(Status.PASS, "Copy Filter is present in search criteria: " + copyFilterName);
-			addSrceenShot("Copy Filter is present in search criteria", test, Capture);
+			addScreenShot("Copy Filter is present in search criteria", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Copy Filter is not present in search criteria: " + copyFilterName);
-			addSrceenShot("Copy Filter is not present in search criteria", test, Capture);
+			addScreenShot("Copy Filter is not present in search criteria", test, Capture);
 		}
 		return isPresent;
 //		return searchCriteriaContainer.getText().contains(copyFilterName);
@@ -539,10 +539,10 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		boolean isUpdated = updatedFiltersElement.isDisplayed();
 		if (isUpdated) {
 			test.log(Status.PASS, "Filter was updated successfully");
-			addSrceenShot("Filter was updated successfully", test, Capture);
+			addScreenShot("Filter was updated successfully", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Filter was not updated successfully");
-			addSrceenShot("Filter was not updated successfully", test, Capture);
+			addScreenShot("Filter was not updated successfully", test, Capture);
 		}
 		return isUpdated;
 
@@ -554,7 +554,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 
 		String attributes = currentFiltersDiv.getText();
 		test.log(Status.INFO, "Retrieved current filter attributes: " + attributes);
-		addSrceenShot("Retrieved current filter attributes", test, Capture);
+		addScreenShot("Retrieved current filter attributes", test, Capture);
 		return attributes;
 //		return currentFiltersDiv.getText();
 
@@ -574,7 +574,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(filterNameField));
 		filterNameField.sendKeys(copyFilterName);
 		test.log(Status.INFO, "Entered new filter name: " + copyFilterName);
-		addSrceenShot("Entered new filter name", test, Capture);
+		addScreenShot("Entered new filter name", test, Capture);
 
 	}
 
@@ -584,7 +584,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(saveFilterButton));
 		saveFilterButton.click();
 		test.log(Status.INFO, "Clicked on Save Copied Filter button");
-		addSrceenShot("Clicked on Save Copied Filter button", test, Capture);
+		addScreenShot("Clicked on Save Copied Filter button", test, Capture);
 
 	}
 
@@ -602,7 +602,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 
 		String attributes = copyFiltersDiv.getText();
 		test.log(Status.INFO, "Retrieved copied filter attributes: " + attributes);
-		addSrceenShot("Retrieved copied filter attributes", test, Capture);
+		addScreenShot("Retrieved copied filter attributes", test, Capture);
 		return attributes;
 //		return copyFiltersDiv.getText();
 	}
@@ -613,7 +613,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(shareFilterButton));
 		clickElement(shareFilterButton);
 		test.log(Status.INFO, "Clicked on Share Filter button");
-		addSrceenShot("Clicked on Share Filter button", test, Capture);
+		addScreenShot("Clicked on Share Filter button", test, Capture);
 
 	}
 
@@ -624,11 +624,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Page title verified: " + actualTitle);
 			test.log(Status.PASS, "Page title verified: " + actualTitle);
-			addSrceenShot("Page title verified", test, Capture);
+			addScreenShot("Page title verified", test, Capture);
 		} else {
 			System.out.println("Page title mismatch. Expected: " + expectedTitle + ", but got: " + actualTitle);
 			test.log(Status.FAIL, "Page title mismatch. Expected: " + expectedTitle + ", but got: " + actualTitle);
-			addSrceenShot("Page title mismatch", test, Capture);
+			addScreenShot("Page title mismatch", test, Capture);
 		}
 	}
 
@@ -639,10 +639,10 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		boolean isShared = sharedFilterElement.isDisplayed();
 		if (isShared) {
 			test.log(Status.PASS, "Filter was shared successfully");
-			addSrceenShot("Filter was shared successfully", test, Capture);
+			addScreenShot("Filter was shared successfully", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Filter was not shared successfully");
-			addSrceenShot("Filter was not shared successfully", test, Capture);
+			addScreenShot("Filter was not shared successfully", test, Capture);
 		}
 		return isShared;
 //		return sharedFilterElement.isDisplayed();
@@ -654,12 +654,12 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(deleteFilterElement));
 		clickElement(deleteFilterElement);
 		test.log(Status.INFO, "Clicked on Delete Filter button");
-		addSrceenShot("Clicked on Delete Filter button", test, Capture);
+		addScreenShot("Clicked on Delete Filter button", test, Capture);
 
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		test.log(Status.INFO, "Accepted alert for Delete Filter");
-		addSrceenShot("Accepted alert for Delete Filter", test, Capture);
+		addScreenShot("Accepted alert for Delete Filter", test, Capture);
 	}
 
 	public boolean isFilterPresent(String filterName, ExtentTest test) throws Exception {
@@ -669,34 +669,34 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(settingsIcon));
 		settingsIcon.click();
 		test.log(Status.INFO, "Clicked on Settings icon");
-		addSrceenShot("Clicked on Settings icon", test, Capture);
+		addScreenShot("Clicked on Settings icon", test, Capture);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(filterDropDown));
 		System.out.println("filterDropDown visibled");
 		test.log(Status.INFO, "Filter dropdown is visible");
-		addSrceenShot("Filter dropdown is visible", test, Capture);
+		addScreenShot("Filter dropdown is visible", test, Capture);
 
 		Thread.sleep(4000);
 		Actions actions = new Actions(driver);
 		actions.moveToElement(filterDropDown).click().perform();
 		System.out.println("filterDropDown clicked");
 		test.log(Status.INFO, "Clicked on Filter dropdown");
-		addSrceenShot("Clicked on Filter dropdown", test, Capture);
+		addScreenShot("Clicked on Filter dropdown", test, Capture);
 
 		actions.moveToElement(searchBox).click().sendKeys(filterName).perform();
 		System.out.println("Data entered in searchBox");
 		test.log(Status.INFO, "Entered data in searchBox: " + filterName);
-		addSrceenShot("Entered data in searchBox", test, Capture);
+		addScreenShot("Entered data in searchBox", test, Capture);
 
 		for (WebElement filter : currentFilters) {
 			if (filter.getText().equals(filterName)) {
 				test.log(Status.FAIL, "Filter is still present: " + filterName);
-				addSrceenShot("Filter is still present", test, Capture);
+				addScreenShot("Filter is still present", test, Capture);
 				return true;
 			}
 		}
 		test.log(Status.PASS, "Filter is not present: " + filterName);
-		addSrceenShot("Filter is not present", test, Capture);
+		addScreenShot("Filter is not present", test, Capture);
 		return false;
 	}
 
@@ -773,7 +773,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(settingsIcon));
 		settingsIcon.click();
 		test.log(Status.INFO, "Clicked On settings Icon ");
-		addSrceenShot("Clicked On settings Icon", test, Capture);
+		addScreenShot("Clicked On settings Icon", test, Capture);
 
 		Thread.sleep(4000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(globalDropDown));
@@ -785,14 +785,14 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 //		actions.moveToElement(SeasonGroups_Global_value).click().perform();
 		actions.moveToElement(option).click().perform();
 		test.log(Status.INFO, "Season Group As Global chosen: " + globalVaue);
-		addSrceenShot("Season Group As Global chosen", test, Capture);
+		addScreenShot("Season Group As Global chosen", test, Capture);
 
 		Thread.sleep(4000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(applyButton));
 		applyButton.click();
 		test.log(Status.INFO, "Clicked On Apply Button");
-		addSrceenShot("Clicked On Apply Button", test, Capture);
+		addScreenShot("Clicked On Apply Button", test, Capture);
 
 		Thread.sleep(4000);
 
@@ -829,11 +829,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 
 					System.out.println("Adopted? GB value changed to Yes");
-					addSrceenShot("Adopted? GB value changed to Yes", test, Capture);
+					addScreenShot("Adopted? GB value changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Adopted? GB value is already Yes, no change needed");
-					addSrceenShot("Adopted? GB value is already Yes, no change needed", test, Capture);
+					addScreenShot("Adopted? GB value is already Yes, no change needed", test, Capture);
 
 				}
 			}
@@ -867,11 +867,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			test.log(Status.INFO, "Clicked On Save Button");
 			Thread.sleep(5000);
 			System.out.println("Adopted? LH value changed to Yes");
-			addSrceenShot("Adopted? LH value changed to Yes", test, Capture);
+			addScreenShot("Adopted? LH value changed to Yes", test, Capture);
 
 		} else {
 			System.out.println("Adopted? LH value is already Yes, no change needed");
-			addSrceenShot("Adopted? LH value is already Yes, no change needed", test, Capture);
+			addScreenShot("Adopted? LH value is already Yes, no change needed", test, Capture);
 
 		}
 	}
@@ -901,11 +901,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			test.log(Status.INFO, "Clicked On Save Button");
 			Thread.sleep(5000);
 			System.out.println("Adopted? AFF value changed to Yes");
-			addSrceenShot("Adopted? AFF value changed to Yes", test, Capture);
+			addScreenShot("Adopted? AFF value changed to Yes", test, Capture);
 
 		} else {
 			System.out.println("Adopted? AFF value is already Yes, no change needed");
-			addSrceenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
+			addScreenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
 
 		}
 	}
@@ -924,11 +924,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			String displayedProduct = productElement.getText();
 			System.out.println("Displayed product: " + displayedProduct);
 			test.log(Status.PASS, "Displayed product: " + displayedProduct);
-			addSrceenShot("Displayed product", test, Capture);
+			addScreenShot("Displayed product", test, Capture);
 			return displayedProduct;
 		} else {
 			test.log(Status.FAIL, "Product element not displayed.");
-			addSrceenShot("Product element not displayed", test, Capture);
+			addScreenShot("Product element not displayed", test, Capture);
 			return null;
 		}
 	}
@@ -940,7 +940,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(settingsIcon));
 		settingsIcon.click();
 		test.log(Status.INFO, "Clicked On settings Icon ");
-		addSrceenShot("Clicked On settings Icon", test, Capture);
+		addScreenShot("Clicked On settings Icon", test, Capture);
 
 		Thread.sleep(4000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(localHubDropDown));
@@ -951,12 +951,12 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		WebElement option = driver.findElement(By.xpath("//span[@title='" + localHubValue.trim() + "']"));
 		actions.moveToElement(option).click().perform();
 		test.log(Status.INFO, "Season Group As LocalHub chosen: " + localHubValue);
-		addSrceenShot("Season Group As LocalHub chosen", test, Capture);
+		addScreenShot("Season Group As LocalHub chosen", test, Capture);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(applyButton));
 		applyButton.click();
 		test.log(Status.INFO, "Clicked On Apply Button");
-		addSrceenShot("Clicked On Apply Button", test, Capture);
+		addScreenShot("Clicked On Apply Button", test, Capture);
 
 		Thread.sleep(4000);
 
@@ -1008,7 +1008,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 
 		List<String> productNamesList = productNames.stream().map(WebElement::getText).collect(Collectors.toList());
 		test.log(Status.PASS, "Product names retrieved: " + productNamesList);
-		addSrceenShot("Product names retrieved", test, Capture);
+		addScreenShot("Product names retrieved", test, Capture);
 
 		return productNamesList;
 //		return productNames.stream().map(WebElement::getText).collect(Collectors.toList());
@@ -1036,14 +1036,14 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		actions.moveToElement(option).click().perform();
 		System.out.println("filtered type choosen");
 		test.log(Status.INFO, "Filtered type chosen: " + filterType);
-		addSrceenShot("Filtered type chosen", test, Capture);
+		addScreenShot("Filtered type chosen", test, Capture);
 		Thread.sleep(4000);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colorwayCodeInput));
 		actions.moveToElement(colorwayCodeInput).click().sendKeys(colorwayCode).perform();
 		System.out.println("Colorway code is entered");
 		test.log(Status.INFO, "Colorway code entered: " + colorwayCode);
-		addSrceenShot("Colorway code entered", test, Capture);
+		addScreenShot("Colorway code entered", test, Capture);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(applyButton));
 		applyButton.click();
@@ -1069,7 +1069,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 	            Assert.assertTrue(ColorwayCode_Value.getText().equalsIgnoreCase(colorwayCode));
 	            System.out.println("Product is displayed in the Line Sheet");
 	            test.log(Status.PASS, "Product is displayed in the Line Sheet");
-	            addSrceenShot("Product is displayed in the Line Sheet", test, Capture);
+	            addScreenShot("Product is displayed in the Line Sheet", test, Capture);
 	            break; // Exit the loop once the product is found
 	        }
 	    }
@@ -1093,14 +1093,14 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 //				if (isProductDisplayed) {
 //					System.out.println("Product is displayed in the Line Sheet");
 //					test.log(Status.PASS, "Product is displayed in the Line Sheet");
-//					addSrceenShot("Product is displayed in the Line Sheet", test, Capture);
+//					addScreenShot("Product is displayed in the Line Sheet", test, Capture);
 //				}
 //				columnHeaderFound = true;
 //			} catch (Exception e) {
 //				scrollAmount += 800;
 //				if (scrollAmount > 3000) {
 //					test.log(Status.FAIL, "Product is not displayed in the Line Sheet");
-//					addSrceenShot("Product is not displayed in the Line Sheet", test, Capture);
+//					addScreenShot("Product is not displayed in the Line Sheet", test, Capture);
 //					throw new NoSuchElementException("Product is not displayed in the Line Sheet");
 //				}
 //			}
@@ -1426,7 +1426,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(20000);
 	 
 					System.out.println("Size Grid Code Value Was choosen");
-					addSrceenShot("Size Grid Code Value Was choosen", test, Capture);
+					addScreenShot("Size Grid Code Value Was choosen", test, Capture);
 					test.log(Status.PASS, "Size Grid Code Value Was choosen : " + sizeGridCode);
 				}
 				
@@ -1442,7 +1442,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					System.out.println("Sample Size is not auto-populated");
 					test.log(Status.FAIL, "Sample Size is not auto-populated");
 				}
-				addSrceenShot("Sample Size Verification", test, Capture);
+				addScreenShot("Sample Size Verification", test, Capture);
  
 			}
 			if (ColumnHeader.equals("Selected Sizes GB")) {
@@ -1523,11 +1523,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(15000);
 	 
 					test.log(Status.INFO, "Updated Selected Sizes LH: " + currentStatus);
-					addSrceenShot("Updated Selected Sizes LH", test, Capture);
+					addScreenShot("Updated Selected Sizes LH", test, Capture);
 				}else {
 					System.out.println(" 'Selected sizes-LH' is aready populating and the Sizes are : " + currentStatus);
 					test.log(Status.INFO, " 'Selected sizes-LH'  is aready populating and the Sizes are :  " + currentStatus);
-					addSrceenShot(" 'Selected sizes-LH'  is aready populating and the Sizes are :  "  + currentStatus, test, Capture);
+					addScreenShot(" 'Selected sizes-LH'  is aready populating and the Sizes are :  "  + currentStatus, test, Capture);
 				}
 			
  
@@ -1563,7 +1563,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		Thread.sleep(3000);
 		Save_button.click();
 		test.log(Status.INFO, "Toggled 'Selected sizes LH Locked?' status to: " + newStatus);
-		addSrceenShot("Toggled 'Selected sizes LH Locked?' status", test, Capture);
+		addScreenShot("Toggled 'Selected sizes LH Locked?' status", test, Capture);
 		System.out.println("Toggled 'Selected sizes LH Locked?' from " + currentStatus + " to " + newStatus);
 		Thread.sleep(4000);
 	}
@@ -1615,11 +1615,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(30000);
 	 
 					test.log(Status.INFO, "Updated Selected Sizes AFF: " + currentStatus);
-					addSrceenShot("Updated Selected Sizes AFF", test, Capture);
+					addScreenShot("Updated Selected Sizes AFF", test, Capture);
 				}else {
 					System.out.println(" 'Selected sizes-AFF' is aready populating and the Sizes are : " + currentStatus);
 					test.log(Status.INFO, " 'Selected sizes-AFF'  is aready populating and the Sizes are :  " + currentStatus);
-					addSrceenShot(" 'Selected sizes-AFF'  is aready populating and the Sizes are :  "  + currentStatus, test, Capture);
+					addScreenShot(" 'Selected sizes-AFF'  is aready populating and the Sizes are :  "  + currentStatus, test, Capture);
 				}
 				
  
@@ -1655,7 +1655,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		Thread.sleep(3000);
 		Save_button.click();
 		test.log(Status.INFO, "Toggled 'Selected sizes AFF Locked?' status to: " + newStatus);
-		addSrceenShot("Toggled 'Selected sizes AFF Locked?' status", test, Capture);
+		addScreenShot("Toggled 'Selected sizes AFF Locked?' status", test, Capture);
 		System.out.println("Toggled 'Selected sizes AFF Locked?' from " + currentStatus + " to " + newStatus);
 		Thread.sleep(6000);
 	}
@@ -1706,7 +1706,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 
 				} else {
 					System.out.println("Adopted? GB value is already Yes, no change needed");
-					addSrceenShot("Adopted? GB value is already Yes, no change needed", test, Capture);
+					addScreenShot("Adopted? GB value is already Yes, no change needed", test, Capture);
 
 				}
 			}
@@ -1824,11 +1824,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(10000);
 
 					System.out.println("Adopted? AFF value changed to Yes");
-					addSrceenShot("Adopted? AFF value changed to Yes", test, Capture);
+					addScreenShot("Adopted? AFF value changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Adopted? AFF value is already Yes, no change needed");
-					addSrceenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
+					addScreenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
 				}
 			}
 			if (ColumnHeader.equals("Current Planned Lifecycle AFF")) {
@@ -1838,7 +1838,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfcplaff = current_Planned_LifecycleAFF_value.getText();
 				System.out.println(" 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
 				test.log(Status.INFO, " 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
-				addSrceenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
+				addScreenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOfcplaff.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -1852,7 +1852,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Current Planned Lifecycle AFF' to: " + currentPlannedLifecycleAFF);
-					addSrceenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
+					addScreenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current Planned Lifecycle AFF' is already set to: " + currentStatusOfcplaff);
@@ -1865,7 +1865,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_FOFMAFF = first_On_Floor_Month_AFF_value.getText();
 				System.out.println(" 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
 				test.log(Status.INFO, " 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
-				addSrceenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
+				addScreenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOf_FOFMAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -1879,7 +1879,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Current First On Floor Month AFF' to: " + firstOnFloorMonthAFF);
-					addSrceenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
+					addScreenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current First On Floor Month AFF' is already set to: " + currentStatusOf_FOFMAFF);
@@ -1891,7 +1891,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_DSAFF = dlvy_Selected_AFF_value.getText();
 				System.out.println("Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
 				test.log(Status.INFO, "Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
-				addSrceenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
+				addScreenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
 				if (currentStatusOf_DSAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
 					actions.doubleClick(dlvy_Selected_AFF_value).perform();
@@ -1904,7 +1904,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Dlvy Selected - AFF' to: " + dlvySelectedAFF);
-					addSrceenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
+					addScreenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, " 'Dlvy Selected - AFF' is already set to: " + currentStatusOf_DSAFF);
 				}
@@ -1935,7 +1935,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfTicketCode = ticket_Code_AFF_value.getText();
 				System.out.println("Current 'Ticket Code AFF' Value: " + currentStatusOfTicketCode);
 				test.log(Status.INFO, "Current 'Ticket Code AFF' Value: " + currentStatusOfTicketCode);
-				addSrceenShot("Current 'Ticket Code AFF' Value", test, Capture);
+				addScreenShot("Current 'Ticket Code AFF' Value", test, Capture);
 
 				if (currentStatusOfTicketCode.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -1949,7 +1949,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.PASS, "Updated 'Ticket Code AFF' to: " + ticketCode);
-					addSrceenShot("Updated 'Ticket Code AFF'", test, Capture);
+					addScreenShot("Updated 'Ticket Code AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Ticket Code AFF' is already set to: " + currentStatusOfTicketCode);
 				}
@@ -1961,7 +1961,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfLSUSStockingCSC = lsus_Stocking_CSC_AFF_value.getText();
 				System.out.println("Current 'LSUS Stocking CSC AFF' Value: " + currentStatusOfLSUSStockingCSC);
 				test.log(Status.INFO, "Current 'LSUS Stocking CSC AFF' Value: " + currentStatusOfLSUSStockingCSC);
-				addSrceenShot("Current 'LSUS Stocking CSC AFF' Value", test, Capture);
+				addScreenShot("Current 'LSUS Stocking CSC AFF' Value", test, Capture);
 
 				if (currentStatusOfLSUSStockingCSC.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -1975,7 +1975,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'LSUS Stocking CSC AFF' to: " + lsusStockingCSC);
-					addSrceenShot("Updated 'LSUS Stocking CSC AFF'", test, Capture);
+					addScreenShot("Updated 'LSUS Stocking CSC AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							"'LSUS Stocking CSC AFF' is already set to: " + currentStatusOfLSUSStockingCSC);
@@ -1986,7 +1986,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfTargetAFFMSRP = target_AFF_MSRP_value.getText();
 				System.out.println("Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
 				test.log(Status.INFO, "Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
-				addSrceenShot("Current 'Target AFF MSRP' Value", test, Capture);
+				addScreenShot("Current 'Target AFF MSRP' Value", test, Capture);
 
 				if (currentStatusOfTargetAFFMSRP.isEmpty() || currentStatusOfTargetAFFMSRP.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2000,7 +2000,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Target AFF MSRP' to: " + targetAFFMSRP);
-					addSrceenShot("Updated 'Target AFF MSRP'", test, Capture);
+					addScreenShot("Updated 'Target AFF MSRP'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Target AFF MSRP' is already set to: " + currentStatusOfTargetAFFMSRP);
 				}
@@ -2011,7 +2011,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfPriceWhslAFF = price_Whsl_AFF_value.getText();
 				System.out.println("Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
 				test.log(Status.INFO, "Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
-				addSrceenShot("Current 'Price Whsl AFF' Value", test, Capture);
+				addScreenShot("Current 'Price Whsl AFF' Value", test, Capture);
 
 				if (currentStatusOfPriceWhslAFF.isEmpty() || currentStatusOfPriceWhslAFF.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2025,7 +2025,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Price Whsl AFF' to: " + priceWhslAFF);
-					addSrceenShot("Updated 'Price Whsl AFF'", test, Capture);
+					addScreenShot("Updated 'Price Whsl AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Price Whsl AFF' is already set to: " + currentStatusOfPriceWhslAFF);
 				}
@@ -2037,7 +2037,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
 				test.log(Status.INFO,
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
-				addSrceenShot("Current 'Product Price Position AFF' Value", test, Capture);
+				addScreenShot("Current 'Product Price Position AFF' Value", test, Capture);
 
 			}
 			if (ColumnHeader.equals("Bucket Code AFF")) {
@@ -2045,7 +2045,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfBucketCodeAFF = bucket_Code_AFF_value.getText();
 				System.out.println("Current 'Bucket Code AFF' Value: " + currentStatusOfBucketCodeAFF);
 				test.log(Status.INFO, "Current 'Bucket Code AFF' Value: " + currentStatusOfBucketCodeAFF);
-				addSrceenShot("Current 'Bucket Code AFF' Value", test, Capture);
+				addScreenShot("Current 'Bucket Code AFF' Value", test, Capture);
 
 				if (currentStatusOfBucketCodeAFF.isEmpty() || currentStatusOfBucketCodeAFF.contains("00000-0000")) {
 					Actions actions = new Actions(driver);
@@ -2058,7 +2058,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Bucket Code AFF' to: " + bucketCodeAFF);
-					addSrceenShot("Updated 'Bucket Code AFF'", test, Capture);
+					addScreenShot("Updated 'Bucket Code AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Bucket Code AFF' is already set to: " + currentStatusOfBucketCodeAFF);
 				}
@@ -2068,7 +2068,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfRunValidation = active_run_Validation_value.getText();
 				System.out.println("Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
 				test.log(Status.INFO, "Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
-				addSrceenShot("Current 'Active Run Validation' Value", test, Capture);
+				addScreenShot("Current 'Active Run Validation' Value", test, Capture);
 				if (!currentStatusOfRunValidation.equalsIgnoreCase("Yes")) {
 					System.out.println("Changing Activate - Run Validation value to Yes");
 					Actions actions = new Actions(driver);
@@ -2079,11 +2079,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(5000);
 					System.out.println("Activate - Run Validation to Yes");
 					
-					addSrceenShot("Activate - Run Validation changed to Yes", test, Capture);
+					addScreenShot("Activate - Run Validation changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Activate - Run Validation value is already Yes, no change needed");
-					addSrceenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
+					addScreenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
 				}
 
 			}
@@ -2093,7 +2093,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		String currentStatusOfactive = active_value.getText();
 		System.out.println("Current 'Active' Value: " + currentStatusOfactive);
 		test.log(Status.INFO, "Current 'Active' Value: " + currentStatusOfactive);
-		addSrceenShot("Current 'Active' Value", test, Capture);
+		addScreenShot("Current 'Active' Value", test, Capture);
 		if (!currentStatusOfactive.equalsIgnoreCase("Yes")) {
 			System.out.println("Changing Activate to Yes");
 			Actions actions = new Actions(driver);
@@ -2103,11 +2103,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			Save_button.click();
 			Thread.sleep(10000);
 			System.out.println("Activate changed to Yes");
-			addSrceenShot("Activate changed to Yes", test, Capture);
+			addScreenShot("Activate changed to Yes", test, Capture);
 
 		} else {
 			System.out.println("Activate value is already Yes, no change needed");
-			addSrceenShot("Activate is already Yes, no change needed", test, Capture);
+			addScreenShot("Activate is already Yes, no change needed", test, Capture);
 		}
 	}
 	
@@ -2238,11 +2238,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(10000);
 
 					System.out.println("Adopted? AFF value changed to Yes");
-					addSrceenShot("Adopted? AFF value changed to Yes", test, Capture);
+					addScreenShot("Adopted? AFF value changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Adopted? AFF value is already Yes, no change needed");
-					addSrceenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
+					addScreenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
 				}
 			}
 			if (ColumnHeader.equals("Current Planned Lifecycle AFF")) {
@@ -2252,7 +2252,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfcplaff = current_Planned_LifecycleAFF_value_APD.getText();
 				System.out.println(" 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
 				test.log(Status.INFO, " 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
-				addSrceenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
+				addScreenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOfcplaff.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2266,7 +2266,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Current Planned Lifecycle AFF' to: " + currentPlannedLifecycleAFF);
-					addSrceenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
+					addScreenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current Planned Lifecycle AFF' is already set to: " + currentStatusOfcplaff);
@@ -2279,7 +2279,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_FOFMAFF = first_On_Floor_Month_AFF_value_APD.getText();
 				System.out.println(" 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
 				test.log(Status.INFO, " 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
-				addSrceenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
+				addScreenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOf_FOFMAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2293,7 +2293,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Current First On Floor Month AFF' to: " + firstOnFloorMonthAFF);
-					addSrceenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
+					addScreenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current First On Floor Month AFF' is already set to: " + currentStatusOf_FOFMAFF);
@@ -2305,7 +2305,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_DSAFF = dlvy_Selected_AFF_APD.getText();
 				System.out.println("Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
 				test.log(Status.INFO, "Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
-				addSrceenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
+				addScreenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
 				if (currentStatusOf_DSAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
 					actions.doubleClick(dlvy_Selected_AFF_APD).perform();
@@ -2318,7 +2318,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Dlvy Selected - AFF' to: " + dlvySelectedAFF);
-					addSrceenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
+					addScreenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, " 'Dlvy Selected - AFF' is already set to: " + currentStatusOf_DSAFF);
 				}
@@ -2350,7 +2350,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfTargetAFFMSRP = target_AFF_MSRP_value_APD.getText();
 				System.out.println("Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
 				test.log(Status.INFO, "Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
-				addSrceenShot("Current 'Target AFF MSRP' Value", test, Capture);
+				addScreenShot("Current 'Target AFF MSRP' Value", test, Capture);
 
 				if (currentStatusOfTargetAFFMSRP.isEmpty() || currentStatusOfTargetAFFMSRP.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2364,7 +2364,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Target AFF MSRP' to: " + targetAFFMSRP);
-					addSrceenShot("Updated 'Target AFF MSRP'", test, Capture);
+					addScreenShot("Updated 'Target AFF MSRP'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Target AFF MSRP' is already set to: " + currentStatusOfTargetAFFMSRP);
 				}
@@ -2375,7 +2375,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfPriceWhslAFF = price_Whsl_AFF_value_APD.getText();
 				System.out.println("Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
 				test.log(Status.INFO, "Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
-				addSrceenShot("Current 'Price Whsl AFF' Value", test, Capture);
+				addScreenShot("Current 'Price Whsl AFF' Value", test, Capture);
 
 				if (currentStatusOfPriceWhslAFF.isEmpty() || currentStatusOfPriceWhslAFF.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2389,7 +2389,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Price Whsl AFF' to: " + priceWhslAFF);
-					addSrceenShot("Updated 'Price Whsl AFF'", test, Capture);
+					addScreenShot("Updated 'Price Whsl AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Price Whsl AFF' is already set to: " + currentStatusOfPriceWhslAFF);
 				}
@@ -2401,14 +2401,14 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
 				test.log(Status.INFO,
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
-				addSrceenShot("Current 'Product Price Position AFF' Value", test, Capture);
+				addScreenShot("Current 'Product Price Position AFF' Value", test, Capture);
 
 			}
 			if (ColumnHeader.equals("Activate - Run Validation")) {
 				String currentStatusOfRunValidation = active_run_Validation_value_APD.getText();
 				System.out.println("Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
 				test.log(Status.INFO, "Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
-				addSrceenShot("Current 'Active Run Validation' Value", test, Capture);
+				addScreenShot("Current 'Active Run Validation' Value", test, Capture);
 				if (!currentStatusOfRunValidation.equalsIgnoreCase("Yes")) {
 					System.out.println("Changing Activate - Run Validation value to Yes");
 					Actions actions = new Actions(driver);
@@ -2418,11 +2418,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(5000);
 					System.out.println("Activate - Run Validation to Yes");
 					
-					addSrceenShot("Activate - Run Validation changed to Yes", test, Capture);
+					addScreenShot("Activate - Run Validation changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Activate - Run Validation value is already Yes, no change needed");
-					addSrceenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
+					addScreenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
 					test.log(Status.INFO,"Activate - Run Validation value is already Yes, no change needed");
 				}
 
@@ -2432,7 +2432,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		String currentStatusOfactive = active_value_APD.getText();
 		System.out.println("Current 'Active' Value: " + currentStatusOfactive);
 		test.log(Status.INFO, "Current 'Active' Value: " + currentStatusOfactive);
-		addSrceenShot("Current 'Active' Value", test, Capture);
+		addScreenShot("Current 'Active' Value", test, Capture);
 		if (!currentStatusOfactive.equalsIgnoreCase("Yes")) {
 			System.out.println("Changing Activate to Yes");
 			Actions actions = new Actions(driver);
@@ -2442,12 +2442,12 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			Save_button.click();
 			Thread.sleep(30000);
 			System.out.println("Activate changed to Yes");
-			addSrceenShot("Activate changed to Yes", test, Capture);
+			addScreenShot("Activate changed to Yes", test, Capture);
 
 		} else {
 			System.out.println("Activate value is already Yes, no change needed");
 			test.log(Status.FAIL,"Activate value is already Yes, no change needed");
-			addSrceenShot("Activate is already Yes, no change needed", test, Capture);
+			addScreenShot("Activate is already Yes, no change needed", test, Capture);
 		}
 	}
 	
@@ -2490,11 +2490,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(10000);
 
 					System.out.println("Adopted? AFF value changed to Yes");
-					addSrceenShot("Adopted? AFF value changed to Yes", test, Capture);
+					addScreenShot("Adopted? AFF value changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Adopted? AFF value is already Yes, no change needed");
-					addSrceenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
+					addScreenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
 				}
 			}
 			if (ColumnHeader.equals("Current Planned Lifecycle AFF")) {
@@ -2504,7 +2504,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfcplaff = current_Planned_LifecycleAFF_value_LSE.getText();
 				System.out.println(" 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
 				test.log(Status.INFO, " 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
-				addSrceenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
+				addScreenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOfcplaff.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2518,7 +2518,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Current Planned Lifecycle AFF' to: " + currentPlannedLifecycleAFF);
-					addSrceenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
+					addScreenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current Planned Lifecycle AFF' is already set to: " + currentStatusOfcplaff);
@@ -2531,7 +2531,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_FOFMAFF = first_On_Floor_Month_AFF_value_LSE.getText();
 				System.out.println(" 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
 				test.log(Status.INFO, " 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
-				addSrceenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
+				addScreenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOf_FOFMAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2545,7 +2545,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Current First On Floor Month AFF' to: " + firstOnFloorMonthAFF);
-					addSrceenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
+					addScreenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current First On Floor Month AFF' is already set to: " + currentStatusOf_FOFMAFF);
@@ -2557,7 +2557,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_DSAFF = dlvy_Selected_AFF_LSE.getText();
 				System.out.println("Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
 				test.log(Status.INFO, "Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
-				addSrceenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
+				addScreenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
 				if (currentStatusOf_DSAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
 					actions.doubleClick(dlvy_Selected_AFF_LSE).perform();
@@ -2570,7 +2570,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Dlvy Selected - AFF' to: " + dlvySelectedAFF);
-					addSrceenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
+					addScreenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, " 'Dlvy Selected - AFF' is already set to: " + currentStatusOf_DSAFF);
 				}
@@ -2602,7 +2602,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfLSUSStockingCSC = lsus_Stocking_CSC_AFF_value_LSE.getText();
 				System.out.println("Current 'LSUS Stocking CSC AFF' Value: " + currentStatusOfLSUSStockingCSC);
 				test.log(Status.INFO, "Current 'LSUS Stocking CSC AFF' Value: " + currentStatusOfLSUSStockingCSC);
-				addSrceenShot("Current 'LSUS Stocking CSC AFF' Value", test, Capture);
+				addScreenShot("Current 'LSUS Stocking CSC AFF' Value", test, Capture);
 
 				if (currentStatusOfLSUSStockingCSC.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2616,7 +2616,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'LSUS Stocking CSC AFF' to: " + lsusStockingCSC);
-					addSrceenShot("Updated 'LSUS Stocking CSC AFF'", test, Capture);
+					addScreenShot("Updated 'LSUS Stocking CSC AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							"'LSUS Stocking CSC AFF' is already set to: " + currentStatusOfLSUSStockingCSC);
@@ -2627,7 +2627,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfTargetAFFMSRP = target_AFF_MSRP_value_LSE.getText();
 				System.out.println("Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
 				test.log(Status.INFO, "Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
-				addSrceenShot("Current 'Target AFF MSRP' Value", test, Capture);
+				addScreenShot("Current 'Target AFF MSRP' Value", test, Capture);
 
 				if (currentStatusOfTargetAFFMSRP.isEmpty() || currentStatusOfTargetAFFMSRP.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2641,7 +2641,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Target AFF MSRP' to: " + targetAFFMSRP);
-					addSrceenShot("Updated 'Target AFF MSRP'", test, Capture);
+					addScreenShot("Updated 'Target AFF MSRP'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Target AFF MSRP' is already set to: " + currentStatusOfTargetAFFMSRP);
 				}
@@ -2652,7 +2652,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfPriceWhslAFF = price_Whsl_AFF_value_LSE.getText();
 				System.out.println("Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
 				test.log(Status.INFO, "Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
-				addSrceenShot("Current 'Price Whsl AFF' Value", test, Capture);
+				addScreenShot("Current 'Price Whsl AFF' Value", test, Capture);
 
 				if (currentStatusOfPriceWhslAFF.isEmpty() || currentStatusOfPriceWhslAFF.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2666,7 +2666,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Price Whsl AFF' to: " + priceWhslAFF);
-					addSrceenShot("Updated 'Price Whsl AFF'", test, Capture);
+					addScreenShot("Updated 'Price Whsl AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Price Whsl AFF' is already set to: " + currentStatusOfPriceWhslAFF);
 				}
@@ -2678,7 +2678,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
 				test.log(Status.INFO,
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
-				addSrceenShot("Current 'Product Price Position AFF' Value", test, Capture);
+				addScreenShot("Current 'Product Price Position AFF' Value", test, Capture);
 
 			}
 			if (ColumnHeader.equals("Bucket Code AFF")) {
@@ -2686,7 +2686,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfBucketCodeAFF = bucket_Code_AFF_value_LSE.getText();
 				System.out.println("Current 'Bucket Code AFF' Value: " + currentStatusOfBucketCodeAFF);
 				test.log(Status.INFO, "Current 'Bucket Code AFF' Value: " + currentStatusOfBucketCodeAFF);
-				addSrceenShot("Current 'Bucket Code AFF' Value", test, Capture);
+				addScreenShot("Current 'Bucket Code AFF' Value", test, Capture);
 
 				if (currentStatusOfBucketCodeAFF.isEmpty() || currentStatusOfBucketCodeAFF.contains("00000-0000")) {
 					Actions actions = new Actions(driver);
@@ -2699,7 +2699,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Bucket Code AFF' to: " + bucketCodeAFF);
-					addSrceenShot("Updated 'Bucket Code AFF'", test, Capture);
+					addScreenShot("Updated 'Bucket Code AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Bucket Code AFF' is already set to: " + currentStatusOfBucketCodeAFF);
 				}
@@ -2709,7 +2709,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfRunValidation = active_run_Validation_value_LSE.getText();
 				System.out.println("Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
 				test.log(Status.INFO, "Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
-				addSrceenShot("Current 'Active Run Validation' Value", test, Capture);
+				addScreenShot("Current 'Active Run Validation' Value", test, Capture);
 				if (!currentStatusOfRunValidation.equalsIgnoreCase("Yes")) {
 					System.out.println("Changing Activate - Run Validation value to Yes");
 					Actions actions = new Actions(driver);
@@ -2720,11 +2720,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(5000);
 					System.out.println("Activate - Run Validation to Yes");
 					
-					addSrceenShot("Activate - Run Validation changed to Yes", test, Capture);
+					addScreenShot("Activate - Run Validation changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Activate - Run Validation value is already Yes, no change needed");
-					addSrceenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
+					addScreenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
 				}
 
 			}
@@ -2734,7 +2734,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		String currentStatusOfactive = active_value_LSE.getText();
 		System.out.println("Current 'Active' Value: " + currentStatusOfactive);
 		test.log(Status.INFO, "Current 'Active' Value: " + currentStatusOfactive);
-		addSrceenShot("Current 'Active' Value", test, Capture);
+		addScreenShot("Current 'Active' Value", test, Capture);
 		if (!currentStatusOfactive.equalsIgnoreCase("Yes")) {
 			System.out.println("Changing Activate to Yes");
 			Actions actions = new Actions(driver);
@@ -2744,11 +2744,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			Save_button.click();
 			Thread.sleep(10000);
 			System.out.println("Activate changed to Yes");
-			addSrceenShot("Activate changed to Yes", test, Capture);
+			addScreenShot("Activate changed to Yes", test, Capture);
 
 		} else {
 			System.out.println("Activate value is already Yes, no change needed");
-			addSrceenShot("Activate is already Yes, no change needed", test, Capture);
+			addScreenShot("Activate is already Yes, no change needed", test, Capture);
 		}
 	}
 	
@@ -2790,11 +2790,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(10000);
 
 					System.out.println("Adopted? AFF value changed to Yes");
-					addSrceenShot("Adopted? AFF value changed to Yes", test, Capture);
+					addScreenShot("Adopted? AFF value changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Adopted? AFF value is already Yes, no change needed");
-					addSrceenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
+					addScreenShot("Adopted? AFF value is already Yes, no change needed", test, Capture);
 				}
 			}
 			if (ColumnHeader.equals("Current Planned Lifecycle AFF")) {
@@ -2804,7 +2804,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfcplaff = current_Planned_LifecycleAFF_value_LSE.getText();
 				System.out.println(" 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
 				test.log(Status.INFO, " 'Current Planned Lifecycle AFF' Value: " + currentStatusOfcplaff);
-				addSrceenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
+				addScreenShot(" 'Current Planned Lifecycle AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOfcplaff.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2818,7 +2818,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Current Planned Lifecycle AFF' to: " + currentPlannedLifecycleAFF);
-					addSrceenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
+					addScreenShot("Updated 'Current Planned Lifecycle AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current Planned Lifecycle AFF' is already set to: " + currentStatusOfcplaff);
@@ -2831,7 +2831,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_FOFMAFF = first_On_Floor_Month_AFF_value_LSE.getText();
 				System.out.println(" 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
 				test.log(Status.INFO, " 'Current First On Floor Month AFF' Value: " + currentStatusOf_FOFMAFF);
-				addSrceenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
+				addScreenShot(" 'Current First On Floor Month AFF' Value", test, Capture);
 				Thread.sleep(2000);
 				if (currentStatusOf_FOFMAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2845,7 +2845,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Current First On Floor Month AFF' to: " + firstOnFloorMonthAFF);
-					addSrceenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
+					addScreenShot("Updated 'Current First On Floor Month AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							" 'Current First On Floor Month AFF' is already set to: " + currentStatusOf_FOFMAFF);
@@ -2857,7 +2857,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOf_DSAFF = dlvy_Selected_AFF_LSE.getText();
 				System.out.println("Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
 				test.log(Status.INFO, "Current 'Dlvy Selected - AFF' Value: " + currentStatusOf_DSAFF);
-				addSrceenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
+				addScreenShot("Current 'Dlvy Selected - AFF' Value", test, Capture);
 				if (currentStatusOf_DSAFF.isEmpty()) {
 					Actions actions = new Actions(driver);
 					actions.doubleClick(dlvy_Selected_AFF_LSE).perform();
@@ -2870,7 +2870,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Dlvy Selected - AFF' to: " + dlvySelectedAFF);
-					addSrceenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
+					addScreenShot("Updated 'Dlvy Selected - AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, " 'Dlvy Selected - AFF' is already set to: " + currentStatusOf_DSAFF);
 				}
@@ -2902,7 +2902,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfLSUSStockingCSC = lsus_Stocking_CSC_AFF_value_LSE.getText();
 				System.out.println("Current 'LSUS Stocking CSC AFF' Value: " + currentStatusOfLSUSStockingCSC);
 				test.log(Status.INFO, "Current 'LSUS Stocking CSC AFF' Value: " + currentStatusOfLSUSStockingCSC);
-				addSrceenShot("Current 'LSUS Stocking CSC AFF' Value", test, Capture);
+				addScreenShot("Current 'LSUS Stocking CSC AFF' Value", test, Capture);
 
 				if (currentStatusOfLSUSStockingCSC.isEmpty()) {
 					Actions actions = new Actions(driver);
@@ -2916,7 +2916,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'LSUS Stocking CSC AFF' to: " + lsusStockingCSC);
-					addSrceenShot("Updated 'LSUS Stocking CSC AFF'", test, Capture);
+					addScreenShot("Updated 'LSUS Stocking CSC AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO,
 							"'LSUS Stocking CSC AFF' is already set to: " + currentStatusOfLSUSStockingCSC);
@@ -2927,7 +2927,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfTargetAFFMSRP = target_AFF_MSRP_value_LSE.getText();
 				System.out.println("Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
 				test.log(Status.INFO, "Current 'Target AFF MSRP' Value: " + currentStatusOfTargetAFFMSRP);
-				addSrceenShot("Current 'Target AFF MSRP' Value", test, Capture);
+				addScreenShot("Current 'Target AFF MSRP' Value", test, Capture);
 
 				if (currentStatusOfTargetAFFMSRP.isEmpty() || currentStatusOfTargetAFFMSRP.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2941,7 +2941,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(12000);
 					test.log(Status.INFO, "Updated 'Target AFF MSRP' to: " + targetAFFMSRP);
-					addSrceenShot("Updated 'Target AFF MSRP'", test, Capture);
+					addScreenShot("Updated 'Target AFF MSRP'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Target AFF MSRP' is already set to: " + currentStatusOfTargetAFFMSRP);
 				}
@@ -2952,7 +2952,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfPriceWhslAFF = price_Whsl_AFF_value_LSE.getText();
 				System.out.println("Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
 				test.log(Status.INFO, "Current 'Price Whsl AFF' Value: " + currentStatusOfPriceWhslAFF);
-				addSrceenShot("Current 'Price Whsl AFF' Value", test, Capture);
+				addScreenShot("Current 'Price Whsl AFF' Value", test, Capture);
 
 				if (currentStatusOfPriceWhslAFF.isEmpty() || currentStatusOfPriceWhslAFF.equals("0")) {
 					Actions actions = new Actions(driver);
@@ -2966,7 +2966,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Price Whsl AFF' to: " + priceWhslAFF);
-					addSrceenShot("Updated 'Price Whsl AFF'", test, Capture);
+					addScreenShot("Updated 'Price Whsl AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Price Whsl AFF' is already set to: " + currentStatusOfPriceWhslAFF);
 				}
@@ -2978,7 +2978,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
 				test.log(Status.INFO,
 						"Current 'Product Price Position AFF' Value: " + currentStatusOfProductPricePositionAFF);
-				addSrceenShot("Current 'Product Price Position AFF' Value", test, Capture);
+				addScreenShot("Current 'Product Price Position AFF' Value", test, Capture);
 
 			}
 			if (ColumnHeader.equals("Bucket Code AFF")) {
@@ -2986,7 +2986,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfBucketCodeAFF = bucket_Code_AFF_value_LSE.getText();
 				System.out.println("Current 'Bucket Code AFF' Value: " + currentStatusOfBucketCodeAFF);
 				test.log(Status.INFO, "Current 'Bucket Code AFF' Value: " + currentStatusOfBucketCodeAFF);
-				addSrceenShot("Current 'Bucket Code AFF' Value", test, Capture);
+				addScreenShot("Current 'Bucket Code AFF' Value", test, Capture);
 
 				if (currentStatusOfBucketCodeAFF.isEmpty() || currentStatusOfBucketCodeAFF.contains("00000-0000")) {
 					Actions actions = new Actions(driver);
@@ -2999,7 +2999,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Save_button.click();
 					Thread.sleep(10000);
 					test.log(Status.INFO, "Updated 'Bucket Code AFF' to: " + bucketCodeAFF);
-					addSrceenShot("Updated 'Bucket Code AFF'", test, Capture);
+					addScreenShot("Updated 'Bucket Code AFF'", test, Capture);
 				} else {
 					test.log(Status.INFO, "'Bucket Code AFF' is already set to: " + currentStatusOfBucketCodeAFF);
 				}
@@ -3009,7 +3009,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				String currentStatusOfRunValidation = active_run_Validation_value_LSE.getText();
 				System.out.println("Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
 				test.log(Status.INFO, "Current 'Active Run Validation' Value: " + currentStatusOfRunValidation);
-				addSrceenShot("Current 'Active Run Validation' Value", test, Capture);
+				addScreenShot("Current 'Active Run Validation' Value", test, Capture);
 				if (!currentStatusOfRunValidation.equalsIgnoreCase("Yes")) {
 					System.out.println("Changing Activate - Run Validation value to Yes");
 					Actions actions = new Actions(driver);
@@ -3020,12 +3020,12 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 					Thread.sleep(5000);
 					System.out.println("Activate - Run Validation to Yes");
 					test.log(Status.INFO, "changed Activate - Run Validation to Yes" );
-					addSrceenShot("Activate - Run Validation changed to Yes", test, Capture);
+					addScreenShot("Activate - Run Validation changed to Yes", test, Capture);
 
 				} else {
 					System.out.println("Activate - Run Validation value is already Yes, no change needed");
 					test.log(Status.INFO, "Activate - Run Validation value is already Yes, no change needed");
-					addSrceenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
+					addScreenShot("Activate - Run Validation is already Yes, no change needed", test, Capture);
 				}
 
 			}
@@ -3043,11 +3043,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (runValidationStatus.equalsIgnoreCase("Yes")) {
 			System.out.println("Run Validation is successful: 'Activate - Run Validation' is set to Yes");
 			test.log(Status.INFO, "Run Validation is successful: 'Activate - Run Validation' is set to Yes");
-			addSrceenShot("Run Validation is successful", test, Capture);
+			addScreenShot("Run Validation is successful", test, Capture);
 		} else {
 			System.out.println("Run Validation failed: 'Activate - Run Validation' is : "+ active_run_Validation_status_LSE.getText());
 			test.log(Status.FAIL, "Run Validation failed: 'Activate - Run Validation' is : "+ active_run_Validation_status_LSE.getText());
-			addSrceenShot("Run Validation failed", test, Capture);
+			addScreenShot("Run Validation failed", test, Capture);
 			
 		}
 	}
@@ -3066,11 +3066,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (activateStatus.equalsIgnoreCase("Yes")) {
 			System.out.println("Activation is successful: 'Activate' is set to Yes");
 			test.log(Status.INFO, "Activation is successful: 'Activate' is set to Yes");
-			addSrceenShot("Activation is successful", test, Capture);
+			addScreenShot("Activation is successful", test, Capture);
 		} else {
 			System.out.println("Activation failed: 'Activate' is not set to Yes");
 			test.log(Status.FAIL, "Activation failed: 'Activate' is not set to Yes");
-			addSrceenShot("Activation failed", test, Capture);
+			addScreenShot("Activation failed", test, Capture);
 		}
 
 		// Check if the 'Activate - Run Validation' attribute is set to 'Yes'
@@ -3078,20 +3078,20 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (runValidationStatus.equalsIgnoreCase("Yes")) {
 			System.out.println("Run Validation is successful: 'Activate - Run Validation' is set to Yes");
 			test.log(Status.INFO, "Run Validation is successful: 'Activate - Run Validation' is set to Yes");
-			addSrceenShot("Run Validation is successful", test, Capture);
+			addScreenShot("Run Validation is successful", test, Capture);
 		} else {
 			System.out.println("Run Validation failed: 'Activate - Run Validation' is not set to Yes");
 			test.log(Status.FAIL, "Run Validation failed: 'Activate - Run Validation' is not set to Yes");
-			addSrceenShot("Run Validation failed", test, Capture);
+			addScreenShot("Run Validation failed", test, Capture);
 		}
 		if(activateStatus_value.getText().contains("No Error")) {
 			System.out.println("Activate Status is successful  and the value is : "+activateStatus_value.getText());
 			test.log(Status.PASS, "Activate Status is successful and the value is : "+activateStatus_value.getText());
-			addSrceenShot("Activate Status is successful  and the value is : "+activateStatus_value.getText(), test, Capture);
+			addScreenShot("Activate Status is successful  and the value is : "+activateStatus_value.getText(), test, Capture);
 		} else {
 			System.out.println("Activate Status is UnSuccessful/Failed");
 			test.log(Status.FAIL, "Activate Status is UnSuccessful/Failed");
-			addSrceenShot("Activate Status is UnSuccessful/Failed", test, Capture);
+			addScreenShot("Activate Status is UnSuccessful/Failed", test, Capture);
 		}
 		}
 
@@ -3108,11 +3108,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (activateStatus.equalsIgnoreCase("Yes")) {
 			System.out.println("Activation is successful: 'Activate' is set to Yes");
 			test.log(Status.INFO, "Activation is successful: 'Activate' is set to Yes");
-			addSrceenShot("Activation is successful", test, Capture);
+			addScreenShot("Activation is successful", test, Capture);
 		} else {
 			System.out.println("Activation failed: 'Activate' is not set to Yes");
 			test.log(Status.FAIL, "Activation failed: 'Activate' is not set to Yes");
-			addSrceenShot("Activation failed", test, Capture);
+			addScreenShot("Activation failed", test, Capture);
 		}
 
 		// Check if the 'Activate - Run Validation' attribute is set to 'Yes'
@@ -3120,20 +3120,20 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (runValidationStatus.equalsIgnoreCase("Yes")) {
 			System.out.println("Run Validation is successful: 'Activate - Run Validation' is set to Yes");
 			test.log(Status.INFO, "Run Validation is successful: 'Activate - Run Validation' is set to Yes");
-			addSrceenShot("Run Validation is successful", test, Capture);
+			addScreenShot("Run Validation is successful", test, Capture);
 		} else {
 			System.out.println("Run Validation failed: 'Activate - Run Validation' is not set to Yes");
 			test.log(Status.FAIL, "Run Validation failed: 'Activate - Run Validation' is not set to Yes");
-			addSrceenShot("Run Validation failed", test, Capture);
+			addScreenShot("Run Validation failed", test, Capture);
 		}
 		if(activateStatus_value_LSE.getText().contains("No Error")) {
 			System.out.println("Activate Status is successful  and the value is : "+activateStatus_value.getText());
 			test.log(Status.PASS, "Activate Status is successful and the value is : "+activateStatus_value.getText());
-			addSrceenShot("Activate Status is successful  and the value is : "+activateStatus_value.getText(), test, Capture);
+			addScreenShot("Activate Status is successful  and the value is : "+activateStatus_value.getText(), test, Capture);
 		} else {
 			System.out.println("Activate Status is UnSuccessful/Failed");
 			test.log(Status.FAIL, "Activate Status is UnSuccessful/Failed");
-			addSrceenShot("Activate Status is UnSuccessful/Failed", test, Capture);
+			addScreenShot("Activate Status is UnSuccessful/Failed", test, Capture);
 		}
 		}
 	
@@ -3150,20 +3150,20 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		if (activateStatus.equalsIgnoreCase("Yes")) {
 			System.out.println("Activation is successful: 'Activate' is set to Yes");
 			test.log(Status.INFO, "Activation is successful: 'Activate' is set to Yes");
-			addSrceenShot("Activation is successful", test, Capture);
+			addScreenShot("Activation is successful", test, Capture);
 		} else {
 			System.out.println("Activation failed: 'Activate' is not set to Yes");
 			test.log(Status.FAIL, "Activation failed: 'Activate' is not set to Yes");
-			addSrceenShot("Activation failed", test, Capture);
+			addScreenShot("Activation failed", test, Capture);
 		}
 		if(activateStatus_value_APD.getText().contains("No Error")) {
 			System.out.println("Activate Status is successful  and the value is : "+activateStatus_value_APD.getText());
 			test.log(Status.PASS, "Activate Status is successful and the value is : "+activateStatus_value_APD.getText());
-			addSrceenShot("Activate Status is successful  and the value is : "+activateStatus_value_APD.getText(), test, Capture);
+			addScreenShot("Activate Status is successful  and the value is : "+activateStatus_value_APD.getText(), test, Capture);
 		} else {
 			System.out.println("Activate Status is UnSuccessful/Failed");
 			test.log(Status.FAIL, "Activate Status is UnSuccessful/Failed");
-			addSrceenShot("Activate Status is UnSuccessful/Failed", test, Capture);
+			addScreenShot("Activate Status is UnSuccessful/Failed", test, Capture);
 		}
 		}
 	
@@ -3194,7 +3194,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(settingsIcon));
 		settingsIcon.click();
 		test.log(Status.INFO, "Clicked On settings Icon ");
-		addSrceenShot("Clicked On settings Icon", test, Capture);
+		addScreenShot("Clicked On settings Icon", test, Capture);
 
 		Thread.sleep(4000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(globalDropDown));
@@ -3205,13 +3205,13 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		WebElement option = driver.findElement(By.xpath("//span[@title='" + globalVaue.trim() + "']"));
 		actions.moveToElement(option).click().perform();
 		test.log(Status.INFO, "Season Group As Global chosen: " + globalVaue);
-		addSrceenShot("Season Group As Global chosen", test, Capture);
+		addScreenShot("Season Group As Global chosen", test, Capture);
 		Thread.sleep(2000);
 		actions.moveToElement(localHubDropDown).click().perform();
 		WebElement option1 = driver.findElement(By.xpath("//span[@title='" + localHubValue.trim() + "']"));
 		actions.moveToElement(option1).click().perform();
 		test.log(Status.INFO, "Season Group As LocalHub chosen: " + localHubValue);
-		addSrceenShot("Season Group As LocalHub chosen", test, Capture);
+		addScreenShot("Season Group As LocalHub chosen", test, Capture);
 		Thread.sleep(2000);
 		actions.moveToElement(affiliateDropDown).click().perform();
 		WebElement option2 = driver.findElement(By.xpath("//span[@title='" + affiliateValue.trim() + "']"));
@@ -3219,14 +3219,14 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		test.log(Status.INFO,
 				"Selected the respective Affiliate from the  Affiliate dropdown according the the Local Hub: "
 						+ affiliateValue);
-		addSrceenShot("Selected the respective Affiliate from the  Affiliate dropdown according the the Local Hub",
+		addScreenShot("Selected the respective Affiliate from the  Affiliate dropdown according the the Local Hub",
 				test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(applyButton));
 		applyButton.click();
 		test.log(Status.INFO, "Clicked On Apply Button");
-		addSrceenShot("Clicked On Apply Button", test, Capture);
+		addScreenShot("Clicked On Apply Button", test, Capture);
 		Thread.sleep(4000);
 
 	}
@@ -3257,7 +3257,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				// Log previous size grid
 				String previousSizeGridCode = sizeGridCode_text.getText();
 				test.log(Status.INFO, "Previous Size Grid Code: " + previousSizeGridCode);
-				addSrceenShot("Previous Size Grid Code", test, Capture);
+				addScreenShot("Previous Size Grid Code", test, Capture);
 
 			}
 			if (ColumnHeader.equals("Selected Sizes GB")) {
@@ -3283,17 +3283,17 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				Save_button.click();
 				Thread.sleep(10000);
 				test.log(Status.INFO, "Replaced New Size Grid Code  with the correct CS size: " + newSizeGridCode);
-				addSrceenShot("Replaced Size Grid Code with: ", test, Capture);
+				addScreenShot("Replaced Size Grid Code with: ", test, Capture);
 				// Verify the size grid changed
 				String currentSizeGridCode = sizeGridCode_text.getText();
 				if (currentSizeGridCode.equals(newSizeGridCode)) {
 					// Capture error message from the size grid error section
 					test.log(Status.INFO, "Size Grid Code changed as expected: " + newSizeGridCode);
-					addSrceenShot("Size Grid Code changed as expected.", test, Capture);
+					addScreenShot("Size Grid Code changed as expected.", test, Capture);
 
 				} else {
 					test.log(Status.FAIL, "Size Grid Code not changed to: " + newSizeGridCode);
-					addSrceenShot("Size Grid Code not changed to: ", test, Capture);
+					addScreenShot("Size Grid Code not changed to: ", test, Capture);
 				}
 
 				String afternewSizgGridStatus = selectedSizesGB_value.getText();
@@ -3332,13 +3332,13 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 			System.out.println("Validation Passed: Size Grid Code is correctly updated to " + actualSizeGridCode_Text);
 			test.log(Status.PASS,
 					"Validation Passed: Size Grid Code is correctly updated to " + actualSizeGridCode_Text);
-			addSrceenShot("Validation Passed", test, Capture);
+			addScreenShot("Validation Passed", test, Capture);
 		} else {
 			System.out.println("Validation Failed: Expected Size Grid Code " + expectedSizeGridCode + " but found "
 					+ actualSizeGridCode_Text);
 			test.log(Status.FAIL, "Validation Failed: Expected Size Grid Code " + expectedSizeGridCode + " but found "
 					+ actualSizeGridCode_Text);
-			addSrceenShot("Validation Failed", test, Capture);
+			addScreenShot("Validation Failed", test, Capture);
 		}
 	}
 
@@ -3366,13 +3366,13 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				.findElement(By.xpath("(//div[@col-id='colorway.skuName|~*~|3.SizeSelection'])[2]//a"));
 		colorwayName.click();
 		test.log(Status.INFO, "Clicked on Colorway Name");
-		addSrceenShot("Clicked on Colorway Name", test, Capture);
+		addScreenShot("Clicked on Colorway Name", test, Capture);
 
 		Thread.sleep(5000);
 
 		System.out.println("Colorway Season Page opened successfully");
 		test.log(Status.PASS, "Colorway Season Page opened successfully");
-		addSrceenShot("Colorway Season Page opened successfully", test, Capture);
+		addScreenShot("Colorway Season Page opened successfully", test, Capture);
 
 	}
 
@@ -3399,7 +3399,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				// Log previous size grid
 				String previousSizeGridCode = sizeGridCode_text.getText();
 				test.log(Status.INFO, "Previous Size Grid Code: " + previousSizeGridCode);
-				addSrceenShot("Previous Size Grid Code", test, Capture);
+				addScreenShot("Previous Size Grid Code", test, Capture);
 				// Attempt to change size grid
 //				Actions actions = new Actions(driver);
 //				actions.doubleClick(sizeGridCode_value).perform();
@@ -3420,17 +3420,17 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				Thread.sleep(60000);
 				Thread.sleep(60000);
 				test.log(Status.INFO, "Attempted to replace Size Grid Code with: " + newSizeGridCode);
-				addSrceenShot("Attempted Size Grid Code Replacement", test, Capture);
+				addScreenShot("Attempted Size Grid Code Replacement", test, Capture);
 				// Verify the size grid did not change
 				String currentSizeGridCode = sizeGridCode_text.getText();
 				if (!currentSizeGridCode.equals(newSizeGridCode)) {
 					// Capture error message from the size grid error section
 					test.log(Status.PASS, "Size Grid Code did not change as expected.");
-					addSrceenShot("Size Grid Code did not change as expected.", test, Capture);
+					addScreenShot("Size Grid Code did not change as expected.", test, Capture);
 
 				} else {
 					test.log(Status.INFO, "Size Grid Code unexpectedly changed to: " + newSizeGridCode);
-					addSrceenShot("Size Grid Code Changed", test, Capture);
+					addScreenShot("Size Grid Code Changed", test, Capture);
 				}
 
 			}
@@ -3497,11 +3497,11 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		String displayedSizeGridCode = sizeGridCode_text_CS.getText();
 		if (displayedSizeGridCode.equals(newSizeGridCode)) {
 			test.log(Status.PASS, "Size Grid Code Saved correctly On Colorway Season Page: " + displayedSizeGridCode);
-			addSrceenShot("Size Grid Code Saved correctly On Colorway Season Page", test, Capture);
+			addScreenShot("Size Grid Code Saved correctly On Colorway Season Page", test, Capture);
 		} else {
 			test.log(Status.FAIL,
 					"Size Grid Code Not Saved correctly On Colorway Season Page: " + displayedSizeGridCode);
-			addSrceenShot("Size Grid Code Not Saved correctly On Colorway Season Page", test, Capture);
+			addScreenShot("Size Grid Code Not Saved correctly On Colorway Season Page", test, Capture);
 		}
 
 		// Verify the sample size
@@ -3509,10 +3509,10 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", sampleSize_text);
 		if (displayedSampleSize != null && !displayedSampleSize.isEmpty()) {
 			test.log(Status.PASS, "Sample Size Based On selected new Size Grid Code: " + displayedSampleSize);
-			addSrceenShot("Sample Size Based On selected new Size Grid Code", test, Capture);
+			addScreenShot("Sample Size Based On selected new Size Grid Code", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Sample Size not displayed correctly: " + displayedSampleSize);
-			addSrceenShot("Sample Size not displayed correctly", test, Capture);
+			addScreenShot("Sample Size not displayed correctly", test, Capture);
 		}
 
 		// Verify the size scale code
@@ -3520,10 +3520,10 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", sizeScaleCode_text);
 		if (displayedSizeScaleCode != null && !displayedSizeScaleCode.isEmpty()) {
 			test.log(Status.PASS, "Size Scale Code Based On selected new Size Grid Code: " + displayedSizeScaleCode);
-			addSrceenShot("Size Scale Code displayed correctly", test, Capture);
+			addScreenShot("Size Scale Code displayed correctly", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Size Scale Code not displayed correctly: " + displayedSizeScaleCode);
-			addSrceenShot("Size Scale Code not displayed correctly", test, Capture);
+			addScreenShot("Size Scale Code not displayed correctly", test, Capture);
 		}
 	}
 	
@@ -3544,7 +3544,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				// Log previous size grid
 				String previousSizeGridCode = sizeGridCode_text.getText();
 				test.log(Status.INFO, "Previous Size Grid Code: " + previousSizeGridCode);
-				addSrceenShot("Previous Size Grid Code", test, Capture);
+				addScreenShot("Previous Size Grid Code", test, Capture);
 
 			}
 			if (ColumnHeader.equals("Selected Sizes GB")) {
@@ -3565,7 +3565,7 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				Save_button.click();
 				Thread.sleep(15000);
 				System.out.println("Cleared sizes at global level clears at all local hubs and all affiliates");
-				addSrceenShot("Cleared sizes at global level clears at all local hubs and all affiliates", test,
+				addScreenShot("Cleared sizes at global level clears at all local hubs and all affiliates", test,
 						Capture);
 				test.log(Status.INFO,
 						"Cleared sizes at global level clears at all local hubs and all affiliates Of: "+currentStatus);
@@ -3590,17 +3590,17 @@ public class LineSheetPage extends WMS_WebDriverUtilities {
 				Save_button.click();
 				Thread.sleep(10000);
 				test.log(Status.INFO, "Replaced Size Grid Code with: " + newSizeGridCode);
-				addSrceenShot("Replaced Size Grid Code with: ", test, Capture);
+				addScreenShot("Replaced Size Grid Code with: ", test, Capture);
 				// Verify the size grid changed
 				String currentSizeGridCode = sizeGridCode_text.getText();
 				if (currentSizeGridCode.equals(newSizeGridCode)) {
 					// Capture error message from the size grid error section
 					test.log(Status.INFO, "Size Grid Code changed as expected: " + newSizeGridCode);
-					addSrceenShot("Size Grid Code changed as expected.", test, Capture);
+					addScreenShot("Size Grid Code changed as expected.", test, Capture);
 
 				} else {
 					test.log(Status.FAIL, "Size Grid Code not changed to: " + newSizeGridCode);
-					addSrceenShot("Size Grid Code not changed to: ", test, Capture);
+					addScreenShot("Size Grid Code not changed to: ", test, Capture);
 				}
 
 				String afternewSizgGridStatus = selectedSizesGB_value.getText();

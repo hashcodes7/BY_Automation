@@ -792,7 +792,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 			business_Object.click();
 			Thread.sleep(3000);
 			test.log(Status.INFO, "clicked on vendorDocuments");
-			addSrceenShot("clicked on vendorDocuments", test, Capture);
+			addScreenShot("clicked on vendorDocuments", test, Capture);
 			Thread.sleep(2000);
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(vendorSearch));
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView;", vendorSearch);
@@ -885,7 +885,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 
 		test.log(Status.INFO, "Updated Vendor(Supplier) Name: " + newVendorName);
-		addSrceenShot("Updated Vendor(Supplier) Name", test, Capture);
+		addScreenShot("Updated Vendor(Supplier) Name", test, Capture);
 		driver.switchTo().window(ParentWinhadle);
 
 		driver.switchTo().defaultContent();
@@ -894,14 +894,14 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		description_Input.clear();
 		description_Input.sendKeys(newDescription);
 		test.log(Status.INFO, "Updated Description: " + newDescription);
-		addSrceenShot("Updated Description", test, Capture);
+		addScreenShot("Updated Description", test, Capture);
 		Thread.sleep(2000);
 
 		WebElement attributeField = driver.findElement(
 				By.xpath("//td[contains(text(), 'Document Type')]/following-sibling::td[1]//child::select"));
 		selectValueFromDropdown(attributeField, newDocumentType);
 		test.log(Status.INFO, "Updated Document Type: " + newDocumentType);
-		addSrceenShot("Updated newDocument Type", test, Capture);
+		addScreenShot("Updated newDocument Type", test, Capture);
 		Thread.sleep(2000);
 
 		lSCoDeveloperLink.click();
@@ -915,9 +915,9 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", searchBtn);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(optnSelect));
 		js.executeScript("arguments[0].click();", optnSelect);
-		addSrceenShot("Selected Vendor", test, Capture);
+		addScreenShot("Selected Vendor", test, Capture);
 		test.log(Status.INFO, "Updated LS&Co. Developer: " + newDocumentType);
-		addSrceenShot("Updated LS&Co. Developer", test, Capture);
+		addScreenShot("Updated LS&Co. Developer", test, Capture);
 		driver.switchTo().window(ParentWinhadle1);
 
 	}
@@ -1003,7 +1003,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 
 		test.log(Status.INFO, "Updated Vendor(Supplier) Name: " + newVendorName);
-		addSrceenShot("Updated Vendor(Supplier) Name", test, Capture);
+		addScreenShot("Updated Vendor(Supplier) Name", test, Capture);
 		driver.switchTo().window(ParentWinhadle);
 
 		driver.switchTo().defaultContent();
@@ -1013,20 +1013,20 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 				By.xpath("//td[contains(text(), 'Image Layout')]/following-sibling::td[1]//child::select"));
 		selectValueFromDropdown(attributeField, newImgLayout);
 		test.log(Status.INFO, "Updated Image Layout: " + newImgLayout);
-		addSrceenShot("Updated Image Layout", test, Capture);
+		addScreenShot("Updated Image Layout", test, Capture);
 		Thread.sleep(2000);
 
 		description_Input.clear();
 		description_Input.sendKeys(newImgDescription);
 		test.log(Status.INFO, "Updated Image Description: " + newImgDescription);
-		addSrceenShot("Updated Description", test, Capture);
+		addScreenShot("Updated Description", test, Capture);
 		Thread.sleep(2000);
 
 		WebElement attributeField2 = driver
 				.findElement(By.xpath("//td[contains(text(), 'Image Type')]/following-sibling::td[1]//child::select"));
 		selectValueFromDropdown(attributeField2, newImgType);
 		test.log(Status.INFO, "Updated Image Type: " + newImgType);
-		addSrceenShot("Updated Image Type", test, Capture);
+		addScreenShot("Updated Image Type", test, Capture);
 		Thread.sleep(2000);
 
 	}
@@ -1061,7 +1061,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 			test.log(Status.FAIL, "Some expected values were not found in the Image Type dropdown. Expected values: "
 					+ expectedValues);
 		}
-		addSrceenShot("Verified all the Image Type list values under Document sub-type Images Vendor Images", test,
+		addScreenShot("Verified all the Image Type list values under Document sub-type Images Vendor Images", test,
 				Capture);
 	}
 
@@ -1129,7 +1129,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		requestNameField.clear();
 		requestNameField.sendKeys(requestName);
 		test.log(Status.INFO, "Updated Request Name: " + requestName);
-		addSrceenShot("Updated Request Name", test, Capture);
+		addScreenShot("Updated Request Name", test, Capture);
 		Thread.sleep(2000);
 
 		Thread.sleep(4000);
@@ -1142,7 +1142,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		airwayBillField.clear();
 		airwayBillField.sendKeys(airwayBill);
 		test.log(Status.INFO, "Updated  Airway Bill # from Vendor: " + airwayBill);
-		addSrceenShot("Updated  Airway Bill # from Vendor", test, Capture);
+		addScreenShot("Updated  Airway Bill # from Vendor", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(shippedDateField));
@@ -1150,7 +1150,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		shippedDateField.clear();
 		shippedDateField.sendKeys(shippedDate);
 		test.log(Status.INFO, "Updated Shipped Date: " + shippedDate);
-		addSrceenShot("Updated Shipped Date", test, Capture);
+		addScreenShot("Updated Shipped Date", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(shippedDateField));
@@ -1158,7 +1158,7 @@ public class VendorPortalPage extends WMS_WebDriverUtilities {
 		vendorCommentsField.clear();
 		vendorCommentsField.sendKeys(vendorComments);
 		test.log(Status.INFO, "Updated Vendor Comments: " + vendorComments);
-		addSrceenShot("Updated Vendor Comments", test, Capture);
+		addScreenShot("Updated Vendor Comments", test, Capture);
 
 		Thread.sleep(2000);
 	}

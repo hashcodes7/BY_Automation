@@ -80,72 +80,72 @@ public class TC05_P2_Color_UploadThumbnail_SeasonalLook extends WMS_TestBase {
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(2000);
 			
 			CNCP.SelectSeasonalColorLook_colorpage(colormenu ,colorsubmenu,filtercolor, test);
 			System.out.println("Seasonal color/look Selected ");
 			test.log(Status.INFO, "Seasonal color/look Selected");
-			addSrceenShot("Seasonal color/look Selected ", test, Capture);
+			addScreenShot("Seasonal color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			palettepage.NavigateTo_updatecolorPage();
 			System.out.println("Navigated to Update color page");
 			test.log(Status.INFO, "Navigated to Update color page");
-			addSrceenShot("Navigated to Update color page", test, Capture);
+			addScreenShot("Navigated to Update color page", test, Capture);
 			
 			String Expectedthumbnail=palettepage.UploadThumbnail(filepath,test);
 			System.out.println("Thumbnail updated for color");
 			test.log(Status.INFO, "Thumbnail updated for color");
-			addSrceenShot("Thumbnail updated for color", test, Capture);
+			addScreenShot("Thumbnail updated for color", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("My seasons menu clicked", test, Capture);
+			addScreenShot("My seasons menu clicked", test, Capture);
 			
 			palettepage.SeasonDropdown(season);
 			System.out.println("Season value seleted:"+season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view is "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view is "+linesheetview, test, Capture);
 			Thread.sleep(2000);
 			
 			
 //			String colorway="0WPJ8-0025 Test MISTED YELLOW";
 			Colorwaypage.SelectColorway(colorway,test);
 			test.log(Status.INFO, "colorway selected: "+colorway);
-			addSrceenShot("colorway selected"+colorway, test, Capture);
+			addScreenShot("colorway selected"+colorway, test, Capture);
 			System.out.println("colorway selected"+colorway);
 			Thread.sleep(2000);
 			
 			palettepage.Validate_thumbnailColor(filename,Expectedthumbnail,test);
 			test.log(Status.PASS, "Validation successful for thumbnail ");
-			addSrceenShot("Validation successful for thumbnail", test, Capture);
+			addScreenShot("Validation successful for thumbnail", test, Capture);
 			System.out.println("Validation successful for thumbnail");
 			Thread.sleep(2000);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

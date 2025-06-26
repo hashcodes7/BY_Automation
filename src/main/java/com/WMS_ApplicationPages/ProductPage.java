@@ -526,7 +526,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 						+ ", Sub Class - " + updatedSubClassValue + ", Consumer - " + updatedConsumer
 						+ ", Consumer Group 1 - " + updatedConsumerGrp1 + ", Consumer Group 2 - " + updatedConsumerGrp2
 						+ ", Customs Classification - " + updatedCustomsClassification);
-		addSrceenShot("Updated product details", test, Capture);
+		addScreenShot("Updated product details", test, Capture);
 	}
 
 	public void updateProduct_SetUpLSE_LSUS(String updatedBrandHierarchy, String updatedClassValue,String updatedSubClassValue, String updatedProSubCat1,
@@ -617,7 +617,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 						+ ", Sub Class - " + updatedSubClassValue + ", Consumer - " + updatedConsumer
 						+ ", Consumer Group 1 - " + updatedConsumerGrp1 + ", Consumer Group 2 - " + updatedConsumerGrp2
 						+ ", Customs Classification - " + updatedCustomsClassification);
-		addSrceenShot("Updated product details", test, Capture);
+		addScreenShot("Updated product details", test, Capture);
 	}
 
 	
@@ -658,7 +658,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		if (!actualSourceName.equals(sourceName)) {
 			System.out.println("Updated source '"+sourceName+"' To '" + actualSourceName);
 			test.log(Status.PASS, "Updated source from '"+sourceName+" ' To ' " + actualSourceName);
-			addSrceenShot("Updated source details", test, Capture);
+			addScreenShot("Updated source details", test, Capture);
  
         }
 		return actualSourceName;
@@ -889,10 +889,10 @@ public class ProductPage extends WMS_WebDriverUtilities {
 
 	    if (allFieldsVerified) {
 	        test.log(Status.INFO, "Non-required attributes were filled successfully.");
-			addSrceenShot("Non-required attributes were filled successfully.", test, Capture);
+			addScreenShot("Non-required attributes were filled successfully.", test, Capture);
 	    } else {
 	        test.log(Status.FAIL, "Verification: Non-required attributes were not filled in successfully.");
-			addSrceenShot("Non-required attributes were not filled successfully.", test, Capture);
+			addScreenShot("Non-required attributes were not filled successfully.", test, Capture);
 	    }
 
 	    return allFieldsVerified;
@@ -906,7 +906,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(newBtn));
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 		clickElement(newBtn);
 	}
 
@@ -915,7 +915,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(productTypeLink));
 		clickElement(productTypeLink);
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 	}
 
 	public void enterProductName(String value) throws Exception {
@@ -924,7 +924,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 40).until(ExpectedConditions.visibilityOf(productNameText));
 		sendInputToTextField(productNameText, value, " ' Product Name ");
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 		// seasonDropdown
 	}
@@ -950,7 +950,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(productType));
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 		clickElement(productType);
 	}
 
@@ -1139,10 +1139,10 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		boolean isDisplayed = driver.findElement(By.xpath("//span[normalize-space()='Product Details']")).isDisplayed();
 		if (isDisplayed) {
 			test.log(Status.PASS, "PC5 Details Page displayed: " + isDisplayed);
-			addSrceenShot("PC5 Details Page displayed", test, Capture);
+			addScreenShot("PC5 Details Page displayed", test, Capture);
 		} else {
 			test.log(Status.FAIL, "PC5 Details Page not displayed.");
-			addSrceenShot("PC5 Details Page not displayed", test, Capture);
+			addScreenShot("PC5 Details Page not displayed", test, Capture);
 		}
 
 		return isDisplayed;
@@ -1158,7 +1158,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //		driver.findElement(By.xpath("//div[contains(text(),'Brand Hierarchy')]/ancestor::div[@class='cascading-div f-attribute-box']/descendant::span[1]")).click();
 //		Thread.sleep(4000);
 //		WebElement HierarcyValue=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_22select-results']/li[1]"));
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		HierarcyValue.click();
 //		System.out.println("selected the Brand :");
 //	}
@@ -1177,7 +1177,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 			driver.findElement(By.xpath("//span[@id='select2-ptc_str_6-container']")).click();
 			Thread.sleep(4000);
 			WebElement capsuleValue = driver.findElement(By.xpath("//ul[@id='select2-ptc_str_6-results']/li[2]"));
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			capsuleValue.click();
 			System.out.println("selected the Brand :");
 		} catch (Exception e) {
@@ -1192,7 +1192,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 			driver.switchTo().frame(iframeContentframe);
 			driver.findElement(By.xpath("//div[@class='dropdown menu-icon']")).click();
 			driver.findElement(By.xpath("//span[normalize-space()='Edit Product']")).click();
-			addSrceenShot("Clicked Edit Product dropdown", test, Capture);
+			addScreenShot("Clicked Edit Product dropdown", test, Capture);
 			System.out.println("string menu" + ":");
 		} catch (Exception e) {
 			System.out.println("string menu" + ":");
@@ -1225,7 +1225,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		searchOption.click();
 
 		test.log(Status.INFO, "Selected Colorway from menu: " + colourWayName);
-		addSrceenShot("Selected Colorway from menu", test, Capture);
+		addScreenShot("Selected Colorway from menu", test, Capture);
 	}
 
 	public void clickOnColorDetailsLink() throws InterruptedException {
@@ -1241,7 +1241,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(pc9CodeElement));
 		String pc9Code = pc9CodeElement.getText();
 		test.log(Status.INFO, "Pc9 code extracted: " + pc9Code);
-		addSrceenShot("Pc9 code extracted", test, Capture);
+		addScreenShot("Pc9 code extracted", test, Capture);
 		return pc9Code;
 	}
 
@@ -1251,7 +1251,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colourwayNameElement));
 		String colourwayName = colourwayNameElement.getText();
 		test.log(Status.INFO, "Colorway name extracted: " + colourwayName);
-		addSrceenShot("Colorway name extracted", test, Capture);
+		addScreenShot("Colorway name extracted", test, Capture);
 		return colourwayName;
 	}
 
@@ -1261,7 +1261,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productNameElement));
 		String productName = productNameElement.getText();
 		test.log(Status.INFO, "Product Name extracted: " + productName);
-		addSrceenShot("Product Name extracted", test, Capture);
+		addScreenShot("Product Name extracted", test, Capture);
 		return productName;
 	}
 
@@ -1271,7 +1271,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productMarketingNameElement));
 		String productMarketingName = productMarketingNameElement.getText();
 		test.log(Status.INFO, "Product Marketing Name extracted: " + productMarketingName);
-		addSrceenShot("Product Marketing Name extracted", test, Capture);
+		addScreenShot("Product Marketing Name extracted", test, Capture);
 		return productMarketingName;
 	}
 
@@ -1281,7 +1281,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(merchFabricTypeElement));
 		String merchFabricTypeName = merchFabricTypeElement.getText();
 		test.log(Status.INFO, "Merch FabricType extracted: " + merchFabricTypeName);
-		addSrceenShot("Merch FabricType extracted", test, Capture);
+		addScreenShot("Merch FabricType extracted", test, Capture);
 		return merchFabricTypeName;
 	}
 
@@ -1291,7 +1291,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(lscoArtworkName));
 		String lscoartworkName = lscoArtworkName.getText();
 		test.log(Status.INFO, "lsco Artwork Name From Color Extracted: " + lscoArtworkName);
-		addSrceenShot("lsco Artwork Name From Color Extracted", test, Capture);
+		addScreenShot("lsco Artwork Name From Color Extracted", test, Capture);
 		return lscoartworkName;
 	}
 
@@ -1301,7 +1301,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(lscoArtwork));
 		String lscoartwork = lscoArtwork.getText();
 		test.log(Status.INFO, "lsco Artwork From Color Extracted: " + lscoArtwork);
-		addSrceenShot("lsco Artwork From Color Extracted", test, Capture);
+		addScreenShot("lsco Artwork From Color Extracted", test, Capture);
 		return lscoartwork;
 	}
 
@@ -1311,7 +1311,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colorComboElement));
 		String colorCombo = colorComboElement.getText();
 		test.log(Status.INFO, "color Combo From Color Extracted: " + colorCombo);
-		addSrceenShot("color Combo From Color Extracted", test, Capture);
+		addScreenShot("color Combo From Color Extracted", test, Capture);
 		return colorCombo;
 	}
 
@@ -1321,7 +1321,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(printTypeElement));
 		String printType = printTypeElement.getText();
 		test.log(Status.INFO, "Print Type From Color Extracted: " + printType);
-		addSrceenShot("Print Type From Color Extracted", test, Capture);
+		addScreenShot("Print Type From Color Extracted", test, Capture);
 		return printType;
 	}
 
@@ -1472,12 +1472,12 @@ public class ProductPage extends WMS_WebDriverUtilities {
 			sizeField.sendKeys(size);
 			sizeField.click();
 			test.log(Status.INFO, "Entered Size: " + size);
-			addSrceenShot("Entered Size", test, Capture);
+			addScreenShot("Entered Size", test, Capture);
 
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(addButton));
 			clickElement(addButton);
 			test.log(Status.INFO, "Clicked Add button for Size: " + size);
-			addSrceenShot("Clicked Add button", test, Capture);
+			addScreenShot("Clicked Add button", test, Capture);
 		}
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(saveAndCheckIn));
 		saveAndCheckIn.click();
@@ -1656,7 +1656,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 			test.log(Status.PASS, "Primary source text: " + primarySourceText);
 			searchOption.click();
 			test.log(Status.INFO, "Source was selected successfully: " + primarySourceText);
-			addSrceenShot("Source was selected successfully", test, Capture);
+			addScreenShot("Source was selected successfully", test, Capture);
 
 			return primarySourceText;
 		} else {
@@ -1672,20 +1672,20 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		String primarySourceAttributeText = primarySourceAttribute.getText();
 		System.out.println("Primary Source attribute: " + primarySourceAttributeText);
 		test.log(Status.PASS, "Primary Source attribute: " + primarySourceAttributeText);
-		addSrceenShot("Primary Source attribute", test, Capture);
+		addScreenShot("Primary Source attribute", test, Capture);
 
 		// Verify Sourcing configuration name
 		String sourcingConfigName = sourcingConfigNameInput.getText();
 		System.out.println("Sourcing configuration name: " + sourcingConfigName);
 		test.log(Status.PASS, "Sourcing configuration name: " + sourcingConfigName);
-		addSrceenShot("\"Sourcing configuration name", test, Capture);
+		addScreenShot("\"Sourcing configuration name", test, Capture);
 
 		// Verify Vendor and Product country of Origin
 		String countryOfOriginText = countryOfOrigin.getText();
 		if (countryOfOriginText.isEmpty()) {
 			System.out.println("Vendor and Product country of Origin is set to blank");
 			test.log(Status.PASS, "Vendor and Product country of Origin is set to blank");
-			addSrceenShot("Vendor and Product country of Origin is set to blank", test, Capture);
+			addScreenShot("Vendor and Product country of Origin is set to blank", test, Capture);
 
 		} else {
 			System.out.println("Vendor and Product country of Origin is not blank" + countryOfOriginText);
@@ -1727,7 +1727,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(optnSelect));
 		js.executeScript("arguments[0].click();", optnSelect);
 		test.log(Status.INFO, "Selected Vendor: " + vendor);
-		addSrceenShot("Selected Vendor", test, Capture);
+		addScreenShot("Selected Vendor", test, Capture);
 		driver.switchTo().window(ParentWinhadle);
 
 	}
@@ -1741,7 +1741,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		String actualSourceName = updatedSourceDetails.getText();
 		System.out.println("Updated source details: " + actualSourceName);
 		test.log(Status.PASS, "Updated source details: " + actualSourceName);
-		addSrceenShot("Updated source details", test, Capture);
+		addScreenShot("Updated source details", test, Capture);
 		return actualSourceName;
 	}
 
@@ -1755,7 +1755,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		String updatedSourceText = updatedSourceDetails.getText();
 		System.out.println("Updated source details: " + updatedSourceText);
 		test.log(Status.PASS, "Updated source details: " + updatedSourceText);
-		addSrceenShot("Updated source details", test, Capture);
+		addScreenShot("Updated source details", test, Capture);
 
 		return updatedSourceText;
 	}
@@ -1769,9 +1769,9 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //			driver.findElement(By.xpath("//div[contains(text(),'Product Sub Cat 1')]/ancestor::div[@class='cascading-div f-attribute-box']/descendant::span[1]")).click();
 //		WebElement ProductSubCatValue=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_19select-results']/li[2]"));
 //		Thread.sleep(2000);
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		ProductSubCatValue.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the Brand :" );
 //	}
 //		catch (Exception e) {
@@ -1789,9 +1789,9 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //			Thread.sleep(2000);
 //		WebElement ProductSubCatValue=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_20select-results']/li[1]"));
 //		Thread.sleep(3000);
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		ProductSubCatValue.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the Brand :" );
 //	}
 //		catch (Exception e) {
@@ -1808,7 +1808,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //		WebElement classValue=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_45select-results']/li[3]"));
 //		Thread.sleep(2000);
 //		classValue.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the selectClass :" );
 //		System.out.println("selected the selectClass :" );
 //	}
@@ -1826,7 +1826,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //		WebElement subClassValue=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_46select-results']/li[2]"));
 //		Thread.sleep(2000);
 //		subClassValue.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the Brand :" );
 //	}
 //		catch (Exception e) {
@@ -1843,7 +1843,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //		WebElement consumerValue=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_49select-results']/li[1]"));
 //		Thread.sleep(2000);
 //		consumerValue.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the Brand :" );
 //	}
 //		catch (Exception e) {
@@ -1860,7 +1860,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //		WebElement consumerGrp1Value=driver.findElement(By.xpath("//ul[@id='select2-ptc_str_50select-results']/li[1]"));
 //		Thread.sleep(2000);
 //		consumerGrp1Value.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the Brand :" );
 //	}
 //		catch (Exception e) {
@@ -1880,7 +1880,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 //		
 //		System.out.println("test");
 //		consumerGrp2Value.click();
-//		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+//		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 //		System.out.println("selected the Brand :" );
 //	}
 //		catch (Exception e) {
@@ -1902,7 +1902,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 
 			System.out.println("test");
 			costomsClassificationValue.click();
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			System.out.println("selected the Brand :");
 		} catch (Exception e) {
 			driver.findElement(By.xpath("//span[@class='select2-results']/ul/li")).click();
@@ -1939,7 +1939,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(createBtn));
 		clickElement(createBtn);
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 	}
 
 	/**
@@ -2021,7 +2021,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(saveBtn));
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 		clickElement(saveBtn);
 		Thread.sleep(6000);
 		System.out.println("saved test:");
@@ -2031,7 +2031,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(viewProductButton));
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 		clickElement(viewProductButton);
 		Thread.sleep(6000);
 		System.out.println("saved test:");
@@ -2042,7 +2042,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(GoToLineSheet));
 		clickElement(GoToLineSheet);
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 		System.out.println("GoToLineSheet test:");
 	}
 
@@ -2051,7 +2051,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(viewProduct));
 		clickElement(viewProduct);
-		addSrceenShot("Clicked on View Product", test, Capture);
+		addScreenShot("Clicked on View Product", test, Capture);
 
 	}
 
@@ -2184,7 +2184,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		business_Object.click();
 		Thread.sleep(2000);
 		test.log(Status.INFO, "Selected Business Object: " + businessObject);
-		addSrceenShot("Selected Business Object", test, Capture);
+		addScreenShot("Selected Business Object", test, Capture);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(searchbutton_2));
 		Thread.sleep(2000);
 		searchbutton_2.click();
@@ -2207,7 +2207,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(table));
 			System.out.println(tableName + " : Present In Consumer Mappings Lookup Table");
 			test.log(Status.INFO, tableName + " : Present In Consumer Mappings Lookup Table");
-			addSrceenShot(tableName, test, Capture);
+			addScreenShot(tableName, test, Capture);
 		}
 	}
 
@@ -2297,7 +2297,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		String infoMsgText = infoMsg.getText();
 		test.log(Status.INFO, "Info: " + infoMsgText);
 		System.out.println("Info: " + infoMsgText);
-		addSrceenShot("Info", test, Capture);
+		addScreenShot("Info", test, Capture);
 		Thread.sleep(2000);
 		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(closePopUp));
 		closePopUp.click();
@@ -2325,7 +2325,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 
 		// Log all options found in the dropdown
 		test.log(Status.INFO, "Dropdown options: " + optionTexts);
-		addSrceenShot("Dropdown options", test, Capture);
+		addScreenShot("Dropdown options", test, Capture);
 
 		// Validate that each expected vendor is in the list of options
 		for (String expectedVendor : vendors) {
@@ -2342,11 +2342,11 @@ public class ProductPage extends WMS_WebDriverUtilities {
 			if (vendorFound) {
 				test.log(Status.PASS,
 						"Vendor found in dropdown: " + expectedVendor + " (Source: " + matchingOption + ")");
-				addSrceenShot("Vendor found in dropdown: " + expectedVendor + " (Source: " + matchingOption + ")", test,
+				addScreenShot("Vendor found in dropdown: " + expectedVendor + " (Source: " + matchingOption + ")", test,
 						Capture);
 			} else {
 				test.log(Status.FAIL, "Vendor not found in dropdown: " + expectedVendor);
-				addSrceenShot("Vendor not found in dropdown: " + expectedVendor, test, Capture);
+				addScreenShot("Vendor not found in dropdown: " + expectedVendor, test, Capture);
 			}
 		}
 	}
@@ -2361,7 +2361,7 @@ public class ProductPage extends WMS_WebDriverUtilities {
 		Thread.sleep(2000);
 		String ErrorMsg = error_Message.getText();
 		test.log(Status.INFO, "Error Message: " + ErrorMsg);
-		addSrceenShot("Error Message", test, Capture);
+		addScreenShot("Error Message", test, Capture);
 		return error_Message.isDisplayed();
 	}
 

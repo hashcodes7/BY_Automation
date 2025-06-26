@@ -100,26 +100,26 @@ public class TC216_P2_Product_BusinessObjects_ConsumerMapping_LookTables extends
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + Administrator_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			// Verify FlexPLM homepage is displayed
 			Assert.assertTrue(productPage.isHomePageDisplayed(), "FlexPLM homepage is not displayed.");
 			System.out.println("FlexPLM homepage is displayed");
 			test.log(Status.PASS, "FlexPLM homepage is displayed");
-			addSrceenShot("FlexPLM homepage is displayed", test, Capture);
+			addScreenShot("FlexPLM homepage is displayed", test, Capture);
 
 			Thread.sleep(5000);
 			productPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_BUSSINESS.menu(), true);
-			addSrceenShot("Clicked on 'Business Object' Under Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on 'Business Object' Under Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on 'Business Object' Under Main menu of Libraries");
 			test.log(Status.INFO, "Clicked on Business Object Under Main menu of Libraries");
 			WaitforPage(4000);
@@ -128,27 +128,27 @@ public class TC216_P2_Product_BusinessObjects_ConsumerMapping_LookTables extends
 			productPage.navigateToConsumerMapping(businessObject, test);
 			System.out.println("Navigated to 'Consumer Mappings'");
 			test.log(Status.INFO, "Navigated to 'Consumer Mappings''");
-			addSrceenShot("Navigated to 'Consumer Mappings'", test, Capture);
+			addScreenShot("Navigated to 'Consumer Mappings'", test, Capture);
 			WaitforPage(4000);
 
 			productPage.verifyLookupTablesCombinations(test);
 			System.out.println("All Lookup tables combinations are displayed");
 			test.log(Status.PASS, "All Lookup tables combinations are displayed");
-			addSrceenShot("All Lookup tables combinations are displayed", test, Capture);
+			addScreenShot("All Lookup tables combinations are displayed", test, Capture);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

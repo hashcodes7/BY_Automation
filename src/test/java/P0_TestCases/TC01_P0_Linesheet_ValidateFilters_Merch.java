@@ -69,41 +69,41 @@ public class TC01_P0_Linesheet_ValidateFilters_Merch extends WMS_TestBase {
 					
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			WaitforPage(10000);
 
 			LineSheetEditPage.Linesheetfilter(filterValue);
 			test.log(Status.INFO, "Filter selected is: "+filterValue);
-			addSrceenShot("Filter selected is: "+filterValue, test, Capture);
+			addScreenShot("Filter selected is: "+filterValue, test, Capture);
 			
 			LineSheetEditPage.Filters_Attribute_Validation(expectedAttributes,test);
 			test.log(Status.PASS, "All the attributes are present according to the filter option ");
-			addSrceenShot("All the attributes are present according to the filter option  ", test, Capture);
+			addScreenShot("All the attributes are present according to the filter option  ", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

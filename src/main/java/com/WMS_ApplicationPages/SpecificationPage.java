@@ -391,7 +391,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		searchOption.click();
 
 		test.log(Status.INFO, "Selected Source from menu: " + sourceName);
-		addSrceenShot("Selected Source from menu", test, Capture);
+		addScreenShot("Selected Source from menu", test, Capture);
 	}
 	
 	public void removeSourceFromSeason(ExtentTest test) throws InterruptedException
@@ -410,10 +410,10 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
             	
 	    			String actSrcVal =sourceValue.getText();
 	    			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(edit)).click();
-	                addSrceenShot("Clicked on edit", test, Capture);
+	                addScreenShot("Clicked on edit", test, Capture);
 
 	    			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(removeSrc)).click();
-	                addSrceenShot("Clicked on remove source", test, Capture);
+	                addScreenShot("Clicked on remove source", test, Capture);
 	                test.log(Status.INFO, "Clicked on 'Remove Source From Season' from 'Actions:' drop down of 'Sourcing Details' Page");
 
 	    			if (new WebDriverWait(driver, 60).until(ExpectedConditions.alertIsPresent()) != null) {
@@ -430,7 +430,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 	    			} else {
 	    				System.out.println("No alert was present");
 		    			test.log(Status.PASS, "Source Is Not Removed from Season");
-		                addSrceenShot("No alert was present", test, Capture);
+		                addScreenShot("No alert was present", test, Capture);
 
 
 	    			}
@@ -465,27 +465,27 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(seasondrp)).click();
 		test.log(Status.INFO, "Clicked on season dropdown");
-	    addSrceenShot("Clicked on season dropdown", test, Capture);
+	    addScreenShot("Clicked on season dropdown", test, Capture);
 		Thread.sleep(2000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(unselseason)).click();
 		test.log(Status.INFO, "Unselected the season");
-		addSrceenShot("Unselected the season", test, Capture);
+		addScreenShot("Unselected the season", test, Capture);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(sourceDropdown));
 		sourceDropdown.click();
 		test.log(Status.INFO, "Clicked on source dropdown");
-	    addSrceenShot("Clicked on source dropdown", test, Capture);
+	    addScreenShot("Clicked on source dropdown", test, Capture);
 		new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(searchField));
 		searchField.sendKeys("Primary");
 		Thread.sleep(3000);
 		searchOption.click();
 		test.log(Status.INFO, "Entered 'Primary Source' in search field ");
-	    addSrceenShot("Entered 'Primary Source", test, Capture);
+	    addScreenShot("Entered 'Primary Source", test, Capture);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(specDropDownText));
 		String name=specDropDownText.getText();
 		Assert.assertEquals(name, "-- None Selected --");
 		System.out.println("Specification is removed from season: "+name);
 		test.log(Status.PASS, "Specification is removed from season: "+name);
-		addSrceenShot("Unselected the season from season drop down", test, Capture);
+		addScreenShot("Unselected the season from season drop down", test, Capture);
 		
 	}
 	
@@ -499,7 +499,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		Assert.assertEquals(name, "-- None Selected --");
 		System.out.println("Specification is removed from source: "+name);
 		test.log(Status.PASS, "Specification is removed from source: "+name);
-	    addSrceenShot("Specification is removed from source", test, Capture);
+	    addScreenShot("Specification is removed from source", test, Capture);
 
 	}
 	
@@ -608,7 +608,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		String customsrc = customSrc.getText();
 		System.out.println(customsrc);
 		test.log(Status.PASS, "custom source object? value: " + customsrc);
-		addSrceenShot("custom source object? value", test, Capture);
+		addScreenShot("custom source object? value", test, Capture);
 		System.out.println(customsrc);
 		Assert.assertEquals(customsrc, "Yes");
 
@@ -617,7 +617,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		String primsrc = primarySrc.getText();
 		System.out.println(primsrc);
 		test.log(Status.PASS, "Is Primary (source)? value: " + primsrc);
-		addSrceenShot("Is primary (source)? value", test, Capture);
+		addScreenShot("Is primary (source)? value", test, Capture);
 		System.out.println(primsrc);
 		Assert.assertEquals(primsrc, "No");
 		Thread.sleep(2000);
@@ -625,12 +625,12 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		Assert.assertTrue(productCode.isDisplayed());
 		System.out.println(productCode.getText());
 		test.log(Status.PASS, "product code: " + productCode.getText());
-		addSrceenShot("product code", test, Capture);
+		addScreenShot("product code", test, Capture);
 
 		Assert.assertTrue(srcConfigName.isDisplayed());
 		System.out.println(srcConfigName.getText());
 		test.log(Status.PASS, "source configuration name: " + srcConfigName.getText());
-		addSrceenShot("source configuration name", test, Capture);
+		addScreenShot("source configuration name", test, Capture);
 
 		String ActualSrcName = srcConfigName.getText();
 		String ExpectedSrcName = productCode.getText() + " -  - " + vendor.getText();
@@ -701,7 +701,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		String customspec = customSpec.getText();
 		System.out.println(customspec);
 		test.log(Status.PASS, "custom source object? value: " + customspec);
-		addSrceenShot("source configuration name", test, Capture);
+		addScreenShot("source configuration name", test, Capture);
 		Assert.assertEquals(customspec, "Yes");
 
 		Thread.sleep(2000);
@@ -710,7 +710,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		String primspec = primarySpec.getText();
 		System.out.println(primspec);
 		test.log(Status.PASS, "Is Primary Specification value? : " + primspec);
-		addSrceenShot("Is Primary Specification value?", test, Capture);
+		addScreenShot("Is Primary Specification value?", test, Capture);
 		Assert.assertEquals(primspec, "No");
 
 		Thread.sleep(1000);
@@ -734,7 +734,7 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", specName);
 		System.out.println(specName.getText());
 		test.log(Status.PASS, "specification name: " + specName.getText());
-		addSrceenShot("specification name", test, Capture);
+		addScreenShot("specification name", test, Capture);
 
 		String ActualSpecName = specName.getText();
 		String ExpectedSpecName = season.getText() + " - " + productCode.getText() + " - " + prodDescr.getText() + " - "
@@ -803,14 +803,14 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 			if (ColumnHeader.equals("Components - Product")) {
 				String componetText = prod_componentField_Text.getText();
 				test.log(Status.INFO, "Components-Product text: " + componetText);
-				addSrceenShot("Components-Product text", test, Capture);
+				addScreenShot("Components-Product text", test, Capture);
 				Actions actions = new Actions(driver);
 				actions.doubleClick(prod_ComponentField).perform();
 				Thread.sleep(2000);
 				List<WebElement> componentElements = driver
 						.findElements(By.xpath("//*[contains(@class,'p-chips-token-label')]"));
 				test.log(Status.INFO, "Number of components In Components-Product: " + componentElements.size());
-				addSrceenShot("Number of components In Components-Product", test, Capture);
+				addScreenShot("Number of components In Components-Product", test, Capture);
 
 				 StringBuilder componentsLog = new StringBuilder("Components: ");
 	                for (WebElement component : componentElements) {
@@ -821,27 +821,27 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 				WebElement lastComponent = componentElements.get(componentElements.size() - 1);
 				String lastComponentName = lastComponent.getText();
 				test.log(Status.INFO, "Removing last component in components-Product: " + lastComponentName);
-				addSrceenShot("Removing last component in components-Product", test, Capture);
+				addScreenShot("Removing last component in components-Product", test, Capture);
 
 				WebElement removeButton = lastComponent
 						.findElement(By.xpath("following-sibling::*[contains(@class,'pi-times-circle')]"));
 				removeButton.click();
 				test.log(Status.INFO, "Removed component in components-Product: " + lastComponentName);
-				addSrceenShot("Removed component in components-Product", test, Capture);
+				addScreenShot("Removed component in components-Product", test, Capture);
 				actions.sendKeys(Keys.ENTER).perform();
 				Thread.sleep(2000);
 				save.click();
 				test.log(Status.INFO, "Clicked on Save button");
-				addSrceenShot("Clicked on Save button", test, Capture);
+				addScreenShot("Clicked on Save button", test, Capture);
 
 				Thread.sleep(7000); // Wait for the changes to be saved
 
 				String updatedComponentsText = prod_componentField_Text.getText();
 				test.log(Status.INFO, "Updated components text in components-Product: " + updatedComponentsText);
-				addSrceenShot("Updated components text in components-Product", test, Capture);
+				addScreenShot("Updated components text in components-Product", test, Capture);
 
 				String[] updatedComponentsArray = updatedComponentsText.split(", ");
-				addSrceenShot("Removed component in components-Product", test, Capture);
+				addScreenShot("Removed component in components-Product", test, Capture);
 
 				boolean isRemoved = true;
 				for (String component : updatedComponentsArray) {
@@ -872,14 +872,14 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 
 		String componetText = colorway_componentField_Text.getText();
 		test.log(Status.INFO, "Components-Colorway text: " + componetText);
-		addSrceenShot("Components-Colorway text", test, Capture);
+		addScreenShot("Components-Colorway text", test, Capture);
 		Actions actions = new Actions(driver);
 		actions.doubleClick(colorway_ComponentField).perform();
 		Thread.sleep(2000);
 		List<WebElement> componentElements = driver
 				.findElements(By.xpath("//*[contains(@class,'p-chips-token-label')]"));
 		test.log(Status.INFO, "Number of components in Components-Colorway: " + componentElements.size());
-		addSrceenShot("Number of components in Components-Colorway", test, Capture);
+		addScreenShot("Number of components in Components-Colorway", test, Capture);
 
 		 StringBuilder componentsLog = new StringBuilder("Components: ");
          for (WebElement component : componentElements) {
@@ -890,24 +890,24 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
 		WebElement lastComponent = componentElements.get(componentElements.size() - 1);
 		String lastComponentName = lastComponent.getText();
 		test.log(Status.INFO, "Removing last component in components-Colorway: " + lastComponentName);
-		addSrceenShot("Removing last component in components-Colorway", test, Capture);
+		addScreenShot("Removing last component in components-Colorway", test, Capture);
 
 		WebElement removeButton = lastComponent
 				.findElement(By.xpath("following-sibling::*[contains(@class,'pi-times-circle')]"));
 		removeButton.click();
 		test.log(Status.INFO, "Removed component in components-Colorway: " + lastComponentName);
-		addSrceenShot("Removed component in components-Colorway", test, Capture);
+		addScreenShot("Removed component in components-Colorway", test, Capture);
 		actions.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(2000);
 		save.click();
 		test.log(Status.INFO, "Clicked on Save button");
-		addSrceenShot("Clicked on Save button", test, Capture);
+		addScreenShot("Clicked on Save button", test, Capture);
 
 		Thread.sleep(7000); // Wait for the changes to be saved
 
 		String updatedComponentsText = colorway_componentField_Text.getText();
 		test.log(Status.INFO, "Updated component text in components-Coloway: " + updatedComponentsText);
-		addSrceenShot("Updated component text in components-Coloway", test, Capture);
+		addScreenShot("Updated component text in components-Coloway", test, Capture);
 
 		String[] updatedComponentsArray = updatedComponentsText.split(", ");
 		boolean isRemoved = true;
@@ -935,26 +935,26 @@ public class SpecificationPage extends WMS_WebDriverUtilities{
             if (ColumnHeader.equals("Components - Product")) {
                 String componetText = prod_componentField_Text.getText();
                 test.log(Status.INFO, "Components-Product text: " + componetText);
-        		addSrceenShot("Components-Product text", test, Capture);
+        		addScreenShot("Components-Product text", test, Capture);
                 Actions actions = new Actions(driver);
                 actions.doubleClick(prod_ComponentField).perform();
                 Thread.sleep(2000);
                 WebElement addComponentField = driver.findElement(By.xpath("//input[@id='multiEntryInput']"));
                 addComponentField.sendKeys(NewComponent);
                 test.log(Status.INFO, "Added component name: " + NewComponent);
-        		addSrceenShot("Added component name", test, Capture);
+        		addScreenShot("Added component name", test, Capture);
 
                 actions.sendKeys(Keys.ENTER).perform();
                 Thread.sleep(2000);
                 save.click();
                 test.log(Status.INFO, "Clicked on Save button");
-        		addSrceenShot("Clicked on Save button", test, Capture);
+        		addScreenShot("Clicked on Save button", test, Capture);
 
                 Thread.sleep(7000); // Wait for the changes to be saved
 
                 String updatedComponentsText = prod_componentField_Text.getText();
                 test.log(Status.INFO, "Updated components text in components-Product: " + updatedComponentsText);
-        		addSrceenShot("Updated components text in components-Product", test, Capture);
+        		addScreenShot("Updated components text in components-Product", test, Capture);
 
                 String[] updatedComponentsArray = updatedComponentsText.split(", ");
                 boolean isAppended = updatedComponentsArray[updatedComponentsArray.length - 1].equals(NewComponent);

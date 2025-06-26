@@ -80,61 +80,61 @@ public class TC183_UpdatePC9_BFFcolor extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 					
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Colorwaypage.SelectColorway(colorway,test);
 			System.out.println("Colorway selected: "+colorway);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 			
 			Colorwaypage.NavigateTo_updatecolorway();
 			System.out.println("Navigated to Edit colorway page ");
 			test.log(Status.INFO, " Navigated to Edit colorway page ");
-			addSrceenShot("Navigated to Edit colorway page ", test, Capture);
+			addScreenShot("Navigated to Edit colorway page ", test, Capture);
 			
 //          if colorsubmenu element(Looks/Sundry) is not there just keep Looks/Sundry string ----------------------			
 			
 			Colorwaypage.requiredAttributes(productsegLSUSvalue,productsegLSEvalue,test);
 			System.out.println("Product segmentation LSE and LSUS fields Updated");
 			test.log(Status.INFO, "Product segmentation LSE and LSUS fields Updated");
-			addSrceenShot("Product segmentation LSE and LSUS fields Updated", test, Capture);
+			addScreenShot("Product segmentation LSE and LSUS fields Updated", test, Capture);
 			WaitforPage(4000);
 			
 			Colorwaypage.Validate_UpdatePC9_SeasonalBFF(productsegLSUSvalue,productsegLSEvalue,test);
 			System.out.println("Validation successful for Product segmentation LSE and LSUS fields");
 			test.log(Status.INFO, "Validation successful for Product segmentation LSE and LSUS fields");
-			addSrceenShot("Validation successful for Product segmentation LSE and LSUS fields", test, Capture);
+			addScreenShot("Validation successful for Product segmentation LSE and LSUS fields", test, Capture);
 						
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

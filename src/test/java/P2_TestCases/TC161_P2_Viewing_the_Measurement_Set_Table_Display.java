@@ -82,90 +82,90 @@ public class TC161_P2_Viewing_the_Measurement_Set_Table_Display extends WMS_Test
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL " + GarmentDeveloper_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "2706LFA";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.PASS, "PC5 Details Page is displayed: " + productName);
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 			MeasurementsPage.clickDetailsTab();
 			test.log(Status.INFO, "Clicked on Details tab");
-			addSrceenShot("Clicked on Details tab", test, Capture);
+			addScreenShot("Clicked on Details tab", test, Capture);
 
 //			String specification = "S1 2025 - 0WP6Y - 2706LFA -";
 			MeasurementsPage.selectSpecifications(specification, test);
 			System.out.println("Selected specifications " + specification);
 			test.log(Status.INFO, "Selected specification " + specification);
-			addSrceenShot("Selected specification " + specification, test, Capture);
+			addScreenShot("Selected specification " + specification, test, Capture);
 
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
 			System.out.println("Navigated to measurement page  ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 
 			// Control the Measurement Set Table using three lists
 			MeasurementsPage.controlMeasurementSetTable(test);
 			test.log(Status.INFO, "Controlled the Measurement Set Table using three lists");
-			addSrceenShot("Controlled the Measurement Set Table using three lists", test, Capture);
+			addScreenShot("Controlled the Measurement Set Table using three lists", test, Capture);
 
 			// Verify display modes
 			Assert.assertTrue(MeasurementsPage.verifyDisplayModes(test), "Display modes are not correct.");
 			test.log(Status.PASS, "Display modes are correct");
-			addSrceenShot("Display modes are correct", test, Capture);
+			addScreenShot("Display modes are correct", test, Capture);
 
 			// Verify units of measure
 			Assert.assertTrue(MeasurementsPage.verifyUnitsOfMeasure(test), "Units of measure are not correct.");
 			test.log(Status.PASS, "Units of measure are correct");
-			addSrceenShot("Units of measure are correct", test, Capture);
+			addScreenShot("Units of measure are correct", test, Capture);
 
 			// Verify filter options
 			Assert.assertTrue(MeasurementsPage.verifyFilterOptions(test), "Filter options are not correct.");
 			test.log(Status.PASS, "Filter options are correct");
-			addSrceenShot("Filter options are correct", test, Capture);
+			addScreenShot("Filter options are correct", test, Capture);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left panel");
 			test.log(Status.INFO, "Clicked on close Left panel");
-			addSrceenShot("Clicked on close Left panel", test, Capture);
+			addScreenShot("Clicked on close Left panel", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

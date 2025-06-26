@@ -80,18 +80,18 @@ public class TC05_P2_Color_Delete_LookInformation extends WMS_TestBase {
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(2000);
 			
 			CNCP.SelectSeasonalColorLook_colorpage(colormenu ,colorsubmenu,filtercolor, test);
 			System.out.println("Seasonal color/look Selected ");
 			test.log(Status.INFO, "Seasonal color/look Selected");
-			addSrceenShot("Seasonal color/look Selected ", test, Capture);
+			addScreenShot("Seasonal color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			CNCP.ColorseasonalLook_page(test);
@@ -99,27 +99,27 @@ public class TC05_P2_Color_Delete_LookInformation extends WMS_TestBase {
 			CNCP.NavigateTo_EditLookInformationPage();
 			System.out.println("Navigated to Edit Look Information page");
 			test.log(Status.INFO, "Navigated to Edit Look Information page");
-			addSrceenShot("Navigated to Edit Look Information page", test, Capture);
+			addScreenShot("Navigated to Edit Look Information page", test, Capture);
 			Thread.sleep(2000);
 
 			CNCP.Delete_seasonalLookInformation(finishformulaname);
 			System.out.println("Deleted a look information");
 			test.log(Status.INFO, "Deleted a look information");
-			addSrceenShot("Deleted a look information", test, Capture);
+			addScreenShot("Deleted a look information", test, Capture);
 			
 			CNCP.Validate_Deleted_lookInformation(test);
 			System.out.println(" Validation successful for Delete Seasonal look information");
 			test.log(Status.PASS, "Validation successful for Delete Seasonal look information");
-			addSrceenShot("Validation successful for Delete Seasonal look information", test, Capture);
+			addScreenShot("Validation successful for Delete Seasonal look information", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

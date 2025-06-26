@@ -1,99 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-26T12:51:22 IST" name="Default suite" finished-at="2025-06-26T12:52:27 IST" duration-ms="64397">
+  <suite started-at="2025-06-26T22:29:36 IST" name="Default suite" finished-at="2025-06-26T22:32:26 IST" duration-ms="170001">
     <groups>
       <group name="E2E_TC">
-        <method signature="TC292_P0_E2E_CreateColors_Solid.P0_TC_292_E2E_CreateColors_Solid(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" name="P0_TC_292_E2E_CreateColors_Solid" class="E2E_Testcases.TC292_P0_E2E_CreateColors_Solid"/>
+        <method signature="TC287_P0_E2E_ProductCreation.P0_TC02_E2E_ProductCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" name="P0_TC02_E2E_ProductCreation" class="E2E_Testcases.TC287_P0_E2E_ProductCreation"/>
       </group> <!-- E2E_TC -->
     </groups>
-    <test started-at="2025-06-26T12:51:22 IST" name="Default test" finished-at="2025-06-26T12:52:27 IST" duration-ms="64397">
-      <class name="E2E_Testcases.TC292_P0_E2E_CreateColors_Solid">
-        <test-method is-config="true" signature="CreateSummary()[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" started-at="2025-06-26T12:51:22 IST" name="CreateSummary" finished-at="2025-06-26T12:51:22 IST" duration-ms="15" status="PASS">
+    <test started-at="2025-06-26T22:29:36 IST" name="Default test" finished-at="2025-06-26T22:32:26 IST" duration-ms="170001">
+      <class name="E2E_Testcases.TC287_P0_E2E_ProductCreation">
+        <test-method is-config="true" signature="CreateSummary()[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" started-at="2025-06-26T22:29:36 IST" name="CreateSummary" finished-at="2025-06-26T22:29:36 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateSummary -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" started-at="2025-06-26T12:51:24 IST" name="setUp" finished-at="2025-06-26T12:51:43 IST" duration-ms="19410" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" started-at="2025-06-26T22:29:38 IST" name="setUp" finished-at="2025-06-26T22:30:05 IST" duration-ms="27646" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="P0_TC_292_E2E_CreateColors_Solid(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" started-at="2025-06-26T12:51:43 IST" name="P0_TC_292_E2E_CreateColors_Solid" data-provider="TC292_P0_E2E_CreateColors_Solid" finished-at="2025-06-26T12:52:26 IST" duration-ms="43241" status="PASS">
+        <test-method signature="P0_TC02_E2E_ProductCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" started-at="2025-06-26T22:30:05 IST" name="P0_TC02_E2E_ProductCreation" data-provider="orderAllocationData" finished-at="2025-06-26T22:32:25 IST" duration-ms="140062" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TC292_P0_E2E_CreateColors_Solid]]>
+                <![CDATA[TC287_P0_E2E_ProductCreation]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Solid Colors]]>
+                <![CDATA[Levi's S1 2025 Female Accessories]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[150]]>
+                <![CDATA[Demo_Product_aug06]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[150]]>
+                <![CDATA[Red Tab Global]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[150]]>
+                <![CDATA[Bags]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[Tans]]>
+                <![CDATA[Backpack]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[Scotdic]]>
+                <![CDATA[Belts]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[111187]]>
+                <![CDATA[Reversible]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[AutomationTest_05]]>
+                <![CDATA[Girls]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[Levis_test_05]]>
+                <![CDATA[Girls Infant]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Regular]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[contains(text(),'Product Name')]//following::input[1]' (tried for 40 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[contains(text(),'Product Name')]//following::input[1]' (tried for 40 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.WMS_ApplicationPages.ProductPage.enterProductName(ProductPage.java:925)
+at E2E_Testcases.TC287_P0_E2E_ProductCreation.P0_TC02_E2E_ProductCreation(TC287_P0_E2E_ProductCreation.java:135)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'Product Name')]//following::input[1]"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\2276537\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53947}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58ce5711635edee5354ad8184cd9a58b
+*** Element info: {Using=xpath, value=//div[contains(text(),'Product Name')]//following::input[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- P0_TC_292_E2E_CreateColors_Solid -->
-        <test-method is-config="true" signature="setUpend()[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" started-at="2025-06-26T12:52:26 IST" name="setUpend" finished-at="2025-06-26T12:52:27 IST" duration-ms="299" status="PASS">
+        </test-method> <!-- P0_TC02_E2E_ProductCreation -->
+        <test-method is-config="true" signature="setUpend()[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" started-at="2025-06-26T22:32:25 IST" name="setUpend" finished-at="2025-06-26T22:32:26 IST" duration-ms="502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpend -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" started-at="2025-06-26T12:52:27 IST" name="afterMethod" finished-at="2025-06-26T12:52:27 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" started-at="2025-06-26T22:32:26 IST" name="afterMethod" finished-at="2025-06-26T22:32:26 IST" duration-ms="3" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=P0_TC_292_E2E_CreateColors_Solid status=SUCCESS method=TC292_P0_E2E_CreateColors_Solid.P0_TC_292_E2E_CreateColors_Solid(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810] output={null}]]]>
+                <![CDATA[[TestResult name=P0_TC02_E2E_ProductCreation status=FAILURE method=TC287_P0_E2E_ProductCreation.P0_TC02_E2E_ProductCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810] output={null}]]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+at com.WMS_Utilities.WMS_WebDriverUtilities.takeScreenshot(WMS_WebDriverUtilities.java:339)
+at com.WMS_Utilities.WMS_TestBase.afterMethod(WMS_TestBase.java:83)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:E2E_Testcases.TC292_P0_E2E_CreateColors_Solid@66ea810]" started-at="2025-06-26T12:52:27 IST" name="tearDown" finished-at="2025-06-26T12:52:27 IST" duration-ms="257" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E2E_Testcases.TC287_P0_E2E_ProductCreation@66ea810]" started-at="2025-06-26T22:32:26 IST" name="tearDown" finished-at="2025-06-26T22:32:26 IST" duration-ms="463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- E2E_Testcases.TC292_P0_E2E_CreateColors_Solid -->
+      </class> <!-- E2E_Testcases.TC287_P0_E2E_ProductCreation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

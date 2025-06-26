@@ -78,11 +78,11 @@ public class TC322_P2_VendorPortalAccess_DocumentSubTypeImagesVendorImages exten
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + VendorPortal_URl);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -90,28 +90,28 @@ public class TC322_P2_VendorPortalAccess_DocumentSubTypeImagesVendorImages exten
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 			WaitforPage(4000);
 			
 			mainMenuPage.selectsubmenu(MainMenuEnum.LIBRARIES_RETAILDOCUMENT.menu());
 			System.out.println("Clicked on Retail Document Under Material");
 			test.log(Status.INFO, "Clicked on Retail Document Under Material");
-			addSrceenShot("Clicked on Retail Document Under Material", test, Capture);
+			addScreenShot("Clicked on Retail Document Under Material", test, Capture);
 			WaitforPage(5000);
 
 //			String documentType = "Vendor Images";
 			vendorPage.selectvendorDocumentsAndclickOnSearch(documentType, test);
 			test.log(Status.INFO, "sub-type Images Vendor Images choosen");
-			addSrceenShot("sub-type Images Vendor Images choosen", test, Capture);
+			addScreenShot("sub-type Images Vendor Images choosen", test, Capture);
 
 //			String vendorDOCName = "Commercial Sample Image - TEST_AUTO_IMG	";
 			vendorPage.clickOnDocumentName(vendorDOCName);
 			test.log(Status.INFO, "Clicked on Document Name");
-			addSrceenShot("Clicked on Document Name", test, Capture);
+			addScreenShot("Clicked on Document Name", test, Capture);
 
 			vendorPage.clickOnUpdateInActionsMenu();
 			test.log(Status.INFO, "Clicked on Update in Actions menu");
-			addSrceenShot("Clicked on Update in Actions menu", test, Capture);
+			addScreenShot("Clicked on Update in Actions menu", test, Capture);
 
 //			String newVendorName = "ARVIND LIMITED 5151 IN";
 //			String newImgLayout = "1x1";
@@ -121,32 +121,32 @@ public class TC322_P2_VendorPortalAccess_DocumentSubTypeImagesVendorImages exten
 			vendorPage.updateAttributesForVendorImgDocumnet(newVendorName, newImgLayout, newImgDescription, newImgType,
 					test);
 			test.log(Status.INFO, "Updated all the required attributes");
-			addSrceenShot("Updated all the required attributes", test, Capture);
+			addScreenShot("Updated all the required attributes", test, Capture);
 
 			vendorPage.verifyListOfValuesInImgTypeDropdown(test);
 
 			WaitforPage(2000);
 			vendorPage.clickOnSaveButton();
 			test.log(Status.INFO, "Clicked on Save button");
-			addSrceenShot("Clicked on Save button", test, Capture);
+			addScreenShot("Clicked on Save button", test, Capture);
 
 			vendorPage.verifyUpdated_Attributes(newVendorName, newImgLayout, newImgDescription, newImgType);
 			test.log(Status.PASS, "Verified all the updated attributes on the Document details page");
-			addSrceenShot("Verified all the updated attributes on the Document details page", test, Capture);
+			addScreenShot("Verified all the updated attributes on the Document details page", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

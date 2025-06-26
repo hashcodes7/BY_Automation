@@ -102,49 +102,49 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2024 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "0908LMA";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(productDetailsPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.INFO, "PC5 Details Page is displayed");
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 			productDetailsPage.CreateColorway();
 			System.out.println("Clicked on Create Colorway");
 			test.log(Status.INFO, "Clicked on Create Colorway");
-			addSrceenShot("Clicked on Create Colorway", test, Capture);
+			addScreenShot("Clicked on Create Colorway", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.ClickColorwayLookColor();
 			System.out.println("Clicked on Colorway(Look/Color)");
 			test.log(Status.INFO, "Clicked on Colorway(Look/Color)");
-			addSrceenShot("Colorway(Look/Color)", test, Capture);
+			addScreenShot("Colorway(Look/Color)", test, Capture);
 			WaitforPage(4000);
 
 //			String colorName = "04U DA077E SolidC123";
 			Colorwaypage.select_Color(colorName, test);
 			System.out.println("Selected Color: " + colorName);
 			test.log(Status.INFO, "Selected  Color: " + colorName);
-			addSrceenShot("Selected Color", test, Capture);
+			addScreenShot("Selected Color", test, Capture);
 			WaitforPage(4000);
 
 			// All mandatory feilds
@@ -152,14 +152,14 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 			colorWayPage.selectProductType(productTypeValue);
 			System.out.println("selected ProductType");
 			test.log(Status.INFO, "Selected Product Type: " + productTypeValue);
-			addSrceenShot("Selected Product Type", test, Capture);
+			addScreenShot("Selected Product Type", test, Capture);
 			WaitforPage(4000);
 
 //			String rigidIndicatorValue = "Rigid";
 			colorWayPage.selectRigidIndicator(rigidIndicatorValue);
 			System.out.println("selected RigidIndicator");
 			test.log(Status.INFO, "Selected Rigid Indicator : " + rigidIndicatorValue);
-			addSrceenShot("Selected Product Type", test, Capture);
+			addScreenShot("Selected Product Type", test, Capture);
 			WaitforPage(4000);
 
 //			String productSegmentationLSE_Value = "A66 - LFB RT Accessories Belts";
@@ -167,7 +167,7 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 			System.out.println("Selected ProductSegmentationLSE value From DropDown");
 			test.log(Status.INFO,
 					"Selected ProductSegmentationLSE value From DropDown: " + productSegmentationLSE_Value);
-			addSrceenShot("Selected ProductSegmentationLSE value From DropDown", test, Capture);
+			addScreenShot("Selected ProductSegmentationLSE value From DropDown", test, Capture);
 			WaitforPage(4000);
 
 //			String productSegmentationLSUS_Value = "5 - LFK Boys 8-20 Discontinued Licensed";
@@ -176,7 +176,7 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 			test.log(Status.INFO,
 					"Selected ProductSegmentationLSUS value From DropDown: " + productSegmentationLSUS_Value);
 			test.log(Status.INFO, "Entered All Mandatory Feilds ");
-			addSrceenShot("Selected ProductSegmentationLSUS value From DropDown", test, Capture);
+			addScreenShot("Selected ProductSegmentationLSUS value From DropDown", test, Capture);
 			WaitforPage(4000);
 
 			// All non mandatory feilds
@@ -198,20 +198,20 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 					merchFabricType, briefCode, test);
 			System.out.println("Filled All NonMandatory Fields");
 			test.log(Status.INFO, "Filled All NonMandatory Fields");
-			addSrceenShot("Filled All NonMandatory Fields", test, Capture);
+			addScreenShot("Filled All NonMandatory Fields", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.clickOnSave();
 			System.out.println("Clicked On save Button");
 			test.log(Status.INFO, "Clicked On save Button");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 			WaitforPage(4000);
 
 //			String hubOfferdToValue = "Global";
 			colorWayPage.selectHubOfferdToValue(hubOfferdToValue);
 			System.out.println("selected HubOfferd To Value");
 			test.log(Status.INFO, "selected HubOfferd To Value : " + hubOfferdToValue);
-			addSrceenShot("selected HubOfferd To Value", test, Capture);
+			addScreenShot("selected HubOfferd To Value", test, Capture);
 			WaitforPage(4000);
 
 			// All non required fields on Colorway Season Page
@@ -246,13 +246,13 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 					productPricePositioning, primaryFinishMill, primaryFinish, fabricMill, seasonalLook, test);
 			System.out.println("Filled All Non Mandatory Fields Of Colorway Season Page");
 			test.log(Status.INFO, "Filled All Non Mandatory Fields Of Colorway Season Page");
-			addSrceenShot("Filled All Non Mandatory Fields Of Colorway Season Page", test, Capture);
+			addScreenShot("Filled All Non Mandatory Fields Of Colorway Season Page", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.clickOnViewProduct();
 			System.out.println("Clicked On ViewProduct");
 			test.log(Status.INFO, "Clicked On View Product");
-			addSrceenShot("Clicked On View Product", test, Capture);
+			addScreenShot("Clicked On View Product", test, Capture);
 			WaitforPage(4000);
 
 			// Verify PC9 creation and non-required attributes
@@ -263,28 +263,28 @@ public class TC45_P1_Create_PC9_With_Non_Required_Attributes extends WMS_TestBas
 			Assert.assertTrue(isPC9Created, "PC9 was not created successfully.");
 			System.out.println("PC9 was created successfully.");
 			test.log(Status.PASS, "Verification: PC9 was created successfully.");
-			addSrceenShot("PC9 was created successfully.", test, Capture);
+			addScreenShot("PC9 was created successfully.", test, Capture);
 
 			Assert.assertTrue(areNonRequiredAttributesFilled,
 					"Non-required attributes were not filled in successfully.");
 			System.out.println("Non-required attributes were filled successfully.");
 			test.log(Status.PASS, "Verification: Non-required attributes were filled successfully.");
-			addSrceenShot("Non-required attributes were filled successfully.", test, Capture);
+			addScreenShot("Non-required attributes were filled successfully.", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

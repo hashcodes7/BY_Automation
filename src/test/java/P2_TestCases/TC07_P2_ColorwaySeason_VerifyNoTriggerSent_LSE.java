@@ -87,37 +87,37 @@ public class TC07_P2_ColorwaySeason_VerifyNoTriggerSent_LSE extends WMS_TestBase
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			SetUpPage.SeasonDropdown(season);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: Adoption");
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			SetUpPage.SelectColorway(colorway);
 			test.log(Status.INFO, "colorway details page opened"+ colorway);
-			addSrceenShot("colorway details page opened", test, Capture);
+			addScreenShot("colorway details page opened", test, Capture);
 			
 			SetUpPage.ClickEditColorwayseason();
 			test.log(Status.INFO, "Colorway season edit page opened");
-			addSrceenShot("Colorway season edit page opened", test, Capture);
+			addScreenShot("Colorway season edit page opened", test, Capture);
 			Thread.sleep(3000);
 			
 			SetUpPage.SetUpLSE(test);
 			test.log(Status.INFO, "SetUP LSE is Completed");
 			System.out.println("SetUP LSE is Completed");
-			addSrceenShot("SetUP LSE is completed", test, Capture);
+			addScreenShot("SetUP LSE is completed", test, Capture);
 			Thread.sleep(4000);
 			
 			if (SetUpPage.validateLSEError() == false) {
@@ -125,26 +125,26 @@ public class TC07_P2_ColorwaySeason_VerifyNoTriggerSent_LSE extends WMS_TestBase
 				SetUpPage.validate_NoTriggerSent_LSE(test);
 				System.out.println("Validation UnSuccessful for  SetUpLSE");
 				test.log(Status.PASS, "Validation UnSuccessful for  SetUpLSE");
-				addSrceenShot("Validation UnSuccessful for  SetUpLSE", test, Capture);
+				addScreenShot("Validation UnSuccessful for  SetUpLSE", test, Capture);
 				Thread.sleep(3000);
 
 				productPage.editProduct();
 				System.out.println("clicked on edit product");
 				test.log(Status.INFO, "clicked on edit product");
-				addSrceenShot("clicked on edit product", test, Capture);
+				addScreenShot("clicked on edit product", test, Capture);
 
 				productPage.updateProduct_SetUpLSE_LSUS(updatedBrandHierarchy, updatedClassValue, updatedSubClassValue,
 						updatedProSubCat1, updatedProSubCat2, updatedConsumer, updatedConsumerGrp1, updatedConsumerGrp2,
 						updatedCustomsClassification, test);
 				System.out.println("All product fields updated");
 				test.log(Status.INFO, "All product fields updated");
-				addSrceenShot("All product fields updated", test, Capture);
+				addScreenShot("All product fields updated", test, Capture);
 				productPage.clickOnSave();
 
 				SetUpPage.ClickEditColorway();
 				test.log(Status.INFO, "Colorway season edit page opened");
 				System.out.println("Colorway season edit page opened");
-				addSrceenShot("Colorway season edit page opened", test, Capture);
+				addScreenShot("Colorway season edit page opened", test, Capture);
 				Thread.sleep(3000);
 				
 				
@@ -152,13 +152,13 @@ public class TC07_P2_ColorwaySeason_VerifyNoTriggerSent_LSE extends WMS_TestBase
 						consumerGroupExt2, destroySampleInd, profitCenterAPD, test);
 				System.out.println("All Colorway fields updated");
 				test.log(Status.INFO, "All Colorway fields updated");
-				addSrceenShot("All Colorway fields updated", test, Capture);
+				addScreenShot("All Colorway fields updated", test, Capture);
 				Thread.sleep(3000);
 
 				SetUpPage.ClickEditColorwayseason();
 				System.out.println("clicked on edit colorway season");
 				test.log(Status.INFO, "clicked on edit colorway season");
-				addSrceenShot("clicked on edit colorway season", test, Capture);
+				addScreenShot("clicked on edit colorway season", test, Capture);
 				Thread.sleep(3000);
 
 				Colorwaypage.UpdatecolorwaySeason_SetUpLSE(hubofferedto, productlifecyclegroup, lastseasonoffered,
@@ -166,40 +166,40 @@ public class TC07_P2_ColorwaySeason_VerifyNoTriggerSent_LSE extends WMS_TestBase
 						test);
 				System.out.println("All Colorway season fields updated");
 				test.log(Status.INFO, "All Colorway season fields updated");
-				addSrceenShot("All Colorway season fields updated", test, Capture);
+				addScreenShot("All Colorway season fields updated", test, Capture);
 				Thread.sleep(3000);
 				
 				SetUpPage.ClickEditColorwayseason();
 				test.log(Status.INFO, "Colorway season edit page opened");
-				addSrceenShot("Colorway season edit page opened", test, Capture);
+				addScreenShot("Colorway season edit page opened", test, Capture);
 
 				SetUpPage.SetUpLSE(test);
 				test.log(Status.INFO, "SetUP LSE is Completed");
 				System.out.println("SetUP LSE is Completed");
-				addSrceenShot("SetUP LSE is completed", test, Capture);
+				addScreenShot("SetUP LSE is completed", test, Capture);
 				Thread.sleep(4000);
 
 				SetUpPage.ClickEditColorwayseason();
 				test.log(Status.INFO, "Colorway season edit page opened");
-				addSrceenShot("Colorway season edit page opened", test, Capture);
+				addScreenShot("Colorway season edit page opened", test, Capture);
 
 				SetUpPage.ValidationLSE(test);
 				test.log(Status.PASS, "Validation successful for  SetUpLSE");
-				addSrceenShot("Validation successful for  SetUpLSE", test, Capture);
+				addScreenShot("Validation successful for  SetUpLSE", test, Capture);
 
 			}
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

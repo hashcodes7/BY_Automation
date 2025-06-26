@@ -73,87 +73,87 @@ public class TC25_P0_RemoveSourcefromSeason extends WMS_TestBase {
 		try {
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers Specifications module from 251 to 256");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + PDS_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "2006LFA12345";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(lineSheetPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.PASS, "PC5 Details Page is displayed");
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 			Thread.sleep(5000);
 
 			productPage.selectSourcingTab();
 			System.out.println("Selected Sourcing tab");
 			test.log(Status.INFO, "Selected Sourcing tab");
-			addSrceenShot("Selected Sourcing tab", test, Capture);
+			addScreenShot("Selected Sourcing tab", test, Capture);
 			WaitforPage(4000);
 
 			productPage.clickOnSummary();
 			System.out.println("Clicked on Samples");
 			test.log(Status.INFO, "Clicked on Samples");
-			addSrceenShot("Clicked on Samples", test, Capture);
+			addScreenShot("Clicked on Samples", test, Capture);
 			WaitforPage(4000);
 
 //			String sourceName = "3M INDUSTRIAL ADHESIVE & TAPES 603112 US";
 			productPage.selectSourceFromDropDown(sourceName, test);
 			System.out.println("Clicked on Source From Drop Down");
 			test.log(Status.INFO, "Clicked on Source From Drop Down: " + sourceName);
-			addSrceenShot("Clicked on Source From Drop Down", test, Capture);
+			addScreenShot("Clicked on Source From Drop Down", test, Capture);
 
 			specificationPage.removeSourceFromSeason(test);
-			addSrceenShot("removed source from season", test, Capture);
+			addScreenShot("removed source from season", test, Capture);
 
 			specificationPage.removeSpecFromSeason(test);
-			addSrceenShot("removed source from season", test, Capture);
+			addScreenShot("removed source from season", test, Capture);
 
 			specificationPage.removeSpecFromSource(test);
-			addSrceenShot("removed source from season", test, Capture);
+			addScreenShot("removed source from season", test, Capture);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

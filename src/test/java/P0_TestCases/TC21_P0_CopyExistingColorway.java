@@ -80,49 +80,49 @@ public class TC21_P0_CopyExistingColorway extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected", test, Capture);
+			addScreenShot("Season selected", test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			CCP.filter_View_Change(viewoption, product,test);
 			test.log(Status.INFO, "Changed the view of Linesheet page");
-			addSrceenShot("Changed the view of Linesheet page", test, Capture);
+			addScreenShot("Changed the view of Linesheet page", test, Capture);
 			
 			Thread.sleep(5000);
 			
 			CCP.copyColorwayUsingContextClick(merchfabrictype,productsegLSEvalue,productsegLSUSvalue,test);
 			test.log(Status.INFO, "Copy colorway clicked and completed the step to copy colorway ");
-			addSrceenShot("Copy colorway clicked and completed the step to copy colorway", test, Capture);
+			addScreenShot("Copy colorway clicked and completed the step to copy colorway", test, Capture);
 			
 			CCP.colorwayseasonfield(hubofferedto);
 			test.log(Status.INFO, "Mandatory fields are filled and clicked on view product");
-			addSrceenShot("Mandatory fields are filled and clicked on view product", test, Capture);
+			addScreenShot("Mandatory fields are filled and clicked on view product", test, Capture);
 			
 			CCP.validationOfAttributes(merchfabrictype,productsegLSEvalue,productsegLSUSvalue,test);
 			test.log(Status.PASS, "Validation of attributes which sent while copying colorway");
-			addSrceenShot("Validation of attributes which sent while copying colorway", test, Capture);
+			addScreenShot("Validation of attributes which sent while copying colorway", test, Capture);
 					
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -79,44 +79,44 @@ public class TC_001_VPColor_Material_Update extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu());
 			test.log(Status.INFO, "Clicked on Material menu ");
-			addSrceenShot("Clicked on material menu ", test, Capture);
+			addScreenShot("Clicked on material menu ", test, Capture);
 			Thread.sleep(4000);
 			
 			vendorPage.materialPage(test, material);
 			test.log(Status.INFO, "material page is opened");
-			addSrceenShot("material page opened", test, Capture);
+			addScreenShot("material page opened", test, Capture);
 			Thread.sleep(5000);
 			
 			vendorPage.materialUpdate(test);
 			test.log(Status.PASS, "material information is updated and validated");
-			addSrceenShot("material information updated and validated", test, Capture);
+			addScreenShot("material information updated and validated", test, Capture);
 			Thread.sleep(5000); 
 			
 			vendorPage.materialSupplierUpdate(test);
 			test.log(Status.PASS, "material supplier information is updated and validated");
-			addSrceenShot("material supplier information updated and validated", test, Capture);
+			addScreenShot("material supplier information updated and validated", test, Capture);
 			Thread.sleep(5000); 
 			
 			vendorPage.addColorToMaterial(test,color);
 			test.log(Status.PASS, "added & validated color to the material");
-			addSrceenShot("added & validated color to the material", test, Capture);
+			addScreenShot("added & validated color to the material", test, Capture);
 			Thread.sleep(5000); 
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

@@ -178,7 +178,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		dimensionNameField.sendKeys(value);
 		dimensionNameField.click();
 		test.log(Status.INFO, "Entered Dimension Name: " + value);
-		addSrceenShot("Entered Dimension Name", test, Capture);
+		addScreenShot("Entered Dimension Name", test, Capture);
 	}
 
 	public void enterDimensionCode(String value, ExtentTest test) throws Exception {
@@ -189,7 +189,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		dimensionCodeField.sendKeys(value);
 		dimensionCodeField.click();
 		test.log(Status.INFO, "Entered Dimension Code: " + value);
-		addSrceenShot("Entered Dimension Code", test, Capture);
+		addScreenShot("Entered Dimension Code", test, Capture);
 	}
 
 	public void enterDimension_Name(String value, ExtentTest test) throws Exception {
@@ -200,7 +200,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		dimension_NameField.sendKeys(value);
 		dimension_NameField.click();
 		test.log(Status.INFO, "Entered Dimension Name: " + value);
-		addSrceenShot("Entered Dimension Name", test, Capture);
+		addScreenShot("Entered Dimension Name", test, Capture);
 	}
 
 	public void addMultipleSizes(List<String> sizes, ExtentTest test) throws Exception {
@@ -214,12 +214,12 @@ public class SizePage extends WMS_WebDriverUtilities {
 			sizeField.sendKeys(size);
 			sizeField.click();
 			test.log(Status.INFO, "Entered Size: " + size);
-			addSrceenShot("Entered Size", test, Capture);
+			addScreenShot("Entered Size", test, Capture);
 
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(addButton));
 			clickElement(addButton);
 			test.log(Status.INFO, "Clicked Add button for Size: " + size);
-			addSrceenShot("Clicked Add button", test, Capture);
+			addScreenShot("Clicked Add button", test, Capture);
 
 			Thread.sleep(2000); // Wait for the size to be added
 		}
@@ -233,7 +233,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 //	    sizeField.sendKeys(value);
 //	    sizeField.click();
 //	    test.log(Status.INFO, "Entered Size: " + value);
-//	    addSrceenShot("Entered Size", test, Capture);
+//	    addScreenShot("Entered Size", test, Capture);
 //	}
 
 	public void clickSaveBtn(ExtentTest test) throws Exception {
@@ -242,7 +242,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(saveButton));
 		clickElement(saveButton);
 		test.log(Status.INFO, "Clicked Save button");
-		addSrceenShot("Clicked Save button", test, Capture);
+		addScreenShot("Clicked Save button", test, Capture);
 	}
 
 	public void enterSizeScaleName(String value, ExtentTest test) throws Exception {
@@ -253,7 +253,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		sizeScaleNameField.sendKeys(value);
 		sizeScaleNameField.click();
 		test.log(Status.INFO, "Entered SizeScale Name: " + value);
-		addSrceenShot("Entered SizeScale Name", test, Capture);
+		addScreenShot("Entered SizeScale Name", test, Capture);
 	}
 
 	public void enterColumnAbbreviation(String value, ExtentTest test) throws Exception {
@@ -264,7 +264,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		columnAbbreviationField.sendKeys(value);
 		columnAbbreviationField.click();
 		test.log(Status.INFO, "Entered Column Abbreviation: " + value);
-		addSrceenShot("Entered Column Abbreviation", test, Capture);
+		addScreenShot("Entered Column Abbreviation", test, Capture);
 	}
 
 	public void clickOnColumnDimension() throws Exception {
@@ -293,7 +293,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 
 		driver.switchTo().window(ParentWinhadle);
 		test.log(Status.INFO, "Selected Column Dimension: " + value);
-		addSrceenShot("Selected Column Dimension", test, Capture);
+		addScreenShot("Selected Column Dimension", test, Capture);
 
 	}
 
@@ -324,7 +324,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		columnNameField.sendKeys(value);
 		columnNameField.click();
 		test.log(Status.INFO, "Entered Column Name: " + value);
-		addSrceenShot("Entered Column Name", test, Capture);
+		addScreenShot("Entered Column Name", test, Capture);
 	}
 
 	public void ClickOnGlobalDimension() throws Exception {
@@ -351,7 +351,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		sizeScaleCodeField.sendKeys(value);
 		sizeScaleCodeField.click();
 		test.log(Status.INFO, "Entered Size Scale Code: " + value);
-		addSrceenShot("Entered Size Scale Code", test, Capture);
+		addScreenShot("Entered Size Scale Code", test, Capture);
 	}
 
 	public void enterRowAbbreviation(String value, ExtentTest test) throws Exception {
@@ -362,7 +362,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		rowAbbreviationField.sendKeys(value);
 		rowAbbreviationField.click();
 		test.log(Status.INFO, "Entered Row Abbreviation: " + value);
-		addSrceenShot("Entered Row Abbreviation", test, Capture);
+		addScreenShot("Entered Row Abbreviation", test, Capture);
 	}
 
 
@@ -380,17 +380,17 @@ public class SizePage extends WMS_WebDriverUtilities {
 	        if (isPopulated) {
 	            System.out.println("Size Dimension ('" + dimensionName + "') Created");
 	            test.log(Status.INFO, "Size Dimension ('" + dimensionName + "') created");
-	            addSrceenShot("Size Dimension created", test, Capture);
+	            addScreenShot("Size Dimension created", test, Capture);
 	        } else {
 	            System.out.println("Size Dimension Not Created");
 	            test.log(Status.FAIL, "Size Dimension Not Created");
-	            addSrceenShot("Size Dimension Not Created", test, Capture);
+	            addScreenShot("Size Dimension Not Created", test, Capture);
 	        }
 	        return isPopulated;
 	    } catch (Exception e) {
 	        System.out.println("Size Dimension Not Created");
 	        test.log(Status.FAIL, "Size Dimension Not Created");
-	        addSrceenShot("Size Dimension Not Created", test, Capture);
+	        addScreenShot("Size Dimension Not Created", test, Capture);
 	        return false;
 	    }
 	}
@@ -405,17 +405,17 @@ public class SizePage extends WMS_WebDriverUtilities {
 	        if (isPopulated) {
 	            System.out.println("New Size Scale ('" + sizeScaleName + "') Created");
 	            test.log(Status.INFO, "New Size Scale ('" + sizeScaleName + "') created");
-	            addSrceenShot("New Size Scale created", test, Capture);
+	            addScreenShot("New Size Scale created", test, Capture);
 	        } else {
 	            System.out.println("New Size Scale Not Created");
 	            test.log(Status.FAIL, "New Size Scale Not Created");
-	            addSrceenShot("New Size Scale Not Created", test, Capture);
+	            addScreenShot("New Size Scale Not Created", test, Capture);
 	        }
 	        return isPopulated;
 	    } catch (Exception e) {
 	        System.out.println("Size Scale Not Created");
 	        test.log(Status.FAIL, "Size Scale Not Created");
-	        addSrceenShot("Size Scale Not Created", test, Capture);
+	        addScreenShot("Size Scale Not Created", test, Capture);
 	        return false;
 	    }
 	}
@@ -428,7 +428,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		rowNameField.sendKeys(value);
 		rowNameField.click();
 		test.log(Status.INFO, "Entered Row Name: " + value);
-		addSrceenShot("Entered Row Name", test, Capture);
+		addScreenShot("Entered Row Name", test, Capture);
 	}
 
 	public void enterDescription(String value, ExtentTest test) throws Exception {
@@ -439,7 +439,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		descriptionField.sendKeys(value);
 		descriptionField.click();
 		test.log(Status.INFO, "Entered Description: " + value);
-		addSrceenShot("Entered Description", test, Capture);
+		addScreenShot("Entered Description", test, Capture);
 	}
 
 	public void enterSizeGridName(String value, ExtentTest test) throws Exception {
@@ -450,7 +450,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		sizeScaleNameField.sendKeys(value);
 		sizeScaleNameField.click();
 		test.log(Status.INFO, "Entered SizeScale Name: " + value);
-		addSrceenShot("Entered SizeScale Name", test, Capture);
+		addScreenShot("Entered SizeScale Name", test, Capture);
 	}
 
 	public void enterCode(String value, ExtentTest test) throws Exception {
@@ -461,7 +461,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		codeField.sendKeys(value);
 		codeField.click();
 		test.log(Status.INFO, "Entered Code: " + value);
-		addSrceenShot("Entered Code", test, Capture);
+		addScreenShot("Entered Code", test, Capture);
 	}
 
 	public void enterSampleSize(String value, ExtentTest test) throws Exception {
@@ -472,7 +472,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		sampleSizeField.sendKeys(value);
 		sampleSizeField.click();
 		test.log(Status.INFO, "Entered Sample Size: " + value);
-		addSrceenShot("Entered Sample Size", test, Capture);
+		addScreenShot("Entered Sample Size", test, Capture);
 	}
 
 	public void selectCoreOrSeasonal(String value, ExtentTest test) throws Exception {
@@ -483,7 +483,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		Select dropdown = new Select(coreOrSeasonalDropdown);
 		dropdown.selectByVisibleText(value);
 		test.log(Status.INFO, "Selected Core/Seasonal: " + value);
-		addSrceenShot("Selected Core/Seasonal", test, Capture);
+		addScreenShot("Selected Core/Seasonal", test, Capture);
 	}
 
 	public void clickOnSizeScale() throws Exception {
@@ -512,7 +512,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 
 		driver.switchTo().window(ParentWinhadle);
 		test.log(Status.INFO, "Selected Size Scale: " + value);
-		addSrceenShot("Selected Size Scale", test, Capture);
+		addScreenShot("Selected Size Scale", test, Capture);
 
 	}
 
@@ -524,7 +524,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		Select dropdown = new Select(sizeGridStatusDropdown);
 		dropdown.selectByVisibleText(value);
 		test.log(Status.INFO, "Selected Size Grid Status: " + value);
-		addSrceenShot("Selected Size Grid Status", test, Capture);
+		addScreenShot("Selected Size Grid Status", test, Capture);
 	}
 
 	public void viewAndUpdateSizeGrid(String actiondpdwnValue, String sizeGridName, ExtentTest test) throws Exception {
@@ -536,7 +536,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 		dropdown.selectByVisibleText(actiondpdwnValue);
 		test.log(Status.PASS, "New Size Grid '" + sizeGridName + "' created successfully");
 		test.log(Status.INFO, "Clicked on View / Update Size Grid in actions dropdown");
-		addSrceenShot("Clicked on View / Update Size Grid in actions dropdown", test, Capture);
+		addScreenShot("Clicked on View / Update Size Grid in actions dropdown", test, Capture);
 
 		// Switch to the new pop-up window
 		String parentWindowHandle = driver.getWindowHandle();
@@ -555,26 +555,26 @@ public class SizePage extends WMS_WebDriverUtilities {
 			String size = checkbox.getAttribute("name"); // Assuming the name attribute holds the size value
 			selectedSizes.add(size);
 			test.log(Status.INFO, "Selected size: " + size);
-			addSrceenShot("Selected size: " + size, test, Capture);
+			addScreenShot("Selected size: " + size, test, Capture);
 		}
 		test.log(Status.INFO, "Clicked on the first three checkboxes");
-		addSrceenShot("Clicked on the first three checkboxes", test, Capture);
+		addScreenShot("Clicked on the first three checkboxes", test, Capture);
 
 		// Scroll to the Save button and click
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", popupSaveButton);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", popupSaveButton);
 		test.log(Status.INFO, "Clicked on Save button");
-		addSrceenShot("Clicked on Save button", test, Capture);
+		addScreenShot("Clicked on Save button", test, Capture);
 
 		// Scroll to the Close button and click
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", popupCloseButton);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", popupCloseButton);
 		test.log(Status.INFO, "Clicked on Close button");
-		addSrceenShot("Clicked on Close button", test, Capture);
+		addScreenShot("Clicked on Close button", test, Capture);
 
 		driver.switchTo().window(parentWindowHandle);
 		test.log(Status.INFO, "Closed pop-up and switched back to parent window");
-		addSrceenShot("Closed pop-up and switched back to parent window", test, Capture);
+		addScreenShot("Closed pop-up and switched back to parent window", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeLeft);
@@ -601,25 +601,25 @@ public class SizePage extends WMS_WebDriverUtilities {
 			String firstPart = (index != -1) ? size.substring(0, index) : size;
 			if (!sizeGridText.contains(firstPart)) {
 				test.log(Status.FAIL, "Size " + size + " not found in sizes attribute");
-				addSrceenShot("Size " + size + " not found in sizes attribute", test, Capture);
+				addScreenShot("Size " + size + " not found in sizes attribute", test, Capture);
 			} else {
 				test.log(Status.PASS, "Size " + size + " found in sizes attribute");
-				addSrceenShot("Size " + size + " found in Size sizes attribute", test, Capture);
+				addScreenShot("Size " + size + " found in Size sizes attribute", test, Capture);
 			}
 		}
 
 		test.log(Status.PASS, "Sizes attribute showed sizes you selected on View/Update Size Grid page.");
-		addSrceenShot("Sizes attribute validation log", test, Capture);
+		addScreenShot("Sizes attribute validation log", test, Capture);
 	}
 
 //	for (String size : selectedSizes) {
 //	    String formattedSize = size.toLowerCase().trim().replace("0x", ""); // Adjust format if needed
 //		if (!sizeGridText.contains(formattedSize)) {
 //			test.log(Status.FAIL, "Size " + size + " not found in sizes attribute");
-//			addSrceenShot("Size " + size + " not found in sizes attribute", test, Capture);
+//			addScreenShot("Size " + size + " not found in sizes attribute", test, Capture);
 //		} else {
 //			test.log(Status.PASS, "Size " + size + " found in sizes attribute");
-//			addSrceenShot("Size " + size + " found in Size sizes attribute", test, Capture);
+//			addScreenShot("Size " + size + " found in Size sizes attribute", test, Capture);
 //		}
 //	}
 
@@ -655,7 +655,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 //		name.sendKeys(value);
 //		name.click();
 //		test.log(Status.INFO, "Entered Name: " + value);
-//		addSrceenShot("Entered Name", test, Capture);
+//		addScreenShot("Entered Name", test, Capture);
 //	}
 //
 //	public void clikOnCreateBtn(ExtentTest test) throws Exception {
@@ -664,7 +664,7 @@ public class SizePage extends WMS_WebDriverUtilities {
 //		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(createBtn));
 //		clickElement(createBtn);
 //		test.log(Status.INFO, "Clicked on Create button");
-//		addSrceenShot("Clicked on Create button", test, Capture);
+//		addScreenShot("Clicked on Create button", test, Capture);
 //	}
 //
 //	public boolean isNewPalettePageDisplayed(ExtentTest test) {
@@ -676,12 +676,12 @@ public class SizePage extends WMS_WebDriverUtilities {
 //			String pageText = newPalettePageElement.getText();
 //
 //			test.log(Status.PASS, "New Palette Page is displayed with text: " + pageText);
-//			addSrceenShot("New Palette Page is displayed", test, Capture);
+//			addScreenShot("New Palette Page is displayed", test, Capture);
 //
 //			return true;
 //		} catch (Exception e) {
 //			test.log(Status.FAIL, "New Palette Page is not displayed: " + e.getMessage());
-//			addSrceenShot("New Palette Page is not displayed", test, Capture);
+//			addScreenShot("New Palette Page is not displayed", test, Capture);
 //			return false;
 //		}
 //	}

@@ -96,31 +96,31 @@ public class TC218_P2_Update_Product_to_Non_Required_Attributes extends WMS_Test
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: - URL-" + Global_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			try {
 
@@ -128,16 +128,16 @@ public class TC218_P2_Update_Product_to_Non_Required_Attributes extends WMS_Test
 				lineSheetPage.filterProductByName(productName, test);
 				System.out.println("Clicked on product name");
 				test.log(Status.INFO, "Clicked on product name: " + productName);
-				addSrceenShot("Clicked on product name", test, Capture);
+				addScreenShot("Clicked on product name", test, Capture);
 
 				Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 				System.out.println("PC5 Details Page is displayed");
 				test.log(Status.PASS, "PC5 Details Page is displayed: " + productName);
-				addSrceenShot("PC5 Details Page is displayed", test, Capture);
+				addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 				productPage.editProduct();
 				test.log(Status.INFO, "Clicked on Update Product from the Actions dropdown");
-				addSrceenShot("Clicked on Update Product from the Actions dropdown", test, Capture);
+				addScreenShot("Clicked on Update Product from the Actions dropdown", test, Capture);
 				WaitforPage(5000);
 
 
@@ -145,17 +145,17 @@ public class TC218_P2_Update_Product_to_Non_Required_Attributes extends WMS_Test
 						productReportCharacteristics, dimensions, typeOfClosure, fitReference, capacity, test);
 				System.out.println("Updated All NonMandatory Fields");
 				test.log(Status.INFO, "Updated All NonMandatory Fields");
-				addSrceenShot("Updated All NonMandatory Fields", test, Capture);
+				addScreenShot("Updated All NonMandatory Fields", test, Capture);
 				WaitforPage(4000);
 
 				productPage.clikOnSaveBtn();
 				test.log(Status.INFO, "Clicked on save button successfully");
-				addSrceenShot("Clicked on save button successfully", test, Capture);
+				addScreenShot("Clicked on save button successfully", test, Capture);
 				WaitforPage(2000);
 
 //				productPage.clikViewProduct();
 //				test.log(Status.INFO, "Clicked on View Product successfully");
-//				addSrceenShot("Clicked on View Product successfully", test, Capture);
+//				addScreenShot("Clicked on View Product successfully", test, Capture);
 //				WaitforPage(2000);
 
 				// Verify Non-required attributes were updated successfully
@@ -165,21 +165,21 @@ public class TC218_P2_Update_Product_to_Non_Required_Attributes extends WMS_Test
 						"Non-required attributes were not filled in successfully.");
 				System.out.println("Non-required attributes were filled successfully.");
 				test.log(Status.PASS, "Verification: Non-required attributes were updated successfully.");
-				addSrceenShot("Non-required attributes were updated successfully.", test, Capture);
+				addScreenShot("Non-required attributes were updated successfully.", test, Capture);
 
 				dashboardPage.closeLeftPanel();
 				System.out.println("Clicked on close Left plane");
 				test.log(Status.INFO, "Clicked on close Left plane");
-				addSrceenShot("Clicked on close Left plane", test, Capture);
+				addScreenShot("Clicked on close Left plane", test, Capture);
 
 				dashboardPage.Logout();
 				System.out.println("Logout successful");
 				test.log(Status.INFO, "Logout successful");
-				addSrceenShot("Logout successful", test, Capture);
+				addScreenShot("Logout successful", test, Capture);
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 
 			}
@@ -188,7 +188,7 @@ public class TC218_P2_Update_Product_to_Non_Required_Attributes extends WMS_Test
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

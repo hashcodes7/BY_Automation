@@ -84,13 +84,13 @@ public class TC221_P2_Create_Levis_LSE_Affiliate_Season_Collection extends WMS_T
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers season module from 221 to 222");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + Administrator_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			Thread.sleep(5000);
 			System.out.println("login successful");
@@ -99,11 +99,11 @@ public class TC221_P2_Create_Levis_LSE_Affiliate_Season_Collection extends WMS_T
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_SEASON_COLLECTION.menu(),
 					true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on season collection");
 			test.log(Status.INFO, "Clicked on season collection");
 			WaitforPage(4000);
@@ -111,7 +111,7 @@ public class TC221_P2_Create_Levis_LSE_Affiliate_Season_Collection extends WMS_T
 			seasonPage.clikOnNewBtn();
 			System.out.println("Clicked on New button to create Season Collection");
 			test.log(Status.INFO, "Clicked on New button to create Season Collection");
-			addSrceenShot("Clicked on New button to create Season Collection", test, Capture);
+			addScreenShot("Clicked on New button to create Season Collection", test, Capture);
 
 //			String seasonCollectionName = "S2 26 BENO LEVI'S";
 //			String collectionId = "1010";
@@ -134,39 +134,39 @@ public class TC221_P2_Create_Levis_LSE_Affiliate_Season_Collection extends WMS_T
 					collectionType, brand, year, season, test);
 			System.out.println("Filled All Season Collection Attributes");
 			test.log(Status.INFO, "Filled All Season Collection Attributes");
-			addSrceenShot("Filled All Season Collection Attributes", test, Capture);
+			addScreenShot("Filled All Season Collection Attributes", test, Capture);
 
 //			seasonPage.clikOnCreate_Btn();
 //			test.log(Status.INFO, "New Season Collection Created Successfully");
-//			addSrceenShot("New Season Collection Created Successfully", test, Capture);
+//			addScreenShot("New Season Collection Created Successfully", test, Capture);
 
 			boolean isValid = seasonPage.validateSeasonCollection(seasonCollectionName, collectionId, collectionDesc,
 					seasonDesc, bookBeginDate, bookEndDate, shipBeginDate, shipEndDate, theme, themeDesc,
 					affiliateAdoptGroup, collectionType, brand, year, season, test);
 			Assert.assertTrue(isValid, "Season Collection validation failed!");
 			test.log(Status.PASS, "Season Collection is verified successfully with all attributes");
-			addSrceenShot("Season Collection verification successful", test, Capture);
+			addScreenShot("Season Collection verification successful", test, Capture);
 
 			// Validate Season Code
 			String expectedSeasonCode = year.substring(2) + season.replaceAll("\\D", "");
 			String actualSeasonCode = seasonPage.get_SeasonCode(test);
 			Assert.assertEquals(actualSeasonCode, expectedSeasonCode, "Season Code does not match!");
 			test.log(Status.PASS, "Verified Season Code: " + actualSeasonCode);
-			addSrceenShot("Verified Season Code", test, Capture);
+			addScreenShot("Verified Season Code", test, Capture);
 
 			seasonPage.refreshPageAndValidateSAPIntegration(seasonCollectionName, test);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

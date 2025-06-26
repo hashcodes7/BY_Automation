@@ -84,21 +84,21 @@ public class TC290_P0_E2E_CreateColors_SL_FG extends WMS_TestBase {
 							
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "In libraries Color/Look menu clicked");
-			addSrceenShot("In libraries Color/Look menu clicked", test, Capture);
+			addScreenShot("In libraries Color/Look menu clicked", test, Capture);
 			
 			Thread.sleep(5000);
 
 			CNCP.clickplussign();
 			test.log(Status.INFO, "Clicked on Add color sign");
-			addSrceenShot("Clicked on Add color sign", test, Capture);
+			addScreenShot("Clicked on Add color sign", test, Capture);
 			
 			CNCP.SelectColorType(colortype,test);
 			test.log(Status.INFO, "Clicked On: " +colortype+" and color page opened");
-			addSrceenShot("Clicked On: " +colortype+" and color page opened", test, Capture);
+			addScreenShot("Clicked On: " +colortype+" and color page opened", test, Capture);
 			
 			String title=driver.getTitle();
 			Assert.assertTrue(title.equalsIgnoreCase("Create Color"));
@@ -106,30 +106,30 @@ public class TC290_P0_E2E_CreateColors_SL_FG extends WMS_TestBase {
 			
 			CNCP.EnterSeasonalFG_Values( season, redvalue,  bluevalue,  greenvalue,  colorfamily, color, finishtype, lookname, test);
 			test.log(Status.INFO, "All the required fields for seasonal color BFF is filled");
-			addSrceenShot("All the required fields for seasonal color BFF is filled", test, Capture);
+			addScreenShot("All the required fields for seasonal color BFF is filled", test, Capture);
 			
 			Thread.sleep(5000);
  			
 			CNCP.clickcreatebutton();
 			test.log(Status.INFO, "Seasonal color FG is created");
-			addSrceenShot("Seasonal color FG is created", test, Capture);
+			addScreenShot("Seasonal color FG is created", test, Capture);
 			
 			Thread.sleep(5000);
 			CNCP.Validate_Color_FG(season,lookname,test);
 			test.log(Status.PASS, "Validated fields in view color page");
-			addSrceenShot("Validated fields in view color page", test, Capture);
+			addScreenShot("Validated fields in view color page", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

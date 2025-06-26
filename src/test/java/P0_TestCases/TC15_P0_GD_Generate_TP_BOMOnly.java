@@ -73,53 +73,53 @@ public class TC15_P0_GD_Generate_TP_BOMOnly extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "left panel opened");
-			addSrceenShot("left panel opened", test, Capture);
+			addScreenShot("left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			WaitforPage(10000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "linesheet view selected- "+linesheetview);
-			addSrceenShot("linesheet view selected- "+linesheetview, test, Capture);
+			addScreenShot("linesheet view selected- "+linesheetview, test, Capture);
 			System.out.println("linesheet view selected- "+linesheetview);
 			
 			Thread.sleep(5000);
 //			String sourcename="0WPJ8 - - Active";
 			Techpackpages.filterdata(sourcename);
 			test.log(Status.INFO, "source filtered "+sourcename);
-			addSrceenShot("source filtered "+sourcename, test, Capture);
+			addScreenShot("source filtered "+sourcename, test, Capture);
 			System.out.println("source filtered "+sourcename);
 			
 			Thread.sleep(5000);
 				
 			Techpackpages.Download_Proto_BOM_File(test);
 			test.log(Status.PASS, "File downloaded ");
-			addSrceenShot("File downloaded ", test, Capture);
+			addScreenShot("File downloaded ", test, Capture);
 			System.out.println("File downloaded ");
 					
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

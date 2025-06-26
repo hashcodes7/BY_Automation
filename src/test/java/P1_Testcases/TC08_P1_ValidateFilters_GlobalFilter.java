@@ -70,62 +70,62 @@ public class TC08_P1_ValidateFilters_GlobalFilter extends WMS_TestBase {
 					
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			WaitforPage(10000);
 
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view is "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view is "+linesheetview, test, Capture);
 			WaitforPage(5000);
 			
 			LineSheetEditPage.Change_Global_Value();
 			System.out.println("Global value selected");
 			test.log(Status.INFO, "Global value selected");
-			addSrceenShot("Global value selected", test, Capture);
+			addScreenShot("Global value selected", test, Capture);
 
 			LineSheetEditPage.Linesheetfilter(filterValue);
 			test.log(Status.INFO, "Filter selected is: "+filterValue);
-			addSrceenShot("Filter selected is: "+filterValue, test, Capture);
+			addScreenShot("Filter selected is: "+filterValue, test, Capture);
 			
 			LineSheetEditPage.Filters_Attribute_Validation(expectedAttributes,test);
 			System.out.println("All the attributes are present according to the filter option");
 			test.log(Status.PASS, "All the attributes are present according to the filter option ");
-			addSrceenShot("All the attributes are present according to the filter option  ", test, Capture);
+			addScreenShot("All the attributes are present according to the filter option  ", test, Capture);
 
 			LineSheetEditPage.Enter_GlobalFiltervalues(colorwayname,colorwaycode,test);
 			System.out.println("Entered/selected all the fields for filtering linesheet using filter option");
 			test.log(Status.INFO, "Entered/selected all the fields for filtering linesheet using filter option");
-			addSrceenShot("Entered/selected all the fields for filtering linesheet using filter option ", test, Capture);
+			addScreenShot("Entered/selected all the fields for filtering linesheet using filter option ", test, Capture);
 			
 			LineSheetEditPage.validate_filteredLinesheet(test);
 			System.out.println("Validation successful for filter option"+filterValue);
 			test.log(Status.PASS, "Validation successful for filter option"+filterValue);
-			addSrceenShot("Validation successful for filter option"+filterValue, test, Capture);
+			addScreenShot("Validation successful for filter option"+filterValue, test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -74,66 +74,66 @@ public class TC10_P0_CreateMeasureSet_UsingTemplate extends WMS_TestBase{
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			MeasurementsPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			Thread.sleep(1000); 
 
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 
 			MeasurementsPage.filter_product(filterproduct,test);
 			test.log(Status.INFO, "clicked on product "+filterproduct);
-			addSrceenShot("clicked on product ", test, Capture);
+			addScreenShot("clicked on product ", test, Capture);
 
 			MeasurementsPage.selectSource(source,test);
 			test.log(Status.INFO, "Selected source "+source);
-			addSrceenShot("Selected source "+source, test, Capture);
+			addScreenShot("Selected source "+source, test, Capture);
 			System.out.println("Selected source "+source);
 
 			MeasurementsPage.selectSpecifications(specifications,test);
 			test.log(Status.INFO, "Selected specifications "+specifications);
-			addSrceenShot("Selected specifications "+specifications, test, Capture);
+			addScreenShot("Selected specifications "+specifications, test, Capture);
 			System.out.println("Selected specifications "+specifications);
 			
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 			System.out.println("Navigated to measurement page  ");
 
 			MeasurementsPage.Create_NewMeasurementSet(measurementsetname,template_name,sizevalue,measurementtype,test);
 			test.log(Status.PASS, "measurements is created with measurement name: "+measurementsetname);
-			addSrceenShot("measurements is created with measurement name: "+measurementsetname, test, Capture);
+			addScreenShot("measurements is created with measurement name: "+measurementsetname, test, Capture);
 			System.out.println("measurements is created with measurement name: "+measurementsetname);
 			
 			MeasurementsPage.measurementSetValidations(measurementsetname,test);
 			test.log(Status.PASS, "Validations of Measurements completed");
-			addSrceenShot("Validations of Measurements completed", test, Capture);
+			addScreenShot("Validations of Measurements completed", test, Capture);
 			System.out.println("Validations of Measurements completed");
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

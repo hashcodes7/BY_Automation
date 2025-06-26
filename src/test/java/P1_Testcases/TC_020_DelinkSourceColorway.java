@@ -86,44 +86,44 @@ public class TC_020_DelinkSourceColorway extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected:"+season, test, Capture);
+			addScreenShot("Season selected:"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 						
 			LineSheetEditPage.filter_View_Change(linesheetview1,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview1);
 			WaitforPage(5000);
-			addSrceenShot("Linesheet view changed to: "+linesheetview1, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview1, test, Capture);
 						
 			sourcingPage.delinkSourceColorway(test,productCode);
 			test.log(Status.PASS, "colorway is delinked to the source");
 			WaitforPage(5000); 
-			addSrceenShot("colorway is delinked to the source", test, Capture);
+			addScreenShot("colorway is delinked to the source", test, Capture);
 						
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 						
 			sourcingPage.validateDelinkSourceColorway(test,productCode);
 			test.log(Status.PASS, "Delink source to Colorway is updated successfully");
 			WaitforPage(5000);
-			addSrceenShot("Delink source to Colorway is updated successfully", test, Capture);
+			addScreenShot("Delink source to Colorway is updated successfully", test, Capture);
 						
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

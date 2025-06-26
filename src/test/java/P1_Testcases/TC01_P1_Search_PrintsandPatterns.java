@@ -68,42 +68,42 @@ public class TC01_P1_Search_PrintsandPatterns  extends WMS_TestBase{
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(3000);
 
 			Colorwaypage.select_printsandPatterns(createdfrom);
 			test.log(Status.INFO, "Created from date selected: "+createdfrom);
 			System.out.println("Created from date selected: "+createdfrom);
-			addSrceenShot("Created from date selected", test, Capture);
+			addScreenShot("Created from date selected", test, Capture);
 			
 			Colorwaypage.filtercolor(colorname);
 			test.log(Status.INFO, "Filtered color selected: "+colorname);
 			System.out.println("Filtered color selected: "+colorname);
-			addSrceenShot("Filtered color selected", test, Capture);
+			addScreenShot("Filtered color selected", test, Capture);
 			
 			Colorwaypage.clickcolor();
 			test.log(Status.INFO, "Clicked on first color");
 			System.out.println("Clicked on first color");
-			addSrceenShot("Clicked on first color", test, Capture);
+			addScreenShot("Clicked on first color", test, Capture);
 				
 			Colorwaypage.Validate_PrintsandPatterns_details_Attributes(attributes,test);
 			test.log(Status.PASS, "Validated Prints and Patterns color Attributes: "+attributes);
 			System.out.println("Validated Prints and Patterns color Attributes: "+attributes);
-			addSrceenShot("Vlaidated Prints and patterns Attributes", test, Capture);
+			addScreenShot("Vlaidated Prints and patterns Attributes", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

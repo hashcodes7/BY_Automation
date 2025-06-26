@@ -79,55 +79,55 @@ public class TC248_P1_ApplySizeGridToNEW_PC9_Prior_to_Setup extends WMS_TestBase
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + Global_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2024 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 //			String linesheetview = "Adoption";
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			WaitforPage(5000);
 
 //			String colorway = "0WPW6-0000 DA077E SolidC123";
 			Colorwaypage.SelectColorway(colorway, test);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 
 			Colorwaypage.editColorWaySeasonPage();
 			test.log(Status.INFO, "Clicked On Edit Colorway - Season from the Menu");
-			addSrceenShot("Clicked On Edit Colorway - Season from the Menu", test, Capture);
+			addScreenShot("Clicked On Edit Colorway - Season from the Menu", test, Capture);
 			WaitforPage(5000);
 
 //			String sizeGridCode = "0-13s, 0-17m - JNRS09";
 			Colorwaypage.chooseSizeGridCode(sizeGridCode, test);
 			test.log(Status.INFO, "Size Grid Code Was Choosen: " + sizeGridCode);
-			addSrceenShot("Size Grid Code Was Choosen", test, Capture);
+			addScreenShot("Size Grid Code Was Choosen", test, Capture);
 
 			colorWayPage.clickOnSave();
 			System.out.println("Clicked On save Button");
 			test.log(Status.INFO, "Clicked On save Button");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 			WaitforPage(4000);
 
 			// Verification step
@@ -135,7 +135,7 @@ public class TC248_P1_ApplySizeGridToNEW_PC9_Prior_to_Setup extends WMS_TestBase
 			Assert.assertEquals(appliedSizeGridCode, sizeGridCode, "Size grid code does not match!");
 			System.out.println("Verified that the chosen size grid code is applied on the colorway-season page.");
 			test.log(Status.PASS, "Verified that the chosen size grid code is applied on the colorway-season page.");
-			addSrceenShot("Verified that the chosen size grid code is applied on the colorway-season page.", test,
+			addScreenShot("Verified that the chosen size grid code is applied on the colorway-season page.", test,
 					Capture);
 
 			// Call the method to verify auto-populated values
@@ -147,11 +147,11 @@ public class TC248_P1_ApplySizeGridToNEW_PC9_Prior_to_Setup extends WMS_TestBase
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -81,7 +81,7 @@ public class TC19_P1_Seasonal_Look_Update_and_Derived_Attribute extends WMS_Test
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers P1 color module from TC19 to TC21");
 
@@ -90,15 +90,15 @@ public class TC19_P1_Seasonal_Look_Update_and_Derived_Attribute extends WMS_Test
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR_LOOK.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Color/Look");
 			test.log(Status.INFO, "Clicked on Color/Look");
 			WaitforPage(4000);
@@ -107,20 +107,20 @@ public class TC19_P1_Seasonal_Look_Update_and_Derived_Attribute extends WMS_Test
 			color_Page.clickOnColorLook(colorLookType, test);
 			System.out.println("Clicked on Seasonal Look");
 			test.log(Status.INFO, "Clicked on Seasonal Look");
-			addSrceenShot("Clicked on Seasonal Look", test, Capture);
+			addScreenShot("Clicked on Seasonal Look", test, Capture);
 			WaitforPage(4000);
 
 //			String seasonalLook = "Levi's S3 2025 Female Accessories 00407 STONEWASH 00407";
 			color_Page.selectSeasonalLook(seasonalLook, test);
 			System.out.println("Selected Seasonal Look: " + seasonalLook);
 			test.log(Status.INFO, "Selected Seasonal Look: " + seasonalLook);
-			addSrceenShot("Selected Seasonal Look", test, Capture);
+			addScreenShot("Selected Seasonal Look", test, Capture);
 			WaitforPage(4000);
 
 			color_Page.clickOnUpdate();
 			System.out.println("Clicked on Update Under Actions Drop Downn");
 			test.log(Status.INFO, "Clicked on Update Under Actions Drop Downn");
-			addSrceenShot("Clicked on Update Under Actions Drop Downn", test, Capture);
+			addScreenShot("Clicked on Update Under Actions Drop Downn", test, Capture);
 			WaitforPage(4000);
 
 			// Modify attribute values
@@ -129,14 +129,14 @@ public class TC19_P1_Seasonal_Look_Update_and_Derived_Attribute extends WMS_Test
 			color_Page.modifyAttributes(lookName, colorFamily);
 			System.out.println("Modified attribute values: " + lookName + " " + colorFamily);
 			test.log(Status.INFO, "Modified attribute values: " + lookName + " " + colorFamily);
-			addSrceenShot("Modified attribute values", test, Capture);
+			addScreenShot("Modified attribute values", test, Capture);
 			WaitforPage(4000);
 
 			// Click on Save
 			color_Page.clickOnSave();
 			System.out.println("Clicked on Save");
 			test.log(Status.INFO, "Clicked on Save");
-			addSrceenShot("Clicked on Save", test, Capture);
+			addScreenShot("Clicked on Save", test, Capture);
 			WaitforPage(4000);
 
 			// Verify updated values
@@ -144,38 +144,38 @@ public class TC19_P1_Seasonal_Look_Update_and_Derived_Attribute extends WMS_Test
 			if (isUpdated) {
 				System.out.println("Seasonal Look updated successfully");
 				test.log(Status.PASS, "Validation: Seasonal Look updated successfully");
-				addSrceenShot("Seasonal Look updated successfully", test, Capture);
+				addScreenShot("Seasonal Look updated successfully", test, Capture);
 			} else {
 				System.out.println("Failed to update Seasonal Look");
 				test.log(Status.FAIL, "Failed to update Seasonal Look");
-				addSrceenShot("Failed to update Seasonal Look", test, Capture);
+				addScreenShot("Failed to update Seasonal Look", test, Capture);
 			}
 
 			boolean isColorNameCorrect = color_Page.verifyColorNameFormat(lookName, test);
 			if (isColorNameCorrect) {
 				System.out.println("Color Name format is correct");
 				test.log(Status.PASS, "Validation: Color Name format is correct");
-				addSrceenShot("Color Name format is correct", test, Capture);
+				addScreenShot("Color Name format is correct", test, Capture);
 			} else {
 				System.out.println("Color Name format is incorrect");
 				test.log(Status.FAIL, "Color Name format is incorrect");
-				addSrceenShot("Color Name format is incorrect", test, Capture);
+				addScreenShot("Color Name format is incorrect", test, Capture);
 			}
 			
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -104,56 +104,56 @@ public class TC_P3_UpdateMultipleMassUpdate_CostwiseView_LogEntry extends WMS_Te
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view is "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view is "+linesheetview, test, Capture);
 			
 			Techpackpages.filterdata(filterdata);
 			test.log(Status.INFO, "Data filtered " + filterdata);
-			addSrceenShot("Data filtered " + filterdata, test, Capture);
+			addScreenShot("Data filtered " + filterdata, test, Capture);
 			System.out.println("Data filtered " + filterdata);
 			
 			
 			int noofrecords_Linesheet=LineSheetEditPage.MassEdit_CostWiseViewAttributes(targetvolume, globalmsrp,test);
 			System.out.println("Mass edit is completed for costwise view ");
 			test.log(Status.INFO, "Mass edit is completed for costwise view ");
-			addSrceenShot("Mass edit is completed for costwise view ", test, Capture);
+			addScreenShot("Mass edit is completed for costwise view ", test, Capture);
 			Thread.sleep(5000);
 			
 			System.out.println(noofrecords_Linesheet);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_LOG_ENTRY.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(2000);
 			
 			LogEntrypage.select_LogEntryObject(LogEntryObject,test);
 			System.out.println("Log Entry Object is selected ");
 			test.log(Status.INFO, "Log Entry Object is selected");
-			addSrceenShot("Log Entry Object is selected", test, Capture);
+			addScreenShot("Log Entry Object is selected", test, Capture);
 			Thread.sleep(2000);
 			
 			
 			LogEntrypage.Add_criteria(event,createddate,test);
 			System.out.println("Criteria is added ");
 			test.log(Status.INFO, "Criteria is added");
-			addSrceenShot("Criteria is added", test, Capture);
+			addScreenShot("Criteria is added", test, Capture);
 			Thread.sleep(2000);
 			
 			LogEntrypage.clickedFirst_viewdetails();
@@ -165,7 +165,7 @@ public class TC_P3_UpdateMultipleMassUpdate_CostwiseView_LogEntry extends WMS_Te
 			LogEntrypage.validate_Logdetails(event,LogEntryObject,test);
 			System.out.println("Validation successful for Log Entry details ");
 			test.log(Status.PASS, "Validation successful for Log Entry details");
-			addSrceenShot("Validation successful for Log Entry details", test, Capture);
+			addScreenShot("Validation successful for Log Entry details", test, Capture);
 			
 			 if (i == testData.length - 1) {
 					// Last iteration, perform logout
@@ -173,7 +173,7 @@ public class TC_P3_UpdateMultipleMassUpdate_CostwiseView_LogEntry extends WMS_Te
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 					
 				} else {
 					
@@ -184,7 +184,7 @@ public class TC_P3_UpdateMultipleMassUpdate_CostwiseView_LogEntry extends WMS_Te
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 			}

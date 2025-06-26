@@ -102,118 +102,118 @@ public class PC5_Create_Update extends WMS_TestBase {
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.PASS, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 				// mainMenuPage.openSubMenu(MainMenuEnum.LIBRARIES.menu(),
 				// MainMenuEnum.LIBRARIES_Season.menu());
 
 				mainMenuPage.openSubMenu(MainMenuEnum.SESSION.menu(), MainMenuEnum.SESSION_LINE_SHEET.menu());
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.PASS, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 				try {
 
 					lineSheetPage.createProduct();
 					test.log(Status.PASS, "Clicked on Create New product");
-					addSrceenShot("Clicked on Create New product", test, Capture);
+					addScreenShot("Clicked on Create New product", test, Capture);
 
 					String productName = "TST7";
 					productPage.enterProductName(productName);
 					test.log(Status.PASS, "Entered product Name successfully");
-					addSrceenShot("Entered product Name successfully", test, Capture);
+					addScreenShot("Entered product Name successfully", test, Capture);
 					WaitforPage(4000);
 
 //					productPage.selectBrandHierarchy();
 //					test.log(Status.PASS, "Entered Brand Hierarchy value successfully");
-//					addSrceenShot("Entered Brand Hierarchy value successfully", test, Capture);
+//					addScreenShot("Entered Brand Hierarchy value successfully", test, Capture);
 //					WaitforPage(2000);
 //
 //					productPage.selectProSubCat1();
 //					test.log(Status.PASS, "Entered product Sub Cat 1 successfully");
-//					addSrceenShot("Entered product Sub Cat 1 successfully", test, Capture);
+//					addScreenShot("Entered product Sub Cat 1 successfully", test, Capture);
 //					WaitforPage(2000);
 //
 //					productPage.selectClass();
 //					test.log(Status.PASS, "Entered class product Hierarcy successfully");
-//					addSrceenShot("Entered class product Hierarcy successfully", test, Capture);
+//					addScreenShot("Entered class product Hierarcy successfully", test, Capture);
 //					WaitforPage(2000);
 //
 //					productPage.selectSubClass();
 //					test.log(Status.PASS, "Entered sub class product Hierarcy successfully");
-//					addSrceenShot("Entered sub class product Hierarcy successfully", test, Capture);
+//					addScreenShot("Entered sub class product Hierarcy successfully", test, Capture);
 //					WaitforPage(2000);
 //
 //					productPage.selectConsumer();
 //					test.log(Status.PASS, "Entered consumer successfully");
-//					addSrceenShot("Entered consumer successfully", test, Capture);
+//					addScreenShot("Entered consumer successfully", test, Capture);
 //					WaitforPage(2000);
 //
 //					productPage.selectConsumerGrp1();
 //					test.log(Status.PASS, "Entered consumer Group 1 successfully");
-//					addSrceenShot("Entered consumer Group 1 successfully", test, Capture);
+//					addScreenShot("Entered consumer Group 1 successfully", test, Capture);
 //					WaitforPage(2000);
 //
 //					productPage.selectConsumerGrp2();
 //					test.log(Status.PASS, "Entered product Name successfully");
-//					addSrceenShot("Entered product Name successfully", test, Capture);
+//					addScreenShot("Entered product Name successfully", test, Capture);
 //					WaitforPage(2000);
 
 					productPage.clikOnSaveBtn();
 					test.log(Status.PASS, "Clicked on save button successfully");
-					addSrceenShot("Clicked on save button successfully", test, Capture);
+					addScreenShot("Clicked on save button successfully", test, Capture);
 					WaitforPage(2000);
 
 					/*
 					 * productPage.clikOnLineSheet(); test.log(Status.PASS,
 					 * "Clicked on Go to Line sheet successfully");
-					 * addSrceenShot("Clicked on Go to Line sheet successfully", test, Capture);
+					 * addScreenShot("Clicked on Go to Line sheet successfully", test, Capture);
 					 * WaitforPage(2000);
 					 */
 
 					productPage.clikViewProduct();
 					test.log(Status.PASS, "Clicked on View Product successfully");
-					addSrceenShot("Clicked on View Product successfully", test, Capture);
+					addScreenShot("Clicked on View Product successfully", test, Capture);
 					WaitforPage(2000);
 
 					productPage.editProduct();
 					test.log(Status.PASS, "Clicked on edit Product");
-					addSrceenShot("Clicked on edit Product", test, Capture);
+					addScreenShot("Clicked on edit Product", test, Capture);
 
 					productPage.selectCapsule();
 					test.log(Status.PASS, "Updated capsule value successfully");
-					addSrceenShot("Updated capsule value successfully", test, Capture);
+					addScreenShot("Updated capsule value successfully", test, Capture);
 					WaitforPage(2000);
 
 					productPage.clikOnSaveBtn();
 					test.log(Status.PASS, "Clicked on save button successfully");
-					addSrceenShot("Clicked on save button successfully", test, Capture);
+					addScreenShot("Clicked on save button successfully", test, Capture);
 					WaitforPage(2000);
 
 					productPage.clikCreatedProduct(productName);
 					test.log(Status.PASS, "Clicked on created product successfully :" + productName);
-					addSrceenShot("Clicked on created product successfully", test, Capture);
+					addScreenShot("Clicked on created product successfully", test, Capture);
 
 					dashboardPage.closeLeftPanel();
 					System.out.println("Clicked on close Left plane");
 					test.log(Status.PASS, "Clicked on close Left plane");
-					addSrceenShot("Clicked on close Left plane", test, Capture);
+					addScreenShot("Clicked on close Left plane", test, Capture);
 
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.PASS, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 
 				} catch (Exception e) {
 					System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 
 				}
 			}
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

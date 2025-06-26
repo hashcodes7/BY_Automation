@@ -81,62 +81,62 @@ public class TC03_P1_Upload_ThumbnailTo_PrintsandPatternColor extends WMS_TestBa
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view is "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view is "+linesheetview, test, Capture);
 			Thread.sleep(2000);
 			
 			Colorwaypage.SelectColorway(colorway,test);
 			System.out.println("Colorway selected: "+colorway);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 			Thread.sleep(2000);
 			
 			Colorwaypage.NavigateTo_ColorLink();
 			System.out.println("Navigated to colorlink ");
 			test.log(Status.INFO, "Navigated to colorlink  ");
-			addSrceenShot("Navigated to colorlink  ", test, Capture);
+			addScreenShot("Navigated to colorlink  ", test, Capture);
 			Thread.sleep(2000);
 			
 			Colorwaypage.NavigateTo_UpdatecolorPC9();
 			System.out.println("Navigated to update color ");
 			test.log(Status.INFO, "Navigated to update color  ");
-			addSrceenShot("Navigated to update color  ", test, Capture);
+			addScreenShot("Navigated to update color  ", test, Capture);
 			Thread.sleep(2000);
 			
 			Colorwaypage.UploadThumbnail_PrintsandPatternsColor(filepath);
 			System.out.println("Thumbnail is uploaded");
 			test.log(Status.INFO, "Thumbnail is uploaded ");
-			addSrceenShot("Thumbnail is uploaded ", test, Capture);
+			addScreenShot("Thumbnail is uploaded ", test, Capture);
 			Thread.sleep(2000);
 		
 			Colorwaypage.ValidateUploadedThumbnail_printsandPatternsColor(test);
 			System.out.println("Validation successful for uploading thumbnail for Prints and Patterns color");
 			test.log(Status.PASS, "Validation successful for uploading thumbnail for Prints and Patterns color");
-			addSrceenShot("Validation successful for uploading thumbnail for Prints and Patterns color", test, Capture);
+			addScreenShot("Validation successful for uploading thumbnail for Prints and Patterns color", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

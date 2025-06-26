@@ -63,45 +63,45 @@ public class TC04_P0_SCL_UpdateColorLookName extends WMS_TestBase{
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, " libraries menu opened");
-			addSrceenShot("libraries menu opened", test, Capture);
+			addScreenShot("libraries menu opened", test, Capture);
 			Thread.sleep(5000);
 			
 
 			CNCP.searchBox(colorname);
 			test.log(Status.INFO, "Color name entered: "+colorname);
-			addSrceenShot("Color name entered", test, Capture);
+			addScreenShot("Color name entered", test, Capture);
 			
 			CNCP.searchButton();
 			test.log(Status.INFO, "Search button clicked");
-			addSrceenShot("Search button clicked", test, Capture);
+			addScreenShot("Search button clicked", test, Capture);
 			
 			CNCP.Action_update_DD();
 			test.log(Status.INFO, "Update menu clicked");
-			addSrceenShot("Update menu clicked", test, Capture);
+			addScreenShot("Update menu clicked", test, Capture);
 			
 			CNCP.Validate_updatecolor(test);
 			test.log(Status.PASS, "validated color/look name");
-			addSrceenShot("validated color/look name", test, Capture);
+			addScreenShot("validated color/look name", test, Capture);
 			
 			CNCP.savebutton();
 			test.log(Status.PASS, "Clicked on save button");
-			addSrceenShot("Clicked on save button", test, Capture);
+			addScreenShot("Clicked on save button", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		}catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

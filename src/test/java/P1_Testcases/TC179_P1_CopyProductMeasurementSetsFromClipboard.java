@@ -76,19 +76,19 @@ public class TC179_P1_CopyProductMeasurementSetsFromClipboard extends WMS_TestBa
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL " + GarmentDeveloper_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PRODUCT.menu(), true);
-			addSrceenShot("Clicked on Product Under Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Product Under Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Product Under Main menu of Libraries ");
 			test.log(Status.INFO, "Clicked on Product Under Main menu of Libraries ");
 			WaitforPage(4000);
@@ -96,57 +96,57 @@ public class TC179_P1_CopyProductMeasurementSetsFromClipboard extends WMS_TestBa
 //			String product = "Test060524";
 			MeasurementsPage.selectProduct(product);
 			test.log(Status.INFO, "Product selected: " + product);
-			addSrceenShot("Product selected: " + product, test, Capture);
+			addScreenShot("Product selected: " + product, test, Capture);
 
 			MeasurementsPage.clickDetailsTab();
 			test.log(Status.INFO, "Clicked on Details tab");
-			addSrceenShot("Clicked on Details tab", test, Capture);
+			addScreenShot("Clicked on Details tab", test, Capture);
 
 //			String season = "Levi's S1 2024 Male Accessories";
 			MeasurementsPage.selectSeason(season, test);
 			System.out.println("Selected season " + season);
 			test.log(Status.INFO, "Selected season " + season);
-			addSrceenShot("Selected season " + season, test, Capture);
+			addScreenShot("Selected season " + season, test, Capture);
 
 //			String source = "0WOZV - Primary -";
 //			MeasurementsPage1.select_Source(source, test);
 //			System.out.println("Selected source " + source);
 //			test.log(Status.INFO, "Selected source " + source);
-//			addSrceenShot("Selected source " + source, test, Capture);
+//			addScreenShot("Selected source " + source, test, Capture);
 
 			// Step 4: Select a Specification from Specifications drop down
 //			String specification = "S1 2024 - 0WOZV - Test060524 -";
 			MeasurementsPage.selectSpecifications(specification, test);
 			System.out.println("Selected specifications " + specification);
 			test.log(Status.INFO, "Selected specification " + specification);
-			addSrceenShot("Selected specification " + specification, test, Capture);
+			addScreenShot("Selected specification " + specification, test, Capture);
 
 			// Step 5: Click on "Measurements" Tab
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
 			System.out.println("Navigated to measurement page  ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 
 			// Step 6: Select a Measurement Set from "View Measurement Set"
 //			String measurementSet = "002 : TEST_AUTO_22";
 			MeasurementsPage.selectMeasurementSet(measurementSet);
 			test.log(Status.INFO, "Selected measurement set: " + measurementSet);
-			addSrceenShot("Selected measurement set: " + measurementSet, test, Capture);
+			addScreenShot("Selected measurement set: " + measurementSet, test, Capture);
 
 			// Step 7: From the "Actions" drop down, click on "Copy To Clipboard"
 			MeasurementsPage.copyToClipboard();
 			test.log(Status.INFO, "Copied measurement set to clipboard: " + measurementSet);
-			addSrceenShot("Copied measurement set to clipboard: " + measurementSet, test, Capture);
+			addScreenShot("Copied measurement set to clipboard: " + measurementSet, test, Capture);
 
 			MeasurementsPage.openNewTab(URL);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PRODUCT.menu(), true);
-			addSrceenShot("Clicked on Product Under Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Product Under Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Product Under Main menu of Libraries ");
 			test.log(Status.INFO, "Clicked on Product Under Main menu of Libraries ");
 			WaitforPage(4000);
@@ -155,35 +155,35 @@ public class TC179_P1_CopyProductMeasurementSetsFromClipboard extends WMS_TestBa
 //			String newProduct = "Test061224";
 			MeasurementsPage.selectProduct(newProduct);
 			test.log(Status.INFO, "New Product selected: " + product);
-			addSrceenShot("New Product selected: " + product, test, Capture);
+			addScreenShot("New Product selected: " + product, test, Capture);
 
 //			String seasonOfNewProd = "Levi's S1 2024 Male Accessories";
 			MeasurementsPage.selectSeason(seasonOfNewProd, test);
 			System.out.println("Selected season for new product" + seasonOfNewProd);
 			test.log(Status.INFO, "Selected season for new product: " + seasonOfNewProd);
-			addSrceenShot("Selected season for new product " + seasonOfNewProd, test, Capture);
+			addScreenShot("Selected season for new product " + seasonOfNewProd, test, Capture);
 
 //			String sourceOfNewProd = "0WP1T - Primary -";
 //			MeasurementsPage1.select_Source(source, test);
 //			System.out.println("Selected Primary source Of new product: " + sourceOfNewProd);
 //			test.log(Status.INFO, "Selected Primary source Of new product: " + sourceOfNewProd);
-//			addSrceenShot("Selected Primary source " + sourceOfNewProd, test, Capture);
+//			addScreenShot("Selected Primary source " + sourceOfNewProd, test, Capture);
 
 			// Step 4: Select a Specification from Specifications drop down
 //			String specOfNewProd = "S1 2024 - 0WP1T - Test061224 -";
 			MeasurementsPage.selectSpecifications(specOfNewProd, test);
 			System.out.println("Selected specification of new product: " + specOfNewProd);
 			test.log(Status.INFO, "Selected specification of new product: " + specOfNewProd);
-			addSrceenShot("Selected specification " + specOfNewProd, test, Capture);
+			addScreenShot("Selected specification " + specOfNewProd, test, Capture);
 
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
 			System.out.println("Navigated to measurement page  ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 
 			String copiedmeasurementValue = MeasurementsPage.addNewMeasurementSetFromClipboard(measurementSet, test);
 			test.log(Status.INFO, "Added new measurement set from clipboard: " + copiedmeasurementValue);
-			addSrceenShot("Added new measurement set from clipboard: " + copiedmeasurementValue, test, Capture);
+			addScreenShot("Added new measurement set from clipboard: " + copiedmeasurementValue, test, Capture);
 			System.out.println("Added new measurement set from clipboard");
 
 			// Step 10: Enter required attributes and save
@@ -194,11 +194,11 @@ public class TC179_P1_CopyProductMeasurementSetsFromClipboard extends WMS_TestBa
 			MeasurementsPage.enterMeasurementSetAttributes(measurementsetname, sizevalue, measurementtype,
 					measurementSet, test);
 			test.log(Status.PASS, "Measurement set copied and applied to new product: " + measurementsetname);
-			addSrceenShot("Measurement set copied and applied to new product: " + measurementsetname, test, Capture);
+			addScreenShot("Measurement set copied and applied to new product: " + measurementsetname, test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

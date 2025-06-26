@@ -233,56 +233,56 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(seasondropdown));
 		this.selectOPtionByVisibleText(seasondropdown, value.trim(), "Season :-" + value);
 		test.log(Status.INFO, "Selected Season: " + value);
-		addSrceenShot("Selected Season", test, Capture);
+		addScreenShot("Selected Season", test, Capture);
 	}
 
 	public void selectProdCat1(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(prodCat1));
 		this.selectOPtionByVisibleText(prodCat1, value.trim(), "prodCat1 :-" + value);
 		test.log(Status.INFO, "Selected Product Category 1: " + value);
-		addSrceenShot("Selected Product Category 1", test, Capture);
+		addScreenShot("Selected Product Category 1", test, Capture);
 	}
 
 	public void selectProdCat2(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(prodCat2));
 		this.selectOPtionByVisibleText(prodCat2, value.trim(), "prodCat2 :-" + value);
 		test.log(Status.INFO, "Selected Product Category 2: " + value);
-		addSrceenShot("Selected Product Category 2", test, Capture);
+		addScreenShot("Selected Product Category 2", test, Capture);
 	}
 
 	public void selectBrand(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(brand));
 		this.selectOPtionByVisibleText(brand, value.trim(), "brand :-" + value);
 		test.log(Status.INFO, "Selected Brand: " + value);
-		addSrceenShot("Selected Brand", test, Capture);
+		addScreenShot("Selected Brand", test, Capture);
 	}
 
 	public void selectCapsule(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(capsule));
 		this.selectOPtionByVisibleText(capsule, value.trim(), "capsule :-" + value);
 		test.log(Status.INFO, "Selected Capsule: " + value);
-		addSrceenShot("Selected Capsule", test, Capture);
+		addScreenShot("Selected Capsule", test, Capture);
 	}
 
 	public void selectCategory(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(category));
 		this.selectOPtionByVisibleText(category, value.trim(), "category :-" + value);
 		test.log(Status.INFO, "Selected Category: " + value);
-		addSrceenShot("Selected Category", test, Capture);
+		addScreenShot("Selected Category", test, Capture);
 	}
 
 	public void selectGender(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(gender));
 		this.selectOPtionByVisibleText(gender, value.trim(), "gender :-" + value);
 		test.log(Status.PASS, "Selected Gender: " + value);
-		addSrceenShot("Selected Gender", test, Capture);
+		addScreenShot("Selected Gender", test, Capture);
 	}
 
 	public void selectreverseSeason(String value, ExtentTest test) throws Exception {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(reverseSeason));
 		this.selectOPtionByVisibleText(reverseSeason, value.trim(), "reverseSeason :-" + value);
 		test.log(Status.INFO, "Selected Reverse Season: " + value);
-		addSrceenShot("Selected Reverse Season", test, Capture);
+		addScreenShot("Selected Reverse Season", test, Capture);
 	}
 
 	public void enterName(String value, ExtentTest test) throws Exception {
@@ -293,7 +293,7 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 		name.sendKeys(value);
 		name.click();
 		test.log(Status.INFO, "Entered Name: " + value);
-		addSrceenShot("Entered Name", test, Capture);
+		addScreenShot("Entered Name", test, Capture);
 	}
 
 	public void clikOnCreateBtn(ExtentTest test) throws Exception {
@@ -302,7 +302,7 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(createBtn));
 		clickElement(createBtn);
 		test.log(Status.INFO, "Clicked on Create button");
-		addSrceenShot("Clicked on Create button", test, Capture);
+		addScreenShot("Clicked on Create button", test, Capture);
 	}
 
 	public boolean isNewPalettePageDisplayed(ExtentTest test) {
@@ -314,12 +314,12 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 			String pageText = newPalettePageElement.getText();
 
 			test.log(Status.PASS, "New Palette Page is displayed with text: " + pageText);
-			addSrceenShot("New Palette Page is displayed", test, Capture);
+			addScreenShot("New Palette Page is displayed", test, Capture);
 
 			return true;
 		} catch (Exception e) {
 			test.log(Status.FAIL, "New Palette Page is not displayed: " + e.getMessage());
-			addSrceenShot("New Palette Page is not displayed", test, Capture);
+			addScreenShot("New Palette Page is not displayed", test, Capture);
 			return false;
 		}
 	}
@@ -449,22 +449,22 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 		if (Updated_ArtworkCode.getText().equals(artworkcode)) {
 			System.out.println("Artwork code value is updated and the value is: " + Updated_ArtworkCode.getText());
 			test.log(Status.INFO, "Artwork code value is updated and the value is: " + Updated_ArtworkCode.getText());
-			addSrceenShot("Artwork code value is updated and the value is: " + Updated_ArtworkCode.getText(), test,
+			addScreenShot("Artwork code value is updated and the value is: " + Updated_ArtworkCode.getText(), test,
 					Capture);
 		} else {
 			System.out.println("Artwork code value did Not updated ");
 			test.log(Status.FAIL, "Artwork code value did not updated ");
-			addSrceenShot("Artwork code value did not updated ", test, Capture);
+			addScreenShot("Artwork code value did not updated ", test, Capture);
 		}
 
 		if (Updated_ArtworkName.getText().equals(artworkname)) {
 			System.out.println("Artwork name  is updated and the value is: " + Updated_ArtworkName.getText());
 			test.log(Status.INFO, "Artwork name  is updated and the value is: " + Updated_ArtworkName.getText());
-			addSrceenShot("Artwork name is updated and the value is: " + Updated_ArtworkName.getText(), test, Capture);
+			addScreenShot("Artwork name is updated and the value is: " + Updated_ArtworkName.getText(), test, Capture);
 		} else {
 			System.out.println("Artwork name value did not updated ");
 			test.log(Status.FAIL, "Artwork name value did not updated ");
-			addSrceenShot("Artwork name value did not updated ", test, Capture);
+			addScreenShot("Artwork name value did not updated ", test, Capture);
 		}
 
 	}
@@ -538,7 +538,7 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 					"Color Thumbnail  : " + ActualThumbnail.getAttribute("src") + " is present in colorway thumbnail");
 			test.log(Status.INFO,
 					"Color Thumbnail: " + ActualThumbnail.getAttribute("src") + " is present in colorway thumbnail");
-			addSrceenShot(
+			addScreenShot(
 					"Color Thumbnail: " + ActualThumbnail.getAttribute("src") + " is present in colorway thumbnail",
 					test, Capture);
 		}
@@ -583,7 +583,7 @@ public class Palette_Page extends WMS_WebDriverUtilities {
 		if (NamePalette.getText().equalsIgnoreCase(PaletteName)) {
 			System.out.println("The Palette created with name : " + NamePalette.getText());
 			test.log(Status.INFO, "The Palette created with name : " + NamePalette.getText());
-			addSrceenShot("The Palette created with name : " + NamePalette.getText(), test, Capture);
+			addScreenShot("The Palette created with name : " + NamePalette.getText(), test, Capture);
 		}
 	}
 

@@ -76,74 +76,74 @@ public class TC286_P0_E2E_caryyover_PC5_PC9 extends WMS_TestBase {
 							
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(to_season);
 			test.log(Status.INFO, "Season value seleted:"+to_season);
-			addSrceenShot("Season value seleted"+to_season, test, Capture);
+			addScreenShot("Season value seleted"+to_season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Thread.sleep(5000);
 			
 			E2EPages.Select_CarryOverProduct();
 			test.log(Status.INFO, "Selected carryover products menu ");
-			addSrceenShot("Selected carryover products menu ", test, Capture);
+			addScreenShot("Selected carryover products menu ", test, Capture);
 			System.out.println("Selected carryover products menu ");
 			
 			Thread.sleep(3000);
 			E2EPages.SelectInitialSeason(from_season);	
 			test.log(Status.INFO, "Initail season selected "+from_season);
-			addSrceenShot("Initail season selected "+from_season, test, Capture);
+			addScreenShot("Initail season selected "+from_season, test, Capture);
 			System.out.println("Initail season selected "+from_season);
 			
 			Thread.sleep(3000);
 			Techpackpages.filterdataa(productname);
 			test.log(Status.INFO, "product filtered "+productname);
-			addSrceenShot("product filtered "+productname, test, Capture);
+			addScreenShot("product filtered "+productname, test, Capture);
 			System.out.println("product filtered "+productname);
 			
 			Thread.sleep(3000);
 			E2EPages.SelectCarryoverProduct();
 			test.log(Status.PASS, "selected product for copycarryover and carryover completed ");
-			addSrceenShot("selected product for copycarryover and carryover completed", test, Capture);
+			addScreenShot("selected product for copycarryover and carryover completed", test, Capture);
 			System.out.println("selected product for copycarryover and carryover completed");
 				
 //			--------------------Carryover Colorway---------------------------------------------
 			
 			E2EPages.Select_CarryOvercolorways();
 			test.log(Status.INFO, "Selected carryover colorway menu ");
-			addSrceenShot("Selected carryover colorway menu ", test, Capture);
+			addScreenShot("Selected carryover colorway menu ", test, Capture);
 			System.out.println("Selected carryover colorway menu ");
 			
 			Thread.sleep(3000);
 			E2EPages.SelectInitialSeason(from_season);
 			test.log(Status.INFO, "Initail season selected "+from_season);
-			addSrceenShot("Initail season selected "+from_season, test, Capture);
+			addScreenShot("Initail season selected "+from_season, test, Capture);
 			System.out.println("Initail season selected "+from_season);
 			
 			Thread.sleep(3000);
 			Techpackpages.filterdataa(colorwayname);
 			test.log(Status.INFO, "colorway filtered "+colorwayname);
-			addSrceenShot("colorwayname filtered "+colorwayname, test, Capture);
+			addScreenShot("colorwayname filtered "+colorwayname, test, Capture);
 			System.out.println("colorwayname filtered "+colorwayname);
 			
 			E2EPages.SelectCarryovercolorway();
 			test.log(Status.PASS, "selected colorway for copycarryover and carryover completed ");
-			addSrceenShot("selected colorway for copycarryover and carryover completed", test, Capture);
+			addScreenShot("selected colorway for copycarryover and carryover completed", test, Capture);
 			System.out.println("selected colorway for copycarryover and carryover completed");
 			
 //			---------Validating the PC5 and PC9 are carried over in the season -------------------
@@ -151,20 +151,20 @@ public class TC286_P0_E2E_caryyover_PC5_PC9 extends WMS_TestBase {
 			Thread.sleep(3000);
 			E2EPages.validate_CarriedOver_PC5_PC9(productname,colorwayname);
 			test.log(Status.PASS, "Validated PC5 and PC9 carried over ");
-			addSrceenShot("Validated PC5 and PC9 carried over", test, Capture);
+			addScreenShot("Validated PC5 and PC9 carried over", test, Capture);
 			System.out.println("Validated PC5 and PC9 carried over");
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 				
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -71,40 +71,40 @@ public class TC285_P0_E2E_CreateNewPalette extends WMS_TestBase {
 			Thread.sleep(5000);
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("My seasons menu clicked", test, Capture);
+			addScreenShot("My seasons menu clicked", test, Capture);
 			
 			palettepage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 
 			palettepage.palettemenu();
 			test.log(Status.INFO, "Clicked on Palette");
-			addSrceenShot("Clicked on Palette", test, Capture);
+			addScreenShot("Clicked on Palette", test, Capture);
 			
 			palettepage.Click_CreateNewPalette();
 			test.log(Status.INFO, "Clicked on create new palette");
-			addSrceenShot("Clicked on create new Palette", test, Capture);
+			addScreenShot("Clicked on create new Palette", test, Capture);
 			
 			palettepage.Fill_CreateNewPalette(palettename);
 			test.log(Status.INFO, "Filled name for create new palette");
-			addSrceenShot("Filled name for create new palette", test, Capture);
+			addScreenShot("Filled name for create new palette", test, Capture);
 			
 			palettepage.Validate_PaletteCreation(palettename,test);
 			test.log(Status.PASS, "Validation successful for create new palette");
-			addSrceenShot("Validation successful for create new palette", test, Capture);
+			addScreenShot("Validation successful for create new palette", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.PASS, "Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

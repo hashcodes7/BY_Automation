@@ -401,17 +401,17 @@ public class Set_Up_Page extends WMS_WebDriverUtilities {
 		Assert.assertTrue(LSEValidationResults.getText().contains("No Error"));
 		test.log(Status.INFO, "Validation Result"+LSEValidationResults.getText());
 		System.out.println("Validation Result"+LSEValidationResults.getText());
-		addSrceenShot("Validation Result"+LSEValidationResults.getText(), test, Capture);
+		addScreenShot("Validation Result"+LSEValidationResults.getText(), test, Capture);
 		
 		Assert.assertTrue(LSE_Status.getText().contains("Processing")||LSE_Status.getText().contains("Completed") );
 		test.log(Status.INFO, "Set UP LSE status value is: "+ LSE_Status.getText());
 		System.out.println("Set UP LSE status value is: "+ LSE_Status.getText());
-		addSrceenShot("Set UP LSE status value is: "+ LSE_Status.getText(), test, Capture);
+		addScreenShot("Set UP LSE status value is: "+ LSE_Status.getText(), test, Capture);
 			
 //		Assert.assertTrue(LSEFeedback.getText().contains("has been created or extended"));
 //		test.log(Status.INFO, "LSE Feedback is-  "+LSEFeedback.getText());
 //		System.out.println("LSE Feedback is-  "+LSEFeedback.getText());
-//		addSrceenShot("LSE Feedback is-  "+LSEFeedback.getText(), test, Capture);
+//		addScreenShot("LSE Feedback is-  "+LSEFeedback.getText(), test, Capture);
 		
 	}
 	
@@ -426,17 +426,17 @@ public class Set_Up_Page extends WMS_WebDriverUtilities {
 		Assert.assertTrue(SetUpLSE_triggervalue.getText().contains("Yes"));
 		test.log(Status.INFO, "Set Up LSE value is: "+SetUpLSE_triggervalue.getText());
 		System.out.println("Set Up LSE value is: "+SetUpLSE_triggervalue.getText());
-		addSrceenShot("Set Up LSE value is: "+SetUpLSE_triggervalue.getText(), test, Capture);
+		addScreenShot("Set Up LSE value is: "+SetUpLSE_triggervalue.getText(), test, Capture);
 		
 		Assert.assertTrue(LSE_Status.getText().contains("Complete"));
 		test.log(Status.INFO, "Set UP LSE status value is: "+ LSE_Status.getText());
 		System.out.println("Set UP LSE status value is: "+ LSE_Status.getText());
-		addSrceenShot("Set UP LSE status value is: "+ LSE_Status.getText(), test, Capture);
+		addScreenShot("Set UP LSE status value is: "+ LSE_Status.getText(), test, Capture);
 		
 		Assert.assertTrue(LSEFeedback.getText().contains("has been created or extended"));
 		test.log(Status.INFO, "LSE Feedback is-  "+LSEFeedback.getText());
 		System.out.println("LSE Feedback is-  "+LSEFeedback.getText());
-		addSrceenShot("LSE Feedback is-  "+LSEFeedback.getText(), test, Capture);
+		addScreenShot("LSE Feedback is-  "+LSEFeedback.getText(), test, Capture);
 		
 		
 	}
@@ -449,22 +449,22 @@ public class Set_Up_Page extends WMS_WebDriverUtilities {
 		Assert.assertTrue(EU_AFF_Trigger.getText().contains("Yes"));
 		test.log(Status.INFO, "EU/AFF_Trigger value is: "+EU_AFF_Trigger.getText());
 		System.out.println("EU/AFF_Trigger value is: "+EU_AFF_Trigger.getText());
-		addSrceenShot("EU/AFF_Trigger value is: "+EU_AFF_Trigger.getText(), test, Capture);
+		addScreenShot("EU/AFF_Trigger value is: "+EU_AFF_Trigger.getText(), test, Capture);
 		
 		Assert.assertTrue(Activated.getText().contains("completed"));
 		test.log(Status.INFO, "Activated? value is: "+Activated.getText());
 		System.out.println("Activated? value is: "+Activated.getText());
-		addSrceenShot("Activated? value is: "+Activated.getText(), test, Capture);
+		addScreenShot("Activated? value is: "+Activated.getText(), test, Capture);
 		
 		Assert.assertTrue(SendToSAP_SetUP.getText().contains("Yes"));
 		test.log(Status.INFO, "SendToSAP_SetUP value is: "+SendToSAP_SetUP.getText());
 		System.out.println("SendToSAP_SetUP value is: "+SendToSAP_SetUP.getText());
-		addSrceenShot("SendToSAP_SetUP value is: "+SendToSAP_SetUP.getText(), test, Capture);
+		addScreenShot("SendToSAP_SetUP value is: "+SendToSAP_SetUP.getText(), test, Capture);
 		
 		Assert.assertTrue(SendToSAP_Activate.getText().contains("Yes"));
 		test.log(Status.INFO, "SendToSAP_Activate value is: "+SendToSAP_Activate.getText());
 		System.out.println("SendToSAP_Activate value is: "+SendToSAP_Activate.getText());
-		addSrceenShot("SendToSAP_Activate value is: "+SendToSAP_Activate.getText(), test, Capture);
+		addScreenShot("SendToSAP_Activate value is: "+SendToSAP_Activate.getText(), test, Capture);
 		
 	}
 	
@@ -476,22 +476,22 @@ public class Set_Up_Page extends WMS_WebDriverUtilities {
 		Assert.assertTrue(SetUpLSE_triggervalue.getText().contains("No"));
 		test.log(Status.INFO, "Set Up LSE value is: "+SetUpLSE_triggervalue.getText());
 		System.out.println("Set Up LSE value is: "+SetUpLSE_triggervalue.getText());
-		addSrceenShot("Set Up LSE value is: "+SetUpLSE_triggervalue.getText(), test, Capture);
+		addScreenShot("Set Up LSE value is: "+SetUpLSE_triggervalue.getText(), test, Capture);
 		
 		Assert.assertTrue(SetUpLSE_Validation_triggervalue.getText().contains("No"));
 		test.log(Status.INFO, "Set Up LSE Validation value is: "+SetUpLSE_Validation_triggervalue.getText());
 		System.out.println("Set Up LSE Validation value is: "+SetUpLSE_Validation_triggervalue.getText());
-		addSrceenShot("Set Up LSE Validation value is: "+SetUpLSE_Validation_triggervalue.getText(), test, Capture);
+		addScreenShot("Set Up LSE Validation value is: "+SetUpLSE_Validation_triggervalue.getText(), test, Capture);
 		
 		Assert.assertTrue(LSE_Status.getText().contains("Validation Error"));
 		test.log(Status.INFO, "Set UP LSE status value is: "+ LSE_Status.getText());
 		System.out.println("Set UP LSE status value is: "+ LSE_Status.getText());
-		addSrceenShot("Set UP LSE status value is: "+ LSE_Status.getText(), test, Capture);
+		addScreenShot("Set UP LSE status value is: "+ LSE_Status.getText(), test, Capture);
 		
 		Assert.assertTrue(SetUpLSE_Validation_trigger_Result.getText().contains("Error"));
 		test.log(Status.INFO, "Set UP LSE Validation result  is: "+ SetUpLSE_Validation_trigger_Result.getText());
 		System.out.println("Set UP LSE Validation result  is: "+ SetUpLSE_Validation_trigger_Result.getText());
-		addSrceenShot("Set UP LSE Validation result  is: "+ SetUpLSE_Validation_trigger_Result.getText(), test, Capture);
+		addScreenShot("Set UP LSE Validation result  is: "+ SetUpLSE_Validation_trigger_Result.getText(), test, Capture);
 		
 	}
 	
@@ -508,17 +508,17 @@ public class Set_Up_Page extends WMS_WebDriverUtilities {
 		if (setUpLSE_value.getAttribute("value").equals("false")) {
 			test.log(Status.INFO, "Set UP LSE value is: "+ setUpLSE_value.getAttribute("value"));
 			System.out.println("Set UP LSE value is: "+ setUpLSE_value.getAttribute("value"));
-			addSrceenShot("Set UP LSE value is: "+ setUpLSE_value.getAttribute("value"), test, Capture);
+			addScreenShot("Set UP LSE value is: "+ setUpLSE_value.getAttribute("value"), test, Capture);
 		}
 		if (setUpLSUS_value.getAttribute("value").equals("false")) {
 			test.log(Status.INFO, "Set UP LSUS value is: "+ setUpLSUS_value.getAttribute("value"));
 			System.out.println("Set UP LSUS value is: "+ setUpLSUS_value.getAttribute("value"));
-			addSrceenShot("Set UP LSUS value is: "+ setUpLSUS_value.getAttribute("value"), test, Capture);	
+			addScreenShot("Set UP LSUS value is: "+ setUpLSUS_value.getAttribute("value"), test, Capture);	
 		}
 		if(LSEValidationResults.getText().isBlank()) {
 			test.log(Status.INFO, "Set UP LSE validation result is blank");
 			System.out.println("Set UP LSE validation result is blank");
-			addSrceenShot("Set UP LSE validation result is blank", test, Capture);
+			addScreenShot("Set UP LSE validation result is blank", test, Capture);
 		}else {
 			test.log(Status.FAIL, "Set UP LSE validation result is not blank");
 			System.out.println("Set UP LSE validation result is not blank");
@@ -526,7 +526,7 @@ public class Set_Up_Page extends WMS_WebDriverUtilities {
 		if(LSUSValidationResults.getText().isEmpty()) {
 			test.log(Status.INFO, "Set UP LSUS validation result is blank");
 			System.out.println("Set UP LSUS validation result is blank");
-			addSrceenShot("Set UP LSUS validation result is blank", test, Capture);
+			addScreenShot("Set UP LSUS validation result is blank", test, Capture);
 			
 		}else {
 			test.log(Status.FAIL, "Set UP LSUS validation result is not blank");

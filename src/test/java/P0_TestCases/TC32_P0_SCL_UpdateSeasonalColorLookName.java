@@ -81,51 +81,51 @@ public class TC32_P0_SCL_UpdateSeasonalColorLookName extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected "+season);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Colorwaypage.SelectColorway(colorway,test);
 //			50155-0055 RIGID A9264 V2
 			test.log(Status.INFO, "colorway details page opened "+colorway);
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 			
 			Colorwaypage.ClickSeasonalLook();
 			test.log(Status.INFO, "Seasonal link is clicked");
-			addSrceenShot("Seasonal link is clicked ", test, Capture);
+			addScreenShot("Seasonal link is clicked ", test, Capture);
 			
 			Colorwaypage.ValidateSeasonalLookAttributes();
 			test.log(Status.PASS, "Validated all the required attributes of seasonalLook ");
-			addSrceenShot("Validated all the required attributes of seasonalLook", test, Capture);
+			addScreenShot("Validated all the required attributes of seasonalLook", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

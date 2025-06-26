@@ -74,22 +74,22 @@ public class TC36_P0_Placements_UpdatingMultiplePlacementValue extends WMS_TestB
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.REPORTS.menu(), MainMenuEnum.REPORTS_LoadFile.menu());
 			test.log(Status.INFO, "Clicked on Reports Load file ");
-			addSrceenShot("Clicked on Reports Load file ", test, Capture);
+			addScreenShot("Clicked on Reports Load file ", test, Capture);
 			
 			WaitforPage(2000);
 			
 			customLoadersPage.selectFileType(filetype);
 			test.log(Status.INFO, "File type selected is:   "+filetype);
-			addSrceenShot("File type selected ", test, Capture);
+			addScreenShot("File type selected ", test, Capture);
 			
 			customLoadersPage.uploadFile(uploadFilepath);
 			System.out.println("file uploaded");
 			test.log(Status.INFO, "File uploaded");
-			addSrceenShot("File uploaded", test, Capture);
+			addScreenShot("File uploaded", test, Capture);
 			Thread.sleep(5000);
 			
 			String result=customLoadersPage.ValidatePlacementLoaderResult(resultFilepath);
@@ -97,7 +97,7 @@ public class TC36_P0_Placements_UpdatingMultiplePlacementValue extends WMS_TestB
 			if(str[0].equalsIgnoreCase("Success")) {
 				test.log(Status.INFO, "File is uploaded and The Result is: "+str[0]+"and message is: "+str[1]);
 				System.out.println("File is uploaded and The Result is success");
-				addSrceenShot("File is uploaded and The Result is success", test, Capture);
+				addScreenShot("File is uploaded and The Result is success", test, Capture);
 			}
 			
 			Thread.sleep(10000);
@@ -106,12 +106,12 @@ public class TC36_P0_Placements_UpdatingMultiplePlacementValue extends WMS_TestB
 			
 			customLoadersPage.selectFileType(filetype);
 			test.log(Status.INFO, "File type selected is:   "+filetype);
-			addSrceenShot("File type selected ", test, Capture);
+			addScreenShot("File type selected ", test, Capture);
 			
 			customLoadersPage.uploadFile(uploadFilePath_update);
 			System.out.println("file Re-uploaded");
 			test.log(Status.INFO, "File Re-uploaded");
-			addSrceenShot("File Re-uploaded", test, Capture);
+			addScreenShot("File Re-uploaded", test, Capture);
 			Thread.sleep(5000);
 			
 			String updateresult=customLoadersPage.ValidatePlacementLoaderResult(resultfilepath_update);
@@ -119,20 +119,20 @@ public class TC36_P0_Placements_UpdatingMultiplePlacementValue extends WMS_TestB
 			if(str1[0].equalsIgnoreCase("Success")) {
 				test.log(Status.PASS, "The Result for the updated file is: "+str1[0]+"and message is: "+str1[1]);
 				System.out.println("The Result for the updated file is:   "+str1[0]+"and message is: "+str1[1]);
-				addSrceenShot("The Result for the updated file is: "+str1[0]+"and message is: "+str1[1], test, Capture);
+				addScreenShot("The Result for the updated file is: "+str1[0]+"and message is: "+str1[1], test, Capture);
 			}
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

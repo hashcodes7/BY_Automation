@@ -99,125 +99,125 @@ public class TC289_P2_Create_Source_For_Duplicate_Vendor extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully" + PDS_URL);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "1709LFA2";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.PASS, "PC5 Details Page is displayed: " + productName);
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 			productPage.selectSourcingTab();
 			System.out.println("Selected Sourcing tab");
 			test.log(Status.INFO, "Selected Sourcing tab");
-			addSrceenShot("Selected Sourcing tab", test, Capture);
+			addScreenShot("Selected Sourcing tab", test, Capture);
 			WaitforPage(4000);
 
 			productPage.clickOnSummary();
 			System.out.println("Clicked on Summary");
 			test.log(Status.INFO, "Clicked on Summary");
-			addSrceenShot("Clicked on Summary", test, Capture);
+			addScreenShot("Clicked on Summary", test, Capture);
 			WaitforPage(4000);
 
 			sourcingPage.selectCreateSourcingConfiguration();
 			test.log(Status.INFO, "Navigated to Create Sourcing Configuration From Actions Drop Down");
-			addSrceenShot("Navigated to Create Sourcing Configuration From Actions Drop Down", test, Capture);
+			addScreenShot("Navigated to Create Sourcing Configuration From Actions Drop Down", test, Capture);
 
 			productPage.clickOnVendorLink();
 			test.log(Status.INFO, "Clicked On Vendor Hyperlink");
-			addSrceenShot("Clicked On Vendor Hyperlink", test, Capture);
+			addScreenShot("Clicked On Vendor Hyperlink", test, Capture);
 
 //			String vendor = "DUMMY MILL BANGLADESH 603191 BD";
 			productPage.selectVendor(vendor, test);
 			test.log(Status.INFO, "Selected Vendor: " + vendor);
-			addSrceenShot("Selected Vendor", test, Capture);
+			addScreenShot("Selected Vendor", test, Capture);
 
 			productPage.clickOnSave();
 			test.log(Status.INFO, "Clicked On Save Button ");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 
 //			productPage.selectSourcingTab();
 //			System.out.println("Selected Sourcing tab");
 //			test.log(Status.INFO, "Selected Sourcing tab");
-//			addSrceenShot("Selected Sourcing tab", test, Capture);
+//			addScreenShot("Selected Sourcing tab", test, Capture);
 //			WaitforPage(4000);
 //
 //			productPage.clickOnSummary();
 //			System.out.println("Clicked on Summary");
 //			test.log(Status.INFO, "Clicked on Summary");
-//			addSrceenShot("Clicked on Summary", test, Capture);
+//			addScreenShot("Clicked on Summary", test, Capture);
 //			WaitforPage(4000);
 
 			sourcingPage.selectCreateSourcingConfiguration();
 			test.log(Status.INFO, "Navigated to Create Sourcing Configuration From Actions Drop Down");
-			addSrceenShot("Navigated to Create Sourcing Configuration From Actions Drop Down", test, Capture);
+			addScreenShot("Navigated to Create Sourcing Configuration From Actions Drop Down", test, Capture);
 			WaitforPage(4000);
 
 			productPage.clickOnVendorLink();
 			test.log(Status.INFO, "Clicked On Vendor Hyperlink");
-			addSrceenShot("Clicked On Vendor Hyperlink", test, Capture);
+			addScreenShot("Clicked On Vendor Hyperlink", test, Capture);
 
 			productPage.selectVendor(vendor, test);
 			test.log(Status.INFO, "Selected Same Vendor: " + vendor);
-			addSrceenShot("Selected Same Vendor", test, Capture);
+			addScreenShot("Selected Same Vendor", test, Capture);
 
 			productPage.clickOnSave();
 			test.log(Status.INFO, "Clicked On Save Button ");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 
 			// Verify error message
 			if (productPage.isErrorMessageDisplayed(test)) {
 				test.log(Status.PASS,
 						"Verified: Error message displayed - 'Vendor is already source configured to the product.'");
-				addSrceenShot("Error message displayed", test, Capture);
+				addScreenShot("Error message displayed", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Sourcing configuration added successfully.");
-				addSrceenShot("Sourcing configuration added successfully", test, Capture);
+				addScreenShot("Sourcing configuration added successfully", test, Capture);
 			}
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

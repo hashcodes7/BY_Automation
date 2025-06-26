@@ -85,40 +85,40 @@ public class TC37_P3_BOMAPP_Mass_update_BOM_details extends WMS_TestBase {
 			
 			System.out.println("Login to flex PLM application successfully ");
 			test.log(Status.INFO, "Login to flex PLM application successfully " + adimin_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 			Thread.sleep(5000);
 
 			BOMPage.navigateToBOMApp();
 			test.log(Status.INFO, "Navigated to BOM App");
-			addSrceenShot("Navigated to BOM App", test, Capture);
+			addScreenShot("Navigated to BOM App", test, Capture);
 
 //			String username = "mankumar@levi.com";
 			BOMPage.login(username, password, test);
-			addSrceenShot("Logged into BOM App", test, Capture);
+			addScreenShot("Logged into BOM App", test, Capture);
 
 			// Select Season and Search for PC9 code
 //			String season = "Levi's S1 2025 Female Accessories";
 			BOMPage.selectSeason(season);
 			test.log(Status.INFO, "Season selected: " + season);
-			addSrceenShot("Season selected", test, Capture);
+			addScreenShot("Season selected", test, Capture);
 
 //			String PC5Code = "000AG";
 			BOMPage.searchForPC9(PC5Code, test);
 			test.log(Status.INFO, "Searched for PC5: " + PC5Code);
 			test.log(Status.INFO, "Selected all Boms");
-			addSrceenShot("Searched for PC5", test, Capture);
+			addScreenShot("Searched for PC5", test, Capture);
 			
 			BOMPage.MassUpdate_BomDetails(test,newQuantity,newRemarks);
 			test.log(Status.PASS, "BOM Details are updated and validated for bulk data");
-			addSrceenShot("BOM Details are updated and validated for bulk data", test, Capture); 
+			addScreenShot("BOM Details are updated and validated for bulk data", test, Capture); 
 			
 			BOMPage.logout(test);
 			test.log(Status.INFO, "Logged out of BOM App");
-			addSrceenShot("Logged out of BOM App", test, Capture);
+			addScreenShot("Logged out of BOM App", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

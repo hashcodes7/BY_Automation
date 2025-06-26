@@ -84,30 +84,30 @@ public class TC313_314_E2E_AddColor_Material extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu());
 			test.log(Status.INFO, "Clicked on material menu ");
-			addSrceenShot("Clicked on material menu ", test, Capture);
+			addScreenShot("Clicked on material menu ", test, Capture);
 			Thread.sleep(4000);
 						
 			vendorPage.materialCode(test,materialCode);
 			test.log(Status.INFO, "material page is opened");
-			addSrceenShot("material page opened", test, Capture);
+			addScreenShot("material page opened", test, Capture);
 			
 			vendorPage.addSupplierToMaterial(test);
 			test.log(Status.INFO, "supplier is added to the material");
-			addSrceenShot("supplier added to material", test, Capture);
+			addScreenShot("supplier added to material", test, Capture);
 			
 			vendorPage.addColorToMaterial(test,color);
 			test.log(Status.PASS, "added & validated color to the material");
-			addSrceenShot("added & validated color to the material", test, Capture);
+			addScreenShot("added & validated color to the material", test, Capture);
 			Thread.sleep(5000); 
 
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

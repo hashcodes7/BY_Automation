@@ -88,44 +88,44 @@ public class TC46_P1_Update_PC9_With_Non_Required_Attributes extends WMS_TestBas
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + Global_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2024 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 //			String linesheetview = "Adoption";
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			WaitforPage(5000);
 
 //			String colorway = "0WPRP-0009 DA077E SolidC123 BEDFORD CORD";
 			Colorwaypage.SelectColorway(colorway, test);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 
 			Colorwaypage.editColorWay();
 			test.log(Status.INFO, "Clicked On Edit Colorway from the Menu");
-			addSrceenShot("Clicked On Edit Colorway from the Menu", test, Capture);
+			addScreenShot("Clicked On Edit Colorway from the Menu", test, Capture);
 			WaitforPage(5000);
 
 			// All non mandatory feilds
@@ -147,13 +147,13 @@ public class TC46_P1_Update_PC9_With_Non_Required_Attributes extends WMS_TestBas
 					merchFabricType, briefCode, test);
 			System.out.println("Updated All NonMandatory Fields");
 			test.log(Status.INFO, "Updated All NonMandatory Fields");
-			addSrceenShot("Updated All NonMandatory Fields", test, Capture);
+			addScreenShot("Updated All NonMandatory Fields", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.clickOnSave();
 			System.out.println("Clicked On save Button");
 			test.log(Status.INFO, "Clicked On save Button");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 			WaitforPage(4000);
 
 			// Verify non-required attributes updated
@@ -164,22 +164,22 @@ public class TC46_P1_Update_PC9_With_Non_Required_Attributes extends WMS_TestBas
 
 			System.out.println("Verified non-required attributes updated successfully.");
 			test.log(Status.PASS, "Verification: Non-required attributes updated successfully.");
-			addSrceenShot("Verified non-required attributes updated successfully", test, Capture);
+			addScreenShot("Verified non-required attributes updated successfully", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

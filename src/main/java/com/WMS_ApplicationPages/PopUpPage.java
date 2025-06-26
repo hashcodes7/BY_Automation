@@ -141,7 +141,7 @@ public class PopUpPage extends WMS_WebDriverUtilities {
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 		Thread.sleep(7000);
 		js.executeScript("arguments[0].click();", choosenFirstColor);
 		driver.switchTo().window(tabs.get(0));

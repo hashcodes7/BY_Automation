@@ -105,14 +105,14 @@ public class TC62_P0_Linesheet_ShareFilter extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-            addSrceenShot("Browser Launched successfully", test, Capture);
+            addScreenShot("Browser Launched successfully", test, Capture);
 
 
 			test.log(Status.INFO, "This test case covers Linesheet- Views & Filters module from 126 to 128");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: "+Administrator_URL);
-            addSrceenShot("login to flex PLM application successfully", test, Capture);
+            addScreenShot("login to flex PLM application successfully", test, Capture);
 
 
 			Thread.sleep(5000);
@@ -120,37 +120,37 @@ public class TC62_P0_Linesheet_ShareFilter extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String filterName = "TestFilter two";
 			lineSheetPage.chooseFilter(filterName,test);
 			System.out.println("filter was choosen");
 			test.log(Status.INFO, "filter was choosen: " + filterName);
-			addSrceenShot("filter was choosen", test, Capture);
+			addScreenShot("filter was choosen", test, Capture);
 
 			lineSheetPage.clickOnEditIcon(test);
 			System.out.println("clicked on edit Icon");
 			test.log(Status.INFO, "clicked on edit Icon");
-			addSrceenShot("clicked on edit Icon", test, Capture);
+			addScreenShot("clicked on edit Icon", test, Capture);
 
 			lineSheetPage.clickShareFilter(test);
 			System.out.println("clicked On Share Filter Button");
 			test.log(Status.INFO, "clicked On Share Filter Button");
-			addSrceenShot("clicked On Share Filter Button", test, Capture);
+			addScreenShot("clicked On Share Filter Button", test, Capture);
 			
 			// Verify the page title
 			String expectedTitle = "Email Client";
@@ -161,16 +161,16 @@ public class TC62_P0_Linesheet_ShareFilter extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

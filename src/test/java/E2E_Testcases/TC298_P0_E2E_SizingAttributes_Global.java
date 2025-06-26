@@ -111,74 +111,74 @@ public class TC298_P0_E2E_SizingAttributes_Global extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			test.log(Status.INFO, "This test case covers E2E module 298");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + global_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2024 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String viewType = "Size Selection";
 			lineSheetPage.selectViewDropdown(viewType);
 			System.out.println("View type is choosen");
 			test.log(Status.INFO, "View type is choosen: " + viewType);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 
 //			String productName = "Test_Product1";
 			lineSheetPage.filterProduct(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 //			String globalVaue = "Global";
 			lineSheetPage.selectSeasonGroupAsGlobal(globalVaue, test);
 			System.out.println("SeasonGroup As Global choosen");
 			test.log(Status.INFO, "selected SeasonGroup As Global choosen: " + globalVaue);
-			addSrceenShot("selected SeasonGroup As Global choosen", test, Capture);
+			addScreenShot("selected SeasonGroup As Global choosen", test, Capture);
 
 //			String sizeGridCode = "0-13s, 0-17m - JNRS09";
 			lineSheetPage.selectAndVerifySizeGridCode(sizeGridCode, test);
 			System.out.println("Sizing Attributes are Updated Successfully For Global");
 			test.log(Status.PASS, "Sizing Attributes are Updated Successfully For Global");
-			addSrceenShot("Sizing Attributes are Updated Successfully For Global", test, Capture);
+			addScreenShot("Sizing Attributes are Updated Successfully For Global", test, Capture);
 
 			WaitforPage(4000);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

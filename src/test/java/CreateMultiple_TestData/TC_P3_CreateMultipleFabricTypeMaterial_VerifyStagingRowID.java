@@ -123,11 +123,11 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched successfully", test, Capture);
+				addScreenShot("Browser Launched successfully", test, Capture);
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully" + pds_URL);
-				addSrceenShot("login to flex PLM application successfully", test, Capture);
+				addScreenShot("login to flex PLM application successfully", test, Capture);
 
 				System.out.println("login successful");
 				test.log(Status.INFO, "login successful");
@@ -135,54 +135,54 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu(), true);
-				addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+				addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 				System.out.println("Clicked on Material");
 				test.log(Status.INFO, "Clicked on Material");
-				addSrceenShot("Clicked on Material", test, Capture);
+				addScreenShot("Clicked on Material", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.createNewMaterial();
 				System.out.println("Clicked on Create New Material");
 				test.log(Status.INFO, "Clicked on Create New Material");
-				addSrceenShot("Clicked on Create New Material", test, Capture);
+				addScreenShot("Clicked on Create New Material", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.chooseFabricType(typeOfFabric);
 				System.out.println("Fabric type was choosen");
 				test.log(Status.INFO, "Fabric type was choosen: " + typeOfFabric);
-				addSrceenShot("Fabric type was choosen", test, Capture);
+				addScreenShot("Fabric type was choosen", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterFabricType(fabricType);
 				System.out.println("Entered Fabric Type: " + fabricType);
 				test.log(Status.INFO, "Entered Fabric Type: " + fabricType);
-				addSrceenShot("Entered Fabric Type", test, Capture);
+				addScreenShot("Entered Fabric Type", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterSeasonFirstIntroduced(seasonFirstIntroduced);
 				System.out.println("Entered Season First Introduced: " + seasonFirstIntroduced);
 				test.log(Status.INFO, "Entered Season First Introduced: " + seasonFirstIntroduced);
-				addSrceenShot("Entered Season First Introduced", test, Capture);
+				addScreenShot("Entered Season First Introduced", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterFabricDescription(fabricDescription);
 				System.out.println("Entered Fabric Description: " + fabricDescription);
 				test.log(Status.INFO, "Entered Fabric Description: " + fabricDescription);
-				addSrceenShot("Entered Fabric Description", test, Capture);
+				addScreenShot("Entered Fabric Description", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterUOM(uom);
 				System.out.println("Entered UOM: " + uom);
 				test.log(Status.INFO, "Entered UOM: " + uom);
-				addSrceenShot("Entered UOM", test, Capture);
+				addScreenShot("Entered UOM", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.setFabricContent(fabricContents, test);
 				test.log(Status.INFO, "Fabric Contents: " + fabricContents.toString());
-				addSrceenShot("Fabric Contents", test, Capture);
+				addScreenShot("Fabric Contents", test, Capture);
 
 				// Capture the current time in GMT
 				LocalDateTime saveTime = LocalDateTime.now(ZoneId.of("GMT"));
@@ -199,12 +199,12 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 				test.log(Status.INFO,
 						"Save button clicked at GMT time: " + formattedTime + " on date: " + formattedDate);
 				System.out.println("Save button clicked at GMT time: " + formattedTime + " on date: " + formattedDate);
-				addSrceenShot("Save button clicked", test, Capture);
+				addScreenShot("Save button clicked", test, Capture);
 
 				materialPage.saveMaterial();
 				System.out.println("Clicked on Save");
 				test.log(Status.INFO, "Clicked on Save");
-				addSrceenShot("Clicked on Save", test, Capture);
+				addScreenShot("Clicked on Save", test, Capture);
 				WaitforPage(4000);
 
 				// Verify The new material is created
@@ -212,11 +212,11 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 				if (isMaterial_Created) {
 					System.out.println("Material was created successfully.");
 					test.log(Status.PASS, "Material was created successfully: " + fabricDescription);
-					addSrceenShot("Material was created successfully.", test, Capture);
+					addScreenShot("Material was created successfully.", test, Capture);
 				} else {
 					System.out.println("Failed to create new material.");
 					test.log(Status.FAIL, "Failed to create new material.");
-					addSrceenShot("Failed to create new material.", test, Capture);
+					addScreenShot("Failed to create new material.", test, Capture);
 				}
 				WaitforPage(4000);
 
@@ -229,7 +229,7 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 						+ ", Raymark Fiber Code - " + raymarkFiberCode;
 				System.out.println(successMessage);
 				test.log(Status.PASS, successMessage);
-				addSrceenShot("Material Created Successfully", test, Capture);
+				addScreenShot("Material Created Successfully", test, Capture);
 				WaitforPage(4000);
 
 				driver.manage().deleteAllCookies();
@@ -238,80 +238,80 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_BUSSINESS.menu(), true);
-				addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+				addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 				System.out.println("Clicked on Business Object");
 				test.log(Status.INFO, "Clicked on Business Object");
-				addSrceenShot("Clicked on Business Object", test, Capture);
+				addScreenShot("Clicked on Business Object", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.chooseBusinessObjectType(businessObjectType);
 				System.out.println("Business object type chosen: " + businessObjectType);
 				test.log(Status.INFO, "Business object type chosen: " + businessObjectType);
-				addSrceenShot("Business object type chosen", test, Capture);
+				addScreenShot("Business object type chosen", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.chooseActionType(actionType);
 				System.out.println("Action type chosen: " + actionType);
 				test.log(Status.INFO, "Action type chosen: " + actionType);
-				addSrceenShot("Action type chosen", test, Capture);
+				addScreenShot("Action type chosen", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.enterEventHourFrom(hourFrom);
 				System.out.println("Event Hour From: " + hourFrom);
 				test.log(Status.INFO, "Event Hour From: " + hourFrom);
-				addSrceenShot("Event Hour From", test, Capture);
+				addScreenShot("Event Hour From", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.enterEventHourTo(hourTo);
 				System.out.println("Event Hour TO: " + hourTo);
 				test.log(Status.INFO, "Event Hour TO: " + hourTo);
-				addSrceenShot("Event Hour TO", test, Capture);
+				addScreenShot("Event Hour TO", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.enterCreatedDate(formattedDate);
 				System.out.println("Entered Created Date: " + formattedDate);
 				test.log(Status.INFO, "Entered Created Date: " + formattedDate);
-				addSrceenShot("Entered Created Date", test, Capture);
+				addScreenShot("Entered Created Date", test, Capture);
 				WaitforPage(4000);
 
 //			String messageTableValue = "*LSCOMaterial*";
 				businessObjectPage.enterMessageTable(messageTableValue);
 				System.out.println("Entered Message Table: " + messageTableValue);
 				test.log(Status.INFO, "Entered Message Table: " + messageTableValue);
-				addSrceenShot("Entered Created Date", test, Capture);
+				addScreenShot("Entered Created Date", test, Capture);
 				WaitforPage(4000);
 
 //			String hierarchyValue = "*LSCO\\Fabric\\Knits*";
 				businessObjectPage.enterHierarchy(hierarchyValue);
 				System.out.println("Entered Hierarchy: " + hierarchyValue);
 				test.log(Status.INFO, "Entered Hierarchy: " + hierarchyValue);
-				addSrceenShot("Entered Hierarchy", test, Capture);
+				addScreenShot("Entered Hierarchy", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.clickSearch();
 				System.out.println("Clicked on Search");
 				test.log(Status.INFO, "Clicked on Search");
-				addSrceenShot("Clicked on Search", test, Capture);
+				addScreenShot("Clicked on Search", test, Capture);
 				WaitforPage(4000);
 
 				// Verify the staging row ID
 				businessObjectPage.verifyStagingRowId(test);
-				addSrceenShot("Staging Row ID is updated in LSCOTransactionTable", test, Capture);
+				addScreenShot("Staging Row ID is updated in LSCOTransactionTable", test, Capture);
 
 				if (i == testData.length - 1) {
 					// Last iteration, perform logout
 					dashboardPage.closeLeftPanel();
 					System.out.println("Clicked on close Left plane");
 					test.log(Status.INFO, "Clicked on close Left plane");
-					addSrceenShot("Clicked on close Left plane", test, Capture);
+					addScreenShot("Clicked on close Left plane", test, Capture);
 
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 				} else {
 					// Delete all cookies and Refresh the browser
 					driver.manage().deleteAllCookies();
@@ -320,7 +320,7 @@ public class TC_P3_CreateMultipleFabricTypeMaterial_VerifyStagingRowID extends W
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-			test.log(Status.FAIL, "Test case failed due to application slowness");
+			test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 			throw e;
 			}
 		}

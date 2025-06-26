@@ -1413,7 +1413,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(optnSelect));
 			js1.executeScript("arguments[0].click();", optnSelect);
 			test.log(Status.INFO, "Selected Size Grid Code: " + sizeGridCode);
-			addSrceenShot("Selected Size Grid Code", test, Capture);
+			addScreenShot("Selected Size Grid Code", test, Capture);
 			driver.switchTo().window(tabs.get(0));
 					
 			driver.switchTo().defaultContent();
@@ -1435,7 +1435,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			js1.executeScript("arguments[0].click();", optnSelect);
 			driver.switchTo().window(tabs1.get(0));
 			test.log(Status.INFO, "Selected Primary Fabric: " + primaryfabric);
-			addSrceenShot("Selected Primary Fabric", test, Capture);
+			addScreenShot("Selected Primary Fabric", test, Capture);
 
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(iframeContentframe);
@@ -1476,7 +1476,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			js1.executeScript("arguments[0].click();", optnSelect);
 			driver.switchTo().window(tabs2.get(0));
 			test.log(Status.INFO, "Selected Fabric Mill: " + fabricmill);
-			addSrceenShot("Selected Fabric Mill ", test, Capture);
+			addScreenShot("Selected Fabric Mill ", test, Capture);
 			
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(iframeContentframe);
@@ -1846,7 +1846,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(optnSelect));
 			js1.executeScript("arguments[0].click();", optnSelect);
 			test.log(Status.INFO, "Selected Size Grid Code: " + sizeGridCode);
-			addSrceenShot("Selected Size Grid Code", test, Capture);
+			addScreenShot("Selected Size Grid Code", test, Capture);
 			driver.switchTo().window(tabs.get(1));
 					
 			driver.switchTo().defaultContent();
@@ -1892,7 +1892,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			js1.executeScript("arguments[0].click();", optnSelect);
 			driver.switchTo().window(tabs1.get(1));
 			test.log(Status.INFO, "Selected Fabric Mill: " + fabricmill);
-			addSrceenShot("Selected Fabric Mill ", test, Capture);
+			addScreenShot("Selected Fabric Mill ", test, Capture);
 			
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(iframeContentframe);
@@ -1930,7 +1930,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(optnSelect));
 			js1.executeScript("arguments[0].click();", optnSelect);
 			test.log(Status.INFO, "Selected Size Grid Code: " + sizeGridCode);
-			addSrceenShot("Selected Size Grid Code", test, Capture);
+			addScreenShot("Selected Size Grid Code", test, Capture);
 			driver.switchTo().window(tabs.get(1));
 					
 			driver.switchTo().defaultContent();
@@ -1952,7 +1952,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			js1.executeScript("arguments[0].click();", optnSelect);
 			driver.switchTo().window(tabs1.get(1));
 			test.log(Status.INFO, "Selected Primary Fabric: " + primaryfabric);
-			addSrceenShot("Selected Primary Fabric", test, Capture);
+			addScreenShot("Selected Primary Fabric", test, Capture);
 
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(iframeContentframe);
@@ -1993,7 +1993,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			js1.executeScript("arguments[0].click();", optnSelect);
 			driver.switchTo().window(tabs2.get(1));
 			test.log(Status.INFO, "Selected Fabric Mill: " + fabricmill);
-			addSrceenShot("Selected Fabric Mill ", test, Capture);
+			addScreenShot("Selected Fabric Mill ", test, Capture);
 			
 			driver.switchTo().defaultContent();
 			driver.switchTo().frame(iframeContentframe);
@@ -2107,11 +2107,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if(Colorway_StagingId.isDisplayed() && ColorwaySeason_StagingId.isDisplayed()) {
 			System.out.println("Staging Id at colorway level is:"+Colorway_StagingId.getText()  +" and colorway season is:"+ ColorwaySeason_StagingId.getText());
 			test.log(Status.INFO,"Staging Id at colorway level is:"+Colorway_StagingId.getText()  +" and colorway season is:"+ ColorwaySeason_StagingId.getText());
-			addSrceenShot("Staging Id at colorway level is:"+Colorway_StagingId.getText()  +" and colorway season is:"+ ColorwaySeason_StagingId.getText(), test, Capture);
+			addScreenShot("Staging Id at colorway level is:"+Colorway_StagingId.getText()  +" and colorway season is:"+ ColorwaySeason_StagingId.getText(), test, Capture);
 		}else {
 			System.out.println("Staging Id id not Populating ");
 			test.log(Status.FAIL,"Staging Id id not Populating ");
-			addSrceenShot("Staging Id id not Populating ", test, Capture);
+			addScreenShot("Staging Id id not Populating ", test, Capture);
 		}
 	}
 
@@ -2174,7 +2174,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 				System.out.println("Rigid indicator value did not changed and the value is: " + Actualrigidindicator);
 				test.log(Status.INFO,
 						"Rigid indicator value did not changed and the value is: " + Actualrigidindicator);
-				addSrceenShot("Rigid indicator value did not changed and the value is: " + Actualrigidindicator, test,
+				addScreenShot("Rigid indicator value did not changed and the value is: " + Actualrigidindicator, test,
 						Capture);
 			}
 
@@ -2228,17 +2228,17 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if (designerValue.getText().equals(designer)) {
 			System.out.println("Designer value is updated and the value is: " + designerValue.getText());
 			test.log(Status.INFO, "Designer value is updated and the value is: " + designerValue.getText());
-			addSrceenShot("Designer value is updated and the value is: " + designerValue.getText(), test, Capture);
+			addScreenShot("Designer value is updated and the value is: " + designerValue.getText(), test, Capture);
 		}
 		if (MerchantValue.getText().equals(merchant)) {
 			System.out.println("Merchant value is updated and the value is: " + MerchantValue.getText());
 			test.log(Status.INFO, "Merchant value is updated and the value is: " + MerchantValue.getText());
-			addSrceenShot("Merchant value is updated and the value is: " + MerchantValue.getText(), test, Capture);
+			addScreenShot("Merchant value is updated and the value is: " + MerchantValue.getText(), test, Capture);
 		}
 		if (FieldPDSValue.getText().equals(fieldPDS)) {
 			System.out.println("Field PDS value is updated and the value is: " + FieldPDSValue.getText());
 			test.log(Status.INFO, "Field PDS value is updated and the value is: " + FieldPDSValue.getText());
-			addSrceenShot("Field PDS value is updated and the value is: " + FieldPDSValue.getText(), test, Capture);
+			addScreenShot("Field PDS value is updated and the value is: " + FieldPDSValue.getText(), test, Capture);
 
 		}
 		if (GarmentDeveloperValue.getText().equals(garmentdeveloper)) {
@@ -2246,7 +2246,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					"Garmment developer value is updated and the value is: " + GarmentDeveloperValue.getText());
 			test.log(Status.INFO,
 					"Garmment developer value is updated and the value is: " + GarmentDeveloperValue.getText());
-			addSrceenShot("Garmment developer value is updated and the value is: " + GarmentDeveloperValue.getText(),
+			addScreenShot("Garmment developer value is updated and the value is: " + GarmentDeveloperValue.getText(),
 					test, Capture);
 
 		}
@@ -2415,7 +2415,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 
 		System.out.println("Product dev center at Colorway level based on user profile is :  " + colorway_productdevcentervalue);
 		test.log(Status.INFO, "Product dev center at Colorway level based on user profile is :  " + colorway_productdevcentervalue);
-		addSrceenShot("Product dev center at Colorway level based on user profile is :  " + colorway_productdevcentervalue,
+		addScreenShot("Product dev center at Colorway level based on user profile is :  " + colorway_productdevcentervalue,
 				test, Capture);
 	}
 
@@ -2425,7 +2425,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 
 		System.out.println("colorway name is   " + ActualcolorwayName);
 		test.log(Status.INFO, "colorway name is   " + ActualcolorwayName);
-		addSrceenShot("colorway name is   " + ActualcolorwayName, test, Capture);
+		addScreenShot("colorway name is   " + ActualcolorwayName, test, Capture);
 	}
 
 	public void UpdateValue_consumergroupExt_1_2(String consumergroupext1, String consumergroupext2, ExtentTest test)
@@ -2452,7 +2452,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if (Colorway_name.getText().contains(filtercolor)) {
 			System.out.println("Same colorway color is successfully updated in PC9  " + Colorway_name.getText());
 			test.log(Status.INFO, "Same colorway color is successfully updated in PC9  " + Colorway_name.getText());
-			addSrceenShot("Same colorway color is successfully updated in PC9  " + Colorway_name.getText(), test,
+			addScreenShot("Same colorway color is successfully updated in PC9  " + Colorway_name.getText(), test,
 					Capture);
 		}
 	}
@@ -2507,7 +2507,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		test.log(Status.INFO,
 				"Thumbnail uploaded for Prints and patterns color in PC9 and after uploading the src value is "
 						+ Thumbnail_img.getAttribute("src"));
-		addSrceenShot("Thumbnail uploaded for Prints and patterns color in PC9 and after uploading the src value is "
+		addScreenShot("Thumbnail uploaded for Prints and patterns color in PC9 and after uploading the src value is "
 				+ Thumbnail_img.getAttribute("src"), test, Capture);
 
 	}
@@ -2522,7 +2522,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if (ActualcolorwayName.equals(ExpectedColorwayName)) {
 			System.out.println("colorway name is derived from colorway code and color name   " + ActualcolorwayName);
 			test.log(Status.INFO, "colorway name is derived from colorway code and color name   " + ActualcolorwayName);
-			addSrceenShot("colorway name is derived from colorway code and color name   ", test, Capture);
+			addScreenShot("colorway name is derived from colorway code and color name   ", test, Capture);
 		}
 		String ActualproductMarketingName = ProductMarketing_Name.getText();
 		driver.switchTo().defaultContent();
@@ -2539,13 +2539,13 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ ActualproductMarketingName);
 			test.log(Status.INFO, "product Marketing name is derived from product name and color name   "
 					+ ActualproductMarketingName);
-			addSrceenShot("product Marketing name is derived from product name and color name   ", test, Capture);
+			addScreenShot("product Marketing name is derived from product name and color name   ", test, Capture);
 
 		}
 		if (seasonalLook_value.isDisplayed()) {
 			System.out.println("Seasonal Look value for same season is:   " + seasonalLook_value.getText());
 			test.log(Status.INFO, "Seasonal Look value for same season is: " + seasonalLook_value.getText());
-			addSrceenShot("Seasonal Look value for same season", test, Capture);
+			addScreenShot("Seasonal Look value for same season", test, Capture);
 
 //			seasonalLook_value.click();
 //			
@@ -2575,17 +2575,17 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if (FabricMill_value.isDisplayed()) {
 			System.out.println("Fabric Mill value is:   " + FabricMill_value.getText());
 			test.log(Status.INFO, "Fabric Mill value is:  " + FabricMill_value.getText());
-			addSrceenShot("Fabric Mill value is:  " + FabricMill_value.getText(), test, Capture);
+			addScreenShot("Fabric Mill value is:  " + FabricMill_value.getText(), test, Capture);
 		}
 		if (PrimaryFabric_value.isDisplayed()) {
 			System.out.println("Primary Fabric value is:   " + PrimaryFabric_value.getText());
 			test.log(Status.INFO, "Primary Fabric value is:  " + PrimaryFabric_value.getText());
-			addSrceenShot("Primary Fabric value is:  " + PrimaryFabric_value.getText(), test, Capture);
+			addScreenShot("Primary Fabric value is:  " + PrimaryFabric_value.getText(), test, Capture);
 		}
 		if (PrimaryFinish_value.isDisplayed()) {
 			System.out.println("Primary finish value  is:  " + PrimaryFinish_value.getText());
 			test.log(Status.INFO, "Primary finish value  is:   " + PrimaryFinish_value.getText());
-			addSrceenShot("Primary finish value  is:   " + PrimaryFinish_value.getText(), test, Capture);
+			addScreenShot("Primary finish value  is:   " + PrimaryFinish_value.getText(), test, Capture);
 		}
 
 	}
@@ -2594,7 +2594,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if (Reuse_errorMessage.getText().contains("Value for Product Marketing Name must be unique")) {
 			System.out.println("Getting Error:-  " + Reuse_errorMessage.getText());
 			test.log(Status.PASS, "Getting Error:-  " + Reuse_errorMessage.getText());
-			addSrceenShot("Getting Error:- " + Reuse_errorMessage.getText(), test, Capture);
+			addScreenShot("Getting Error:- " + Reuse_errorMessage.getText(), test, Capture);
 		}
 	}
 
@@ -2604,7 +2604,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		colorwaycodename = ColorwayName.getText();
 		System.out.println("The colorway generated with name : " + ColorwayName.getText());
 		test.log(Status.INFO, "The colorway generated with name : " + ColorwayName.getText());
-		addSrceenShot("The colorway generated with name : " + ColorwayName.getText(), test, Capture);
+		addScreenShot("The colorway generated with name : " + ColorwayName.getText(), test, Capture);
 		return colorwaycodename;
 	}
 
@@ -2617,7 +2617,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and Product Segmentation LSE value is " + productsegLSEvalue + "  are matching");
 			test.log(Status.INFO, "Product Segementation LSE (UI) value is " + ProductsegmentationLSE.getText()
 					+ " and Product Segmentation LSE value is " + productsegLSEvalue + "  are matching");
-			addSrceenShot(
+			addScreenShot(
 					"Product Segementation LSE (UI) value is " + ProductsegmentationLSE.getText()
 							+ " and Product Segmentation LSE value is " + productsegLSEvalue + "  are matching",
 					test, Capture);
@@ -2628,7 +2628,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and Product Segmentation LSUS value is " + productsegLSUSvalue + "  are matching");
 			test.log(Status.INFO, "Product Segementation LSUS (UI) value is " + ProductsegmentationLSUS.getText()
 					+ " and Product Segmentation LSUS value is " + productsegLSUSvalue + "  are matching");
-			addSrceenShot(
+			addScreenShot(
 					"Product Segementation LSUS (UI) value is " + ProductsegmentationLSUS.getText()
 							+ " and Product Segmentation LSUS value is " + productsegLSUSvalue + "  are matching",
 					test, Capture);
@@ -2725,7 +2725,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			Assert.assertEquals(LSUS_value, PCUS_value);
 			System.out.println(LSUS_value + "and" + PCUS_value + " are matching");
 			test.log(Status.INFO, LSUS_value + "and" + PCUS_value + " are matching");
-			addSrceenShot(LSUS_value + "and" + PCUS_value + " are matching", test, Capture);
+			addScreenShot(LSUS_value + "and" + PCUS_value + " are matching", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println(e);
@@ -2746,7 +2746,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and seasonintroducedPC5 value is " + seasonintroducedPC5 + "  are matching");
 			test.log(Status.INFO, "seasonfirstintroduced value is " + seasonfirstintroduced
 					+ " and seasonintroducedPC5 value is " + seasonintroducedPC5 + "  are matching");
-			addSrceenShot("seasonfirstintroduced value is " + seasonfirstintroduced
+			addScreenShot("seasonfirstintroduced value is " + seasonfirstintroduced
 					+ " and seasonintroducedPC5 value is " + seasonintroducedPC5 + "  are matching", test, Capture);
 		}
 	}
@@ -2766,7 +2766,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and Colorway brand Hierarchy value is " + colorwayBrandHierarchy + "  are matching");
 			test.log(Status.INFO, "product brand hierarchy value is " + productBrandHierarchy
 					+ " and Colorway brand Hierarchy value is " + colorwayBrandHierarchy + "  are matching");
-			addSrceenShot(
+			addScreenShot(
 					"product brand hierarchy value is " + productBrandHierarchy
 							+ " and Colorway brand Hierarchy value is " + colorwayBrandHierarchy + "  are matching",
 					test, Capture);
@@ -2788,7 +2788,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and Colorway Concept Attribute value is " + colorwayConcept + "  are matching");
 			test.log(Status.INFO, "product Concept attribute value is " + productConcept
 					+ " and Colorway Concept Attribute value is " + colorwayConcept + "  are matching");
-			addSrceenShot("product Concept attribute value is " + productConcept
+			addScreenShot("product Concept attribute value is " + productConcept
 					+ " and Colorway Concept Attribute value is " + colorwayConcept + "  are matching", test, Capture);
 		}
 	}
@@ -2801,7 +2801,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and Colorway Business Unit value is " + colorwayBusinessUnit + "  are matching");
 			test.log(Status.INFO, "product Business Unit value is " + productBusinessUnit
 					+ " and Colorway Business Unit value is " + colorwayBusinessUnit + "  are matching");
-			addSrceenShot("product Business Unit value is " + productBusinessUnit
+			addScreenShot("product Business Unit value is " + productBusinessUnit
 					+ " and Colorway Business Unit value is " + colorwayBusinessUnit + "  are matching", test, Capture);
 		}
 	}
@@ -2822,7 +2822,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ consumergroupExt1 + "  are matching");
 			test.log(Status.INFO, "consumergroup1 value is " + consumergroup1 + " and consumergroupExt1 value is  "
 					+ consumergroupExt1 + "  are matching");
-			addSrceenShot("consumergroup1 value is " + consumergroup1 + " and consumergroupExt1 value is  "
+			addScreenShot("consumergroup1 value is " + consumergroup1 + " and consumergroupExt1 value is  "
 					+ consumergroupExt1 + "  are matching", test, Capture);
 		}
 		if (consumergroup2.equals(consumergroupExt2)) {
@@ -2830,7 +2830,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ consumergroupExt2 + "  are matching");
 			test.log(Status.INFO, "consumergroup2 value is " + consumergroup2 + " and consumergroupExt2 value is  "
 					+ consumergroupExt2 + "  are matching");
-			addSrceenShot("consumergroup2 value is " + consumergroup2 + " and consumergroupExt2 value is  "
+			addScreenShot("consumergroup2 value is " + consumergroup2 + " and consumergroupExt2 value is  "
 					+ consumergroupExt2 + "  are matching", test, Capture);
 		}
 
@@ -2849,7 +2849,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ consumergroupExt1 + "  are matching");
 			test.log(Status.INFO, "consumergroup1 value is " + consumergroup1 + " and consumergroupExt1 value is  "
 					+ consumergroupExt1 + "  are matching");
-			addSrceenShot("consumergroup1 value is " + consumergroup1 + " and consumergroupExt1 value is  "
+			addScreenShot("consumergroup1 value is " + consumergroup1 + " and consumergroupExt1 value is  "
 					+ consumergroupExt1 + "  are matching", test, Capture);
 		}
 		if (consumergroup2.equals("Regular")) {
@@ -2858,7 +2858,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						+ consumergroupExt2 + "  are matching");
 				test.log(Status.INFO, "consumergroup2 value is " + consumergroup2 + " and consumergroupExt2 value is  "
 						+ consumergroupExt2 + "  are matching");
-				addSrceenShot("consumergroup2 value is " + consumergroup2 + " and consumergroupExt2 value is  "
+				addScreenShot("consumergroup2 value is " + consumergroup2 + " and consumergroupExt2 value is  "
 						+ consumergroupExt2 + "  are matching", test, Capture);
 			}
 		}
@@ -2881,7 +2881,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and DestroySample value is : " + DestroySample);
 			test.log(Status.INFO, "Consumer Prod Hierarchy value is : " + ConsumerHirarchy
 					+ " and DestroySample value is : " + DestroySample);
-			addSrceenShot("Consumer prod Hierarchy value is : " + ConsumerHirarchy + " and DestroySample value is : "
+			addScreenShot("Consumer prod Hierarchy value is : " + ConsumerHirarchy + " and DestroySample value is : "
 					+ DestroySample, test, Capture);
 		}
 		if (ConsumerHirarchy.equals("Boys") || ConsumerHirarchy.equals("Girls")) {
@@ -2890,7 +2890,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					+ " and DestroySample value is : " + DestroySample);
 			test.log(Status.INFO, "Consumer prod Hierarchy value is : " + ConsumerHirarchy
 					+ " and DestroySample value is : " + DestroySample);
-			addSrceenShot("Consumer prod Hierarchy value is : " + ConsumerHirarchy + " and DestroySample value is : "
+			addScreenShot("Consumer prod Hierarchy value is : " + ConsumerHirarchy + " and DestroySample value is : "
 					+ DestroySample, test, Capture);
 		}
 
@@ -2956,7 +2956,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						"Actual product -product business unit is:  " + Actualproduct_productBusinessUnit
 								+ "----- Copied product-poduct businessunit is: " + copiedproduct_productBusinessUnit
 								+ "---  are matching");
-				addSrceenShot("Actual product -product business unit is:  " + Actualproduct_productBusinessUnit
+				addScreenShot("Actual product -product business unit is:  " + Actualproduct_productBusinessUnit
 						+ "------- Copied product-poduct businessunit is: " + copiedproduct_productBusinessUnit
 						+ "---  are matching", test, Capture);
 			}
@@ -2968,7 +2968,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						"Actual product -product category is:  " + Actualproduct_productcategory
 								+ "------- Copied product-poduct category is: " + copiedproduct_productcategory
 								+ "---  are matching");
-				addSrceenShot("Actual product -product category is:  " + Actualproduct_productcategory
+				addScreenShot("Actual product -product category is:  " + Actualproduct_productcategory
 						+ "-------- Copied product-poduct category is: " + copiedproduct_productcategory
 						+ "---  are matching", test, Capture);
 			}
@@ -2980,7 +2980,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						"Actual product -product code is:  " + Actualproduct_productcode
 								+ "--------- Copied product-poduct code is: " + copiedproduct_productcode
 								+ " --- are not matching");
-				addSrceenShot("Actual product -product code is:  " + Actualproduct_productcode
+				addScreenShot("Actual product -product code is:  " + Actualproduct_productcode
 						+ " -----------Copied product-poduct code is: " + copiedproduct_productcode
 						+ " --- are not matching", test, Capture);
 			}
@@ -2992,7 +2992,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						"Actual product -product brand value is:  " + Actualproduct_brandvalue
 								+ "-------- Copied product-poduct brand value is: " + copiedproduct_brandvalue
 								+ "---  are matching");
-				addSrceenShot("Actual product -product brand value is:  " + Actualproduct_brandvalue
+				addScreenShot("Actual product -product brand value is:  " + Actualproduct_brandvalue
 						+ "--------- Copied product-poduct brand value is: " + copiedproduct_brandvalue
 						+ "---  are matching", test, Capture);
 			}
@@ -3379,12 +3379,12 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		if (colorname.equals(LSCOcolorcode + " " + LSCOcolorname)) {
 			System.out.println("color name is validated and the colorname is:" + colorname);
 			test.log(Status.PASS, "color name is validated and the colorname is:" + colorname);
-			addSrceenShot("color name is validated and the colorname is:" + colorname, test, Capture);
+			addScreenShot("color name is validated and the colorname is:" + colorname, test, Capture);
 		}
 		if (LSCOsearch_code.getText().equals(LSCOcolorname + " " + LSCOcolorcode)) {
 			System.out.println("search code is validated and the searchcode is:" + LSCOsearch_code.getText());
 			test.log(Status.PASS, "search code is validated and the search code is:" + LSCOsearch_code.getText());
-			addSrceenShot("search code is validated and the search code is:" + LSCOsearch_code.getText(), test,
+			addScreenShot("search code is validated and the search code is:" + LSCOsearch_code.getText(), test,
 					Capture);
 		}
 
@@ -3412,7 +3412,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 				if (ActualAttributes.contains(ExpectedAttributes)) {
 					System.out.println(ExpectedAttributes + " : attribute is present");
 					test.log(Status.INFO, ExpectedAttributes + " : attribute is present");
-					addSrceenShot("Attribute is present" + ExpectedAttributes, test, Capture);
+					addScreenShot("Attribute is present" + ExpectedAttributes, test, Capture);
 				}
 
 			}
@@ -3436,7 +3436,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 				if (ActualAttributes.equals(ExpectedAttributes)) {
 					System.out.println(ExpectedAttributes + " : attribute is Mandatory and present");
 					test.log(Status.INFO, ExpectedAttributes + " : attribute is Mandatory and  present");
-					addSrceenShot("Attribute is mandatory and present" + ExpectedAttributes, test, Capture);
+					addScreenShot("Attribute is mandatory and present" + ExpectedAttributes, test, Capture);
 				}
 			}
 		}
@@ -3528,7 +3528,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		driver.findElement(By.xpath("//div[@class='dropdown menu-icon']")).click();
 		driver.findElement(By.xpath("//span[normalize-space()='Edit Colorway']")).click();
 		Thread.sleep(2000);
-		addSrceenShot("Clicked On Edit Colorway from the Menu", test, Capture);
+		addScreenShot("Clicked On Edit Colorway from the Menu", test, Capture);
 
 	}
 
@@ -3549,11 +3549,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 //			}
 //			Thread.sleep(200);
 //			test.log(Status.INFO, "Profit Center [APD] values retrieved: " + String.join(", ", apdValues));
-//			addSrceenShot("Profit Center [APD] values retrieved", test, Capture);
+//			addScreenShot("Profit Center [APD] values retrieved", test, Capture);
 //
 //		} catch (Exception e) {
 //			test.log(Status.FAIL, "Failed to retrieve APD values due to exception: " + e.getMessage());
-//			addSrceenShot("Failed to retrieve LSUS values", test, Capture);
+//			addScreenShot("Failed to retrieve LSUS values", test, Capture);
 //			System.out.println(e);
 //		}
 //		return apdValues;
@@ -3585,11 +3585,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			}
 			Thread.sleep(200);
 			test.log(Status.INFO, "Profit Center [APD] values retrieved: " + String.join(", ", apdValues));
-			addSrceenShot("Profit Center [APD] values retrieved", test, Capture);
+			addScreenShot("Profit Center [APD] values retrieved", test, Capture);
 
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Failed to retrieve APD values due to exception: " + e.getMessage());
-			addSrceenShot("Failed to retrieve APD values", test, Capture);
+			addScreenShot("Failed to retrieve APD values", test, Capture);
 			System.out.println(e);
 		}
 		return apdValues;
@@ -3612,11 +3612,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			}
 			Thread.sleep(200);
 			test.log(Status.INFO, "LSUS values retrieved: " + String.join(", ", lsusValues));
-			addSrceenShot("LSUS values retrieved", test, Capture);
+			addScreenShot("LSUS values retrieved", test, Capture);
 
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Failed to retrieve LSUS values due to exception: " + e.getMessage());
-			addSrceenShot("Failed to retrieve LSUS values", test, Capture);
+			addScreenShot("Failed to retrieve LSUS values", test, Capture);
 			System.out.println(e);
 		}
 		return lsusValues;
@@ -3639,10 +3639,10 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			}
 
 			test.log(Status.INFO, "LSE values retrieved: " + String.join(", ", lseValues));
-			addSrceenShot("LSE values retrieved", test, Capture);
+			addScreenShot("LSE values retrieved", test, Capture);
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Failed to retrieve LSE values due to exception: " + e.getMessage());
-			addSrceenShot("Failed to retrieve LSE values", test, Capture);
+			addScreenShot("Failed to retrieve LSE values", test, Capture);
 			System.out.println(e);
 		}
 		return lseValues;
@@ -3689,7 +3689,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 
 		driver.get(URL); // Navigate to the color look library URL
 		Thread.sleep(4000);
-		addSrceenShot("Opened URL", test, Capture);
+		addScreenShot("Opened URL", test, Capture);
 		driver.switchTo().frame(iframeLeftPanel);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(pinbutton));
 		clickElement(pinbutton);
@@ -3697,11 +3697,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(librariesoptn));
 		librariesoptn.click();
 		Thread.sleep(2000);
-		addSrceenShot("Clicked On library", test, Capture);
+		addScreenShot("Clicked On library", test, Capture);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(businessObjectoptn));
 		businessObjectoptn.click();
 		Thread.sleep(2000);
-		addSrceenShot("Opened new tab and navigated to the Business Object Library", test, Capture);
+		addScreenShot("Opened new tab and navigated to the Business Object Library", test, Capture);
 	}
 
 	public void selctBusinessObject(String businessObject) throws InterruptedException {
@@ -3729,7 +3729,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addBrandButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Brand button");
-			addSrceenShot("Clicked Add Brand button", test, Capture);
+			addScreenShot("Clicked Add Brand button", test, Capture);
 
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productCategoryDropdown));
 			Select productCategorySelect = new Select(productCategoryDropdown);
@@ -3739,7 +3739,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addProductCategoryButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Product Category button");
-			addSrceenShot("Clicked Add Product Category button", test, Capture);
+			addScreenShot("Clicked Add Product Category button", test, Capture);
 
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(consumerPHDropdown));
 			Select consumerPHSelect = new Select(consumerPHDropdown);
@@ -3749,17 +3749,17 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addConsumerPHButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Consumer PH button");
-			addSrceenShot("Clicked Add Consumer PH button", test, Capture);
+			addScreenShot("Clicked Add Consumer PH button", test, Capture);
 
 			Thread.sleep(2000);
 //			JavascriptExecutor js = (JavascriptExecutor) driver;
 //			js.executeScript("arguments[0].click();", searchbutton_2);
 			searchbutton_2.click();
 			test.log(Status.INFO, "Clicked on Search button");
-			addSrceenShot("Clicked on Search button", test, Capture);
+			addScreenShot("Clicked on Search button", test, Capture);
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Failed to fill Product Segmentation details due to exception: " + e.getMessage());
-			addSrceenShot("Failed to fill Product Segmentation details", test, Capture);
+			addScreenShot("Failed to fill Product Segmentation details", test, Capture);
 			System.out.println(e);
 		}
 	}
@@ -3778,7 +3778,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addBrandButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Brand button");
-			addSrceenShot("Clicked Add Brand button", test, Capture);
+			addScreenShot("Clicked Add Brand button", test, Capture);
 
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productCategoryDropdown));
 			Select productCategorySelect = new Select(productCategoryDropdown);
@@ -3788,7 +3788,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addProductCategoryButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Product Category button");
-			addSrceenShot("Clicked Add Product Category button", test, Capture);
+			addScreenShot("Clicked Add Product Category button", test, Capture);
 
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(consumerPHDropdown));
 			Select consumerPHSelect = new Select(consumerPHDropdown);
@@ -3798,17 +3798,17 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addConsumerPHButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Consumer PH button");
-			addSrceenShot("Clicked Add Consumer PH button", test, Capture);
+			addScreenShot("Clicked Add Consumer PH button", test, Capture);
 
 			Thread.sleep(2000);
 //			JavascriptExecutor js = (JavascriptExecutor) driver;
 //			js.executeScript("arguments[0].click();", searchbutton_2);
 			searchbutton_2.click();
 			test.log(Status.INFO, "Clicked on Search button");
-			addSrceenShot("Clicked on Search button", test, Capture);
+			addScreenShot("Clicked on Search button", test, Capture);
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Failed to fill Product Segmentation details due to exception: " + e.getMessage());
-			addSrceenShot("Failed to fill Product Segmentation details", test, Capture);
+			addScreenShot("Failed to fill Product Segmentation details", test, Capture);
 			System.out.println(e);
 		}
 	}
@@ -3827,7 +3827,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addBrandButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Brand button");
-			addSrceenShot("Clicked Add Brand button", test, Capture);
+			addScreenShot("Clicked Add Brand button", test, Capture);
 
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productCategoryDropdown));
 			Select productCategorySelect = new Select(productCategoryDropdown);
@@ -3837,7 +3837,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addProductCategoryButton.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Product Category button");
-			addSrceenShot("Clicked Add Product Category button", test, Capture);
+			addScreenShot("Clicked Add Product Category button", test, Capture);
 
 			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(consumerGroup1Dropdown));
 			Select consumerGroup1Select = new Select(consumerGroup1Dropdown);
@@ -3847,17 +3847,17 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			addConsumerGroup1Button.click();
 			Thread.sleep(2000);
 			test.log(Status.INFO, "Clicked Add Consumer Group 1 button");
-			addSrceenShot("Clicked Add Consumer Group 1 button", test, Capture);
+			addScreenShot("Clicked Add Consumer Group 1 button", test, Capture);
 
 			Thread.sleep(2000);
 //			JavascriptExecutor js = (JavascriptExecutor) driver;
 //			js.executeScript("arguments[0].click();", searchbutton_2);
 			searchbutton_2.click();
 			test.log(Status.INFO, "Clicked on Search button");
-			addSrceenShot("Clicked on Search button", test, Capture);
+			addScreenShot("Clicked on Search button", test, Capture);
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Failed to fill Product Segmentation details due to exception: " + e.getMessage());
-			addSrceenShot("Failed to fill Product Segmentation details", test, Capture);
+			addScreenShot("Failed to fill Product Segmentation details", test, Capture);
 			System.out.println(e);
 		}
 	}
@@ -3877,12 +3877,12 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			}
 			test.log(Status.INFO,
 					"Lookup Tables\\Product Segmentation table values retrieved: " + String.join(", ", tableValues));
-			addSrceenShot("Lookup Tables\\Product Segmentation table values retrieved", test, Capture);
+			addScreenShot("Lookup Tables\\Product Segmentation table values retrieved", test, Capture);
 		} catch (Exception e) {
 			test.log(Status.FAIL,
 					"Failed to retrieve Lookup Tables\\Product Segmentation table values due to exception: "
 							+ e.getMessage());
-			addSrceenShot("Failed to retrieve LSE values", test, Capture);
+			addScreenShot("Failed to retrieve LSE values", test, Capture);
 			System.out.println(e);
 		}
 		return tableValues;
@@ -3903,11 +3903,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			}
 			test.log(Status.INFO,
 					"Lookup Tables\\Profit Center table values retrieved: " + String.join(", ", tableValues));
-			addSrceenShot("Lookup Tables\\Profit Center table values retrieved", test, Capture);
+			addScreenShot("Lookup Tables\\Profit Center table values retrieved", test, Capture);
 		} catch (Exception e) {
 			test.log(Status.FAIL,
 					"Failed to retrieve Lookup Tables\\Profit Center table values due to exception: " + e.getMessage());
-			addSrceenShot("Failed to retrieve Profit Center values", test, Capture);
+			addScreenShot("Failed to retrieve Profit Center values", test, Capture);
 			System.out.println(e);
 		}
 		return tableValues;
@@ -3972,11 +3972,11 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			if (isWordsPresent) {
 				test.log(Status.INFO, "Profit Center [US]: " + actualProfitCenter
 						+ "  is derived from Product Segmentation [LSUS]: " + productSegmentationLSUS_Value + "");
-				addSrceenShot("Profit Center [US] value verified successfully", test, Capture);
+				addScreenShot("Profit Center [US] value verified successfully", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Profit Center [US]: " + actualProfitCenter
 						+ "  is not derived from Product Segmentation [LSUS]: " + productSegmentationLSUS_Value + "");
-				addSrceenShot("Profit Center [US] value verification failed", test, Capture);
+				addScreenShot("Profit Center [US] value verification failed", test, Capture);
 			}
 
 			// Assert the condition
@@ -3985,7 +3985,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Verification failed due to exception: " + e.getMessage());
-			addSrceenShot("Verification failed", test, Capture);
+			addScreenShot("Verification failed", test, Capture);
 			throw e;
 		}
 	}
@@ -4018,10 +4018,10 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			if (isWordsPresent) {
 				test.log(Status.INFO, "Profit Center [EUROPE]:- " + actualProfitCenter
 						+ "  is derived from Product Segmentation [LSE]:- " + productSegmentationLSE_Value + " ");
-				addSrceenShot("Profit Center [EUROPE] value verified successfully", test, Capture);
+				addScreenShot("Profit Center [EUROPE] value verified successfully", test, Capture);
 			} else {
 				test.log(Status.FAIL, "No words from Product Segmentation [LSUS] is present in Profit Center [US]");
-				addSrceenShot("Profit Center [EUROPE] value verification failed", test, Capture);
+				addScreenShot("Profit Center [EUROPE] value verification failed", test, Capture);
 			}
 
 			// Assert the condition
@@ -4030,7 +4030,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Verification failed due to exception: " + e.getMessage());
-			addSrceenShot("Verification failed", test, Capture);
+			addScreenShot("Verification failed", test, Capture);
 			throw e;
 		}
 	}
@@ -4107,12 +4107,12 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 //		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(ColorLookDropdown));
 //		ColorLookDropdown.click();
 //		test.log(Status.INFO, "Clicked on Color Look dropdown");
-//		addSrceenShot("Clicked on Color Look dropdown", test, Capture);
+//		addScreenShot("Clicked on Color Look dropdown", test, Capture);
 //
 //		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(searchInput));
 //		searchInput.sendKeys(colorLookType);
 //		test.log(Status.INFO, "Entered color type: " + colorLookType);
-//		addSrceenShot("Entered color type", test, Capture);
+//		addScreenShot("Entered color type", test, Capture);
 //		Thread.sleep(3000);
 //
 //		WebElement colorType = driver.findElement(By.xpath("//span[contains(text(),'" + colorLookType.trim() + "')]"));
@@ -4134,7 +4134,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(choosenFirstColor)).click();
 		driver.switchTo().window(tabs.get(1));
@@ -4251,7 +4251,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						+ ", Consumer Group Ext2: " + consumerGroupExt2 + ", Destroy Sample Ind: " + destroySampleInd
 						+ ", Profit Center APD: " + profitCenterAPD + ", Merch Fabric Type: " + merchFabricType
 						+ ", Brief Code: " + briefCode);
-		addSrceenShot("Filled Non-Mandatory Fields", test, Capture);
+		addScreenShot("Filled Non-Mandatory Fields", test, Capture);
 
 	}
 
@@ -4281,7 +4281,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 		driver.switchTo().window(tabs.get(1));
 		test.log(Status.INFO, "Selected Size Grid Code: " + sizeGridCode);
-		addSrceenShot("Selected Size Grid Code", test, Capture);
+		addScreenShot("Selected Size Grid Code", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
@@ -4301,7 +4301,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 		driver.switchTo().window(tabs1.get(1));
 		test.log(Status.INFO, "Selected Primary Fabric: " + primaryFabric);
-		addSrceenShot("Selected Primary Fabric", test, Capture);
+		addScreenShot("Selected Primary Fabric", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
@@ -4409,7 +4409,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 		driver.switchTo().window(tabs2.get(1));
 		test.log(Status.INFO, "Selected Primary Finish Mill: " + primaryFinishMill);
-		addSrceenShot("Selected Primary Finish Mill", test, Capture);
+		addScreenShot("Selected Primary Finish Mill", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
@@ -4429,7 +4429,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 		driver.switchTo().window(tabs3.get(1));
 		test.log(Status.INFO, "Selected Primary Finish: " + primaryFinish);
-		addSrceenShot("Selected Primary Finish ", test, Capture);
+		addScreenShot("Selected Primary Finish ", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
@@ -4449,7 +4449,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 		driver.switchTo().window(tabs4.get(1));
 		test.log(Status.INFO, "Selected Fabric Mill: " + fabricMill);
-		addSrceenShot("Selected Fabric Mill ", test, Capture);
+		addScreenShot("Selected Fabric Mill ", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
@@ -4469,7 +4469,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		js.executeScript("arguments[0].click();", optnSelect);
 		driver.switchTo().window(tabs5.get(1));
 		test.log(Status.INFO, "Selected Seasonal Look: " + seasonalLook);
-		addSrceenShot("Selected Seasonal Look ", test, Capture);
+		addScreenShot("Selected Seasonal Look ", test, Capture);
 
 		// Log all fields in one line
 		test.log(Status.INFO, "Filled Non-Mandatory Fields of Colorway Season Page: Seasonal Direction: "
@@ -4481,7 +4481,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 				+ ", Equity MOQ Request: " + equityMOQRequest + ", Early Delivery: " + earlyDelivery
 				+ ", LSUS Stocking CSC: " + lsusStockingCSC + ", Current Planned Lifecycle: " + currentPlannedLifecycle
 				+ ", Hero Outfit: " + heroOutfit + ", Product Price Positioning: " + productPricePositioning);
-		addSrceenShot("Filled Non-Mandatory Fields of Colorway Season Page", test, Capture);
+		addScreenShot("Filled Non-Mandatory Fields of Colorway Season Page", test, Capture);
 
 	}
 
@@ -4539,7 +4539,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(choosenFirstColor)).click();
 		driver.switchTo().window(tabs.get(1));
@@ -4565,7 +4565,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(choosenFirstColor)).click();
 		Thread.sleep(2000);
@@ -4691,7 +4691,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 						+ ", Consumer Group Ext2: " + consumerGroupExt2 + ", Destroy Sample Ind: " + destroySampleInd
 						+ ", Profit Center APD: " + profitCenterAPD + ", Merch Fabric Type: " + merchFabricType
 						+ ", Brief Code: " + briefCode);
-		addSrceenShot("Updated Non-Mandatory Fields", test, Capture);
+		addScreenShot("Updated Non-Mandatory Fields", test, Capture);
 
 	}
 
@@ -4757,7 +4757,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 120).until(ExpectedConditions.visibilityOf(sizeGridCodeLink));
 		sizeGridCodeLink.click();
 		test.log(Status.INFO, "Clicked On size Grid Code Link");
-		addSrceenShot("Clicked On size Grid Code Link", test, Capture);
+		addScreenShot("Clicked On size Grid Code Link", test, Capture);
 
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(2));
@@ -4773,7 +4773,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 
 		driver.switchTo().window(tabs.get(1));
 		test.log(Status.INFO, "Selected Size Grid Code: " + sizeGridCode);
-		addSrceenShot("Selected Size Grid Code", test, Capture);
+		addScreenShot("Selected Size Grid Code", test, Capture);
 
 	}
 
@@ -4820,21 +4820,21 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 		} else {
 			test.log(Status.FAIL, "Size Scale Code is not populated.");
 		}
-		addSrceenShot("Size Scale Code", test, Capture);
+		addScreenShot("Size Scale Code", test, Capture);
 
 		if (sampleSize != null && !sampleSize.isEmpty()) {
 			test.log(Status.PASS, "Sample Size is populated: " + sampleSize);
 		} else {
 			test.log(Status.FAIL, "Sample Size is not populated.");
 		}
-		addSrceenShot("Sample Size", test, Capture);
+		addScreenShot("Sample Size", test, Capture);
 
 		if (selectedSizes != null && !selectedSizes.isEmpty()) {
 			test.log(Status.PASS, "Selected Sizes are populated: " + selectedSizes);
 		} else {
 			test.log(Status.FAIL, "Selected Sizes are not populated.");
 		}
-		addSrceenShot("Selected Sizes", test, Capture);
+		addScreenShot("Selected Sizes", test, Capture);
 	}
 
 	@FindBy(xpath = "//td[@class='PAGEHEADINGTITLE']")
@@ -4893,7 +4893,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 			test.log(Status.FAIL, "Populated Sample Size is not the same in the Size Grid. Populated Sample Size: "
 					+ expectedSampleSize + ", Sample Size in Size Grid: " + sampleSizeInSizeGrid);
 		}
-		addSrceenShot("Sample Size", test, Capture);
+		addScreenShot("Sample Size", test, Capture);
 
 		// Verify and log the selected sizes
 		if (selectedSizesInSizeGrid.equals(expectedSelectedSizes)) {
@@ -4904,7 +4904,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					"Populated Selected Sizes are not the same in the Size Grid. Populated Selected Sizes: "
 							+ expectedSelectedSizes + ", Selected Sizes in Size Grid: " + selectedSizesInSizeGrid);
 		}
-		addSrceenShot("Selected Sizes", test, Capture);
+		addScreenShot("Selected Sizes", test, Capture);
 
 		Thread.sleep(2000);
 
@@ -4928,7 +4928,7 @@ public class Colorway_page extends WMS_WebDriverUtilities {
 					"Populated Size Scale Code is not the same in the Size Grid. Populated Size Scale Code: "
 							+ expectedSizeScaleCode + ", Size Scale Code in Size Grid: " + sizeScaleCodeInSizeGrid);
 		}
-		addSrceenShot("Size Scale Code", test, Capture);
+		addScreenShot("Size Scale Code", test, Capture);
 	}
 
 }

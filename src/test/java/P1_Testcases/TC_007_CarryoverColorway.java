@@ -87,106 +87,106 @@ public class TC_007_CarryoverColorway extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(toSeason,test);
 			test.log(Status.INFO, "Season selected: "+toSeason);
-			addSrceenShot("Season selected:"+toSeason, test, Capture);
+			addScreenShot("Season selected:"+toSeason, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview1,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview1);
-			addSrceenShot("Linesheet view changed to: "+linesheetview1, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview1, test, Capture);
 			WaitforPage(5000);
 			
 			carryoverPage.Select_CarryOvercolorways();
 			test.log(Status.INFO, "Selected carryover colorway menu ");
-			addSrceenShot("Selected carryover colorway menu ", test, Capture);
+			addScreenShot("Selected carryover colorway menu ", test, Capture);
 			System.out.println("Selected carryover colorway menu ");
 			
 			Thread.sleep(3000);
 			carryoverPage.SelectInitialSeason(fromSeason);	
 			test.log(Status.INFO, "Initail season selected "+fromSeason);
-			addSrceenShot("Initail season selected "+fromSeason, test, Capture);
+			addScreenShot("Initail season selected "+fromSeason, test, Capture);
 			System.out.println("Initail season selected "+fromSeason);
 			
 			carryoverPage.filterdata(colorwayname);
 			test.log(Status.INFO, "colorway filtered "+colorwayname);
-			addSrceenShot("colorwayname filtered "+colorwayname, test, Capture);
+			addScreenShot("colorwayname filtered "+colorwayname, test, Capture);
 			System.out.println("colorwayname filtered "+colorwayname);
 			
 			carryoverPage.SelectCarryovercolorway();
 			test.log(Status.PASS, "selected colorway for copycarryover and carryover completed ");
-			addSrceenShot("selected colorway for copycarryover and carryover completed", test, Capture);
+			addScreenShot("selected colorway for copycarryover and carryover completed", test, Capture);
 			System.out.println("selected colorway for copycarryover and carryover completed"); 
 			
 			sourcingPage.validateCarryovercolorway(test);
 			test.log(Status.PASS, "colorway carried over to new season successfully ");
-			addSrceenShot("colorway carried over to new season successfully", test, Capture); 
+			addScreenShot("colorway carried over to new season successfully", test, Capture); 
 						
 			Colorwaypage.SeasonDropdown(fromSeason,test);
 			test.log(Status.INFO, "Season selected: "+fromSeason);
-			addSrceenShot("Season selected:"+fromSeason, test, Capture);
+			addScreenShot("Season selected:"+fromSeason, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			
 			LineSheetEditPage.filter_View_Change(linesheetview3,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview3);
 			WaitforPage(5000);
-			addSrceenShot("Linesheet view changed to: "+linesheetview3, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview3, test, Capture);
 			
 			
 			sourcingPage.validateCarryoverColorwayFields(test,productCode);
 			test.log(Status.PASS, "vendor and source colorway fields are set to blank");
-			addSrceenShot("vendor and source colorway fields are set to blank", test, Capture); 
+			addScreenShot("vendor and source colorway fields are set to blank", test, Capture); 
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			
 			LineSheetEditPage.filter_View_Change(linesheetview2,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview2);
-			addSrceenShot("Linesheet view changed to: "+linesheetview2, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview2, test, Capture);
 			
 			sourcingPage.getSourceAssociatedValues(test,productCode);
 			
 			Colorwaypage.SeasonDropdown(toSeason,test);
 			test.log(Status.INFO, "Season selected: "+toSeason);
-			addSrceenShot("Season selected:"+toSeason, test, Capture);
+			addScreenShot("Season selected:"+toSeason, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 						
 			LineSheetEditPage.filter_View_Change(linesheetview2,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview2);
 			WaitforPage(5000);
-			addSrceenShot("Linesheet view changed to: "+linesheetview2, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview2, test, Capture);
 						
 			sourcingPage.validateCarryoverColorwaySources(test,productCode);
 			test.log(Status.PASS, "carryover colorway associated to same sources");
 			WaitforPage(5000);
-			addSrceenShot("carryover colorway associated to same sources", test, Capture);
+			addScreenShot("carryover colorway associated to same sources", test, Capture);
 						
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

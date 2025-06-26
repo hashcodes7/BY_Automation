@@ -85,35 +85,35 @@ public class TC003_VerifyTechpack extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected:"+season, test, Capture);
+			addScreenShot("Season selected:"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 						
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
 			WaitforPage(5000);
-			addSrceenShot("Linesheet view changed to: "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview, test, Capture);
 						
 			vendorPortalPage.downloadTechpack(test,colorwayCode);
 			test.log(Status.PASS, "Downloaded the techpack from the linesheet");
 			WaitforPage(5000);
-			addSrceenShot("Downloaded the techpack from the linesheet", test, Capture);
+			addScreenShot("Downloaded the techpack from the linesheet", test, Capture);
 			
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

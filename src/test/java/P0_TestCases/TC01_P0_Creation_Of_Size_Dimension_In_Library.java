@@ -93,13 +93,13 @@ public class TC01_P0_Creation_Of_Size_Dimension_In_Library extends WMS_TestBase 
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers Sizing module from 226 to 228");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully" + Administrator_URL);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -107,68 +107,68 @@ public class TC01_P0_Creation_Of_Size_Dimension_In_Library extends WMS_TestBase 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_SIZEDIMENSION.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Size Dimension");
 			test.log(Status.INFO, "Clicked on Size Dimension");
 			WaitforPage(4000);
 
 			sizePage.clikOnNewBtn();
 			test.log(Status.INFO, "Clicked on New button to create New Size Dimention");
-			addSrceenShot("New Size Dimention creation started", test, Capture);
+			addScreenShot("New Size Dimention creation started", test, Capture);
 
 //			String dimensionName = "DimensionName001";
 			sizePage.enterDimensionName(dimensionName, test);
 			test.log(Status.INFO, "Entered Dimension Name");
-			addSrceenShot("Entered Dimension Name", test, Capture);
+			addScreenShot("Entered Dimension Name", test, Capture);
 
 //			String dimensionCode = "DimensionCode123";
 			sizePage.enterDimensionCode(dimensionCode, test);
 			test.log(Status.INFO, "Entered Dimension Code");
-			addSrceenShot("Entered Dimension Code", test, Capture);
+			addScreenShot("Entered Dimension Code", test, Capture);
 
 //			String dimension_Name = "DimensionName_0023";
 			sizePage.enterDimension_Name(dimension_Name, test);
 			test.log(Status.INFO, "Entered Dimension Name");
-			addSrceenShot("Entered Dimension Name", test, Capture);
+			addScreenShot("Entered Dimension Name", test, Capture);
 
 //			List<String> sizes = Arrays.asList("32", "34", "36");
 			sizePage.addMultipleSizes(sizes, test);
 			test.log(Status.INFO, "Entered and Added Multiple Sizes");
-			addSrceenShot("Entered and Added Multiple Sizes", test, Capture);
+			addScreenShot("Entered and Added Multiple Sizes", test, Capture);
 
 			// Save the new size dimension
 			sizePage.clickSaveBtn(test);
 			test.log(Status.INFO, "Clicked Save button to save the new Size Dimension");
-			addSrceenShot("New Size Dimension saved", test, Capture);
+			addScreenShot("New Size Dimension saved", test, Capture);
 
 			sizePage.selectSizeDimension(MainMenuEnum.LIBRARIES_SIZEDIMENSION.menu());
 			test.log(Status.INFO, "Clicked on Size Dimension");
-			addSrceenShot("Clicked on Size Dimension", test, Capture);
+			addScreenShot("Clicked on Size Dimension", test, Capture);
 
 			// Verify the new size dimension is created successfully
 			boolean isCreated = sizePage.verifySizeDimensionCreation(dimensionName, test);
 			if (isCreated) {
 				test.log(Status.PASS, "New Size Dimension is created successfully");
-				addSrceenShot("New Size Dimension is created successfully", test, Capture);
+				addScreenShot("New Size Dimension is created successfully", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Failed to create New Size Dimension");
-				addSrceenShot("Failed to create New Size Dimension", test, Capture);
+				addScreenShot("Failed to create New Size Dimension", test, Capture);
 			}
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

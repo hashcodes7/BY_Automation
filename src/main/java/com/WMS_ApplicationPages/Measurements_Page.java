@@ -428,7 +428,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 							"Product components: " + i + "  and specification components: " + j + "  are matching");
 					test.log(Status.INFO,
 							"Product components: " + i + "  and specification components: " + j + "  are matching");
-					addSrceenShot(
+					addScreenShot(
 							"Product components: " + i + "  and specification components: " + j + "  are matching",
 							test, Capture);
 				}
@@ -463,7 +463,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		System.out.println("The recent generated techpack is downloaded");
 		test.log(Status.INFO, "The recent generated techpack is downloaded ");
-		addSrceenShot("The recent generated techpack is downlpoaded", test, Capture);
+		addScreenShot("The recent generated techpack is downlpoaded", test, Capture);
 	}
 
 	public void NavigateTo_VisualAssets() throws InterruptedException {
@@ -1016,12 +1016,12 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 						POM_description_Input.clear();
 						POM_description_Input.sendKeys(updatedPOMDescription);
 						test.log(Status.INFO, "Updated POM description: " + updatedPOMDescription);
-						addSrceenShot("Updated POM description", test, Capture);
+						addScreenShot("Updated POM description", test, Capture);
 						Thread.sleep(2000);
 						POM_Id_Input.clear();
 						POM_Id_Input.sendKeys(updated_POM_ID);
 						test.log(Status.INFO, "Updated POM ID: " + updated_POM_ID);
-						addSrceenShot("Updated POM ID", test, Capture);
+						addScreenShot("Updated POM ID", test, Capture);
 						POM_Save.click();
 						test.log(Status.INFO, "POM Template updated ");
 						System.out.println("POM Template updated  ");
@@ -1159,11 +1159,11 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		if (isRowDeleted) {
 			test.log(Status.INFO, "First row deletion successful.");
-			addSrceenShot("First row deletion successful.", test, Capture);
+			addScreenShot("First row deletion successful.", test, Capture);
 
 		} else {
 			test.log(Status.FAIL, "First row deletion failed. Verification failed.");
-			addSrceenShot("First row deletion failed. Verification failed.", test, Capture);
+			addScreenShot("First row deletion failed. Verification failed.", test, Capture);
 		}
 
 		return isRowDeleted;
@@ -1268,7 +1268,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		WebElement dropdown = criticalityCell.findElement(By.xpath(".//select"));
 		selectValueFromDropdown(dropdown, criticality);
 		test.log(Status.INFO, "Selected Critical from the drop down ");
-		addSrceenShot("Selected Critical from the drop down ", test, Capture);
+		addScreenShot("Selected Critical from the drop down ", test, Capture);
 		Thread.sleep(3000);
 
 		updateCell(rowIndex, 3, pomID);
@@ -1279,7 +1279,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		validateRowColor(rowIndex, test);
 		SaveAndCheckIn.click();
 		test.log(Status.INFO, "Clicked On Save And CheckIn");
-		addSrceenShot("Clicked On Save And CheckIn", test, Capture);
+		addScreenShot("Clicked On Save And CheckIn", test, Capture);
 
 	}
 
@@ -1298,7 +1298,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		String rowClass = row.getAttribute("class");
 		Assert.assertTrue(rowClass.contains("HIGHLIGHT_YELLOW"), "Row class did not change to HIGHLIGHT_YELLOW.");
 		test.log(Status.PASS, "Criticality row is highlighted in yellow ");
-		addSrceenShot("Criticality row is highlighted in yellow", test, Capture);
+		addScreenShot("Criticality row is highlighted in yellow", test, Capture);
 	}
 
 	private void addNewRow() throws InterruptedException {
@@ -1326,7 +1326,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 //				WebElement dropdown = criticalityCell.findElement(By.xpath(".//select"));
 //				selectValueFromDropdown(dropdown, criticality);
 //				test.log(Status.INFO, "Selected  Critical from the drop down ");
-//				addSrceenShot("Selected  Critical from the drop down ", test, Capture);
+//				addScreenShot("Selected  Critical from the drop down ", test, Capture);
 //				Thread.sleep(3000);
 //
 //				// Update the corresponding cells in the same row
@@ -1342,7 +1342,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 //				String rowClass = row.getAttribute("class");
 //	            Assert.assertTrue(rowClass.contains("HIGHLIGHT_YELLOW"), "Row class did not change to HIGHLIGHT_YELLOW.");
 //				test.log(Status.PASS, "Criticality row is highlighted in yellow ");
-//				addSrceenShot("Criticality row is highlighted in yellow", test, Capture);
+//				addScreenShot("Criticality row is highlighted in yellow", test, Capture);
 //
 //				WebElement pom_Description = driver
 //						.findElement(By.xpath("//table[@id='editorTable']//tr[" + i + "]/td[4]"));
@@ -1489,10 +1489,10 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 			if (archiveField.isDisplayed()) {
 				test.log(Status.INFO, "Archive field is visible");
-				addSrceenShot("Archive field is visible", test, Capture);
+				addScreenShot("Archive field is visible", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Archive field is not visible");
-				addSrceenShot("Archive field is not visible", test, Capture);
+				addScreenShot("Archive field is not visible", test, Capture);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
@@ -1508,10 +1508,10 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 //if (!archiveField.isEnabled()) {
 			if (archiveField != null) {
 				test.log(Status.INFO, "Archive field is non-editable");
-				addSrceenShot("Archive field is non-editable", test, Capture);
+				addScreenShot("Archive field is non-editable", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Archive field is editable");
-				addSrceenShot("Archive field is editable", test, Capture);
+				addScreenShot("Archive field is editable", test, Capture);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
@@ -1528,19 +1528,19 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 				WebElement firstRow = allRows.get(1); // Select the first row after the header
 				firstRow.click(); // Highlight the row
 				test.log(Status.INFO, "First row highlighted for POM insertion");
-				addSrceenShot("First row highlighted for POM insertion", test, Capture);
+				addScreenShot("First row highlighted for POM insertion", test, Capture);
 
 				ClickViewPOMs();
 				test.log(Status.INFO, "Clicked on View POMs");
-				addSrceenShot("Clicked on View POMs", test, Capture);
+				addScreenShot("Clicked on View POMs", test, Capture);
 
 				SelectPOMFromLibrary(pomDescription, test);
 				test.log(Status.INFO, "Selected POM from library: " + pomDescription);
-				addSrceenShot("Selected POM from library", test, Capture);
+				addScreenShot("Selected POM from library", test, Capture);
 
 				ClosePOMLibraryPopup();
 				test.log(Status.INFO, "Closed POM Library popup");
-				addSrceenShot("Closed POM Library popup", test, Capture);
+				addScreenShot("Closed POM Library popup", test, Capture);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
@@ -1577,7 +1577,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		Actions actions = new Actions(driver);
 		actions.clickAndHold(dragHandle).moveByOffset(300, -300).release().perform();
 		test.log(Status.INFO, "Dragged the popup window to a fixed position");
-		addSrceenShot("Dragged the popup window to a fixed position", test, Capture);
+		addScreenShot("Dragged the popup window to a fixed position", test, Capture);
 
 		WebElement pomRow = driver
 				.findElement(By.xpath("//div[@id='pomLibraryGrid-normal-body']//table//tr[td[6]//div[text()='"
@@ -1585,7 +1585,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		pomRow.click();
 
 		test.log(Status.INFO, "Clicked on insert POM arrow for: " + pomDescription);
-		addSrceenShot("Clicked on insert POM arrow", test, Capture);
+		addScreenShot("Clicked on insert POM arrow", test, Capture);
 	}
 
 	public void ClosePOMLibraryPopup() throws Exception {
@@ -1614,7 +1614,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 				Assert.assertEquals(nextRowData, pomDescription, "The data was not added to the next selected row.");
 				test.log(Status.PASS, "The data was added to the next selected row: " + pomDescription);
-				addSrceenShot("Data added to the next selected row", test, Capture);
+				addScreenShot("Data added to the next selected row", test, Capture);
 			} else {
 				System.out.println("Not enough rows in the table to validate");
 				test.log(Status.FAIL, "Not enough rows in the table to validate");
@@ -1732,7 +1732,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 			}
 			System.out.println(attributesList.toString());
 			test.log(Status.INFO, attributesList.toString());
-			addSrceenShot(element.getText(), test, Capture);
+			addScreenShot(element.getText(), test, Capture);
 		}
 	}
 
@@ -1749,7 +1749,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 // Select Display Mode
 		selectDisplayMode("Grade Rules");
 		test.log(Status.INFO, "Selected Display Mode: Grade Rules");
-		addSrceenShot("Selected Display Mode: Grade Rules", test, Capture);
+		addScreenShot("Selected Display Mode: Grade Rules", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1759,7 +1759,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		selectDisplayMode("Measurement Set");
 		test.log(Status.INFO, "Selected Display Mode: Measurement Set");
-		addSrceenShot("Selected Display Mode: Measurement Set", test, Capture);
+		addScreenShot("Selected Display Mode: Measurement Set", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1770,7 +1770,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 // Select Units of Measure
 		selectUnitsOfMeasure("cm");
 		test.log(Status.INFO, "Selected Units of Measure: cm");
-		addSrceenShot("Selected Units of Measure: cm", test, Capture);
+		addScreenShot("Selected Units of Measure: cm", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1780,7 +1780,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		selectUnitsOfMeasure("in");
 		test.log(Status.INFO, "Selected Units of Measure: in");
-		addSrceenShot("Selected Units of Measure: in", test, Capture);
+		addScreenShot("Selected Units of Measure: in", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1790,7 +1790,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		selectUnitsOfMeasure("ft");
 		test.log(Status.INFO, "Selected Units of Measure: ft");
-		addSrceenShot("Selected Units of Measure: ft", test, Capture);
+		addScreenShot("Selected Units of Measure: ft", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1800,7 +1800,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		selectUnitsOfMeasure("m");
 		test.log(Status.INFO, "Selected Units of Measure: m");
-		addSrceenShot("Selected Units of Measure: m", test, Capture);
+		addScreenShot("Selected Units of Measure: m", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1810,7 +1810,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 
 		selectUnitsOfMeasure("mm");
 		test.log(Status.INFO, "Selected Units of Measure: mm");
-		addSrceenShot("Selected Units of Measure: mm", test, Capture);
+		addScreenShot("Selected Units of Measure: mm", test, Capture);
 		Thread.sleep(1000);
 
 		new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(measurementDisplayOption));
@@ -1821,17 +1821,17 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 // Select Filter Option
 		selectFilterOption("Critical");
 		test.log(Status.INFO, "Selected Filter Option: Critical");
-		addSrceenShot("Selected Filter Option: Critical", test, Capture);
+		addScreenShot("Selected Filter Option: Critical", test, Capture);
 		Thread.sleep(1000);
 
 		selectFilterOption("Detail");
 		test.log(Status.INFO, "Selected Filter Option: Detail");
-		addSrceenShot("Selected Filter Option: Detail", test, Capture);
+		addScreenShot("Selected Filter Option: Detail", test, Capture);
 		Thread.sleep(1000);
 
 		selectFilterOption("Secondary");
 		test.log(Status.INFO, "Selected Filter Option: Secondary");
-		addSrceenShot("Selected Filter Option: Secondary", test, Capture);
+		addScreenShot("Selected Filter Option: Secondary", test, Capture);
 
 		Thread.sleep(2000);
 	}
@@ -1953,7 +1953,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(CreatefromMeasurementTemplate));
 		CreatefromMeasurementTemplate.click();
 		test.log(Status.INFO, "Clicked On 'Create from Measurement Template' Link");
-		addSrceenShot("Clicked On 'Create from Measurement Template' Link", test, Capture);
+		addScreenShot("Clicked On 'Create from Measurement Template' Link", test, Capture);
 		Thread.sleep(5000);
 		Set<String> allWindowHandles = driver.getWindowHandles();
 		ArrayList<String> tabs = new ArrayList<>(allWindowHandles);
@@ -1968,7 +1968,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(choose));
 		choose.click();
 		test.log(Status.INFO, "Measurement Template was choosen: " + measurementTemplateName);
-		addSrceenShot("Measurement Template was choosen: " + measurementTemplateName, test, Capture);
+		addScreenShot("Measurement Template was choosen: " + measurementTemplateName, test, Capture);
 		driver.switchTo().window(tabs.get(1));
 
 		Thread.sleep(2000);
@@ -1994,7 +1994,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		boolean isChecked = "true".equals(colorwayVariationHiddenInput.getAttribute("value"));
 
 		test.log(Status.INFO, "Checked 'Colorway Variation' for template: " + measurementTemplateName);
-		addSrceenShot("Checked 'Colorway Variation' for template", test, Capture);
+		addScreenShot("Checked 'Colorway Variation' for template", test, Capture);
 
 		return isChecked;
 	}
@@ -2084,7 +2084,7 @@ public class Measurements_Page extends WMS_WebDriverUtilities {
 		boolean isChecked = "true".equals(colorwayVariationHiddenInput.getAttribute("value"));
 
 		test.log(Status.INFO, "Checked 'Colorway Variation' for Create Image Page: " + isChecked);
-		addSrceenShot("Checked 'Colorway Variation' for Create Image Page", test, Capture);
+		addScreenShot("Checked 'Colorway Variation' for Create Image Page", test, Capture);
 
 		return isChecked;
 	}

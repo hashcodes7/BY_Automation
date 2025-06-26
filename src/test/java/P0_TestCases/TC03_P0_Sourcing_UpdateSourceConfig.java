@@ -91,7 +91,7 @@ public class TC03_P0_Sourcing_UpdateSourceConfig extends WMS_TestBase {
  
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
  
 			test.log(Status.INFO, "This test case covers P0 Sourcing module from 239 to 241");
  
@@ -100,16 +100,16 @@ public class TC03_P0_Sourcing_UpdateSourceConfig extends WMS_TestBase {
  
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
  
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
  
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PRODUCT.menu(), true);
 			test.log(Status.INFO, "Clicked on Main menu of Libraries");
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on product ");
 			test.log(Status.INFO, "Clicked on product");
 			WaitforPage(4000);
@@ -118,50 +118,50 @@ public class TC03_P0_Sourcing_UpdateSourceConfig extends WMS_TestBase {
 			productPage.filterProductByName(productName);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
  
 //			String seasonType = "Levi's S3 2024 Female Accessories";
 			productPage.selectSeasonType(seasonType);
 			test.log(Status.INFO, "Selected Season successfully: " + seasonType);
-			addSrceenShot("Selected Season successfully", test, Capture);
+			addScreenShot("Selected Season successfully", test, Capture);
 			WaitforPage(5000);
  
 //			String sourceName = "ADVANCE DENIM CO LTD 603190 CN";
 			productPage.selectSourceFromDropDown(sourceName, test);
 			System.out.println("Selected Source From Drop Down");
 			test.log(Status.INFO, "Selected Source From Drop Down: " + sourceName);
-			addSrceenShot("Selected Source From Drop Down", test, Capture);
+			addScreenShot("Selected Source From Drop Down", test, Capture);
  
 			productPage.selectSourcingTab();
 			System.out.println("Selected Sourcing tab");
 			test.log(Status.INFO, "Selected Sourcing tab");
-			addSrceenShot("Selected Sourcing tab", test, Capture);
+			addScreenShot("Selected Sourcing tab", test, Capture);
 			WaitforPage(4000);
  
 			productPage.clickOnSummary();
 			System.out.println("Clicked on Samples");
 			test.log(Status.INFO, "Clicked on Samples");
-			addSrceenShot("Clicked on Samples", test, Capture);
+			addScreenShot("Clicked on Samples", test, Capture);
 			WaitforPage(4000);
  
 			productPage.clickOnUpdateSource();
 			System.out.println("Clicked On Update Source ");
 			test.log(Status.INFO, "Clicked On Update Source");
-			addSrceenShot("Clicked On Update Source", test, Capture);
+			addScreenShot("Clicked On Update Source", test, Capture);
 			WaitforPage(4000);
  
 			productPage.clickOnVendorLink();
 			test.log(Status.INFO, "Clicked On Vendor Hyperlink");
-			addSrceenShot("Clicked On Vendor Hyperlink", test, Capture);
+			addScreenShot("Clicked On Vendor Hyperlink", test, Capture);
  
 //			String vendor = "AMHOT INTL INC 601004 JP";
 			productPage.selectVendor(vendor, test);
 			test.log(Status.INFO, "Selected Vendor: " + vendor);
-			addSrceenShot("Selected Vendor", test, Capture);
+			addScreenShot("Selected Vendor", test, Capture);
  
 			productPage.clickOnSave();
 			test.log(Status.INFO, "Clicked On Save Button ");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
  
 			// Verify that the newly selected source is added to the product with its sourcing details updated
 			String actualSourceName = productPage.verifySourceDetails(sourceName, test);
@@ -171,14 +171,14 @@ public class TC03_P0_Sourcing_UpdateSourceConfig extends WMS_TestBase {
 				test.log(Status.PASS,
 						"Verification: The newly selected source is added to the product with its sourcing details updated: "
 								+ actualSourceName);
-				addSrceenShot("Source Details Updated", test, Capture);
+				addScreenShot("Source Details Updated", test, Capture);
 			} else if (productPage.isVendorAlreadySourceConfigured()) {
                 test.log(Status.WARNING, "Vendor is already source configured to Product'" + productName);
-                addSrceenShot("Vendor was already selected", test, Capture);
+                addScreenShot("Vendor was already selected", test, Capture);
             } else {
 				System.out.println("Failed to update the source details.");
 				test.log(Status.FAIL, "Failed to update the source details.");
-				addSrceenShot("Source Details Update Failed", test, Capture);
+				addScreenShot("Source Details Update Failed", test, Capture);
 			}
  
 			
@@ -186,16 +186,16 @@ public class TC03_P0_Sourcing_UpdateSourceConfig extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
  
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -86,7 +86,7 @@ public class TC311_P0_E2E_LookFinishRecipe extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers E2E module 311 to 312");
 
@@ -95,15 +95,15 @@ public class TC311_P0_E2E_LookFinishRecipe extends WMS_TestBase {
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR_LOOK.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Color/Look");
 			test.log(Status.INFO, "Clicked on Color/Look");
 			WaitforPage(4000);
@@ -112,31 +112,31 @@ public class TC311_P0_E2E_LookFinishRecipe extends WMS_TestBase {
 			seasonPage.searchSeasonalLook(seasonalLook, test);
 			System.out.println("Searched for the seasonal Look");
 			test.log(Status.INFO, "Searched for the seasonal Look: " + seasonalLook);
-			addSrceenShot("Searched for the seasonal Look", test, Capture);
+			addScreenShot("Searched for the seasonal Look", test, Capture);
 			WaitforPage(4000);
 
 			seasonPage.clickOnEditLookInfo();
 			System.out.println("Clicked on Edit under 'Look Information'");
 			test.log(Status.INFO, "Clicked on Edit under 'Look Information'");
-			addSrceenShot("Clicked on Edit under 'Look Information'", test, Capture);
+			addScreenShot("Clicked on Edit under 'Look Information'", test, Capture);
 			WaitforPage(4000);
 
 //			String lookFinishRecipe = "236189 demo_Material_Aug05th";
 			seasonPage.selectFinishRecipe(lookFinishRecipe, test);
 			System.out.println("Selected Look Finish Recipe: " + lookFinishRecipe);
 			test.log(Status.INFO, "Selected Look Finish Recipe: " + lookFinishRecipe);
-			addSrceenShot("Selected Look Finish Recipe", test, Capture);
+			addScreenShot("Selected Look Finish Recipe", test, Capture);
 			WaitforPage(4000);
 
 			boolean isFabricAutoPopulated = seasonPage.isFabricAutoPopulated(lookFinishRecipe, test);
 			if (isFabricAutoPopulated) {
 				System.out.println("Fabric is auto-populated in the Look info MOA table.");
 				test.log(Status.PASS, "Fabric is auto-populated in the Look info MOA table.");
-				addSrceenShot("Fabric is auto-populated in the Look info MOA table", test, Capture);
+				addScreenShot("Fabric is auto-populated in the Look info MOA table", test, Capture);
 			} else {
 				System.out.println("Fabric is not auto-populated in the Look info MOA table.");
 				test.log(Status.FAIL, "Fabric is not auto-populated in the Look info MOA table.");
-				addSrceenShot("Fabric is not auto-populated in the Look info MOA table", test, Capture);
+				addScreenShot("Fabric is not auto-populated in the Look info MOA table", test, Capture);
 			}
 			WaitforPage(4000);
 
@@ -146,11 +146,11 @@ public class TC311_P0_E2E_LookFinishRecipe extends WMS_TestBase {
 						"Look finish recipe is lined to the Look info table successfully: " + lookFinishRecipe);
 				test.log(Status.PASS,
 						"Look finish recipe is lined to the Look info table successfully: " + lookFinishRecipe);
-				addSrceenShot("Look finish recipe is lined to the Look info table successfully", test, Capture);
+				addScreenShot("Look finish recipe is lined to the Look info table successfully", test, Capture);
 			} else {
 				System.out.println("Look finish recipe is not lined to the Look info table.");
 				test.log(Status.FAIL, "Look finish recipe is not lined to the Look info table.");
-				addSrceenShot("Look finish recipe is not lined to the Look info table", test, Capture);
+				addScreenShot("Look finish recipe is not lined to the Look info table", test, Capture);
 			}
 			WaitforPage(4000);
 
@@ -158,13 +158,13 @@ public class TC311_P0_E2E_LookFinishRecipe extends WMS_TestBase {
 			if (isMaterialCodeLinked) {
 				System.out.println("(Look finish recipe)Material code is linked to Seasonal Looks successfully.");
 				test.log(Status.PASS, "(Look finish recipe)Material code is linked to Seasonal Looks successfully.");
-				addSrceenShot("(Look finish recipe)Material code is linked to Seasonal Looks successfully.", test,
+				addScreenShot("(Look finish recipe)Material code is linked to Seasonal Looks successfully.", test,
 						Capture);
 			} else {
 				System.out.println("(Look finish recipe)Material code is not linked to Seasonal Looks successfully.");
 				test.log(Status.FAIL,
 						"(Look finish recipe)Material code is not linked to Seasonal Looks successfully.");
-				addSrceenShot("(Look finish recipe)Material code is not linked to Seasonal Looks successfully.", test,
+				addScreenShot("(Look finish recipe)Material code is not linked to Seasonal Looks successfully.", test,
 						Capture);
 			}
 
@@ -172,16 +172,16 @@ public class TC311_P0_E2E_LookFinishRecipe extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

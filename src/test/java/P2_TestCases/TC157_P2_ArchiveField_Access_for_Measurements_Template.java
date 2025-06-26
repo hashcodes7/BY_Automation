@@ -76,47 +76,47 @@ public class TC157_P2_ArchiveField_Access_for_Measurements_Template extends WMS_
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MEASUREMENTS.menu());
 			test.log(Status.INFO, "Clicked on Measurements menu ");
-			addSrceenShot("Clicked on Measurements menu ", test, Capture);
+			addScreenShot("Clicked on Measurements menu ", test, Capture);
 
 			Thread.sleep(5000);
 
 //			String template = "Measurement Templates";
 			MeasurementsPage.SelectTemplate(template);
 			test.log(Status.INFO, "Template is selected: " + template);
-			addSrceenShot("Template is selected ", test, Capture);
+			addScreenShot("Template is selected ", test, Capture);
 
 //			String measurementTempName = "Test_auto_02";
 			MeasurementsPage.ClickUpdateMeasurementTemp(measurementTempName, test);
 			System.out.println("Clicked on Update Measurement Templatate: " + measurementTempName);
 			test.log(Status.INFO, "Clicked on Update Measurement Templatate: " + measurementTempName);
-			addSrceenShot("Clicked on Update Measurements", test, Capture);
+			addScreenShot("Clicked on Update Measurements", test, Capture);
 
 			MeasurementsPage.CheckArchiveField(test);
 			test.log(Status.PASS, "Checked Archive field access for Measurement Templatate");
-			addSrceenShot("Checked Archive field access ", test, Capture);
+			addScreenShot("Checked Archive field access ", test, Capture);
 
 			MeasurementsPage.VerifyArchiveFieldNonEditable(test);
 			test.log(Status.PASS, "Verified Archive field is non-editable");
-			addSrceenShot("Verified Archive field is non-editable", test, Capture);
+			addScreenShot("Verified Archive field is non-editable", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

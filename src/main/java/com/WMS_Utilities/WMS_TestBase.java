@@ -114,7 +114,7 @@ public WebDriver invokeBrowser() throws InterruptedException {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
-    options.addArguments("--headless=new");
+//    options.addArguments("--headless=new");
     options.addArguments("--disable-gpu");
     String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
     options.addArguments("--user-data-dir=" + uniqueUserDataDir);
@@ -302,7 +302,7 @@ public WebDriver invokeBrowser() throws InterruptedException {
 		Thread.sleep(i);
 	}
 
-	public void addSrceenShot(String TestName, ExtentTest testparam, boolean Capture) {
+	public void addScreenShot(String TestName, ExtentTest testparam, boolean Capture) {
 
 		if (Capture) {
 			try {

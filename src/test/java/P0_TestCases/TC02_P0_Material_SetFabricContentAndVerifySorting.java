@@ -91,69 +91,69 @@ public class TC02_P0_Material_SetFabricContentAndVerifySorting extends WMS_TestB
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched successfully", test, Capture);
+				addScreenShot("Browser Launched successfully", test, Capture);
 
 				test.log(Status.INFO, "This test case covers material module from 138 to 140");
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully" + PDS_URL);
-				addSrceenShot("login to flex PLM application successfully", test, Capture);
+				addScreenShot("login to flex PLM application successfully", test, Capture);
 
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu(), true);
-				addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+				addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 				test.log(Status.INFO, "Clicked on Material");
-				addSrceenShot("Clicked on Material", test, Capture);
+				addScreenShot("Clicked on Material", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.createNewMaterial();
 				System.out.println("Clicked on Create New Material");
 				test.log(Status.INFO, "Clicked on Create New Material");
-				addSrceenShot("Clicked on Create New Material", test, Capture);
+				addScreenShot("Clicked on Create New Material", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.chooseFabricType(typeOfFabric);
 				System.out.println("Fabric type was choosen");
 				test.log(Status.INFO, "Fabric type was choosen: " + typeOfFabric);
-				addSrceenShot("Fabric type was choosen", test, Capture);
+				addScreenShot("Fabric type was choosen", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterFabricType(fabricType);
 				System.out.println("Entered Fabric Type: " + fabricType);
 				test.log(Status.INFO, "Entered Fabric Type: " + fabricType);
-				addSrceenShot("Entered Fabric Type", test, Capture);
+				addScreenShot("Entered Fabric Type", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterSeasonFirstIntroduced(seasonFirstIntroduced);
 				System.out.println("Entered Season First Introduced: " + seasonFirstIntroduced);
 				test.log(Status.INFO, "Entered Season First Introduced: " + seasonFirstIntroduced);
-				addSrceenShot("Entered Season First Introduced", test, Capture);
+				addScreenShot("Entered Season First Introduced", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterFabricDescription(fabricDescription);
 				System.out.println("Entered Fabric Description: " + fabricDescription);
 				test.log(Status.INFO, "Entered Fabric Description: " + fabricDescription);
-				addSrceenShot("Entered Fabric Description", test, Capture);
+				addScreenShot("Entered Fabric Description", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.enterUOM(uom);
 				System.out.println("Entered UOM: " + uom);
 				test.log(Status.INFO, "Entered UOM: " + uom);
-				addSrceenShot("Entered UOM", test, Capture);
+				addScreenShot("Entered UOM", test, Capture);
 				WaitforPage(4000);
 
 				materialPage.setFabricContent(fabricContents, test);
 				test.log(Status.INFO, "Fabric Contents: " + fabricContents.toString());
-				addSrceenShot("Fabric Contents", test, Capture);
+				addScreenShot("Fabric Contents", test, Capture);
 
 				materialPage.saveMaterial();
 				System.out.println("Clicked on Save");
 				test.log(Status.INFO, "Clicked on Save");
-				addSrceenShot("Clicked on Save", test, Capture);
+				addScreenShot("Clicked on Save", test, Capture);
 				WaitforPage(4000);
 
 				// Verify generic content values derived from branded content
@@ -200,7 +200,7 @@ public class TC02_P0_Material_SetFabricContentAndVerifySorting extends WMS_TestB
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

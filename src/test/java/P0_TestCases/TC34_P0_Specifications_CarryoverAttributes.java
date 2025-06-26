@@ -78,72 +78,72 @@ public class TC34_P0_Specifications_CarryoverAttributes extends WMS_TestBase {
 		try {
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers Specifications module from TC_257 to TC_262");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " +Admin_URL_STG);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			MeasurementsPage.filter_product(filterproduct, test);
 			test.log(Status.INFO, "product selected"+filterproduct);
-			addSrceenShot("product selected", test, Capture);
+			addScreenShot("product selected", test, Capture);
 			
 			String components=specificationPage.CheckComponents_CarriedOver(test);
 			System.out.println("Linesheet Components checked");
 			test.log(Status.INFO, " Linesheet Components checked");
-			addSrceenShot("Linesheet Components checked", test, Capture);
+			addScreenShot("Linesheet Components checked", test, Capture);
 			WaitforPage(4000);
 			
 			MeasurementsPage.selectSource(source,test);
 			test.log(Status.INFO, "Selected source "+source);
-			addSrceenShot("Selected source "+source, test, Capture);
+			addScreenShot("Selected source "+source, test, Capture);
 			System.out.println("Selected source "+source);
 
 			MeasurementsPage.selectSpecifications(specifications,test);
 			test.log(Status.INFO, "Selected specifications "+source);
-			addSrceenShot("Selected specifications "+source, test, Capture);
+			addScreenShot("Selected specifications "+source, test, Capture);
 			System.out.println("Selected specifications "+source);
 			
 			specificationPage.NavigateToSpecifications_Summary();
 			test.log(Status.INFO, "Navigated to specifications summary page ");
-			addSrceenShot("Navigated to specifications summary page  ", test, Capture);
+			addScreenShot("Navigated to specifications summary page  ", test, Capture);
 			System.out.println("Navigated to specifications summary page  ");
 			
 			
 			String productpage_components=specificationPage.Components_FromProductsDetails();
 			test.log(Status.INFO, "Components from product specifications summary page is fetched ");
-			addSrceenShot("Components from product specifications summary page is fetched  ", test, Capture);
+			addScreenShot("Components from product specifications summary page is fetched  ", test, Capture);
 			System.out.println("Components from product specifications summary page is fetched  ");
 			
 			Thread.sleep(3000);
@@ -161,15 +161,15 @@ public class TC34_P0_Specifications_CarryoverAttributes extends WMS_TestBase {
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 				
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

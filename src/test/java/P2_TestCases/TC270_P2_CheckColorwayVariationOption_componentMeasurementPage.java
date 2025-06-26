@@ -80,64 +80,64 @@ public class TC270_P2_CheckColorwayVariationOption_componentMeasurementPage exte
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL " + GarmentDeveloper_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "TESTING PC9";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(lineSheetPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.PASS, "PC5 Details Page is displayed");
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 			Thread.sleep(5000);
 
 //			String sourceName = "0WPQ8 - Primary -";
 			productPage.selectSourceFromDropDown(sourceName, test);
 			System.out.println("selected Source From The Sourcing Drop Down");
 			test.log(Status.INFO, "selected Source From The Sourcing Drop Down" + sourceName);
-			addSrceenShot("selected Source From The Sourcing Drop Down", test, Capture);
+			addScreenShot("selected Source From The Sourcing Drop Down", test, Capture);
 
 //			String specification = "S1 2025 - 0WPQ8 - TESTING PC9 -";
 			MeasurementsPage.selectSpecifications(specification, test);
 			System.out.println("Selected specifications " + specification);
 			test.log(Status.INFO, "Selected specification " + specification);
-			addSrceenShot("Selected specification " + specification, test, Capture);
+			addScreenShot("Selected specification " + specification, test, Capture);
 
 			// Click on "Measurements" Tab
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
 			System.out.println("Navigated to measurement page  ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 
 			// Click on create from Measurement Template
 			MeasurementsPage.clickCreateFromTemplate();
 			test.log(Status.INFO, "Clicked on create New Measurement Template");
-			addSrceenShot("Clicked on create New Measurement Template", test, Capture);
+			addScreenShot("Clicked on create New Measurement Template", test, Capture);
 
 			// Choose measurement template and check if "colorway variation" is checked by
 			// default
@@ -149,12 +149,12 @@ public class TC270_P2_CheckColorwayVariationOption_componentMeasurementPage exte
 			if (isColorwayChecked) {
 				System.out.println("Test Passed: 'Colorway Variation' is checked by default.");
 				test.log(Status.PASS, "Test Passed: 'Colorway Variation' is checked by default.");
-				addSrceenShot("'Colorway Variation' is checked by default", test, Capture);
+				addScreenShot("'Colorway Variation' is checked by default", test, Capture);
 
 			} else {
 				System.out.println("Test Failed: 'Colorway Variation' is not checked by default.");
 				test.log(Status.FAIL, "'Colorway Variation' is not checked by default.");
-				addSrceenShot("'Colorway Variation' is not checked by default", test, Capture);
+				addScreenShot("'Colorway Variation' is not checked by default", test, Capture);
 
 			}
 
@@ -169,25 +169,25 @@ public class TC270_P2_CheckColorwayVariationOption_componentMeasurementPage exte
 			if (isCreated) {
 				System.out.println("Test Passed: 'Measurement Set' created successfully.");
 				test.log(Status.PASS, "Test Passed: 'Measurement Set' created successfully.");
-				addSrceenShot("'Measurement Set' created successfully", test, Capture);
+				addScreenShot("'Measurement Set' created successfully", test, Capture);
 
 			} else {
 				System.out.println("Test Failed: Measurement creation failed.");
 				test.log(Status.FAIL, "Test Failed: Measurement Set creation failed.");
-				addSrceenShot("'Measurement Set' created failed", test, Capture);
+				addScreenShot("'Measurement Set' created failed", test, Capture);
 			}
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

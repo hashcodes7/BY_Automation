@@ -79,16 +79,16 @@ public class TC01_P2_CustomLoaders_CreateLooks_usingLoaders extends WMS_TestBase
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.REPORTS.menu(), MainMenuEnum.REPORTS_LoadFile.menu());
 			test.log(Status.INFO, "Clicked on Reports Load file ");
-			addSrceenShot("Clicked on Reports Load file ", test, Capture);
+			addScreenShot("Clicked on Reports Load file ", test, Capture);
 			
 			customLoadersPage.uploadbulkFile(uploadFilepath);
 			System.out.println("file uploaded");
 			test.log(Status.INFO, "File uploaded");
-			addSrceenShot("File uploaded", test, Capture);
+			addScreenShot("File uploaded", test, Capture);
 			
 			Thread.sleep(2000);
 			
@@ -109,16 +109,16 @@ public class TC01_P2_CustomLoaders_CreateLooks_usingLoaders extends WMS_TestBase
 				
 				mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 				test.log(Status.INFO, "Clicked on Libraries menu");
-				addSrceenShot("Clicked on Libraries menu", test, Capture);
+				addScreenShot("Clicked on Libraries menu", test, Capture);
 				
 				String colorname="*"+colorcode+"*";
 				CNCP.searchBox(colorname);
 				test.log(Status.INFO, "Color name entered: "+colorname);
-				addSrceenShot("Color name entered", test, Capture);
+				addScreenShot("Color name entered", test, Capture);
 				
 				CNCP.searchButton();
 				test.log(Status.INFO, "Search button clicked");
-				addSrceenShot("Search button clicked", test, Capture);
+				addScreenShot("Search button clicked", test, Capture);
 				
 				
 //-----------------				lookname same as the lookname given in loader files----------------------------------
@@ -126,21 +126,21 @@ public class TC01_P2_CustomLoaders_CreateLooks_usingLoaders extends WMS_TestBase
 				customLoadersPage.ValidateBulkLook_UI(lookname,test);
 				System.out.println("Validation successful for the Look created");
 				test.log(Status.PASS, "Validation successful for the Look created");
-				addSrceenShot("Validation successful for the Look created", test, Capture);
+				addScreenShot("Validation successful for the Look created", test, Capture);
 
 			}
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

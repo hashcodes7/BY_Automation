@@ -192,7 +192,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		for (WebElement option : options) {
 			if (option.getText().contains(supplierName)) {
 				option.click();
-				addSrceenShot("Selected supplier from Drop Down", test, Capture);
+				addScreenShot("Selected supplier from Drop Down", test, Capture);
 				break;
 			}
 		}
@@ -220,11 +220,11 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(dpdownMenuIcon));
 		dpdownMenuIcon.click();
 		test.log(Status.INFO, "Clicked on dropdown menu icon");
-		addSrceenShot("Clicked on dropdown menu icon", test, Capture);
+		addScreenShot("Clicked on dropdown menu icon", test, Capture);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(addMultipleColorsButton));
 		addMultipleColorsButton.click();
 		test.log(Status.INFO, "Clicked on 'Add multiple colors' button");
-		addSrceenShot("Clicked on 'Add multiple colors' button", test, Capture);
+		addScreenShot("Clicked on 'Add multiple colors' button", test, Capture);
 		Thread.sleep(2000);
 		String ParentWinhadle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
@@ -237,18 +237,18 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(ColorLookDropdown));
 		ColorLookDropdown.click();
 		test.log(Status.INFO, "Clicked on Color Look dropdown");
-		addSrceenShot("Clicked on Color Look dropdown", test, Capture);
+		addScreenShot("Clicked on Color Look dropdown", test, Capture);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(searchInput));
 		searchInput.sendKeys(colorType);
 		test.log(Status.INFO, "Entered color type: " + colorType);
-		addSrceenShot("Entered color type", test, Capture);
+		addScreenShot("Entered color type", test, Capture);
 
 		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(solidColorOption));
 		solidColorOption.click();
 		Thread.sleep(1000);
 		test.log(Status.INFO, "Selected solid color option");
-		addSrceenShot("Selected solid color option", test, Capture);
+		addScreenShot("Selected solid color option", test, Capture);
 		clearCriteria.click();
 		// ColorLookDropdown.click();
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(lSAndCoColorInput));
@@ -258,12 +258,12 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		resetDefaults.click();
 		lSAndCoColorInput.sendKeys(colorItem);
 		test.log(Status.INFO, "Entered color item: " + colorItem);
-		addSrceenShot("Entered color item", test, Capture);
+		addScreenShot("Entered color item", test, Capture);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 		Thread.sleep(3000);
 
 		new WebDriverWait(driver, 20)
@@ -276,7 +276,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		selectOptn.click();
 		Thread.sleep(2000);
 		test.log(Status.INFO, "Clicked on select option");
-		addSrceenShot("Clicked on select option", test, Capture);
+		addScreenShot("Clicked on select option", test, Capture);
 		Thread.sleep(5000);
 
 		driver.switchTo().defaultContent();
@@ -292,7 +292,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(materialColordropdown));
 		materialColordropdown.click();
 		test.log(Status.INFO, "Material/Supplier screen is visible");
-		addSrceenShot("Material/Supplier screen is visible", test, Capture);
+		addScreenShot("Material/Supplier screen is visible", test, Capture);
 
 		List<WebElement> options = driver.findElements(
 				By.xpath("//div[contains(text(), 'Material Color')]/following-sibling::div/following::li"));
@@ -307,7 +307,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		if (isColorPresent) {
 			System.out.println("Added Color is present in dropdown: " + colorItem);
 			test.log(Status.PASS, "Added Color is present in dropdown: " + colorItem);
-			addSrceenShot("Added Color is present in dropdown", test, Capture);
+			addScreenShot("Added Color is present in dropdown", test, Capture);
 
 		} else {
 			System.out.println("Added Color is not present in dropdown");
@@ -322,12 +322,12 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(ColorLookDropdown));
 		ColorLookDropdown.click();
 		test.log(Status.INFO, "Clicked on Color Look dropdown");
-		addSrceenShot("Clicked on Color Look dropdown", test, Capture);
+		addScreenShot("Clicked on Color Look dropdown", test, Capture);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(searchInput));
 		searchInput.sendKeys(colorLookType);
 		test.log(Status.INFO, "Entered color type: " + colorLookType);
-		addSrceenShot("Entered color type", test, Capture);
+		addScreenShot("Entered color type", test, Capture);
 		Thread.sleep(3000);
 
 		WebElement colorType = driver.findElement(By.xpath("//span[contains(text(),'" + colorLookType.trim() + "')]"));
@@ -354,7 +354,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 
 	}
 
@@ -376,7 +376,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 
 	}
 
@@ -453,7 +453,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 			String actualSeason = seasonExtract.getText();
 			test.log(Status.INFO, "Actual Season: " + actualSeason + ", Actual Color Code: " + actualColorCode
 					+ ", Actual Color Name: " + actualLookName);
-			addSrceenShot("Actual Values", test, Capture);
+			addScreenShot("Actual Values", test, Capture);
 
 			String expectedColorName = actualSeason + " " + actualColorCode + " " + lookName;
 //			String expectedColorName = actualColorCode + " " + lookName;
@@ -461,11 +461,11 @@ public class Color_Page extends WMS_WebDriverUtilities {
 
 			if (isColorNameCorrect) {
 				test.log(Status.PASS, "Color Name format is correct: " + expectedColorName);
-				addSrceenShot("Color Name format is correct", test, Capture);
+				addScreenShot("Color Name format is correct", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Color Name format is incorrect. Expected: " + expectedColorName + ", Actual: "
 						+ actualLookName);
-				addSrceenShot("Color Name format is incorrect", test, Capture);
+				addScreenShot("Color Name format is incorrect", test, Capture);
 			}
 
 			return isColorNameCorrect;
@@ -492,7 +492,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 
 		test.log(Status.INFO, "Color Record Details - Color ID: " + colorID + ", Color Name: " + colorNameValue
 				+ ", Type: " + colorType + ", Color Family: " + colorFamily + ", code: " + colorCode);
-		addSrceenShot("Viewed color record", test, Capture);
+		addScreenShot("Viewed color record", test, Capture);
 	}
 
 	public String getColorNameValue() {
@@ -519,7 +519,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		String errorMsg_Extract = errorMsgExtract.getText();
 
 		test.log(Status.INFO, "Error:  " + errorMsg_Extract);
-		addSrceenShot("Error", test, Capture);
+		addScreenShot("Error", test, Capture);
 
 		return errorMsg_Extract;
 	}
@@ -543,7 +543,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		Thread.sleep(2000);
 
 		test.log(Status.INFO, "Opened new tab and navigated to the Color/Look Library");
-		addSrceenShot("Opened new tab and navigated to the Color/Look Library", test, Capture);
+		addScreenShot("Opened new tab and navigated to the Color/Look Library", test, Capture);
 	}
 	////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -559,7 +559,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(addMultipleColorsButton));
 		addMultipleColorsButton.click();
 		test.log(Status.INFO, "Clicked on 'Add multiple colors' button");
-		addSrceenShot("Clicked on 'Add multiple colors' button", test, Capture);
+		addScreenShot("Clicked on 'Add multiple colors' button", test, Capture);
 		Thread.sleep(2000);
 		String ParentWinhadle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
@@ -576,12 +576,12 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		Thread.sleep(2000);
 		nameSearchField.sendKeys(colorItem);
 		test.log(Status.INFO, "Entered color item: " + colorItem);
-		addSrceenShot("Entered color item", test, Capture);
+		addScreenShot("Entered color item", test, Capture);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 20)
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@name='center']")));
@@ -592,7 +592,7 @@ public class Color_Page extends WMS_WebDriverUtilities {
 		selectOptn.click();
 		Thread.sleep(2000);
 		test.log(Status.INFO, "Clicked on select option");
-		addSrceenShot("Clicked on select option", test, Capture);
+		addScreenShot("Clicked on select option", test, Capture);
 
 		Thread.sleep(5000);
 		driver.switchTo().defaultContent();

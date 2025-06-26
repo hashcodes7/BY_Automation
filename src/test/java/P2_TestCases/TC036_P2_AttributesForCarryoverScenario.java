@@ -79,35 +79,35 @@ public class TC036_P2_AttributesForCarryoverScenario extends WMS_TestBase {
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected:"+season, test, Capture);
+			addScreenShot("Season selected:"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			WaitforPage(5000);
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 						
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
 			WaitforPage(5000);
-			addSrceenShot("Linesheet view changed to: "+linesheetview, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview, test, Capture);
 						
 			CCP.CopyCarryoverForAttributesValidation(test,colorwayCode);
 			test.log(Status.PASS, "Validation successful for Attributes of copied product");
 			WaitforPage(5000);
-			addSrceenShot("Validation successful for Attributes of copied product", test, Capture);
+			addScreenShot("Validation successful for Attributes of copied product", test, Capture);
 			
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

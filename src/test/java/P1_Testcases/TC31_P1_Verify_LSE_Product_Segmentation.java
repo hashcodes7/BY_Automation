@@ -83,54 +83,54 @@ public class TC31_P1_Verify_LSE_Product_Segmentation extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers P1 Colorway module from TC31");
 
 			System.out.println("login to flex PLM application successfully ");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL -  " + global_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			WaitforPage(4000);
 
 //			String season = "Levi's S1 2023 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "Season selected: " + season);
-			addSrceenShot("Season selected:" + season, test, Capture);
+			addScreenShot("Season selected:" + season, test, Capture);
 			WaitforPage(4000);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(4000);
 
 //			String linesheetview = "Adoption";
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			WaitforPage(5000);
 
 //			String colorWay = "0WPGZ-0011 LUCEE TEST213";
 			Colorwaypage.SelectColorway(colorWay, test);
 			test.log(Status.INFO, "colorway selected: " + colorWay);
-			addSrceenShot("colorway selected", test, Capture);
+			addScreenShot("colorway selected", test, Capture);
 
 			Colorwaypage.editColorWay();
 			test.log(Status.INFO, "Clicked On Edit Colorway from the Menu");
-			addSrceenShot("Clicked On Edit Colorway from the Menu", test, Capture);
+			addScreenShot("Clicked On Edit Colorway from the Menu", test, Capture);
 			WaitforPage(5000);
 
 			// Store all product segmentation LSE values in a list
 			List<String> lseValues = Colorwaypage.getLSEValues(test);
 			test.log(Status.INFO, "Stored LSE values: " + String.join(", ", lseValues));
-			addSrceenShot("Stored LSE values", test, Capture);
+			addScreenShot("Stored LSE values", test, Capture);
 
 			String Brand = Colorwaypage.getBrand();
 			System.out.println("Brand Value: " + Brand);
@@ -147,25 +147,25 @@ public class TC31_P1_Verify_LSE_Product_Segmentation extends WMS_TestBase {
 			Colorwaypage.openNewTabAndNavigateToBusinessObject(global_URL, test);
 			System.out.println("Opened new tab and navigated to the Business Object Library");
 			test.log(Status.INFO, "Opened new tab and navigated to the Business Object Library");
-			addSrceenShot("Opened new tab and navigated to the Business Object Library", test, Capture);
+			addScreenShot("Opened new tab and navigated to the Business Object Library", test, Capture);
 			WaitforPage(4000);
 
 //			String businessObject = "Product Segmentation";
 			Colorwaypage.selctBusinessObject(businessObject);
 			System.out.println("Selected Business Object: " + businessObject);
 			test.log(Status.INFO, "Selected Business Object: " + businessObject);
-			addSrceenShot("Selected Business Object: ", test, Capture);
+			addScreenShot("Selected Business Object: ", test, Capture);
 			WaitforPage(4000);
 
 			Colorwaypage.fillProductSegmentationLSEDetails(Brand, ProductCategory, ConsumerGroup1, test);
 			test.log(Status.INFO, "Filled in Product Segmentation details");
-			addSrceenShot("Filled in Product Segmentation details", test, Capture);
+			addScreenShot("Filled in Product Segmentation details", test, Capture);
 			WaitforPage(4000);
 
 			List<String> tableValues = Colorwaypage.getTableValues(test);
 			test.log(Status.INFO,
 					"Lookup Tables\\Product Segmentation table values: " + String.join(", ", tableValues));
-			addSrceenShot("Lookup Tables\\Product Segmentation table values", test, Capture);
+			addScreenShot("Lookup Tables\\Product Segmentation table values", test, Capture);
 
 			boolean allValuesPresent = true;
 			List<String> missingValues = new ArrayList<>();
@@ -181,11 +181,11 @@ public class TC31_P1_Verify_LSE_Product_Segmentation extends WMS_TestBase {
 				test.log(Status.PASS, "All LSE values are present in the Lookup Table\\Product Segmentation table");
 				test.log(Status.PASS, "LSE Product Segmentation values are derived from Brand: " + Brand
 						+ ", Product Category: " + ProductCategory + ", Consumer Group 1: " + ConsumerGroup1);
-				addSrceenShot("All LSE values are present in the Lookup Tables\\Product Segmentation table", test,
+				addScreenShot("All LSE values are present in the Lookup Tables\\Product Segmentation table", test,
 						Capture);
 			} else {
 				test.log(Status.FAIL, "Some LSE values are missing in the Lookup Tables\\Product Segmentation table");
-				addSrceenShot("Some LSE values are missing in the Lookup Tables\\Product Segmentation table", test,
+				addScreenShot("Some LSE values are missing in the Lookup Tables\\Product Segmentation table", test,
 						Capture);
 				test.log(Status.INFO, "Missing LSE values: " + String.join(", ", missingValues));
 
@@ -195,16 +195,16 @@ public class TC31_P1_Verify_LSE_Product_Segmentation extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

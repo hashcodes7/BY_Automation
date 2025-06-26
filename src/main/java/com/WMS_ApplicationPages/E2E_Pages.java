@@ -385,12 +385,12 @@ public class E2E_Pages extends WMS_WebDriverUtilities {
 					Thread.sleep(20000);
 	 
 					System.out.println("Profit center value is selected");
-					addSrceenShot("profit center APD Value is selected " , test, Capture);
+					addScreenShot("profit center APD Value is selected " , test, Capture);
 					test.log(Status.INFO, "profit center APD Value is selected : " + profitcenterAPD);
 
 				}else {
 					System.out.println("Profit center value is already Populated");
-					addSrceenShot("profit center APD Value is already Populated " , test, Capture);
+					addScreenShot("profit center APD Value is already Populated " , test, Capture);
 					test.log(Status.INFO, "profit center APD Value is already Populated : " + profitcenterAPD);
 				}
 			}

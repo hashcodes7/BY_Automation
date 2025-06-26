@@ -109,7 +109,7 @@ public class TC15_P0_VerifyPC9CodeCreation extends WMS_TestBase {
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-	            addSrceenShot("Browser Launched successfully", test, Capture);
+	            addScreenShot("Browser Launched successfully", test, Capture);
 
 				
 				test.log(Status.INFO, "This test case covers colorway module from 28 to 30");
@@ -117,7 +117,7 @@ public class TC15_P0_VerifyPC9CodeCreation extends WMS_TestBase {
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully: " +Global_URL);
-	            addSrceenShot("login successful", test, Capture);
+	            addScreenShot("login successful", test, Capture);
 
 
 				Thread.sleep(5000);
@@ -125,40 +125,40 @@ public class TC15_P0_VerifyPC9CodeCreation extends WMS_TestBase {
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.clickOnMySeasons();
 				test.log(Status.INFO, "Clicked on MySeasons");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //				String mySeasonType = "Levi's S1 2025 Male Bottoms";
 //				String mySeasonType = "Levi's S1 2023 Male Accessories";
 				mainMenuPage.chooseMySeasonType(mySeasonType);
 				System.out.println("season type is choosen");
 				test.log(Status.INFO, "season type is choosen: " +mySeasonType);
-				addSrceenShot("Season type is choosen", test, Capture);
+				addScreenShot("Season type is choosen", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 
 //				String productName = "1890 XX501® JEANS";
 				lineSheetPage.filterProductByName(productName, test);
 				System.out.println("Clicked on product name");
 				test.log(Status.INFO, "Clicked on product name: " +productName);
-				addSrceenShot("Clicked on product name", test, Capture);
+				addScreenShot("Clicked on product name", test, Capture);
 
 				Assert.assertTrue(productDetailsPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 				System.out.println("PC5 Details Page is displayed");
 				test.log(Status.INFO, "PC5 Details Page is displayed");
-				addSrceenShot("PC5 Details Page is displayed", test, Capture);
+				addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 //				String colourWayName = "90501-0230 new Blues 24";
 				productDetailsPage.selectColorwayFromMenu(colourWayName, test);
 				System.out.println("Clicked on Colorway From Menu");
 				test.log(Status.INFO, "Clicked on Colorway From Menu: " +colourWayName);
-				addSrceenShot("Clicked on Colorway From Menu", test, Capture);
+				addScreenShot("Clicked on Colorway From Menu", test, Capture);
 				
 				boolean isDisplayed = productDetailsPage.isColorwayCodeDisplayed();
 		        Assert.assertTrue(isDisplayed, "Colorway code should be displayed.");
@@ -177,18 +177,18 @@ public class TC15_P0_VerifyPC9CodeCreation extends WMS_TestBase {
 		        dashboardPage.closeLeftPanel();
 				System.out.println("Clicked on close Left plane");
 				test.log(Status.INFO, "Clicked on close Left plane");
-				addSrceenShot("Clicked on close Left plane", test, Capture);
+				addScreenShot("Clicked on close Left plane", test, Capture);
 
 				dashboardPage.Logout();
 				System.out.println("Logout successful");
 				test.log(Status.INFO, "Logout successful");
-				addSrceenShot("Logout successful", test, Capture);
+				addScreenShot("Logout successful", test, Capture);
 
 		} catch (
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 		

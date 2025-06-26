@@ -141,117 +141,117 @@ public class TC_P3_CreateMultipleProduct_Colorway_SetUpLSE extends WMS_TestBase 
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			try {
 
 				lineSheetPage.createProduct();
 				test.log(Status.INFO, "Clicked on Create New product");
-				addSrceenShot("Clicked on Create New product", test, Capture);
+				addScreenShot("Clicked on Create New product", test, Capture);
 				WaitforPage(4000);
 
 //				String productName = "NTEST_AM_02Q";
 				productPage.enterProductName(productName);
 				test.log(Status.INFO, "Entered product Name successfully: " + productName);
-				addSrceenShot("Entered product Name successfully", test, Capture);
+				addScreenShot("Entered product Name successfully", test, Capture);
 				WaitforPage(4000);
 
 //				String brandHierarchy = "Red Tab Global";
 				productPage.selectBrandHierarchy(brandHierarchy);
 				test.log(Status.INFO, "Entered Brand Hierarchy value successfully: " + brandHierarchy);
-				addSrceenShot("Entered Brand Hierarchy value successfully", test, Capture);
+				addScreenShot("Entered Brand Hierarchy value successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String proSubCat1 = "Alternative Lengths";
 				productPage.selectProSubCat1(proSubCat1);
 				test.log(Status.INFO, "Entered product Sub Cat 1 successfully: " + proSubCat1);
-				addSrceenShot("Entered product Sub Cat 1 successfully", test, Capture);
+				addScreenShot("Entered product Sub Cat 1 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String proSubCat2 = "Not Applicable";
 				productPage.selectProSubCat2(proSubCat2);
 				test.log(Status.INFO, "Entered product Sub Cat 2 successfully: " + proSubCat2);
-				addSrceenShot("Entered product Sub Cat 2 successfully", test, Capture);
+				addScreenShot("Entered product Sub Cat 2 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String classValue = "Jeans";
 				productPage.selectClass(classValue);
 				test.log(Status.INFO, "Entered class product Hierarchy successfully: " + classValue);
-				addSrceenShot("Entered class product Hierarchy successfully", test, Capture);
+				addScreenShot("Entered class product Hierarchy successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String subClassValue = "Bootcut or Flare";
 				productPage.selectSubClass(subClassValue);
 				test.log(Status.INFO, "Entered sub class product Hierarchy successfully: " + subClassValue);
-				addSrceenShot("Entered sub class product Hierarchy successfully", test, Capture);
+				addScreenShot("Entered sub class product Hierarchy successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String consumer = "Mens";
 				productPage.selectConsumer(consumer);
 				test.log(Status.INFO, "Entered consumer successfully: " + consumer);
-				addSrceenShot("Entered consumer successfully", test, Capture);
+				addScreenShot("Entered consumer successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String consumerGrp1 = "Adult Mens";
 				productPage.selectConsumerGrp1(consumerGrp1);
 				test.log(Status.INFO, "Entered consumer Group 1 successfully: " + consumerGrp1);
-				addSrceenShot("Entered consumer Group 1 successfully", test, Capture);
+				addScreenShot("Entered consumer Group 1 successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String consumerGrp2 = "Regular";
 				productPage.selectConsumerGrp2(consumerGrp2);
 				test.log(Status.INFO, "Entered consumer Group 2 successfully: " + consumerGrp2);
-				addSrceenShot("Entered consumer Group 2 successfully", test, Capture);
+				addScreenShot("Entered consumer Group 2 successfully", test, Capture);
 				WaitforPage(5000);
 
 				productPage.clikOnSaveBtn();
 				test.log(Status.INFO, "Clicked on save button successfully");
-				addSrceenShot("Clicked on save button successfully", test, Capture);
+				addScreenShot("Clicked on save button successfully", test, Capture);
 				WaitforPage(2000);
 
 				productPage.clikViewProduct();
 				test.log(Status.INFO, "Clicked on View Product successfully");
-				addSrceenShot("Clicked on View Product successfully", test, Capture);
+				addScreenShot("Clicked on View Product successfully", test, Capture);
 				WaitforPage(2000);
 
 				// Verify product name
 				String product_Name = productPage.getProductName();
 				if (product_Name.equals(productName)) {
 					test.log(Status.PASS, "Product name verification--- PC5 is created: " + productName);
-					addSrceenShot("Product name verification", test, Capture);
+					addScreenShot("Product name verification", test, Capture);
 				} else {
 					test.log(Status.FAIL, "Product name verification: Failed");
-					addSrceenShot("Product name verification", test, Capture);
+					addScreenShot("Product name verification", test, Capture);
 				}
 			} catch (
 
 			Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-				test.log(Status.FAIL, "Test case failed due to application slowness");
+				test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 			}
 
 			Colorwaypage.Create_ColorwayafterProductcreation();
 			System.out.println("Colorway page displayed");
 			test.log(Status.INFO, "Colorway page displayed");
-			addSrceenShot("Colorway page displayed", test, Capture);
+			addScreenShot("Colorway page displayed", test, Capture);
 
 //         if colorsubmenu element is not there just keep blank string ----------------------			
 			String thumbnail = Colorwaypage.selectcolour_afterproductcreation(colormenu, colorsubmenu, filtercolor, test);
 			System.out.println("color/look Selected ");
 			test.log(Status.INFO, " color/look Selected");
-			addSrceenShot("color/look Selected ", test, Capture);
+			addScreenShot("color/look Selected ", test, Capture);
 			WaitforPage(4000);
 
 			Colorwaypage.MandatoryColorwayDetails_ForLSESetUP(productsegLSUSvalue, productsegLSEvalue, classification,
@@ -260,7 +260,7 @@ public class TC_P3_CreateMultipleProduct_Colorway_SetUpLSE extends WMS_TestBase 
 					test);
 			System.out.println("All mandatory fields filled");
 			test.log(Status.INFO, "All mandatory fields filled");
-			addSrceenShot("All mandatory fields filled", test, Capture);
+			addScreenShot("All mandatory fields filled", test, Capture);
 			WaitforPage(4000);
 
 			Colorwaypage.MandatoryFields_colorwaySeason_SetUpLSE_afterproductcreation(hubofferedto, productlifecyclegroup, lastseasonoffered,
@@ -268,30 +268,30 @@ public class TC_P3_CreateMultipleProduct_Colorway_SetUpLSE extends WMS_TestBase 
 					primaryfabric, test);
 			System.out.println("Colorway season fields selected and view product clicked");
 			test.log(Status.INFO, "Colorway season fields selected and view product clicked");
-			addSrceenShot("Colorway season fields selected and view product clicked", test, Capture);
+			addScreenShot("Colorway season fields selected and view product clicked", test, Capture);
 
 			Thread.sleep(2000);
 			String colorwayname = Colorwaypage.validateColorway_creation(filtercolor, test);
 			System.out.println("Validated Colorway creation");
 			test.log(Status.PASS, "Validated Colorway creation");
-			addSrceenShot("Validated Colorway creation", test, Capture);
+			addScreenShot("Validated Colorway creation", test, Capture);
 			
 			Colorwaypage.SiteClick();
 			Thread.sleep(2000);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 	
 			LineSheetEditPage.filter_View_Change(linesheetview_LSUS, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview_LSUS);
-			addSrceenShot("Linesheet view is " + linesheetview_LSUS, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview_LSUS, test, Capture);
 			WaitforPage(5000);
 			
 			Techpackpages.filterdata(colorwayname);
 			test.log(Status.INFO, "colorway filtered " + colorwayname);
-			addSrceenShot("colorway filtered " + colorwayname, test, Capture);
+			addScreenShot("colorway filtered " + colorwayname, test, Capture);
 			System.out.println("colorway filtered " + colorwayname);
 
 			Thread.sleep(5000);
@@ -301,7 +301,7 @@ public class TC_P3_CreateMultipleProduct_Colorway_SetUpLSE extends WMS_TestBase 
 			E2EPages.Linesheet_SetUpLSE(test);
 			test.log(Status.PASS, " LSE setup completed ");
 			System.out.println(" LSE setup completed ");
-			addSrceenShot(" LSE setup completed ", test, Capture);
+			addScreenShot(" LSE setup completed ", test, Capture);
 			Thread.sleep(3000);
 			
 			
@@ -311,7 +311,7 @@ public class TC_P3_CreateMultipleProduct_Colorway_SetUpLSE extends WMS_TestBase 
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 					
 				} else {
 					
@@ -327,7 +327,7 @@ public class TC_P3_CreateMultipleProduct_Colorway_SetUpLSE extends WMS_TestBase 
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 			}

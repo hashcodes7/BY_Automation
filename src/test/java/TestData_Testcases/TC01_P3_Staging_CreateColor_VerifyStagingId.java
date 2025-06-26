@@ -84,31 +84,31 @@ public class TC01_P3_Staging_CreateColor_VerifyStagingId extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers material module from 83 to 84");
 
 			System.out.println("login to flex PLM application successfully with URl : " + Admin_URL_STG);
 			test.log(Status.INFO, "login to flex PLM application successfully with URL : " + Admin_URL_STG);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(5000);
 
 			CNCP.clickplussign();
 			test.log(Status.INFO, "Clicked on Add color Sign");
-			addSrceenShot("Clicked on Add color Sign", test, Capture);
+			addScreenShot("Clicked on Add color Sign", test, Capture);
 			
 			CNCP.SelectColorType(colortype,test);
 			test.log(Status.INFO, "Clicked On: " +colortype+" and color page opened");
-			addSrceenShot("Clicked On: " +colortype+" and color page opened", test, Capture);
+			addScreenShot("Clicked On: " +colortype+" and color page opened", test, Capture);
 			
 			String title= driver.getTitle();
 			System.out.println(title);
@@ -119,7 +119,7 @@ public class TC01_P3_Staging_CreateColor_VerifyStagingId extends WMS_TestBase {
 			
 			CNCP.createcolorPrintsandPatterns(redvalue,bluevalue,greenvalue,artworkname,artworkcode,colorfamily,patterntype,colorcombo,developer,test);
 			test.log(Status.INFO, "All the required fields are filled");
-			addSrceenShot("All the required fields are filled", test, Capture);
+			addScreenShot("All the required fields are filled", test, Capture);
 			
 			CNCP.clickcreatebutton();
 			test.log(Status.INFO, "Colour created under Prints and patterns");
@@ -127,14 +127,14 @@ public class TC01_P3_Staging_CreateColor_VerifyStagingId extends WMS_TestBase {
 			Thread.sleep(3000);
 			CNCP.PrintsandPatterns_color_validation(artworkname,test);
 			test.log(Status.PASS, "Validation is successful");
-			addSrceenShot("Validation is successful", test, Capture);
+			addScreenShot("Validation is successful", test, Capture);
 			
 
 			mainMenuPage.LibraryMenu( MainMenuEnum.LIBRARIES_BUSSINESS.menu());
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Business Object");
 			test.log(Status.INFO, "Clicked on Business Object");
-			addSrceenShot("Clicked on Business Object", test, Capture);
+			addScreenShot("Clicked on Business Object", test, Capture);
 			WaitforPage(4000);
 
 
@@ -142,53 +142,53 @@ public class TC01_P3_Staging_CreateColor_VerifyStagingId extends WMS_TestBase {
 			businessObjectPage.chooseBusinessObjectType(businessObjectType);
 		    System.out.println("Business object type chosen: "+businessObjectType);
 		    test.log(Status.INFO, "Business object type chosen: "+businessObjectType);
-		    addSrceenShot("Business object type chosen", test, Capture);
+		    addScreenShot("Business object type chosen", test, Capture);
 		    WaitforPage(4000);
 
 //			String actionType =  "Create";
 			businessObjectPage.chooseActionType(actionType);
 		    System.out.println("Action type chosen: "+actionType);
 		    test.log(Status.INFO, "Action type chosen: "+actionType);
-		    addSrceenShot("Action type chosen", test, Capture);
+		    addScreenShot("Action type chosen", test, Capture);
 		    WaitforPage(4000);
 		    
 //			String createdDate =  "10/09/2024";
 		    businessObjectPage.enterCreatedDate(createdDate);
 		    System.out.println("Entered Created Date: " + createdDate);
 		    test.log(Status.INFO, "Entered Created Date: " + createdDate);
-		    addSrceenShot("Entered Created Date", test, Capture);
+		    addScreenShot("Entered Created Date", test, Capture);
 		    WaitforPage(4000);
 		    
 //		    String messageTableValue =  "*LSCOMaterial*";
 		    businessObjectPage.enterMessageTable(messageTableValue);
 		    System.out.println("Entered Message Table: " + messageTableValue);
 		    test.log(Status.INFO, "Entered Message Table: " + messageTableValue);
-		    addSrceenShot("Entered Created Date", test, Capture);
+		    addScreenShot("Entered Created Date", test, Capture);
 		    WaitforPage(4000);
 		    
 //		    String hierarchyValue =  "*LSCO\\Fabric\\Knits*";
 		    businessObjectPage.enterHierarchy(hierarchyValue);
 		    System.out.println("Entered Hierarchy: " + hierarchyValue);
 		    test.log(Status.INFO, "Entered Hierarchy: " + hierarchyValue);
-		    addSrceenShot("Entered Hierarchy", test, Capture);
+		    addScreenShot("Entered Hierarchy", test, Capture);
 		    WaitforPage(4000);
 		    
 		    businessObjectPage.clickSearch();
 		    System.out.println("Clicked on Search");
 		    test.log(Status.INFO, "Clicked on Search");
-		    addSrceenShot("Clicked on Search", test, Capture);
+		    addScreenShot("Clicked on Search", test, Capture);
 		    WaitforPage(4000);
 		    
 		 // Verify the staging row ID
 		    businessObjectPage.verifyStagingRowId(test);
 		    System.out.println("Validation successful for Staging row Id for Create color");
 		    test.log(Status.INFO, "Validation successful for Staging row Id for Create color");
-		    addSrceenShot("Validation successful for Staging row Id for Create color", test, Capture);
+		    addScreenShot("Validation successful for Staging row Id for Create color", test, Capture);
 		    
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 
 		} catch (Exception e) {

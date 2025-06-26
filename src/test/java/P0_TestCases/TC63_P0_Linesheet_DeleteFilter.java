@@ -103,14 +103,14 @@ public class TC63_P0_Linesheet_DeleteFilter extends WMS_TestBase {
 		try {
 			System.out.println("Browser Launched successfully");
 			test.log(Status.PASS, "Browser Launched successfully");
-            addSrceenShot("Browser Launched successfully", test, Capture);
+            addScreenShot("Browser Launched successfully", test, Capture);
 
 
 			test.log(Status.INFO, "This test case covers Linesheet- Views & Filters module from 129 to 131");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.PASS, "login to flex PLM application successfully: "+Administrator_URL);
-            addSrceenShot("login to flex PLM application successfully", test, Capture);
+            addScreenShot("login to flex PLM application successfully", test, Capture);
 
 
 			Thread.sleep(5000);
@@ -118,56 +118,56 @@ public class TC63_P0_Linesheet_DeleteFilter extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.PASS, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.PASS, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.PASS, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.PASS, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String filterName = "CopiedTestFilter1 ";
 			lineSheetPage.chooseFilter(filterName, test);
 			System.out.println("filter was choosen");
 			test.log(Status.PASS, "filter was choosen: " + filterName);
-			addSrceenShot("filter was choosen", test, Capture);
+			addScreenShot("filter was choosen", test, Capture);
 
 			lineSheetPage.clickOnEditIcon(test);
 			System.out.println("clicked on edit Icon");
 			test.log(Status.PASS, "clicked on edit Icon");
-			addSrceenShot("clicked on edit Icon", test, Capture);
+			addScreenShot("clicked on edit Icon", test, Capture);
 
 			lineSheetPage.clickDeleteFilter(test);
 			System.out.println("clicked On Delete Filter Button");
 			test.log(Status.PASS, "clicked On Delete Filter Button");
-			addSrceenShot("clicked On Delete Filter Button", test, Capture);
+			addScreenShot("clicked On Delete Filter Button", test, Capture);
 
 			Assert.assertFalse(lineSheetPage.isFilterPresent(filterName, test), "Filter was not deleted successfully");
 			System.out.println("Filter was deleted successfully");
 			test.log(Status.PASS, "Filter was deleted successfully");
-			addSrceenShot("Filter deleted successfully", test, Capture);
+			addScreenShot("Filter deleted successfully", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

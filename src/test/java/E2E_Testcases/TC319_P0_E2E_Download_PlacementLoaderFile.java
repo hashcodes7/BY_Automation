@@ -84,27 +84,27 @@ public class TC319_P0_E2E_Download_PlacementLoaderFile extends WMS_TestBase {
 					
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_RETAILDOCUMENT.menu());
 			test.log(Status.INFO, "Clicked on Libraries retail Document");
-			addSrceenShot("Clicked on Libraries retail Document", test, Capture);
+			addScreenShot("Clicked on Libraries retail Document", test, Capture);
 			
 			customLoadersPage.Download_LoaderPlacementFile_staging(test);
 			test.log(Status.PASS, "Template downloaded");
-			addSrceenShot("Template downloaded", test, Capture);
+			addScreenShot("Template downloaded", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}	

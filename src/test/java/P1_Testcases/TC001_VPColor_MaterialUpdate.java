@@ -78,87 +78,87 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Color menu ");
-			addSrceenShot("Clicked on Color menu ", test, Capture);
+			addScreenShot("Clicked on Color menu ", test, Capture);
 			Thread.sleep(4000);
 			
 			newColorPage.clickplussign();
 			test.log(Status.INFO, "Clicked on add color");
-			addSrceenShot("Clicked on add color", test, Capture);
+			addScreenShot("Clicked on add color", test, Capture);
 			
 			//create print and pattern color and upload the thumbnail
 			colorPage.selectPrintPatternsColor(test);
 			test.log(Status.INFO, "print and patterns color is selected ");
-			addSrceenShot("Selected print and patterns color ", test, Capture); 
+			addScreenShot("Selected print and patterns color ", test, Capture); 
 			
 			colorPage.uploadThumbnail(test);
 			test.log(Status.INFO, "Thumbnail is uploaded ");
-			addSrceenShot("Uploaded Thumbnail ", test, Capture); 
+			addScreenShot("Uploaded Thumbnail ", test, Capture); 
 			
 			newColorPage.createcolorPrintsandPatterns(redvalue,bluevalue,greenvalue,artworkname,artworkcode,colorfamily,patterntype,colorcombo,developer,test);
 			test.log(Status.INFO, "All the required fields are filled");
-			addSrceenShot("All the required fields are filled", test, Capture); 
+			addScreenShot("All the required fields are filled", test, Capture); 
 			
 			newColorPage.clickcreatebutton();
 			test.log(Status.PASS, "Colour created under Prints and patterns");
-			addSrceenShot("Colour created under Prints and patterns", test, Capture);
+			addScreenShot("Colour created under Prints and patterns", test, Capture);
 			
 			colorPage.validateVendorCreatedFlag(test);
 			test.log(Status.INFO, "Vendor Created Flag ");
-			addSrceenShot("Vendor Created Flag", test, Capture); 
+			addScreenShot("Vendor Created Flag", test, Capture); 
 			
 //Update print and pattern Color - By supplier	
 			
 			colorPage.updatepickPatternsColor(test);
 			test.log(Status.INFO, "pick and patterns color is updated ");
-			addSrceenShot("pick and patterns color is updated", test, Capture); 
+			addScreenShot("pick and patterns color is updated", test, Capture); 
 			
 			
 			
 //Create Sundry Color - By supplier					
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Color menu ");
-			addSrceenShot("Clicked on Color menu ", test, Capture);
+			addScreenShot("Clicked on Color menu ", test, Capture);
 			Thread.sleep(4000);
 			
 			newColorPage.clickplussign();
 			test.log(Status.INFO, "Clicked on add color");
-			addSrceenShot("Clicked on add color", test, Capture); 
+			addScreenShot("Clicked on add color", test, Capture); 
 
 			colorPage.selectSundryColor(test);
 			test.log(Status.INFO, "Sundry color is selected ");
-			addSrceenShot("Selected Sundry color ", test, Capture);
+			addScreenShot("Selected Sundry color ", test, Capture);
 			
 			colorPage.uploadThumbnail(test);
 			test.log(Status.INFO, "Thumbnail is uploaded ");
-			addSrceenShot("Uploaded Thumbnail ", test, Capture); 
+			addScreenShot("Uploaded Thumbnail ", test, Capture); 
 			
 			newColorPage.createcolorSundry(name,redvalue,bluevalue,greenvalue,colorname,colorfamily,test);
 			test.log(Status.INFO, "All the required fields are filled");
-			addSrceenShot("All the required fields are filled", test, Capture);
+			addScreenShot("All the required fields are filled", test, Capture);
 			
 			newColorPage.clickcreatebutton();
 			test.log(Status.PASS, "Colour created under Prints and patterns");
-			addSrceenShot("Colour created under Prints and patterns", test, Capture);
+			addScreenShot("Colour created under Prints and patterns", test, Capture);
 
 			colorPage.validateVendorCreatedFlag(test);
 			test.log(Status.INFO, "Vendor Created Flag ");
-			addSrceenShot("Vendor Created Flag", test, Capture); 
+			addScreenShot("Vendor Created Flag", test, Capture); 
 			
 //Update Sundry Color - By supplier	
 	
 			colorPage.updateSundryColor(test);
 			test.log(Status.INFO, "Sundry color is updated ");
-			addSrceenShot("Sundry color is updated", test, Capture); 
+			addScreenShot("Sundry color is updated", test, Capture); 
 //Upload Thumbnail to material			
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES_MATERIAL.menu());
 			test.log(Status.INFO, "Clicked on Material menu ");
 			Thread.sleep(4000);
-			addSrceenShot("Clicked on Material menu ", test, Capture);
+			addScreenShot("Clicked on Material menu ", test, Capture);
 			
 			vendorPortalPage.P1materialPage(test,material);
 			test.log(Status.INFO, "Material page is loaded"); 
@@ -166,12 +166,12 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 			vendorPortalPage.uploadThumbnailMaterial(test);
 			test.log(Status.INFO, "vendor user won't have access for upload thumbnail to material");
 			Thread.sleep(4000);
-			addSrceenShot("vendor user won't have access for upload thumbnail to material", test, Capture);		
+			addScreenShot("vendor user won't have access for upload thumbnail to material", test, Capture);		
 //Upload Images for materials	
 			vendorPortalPage.uploadImageMaterial(test);
 			test.log(Status.INFO, "vendor user won't have permission for upload image to material");
 			Thread.sleep(4000);
-			addSrceenShot("vendor user won't have permission for upload image to material", test, Capture); 
+			addScreenShot("vendor user won't have permission for upload image to material", test, Capture); 
 		
 //Add documents at material supplier information
 			vendorPortalPage.clickOnSite(test);
@@ -179,7 +179,7 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES_MATERIAL.menu());
 			test.log(Status.INFO, "Clicked on Material menu ");
-			addSrceenShot("Clicked on Material menu ", test, Capture);
+			addScreenShot("Clicked on Material menu ", test, Capture);
 			Thread.sleep(4000);
 			
 			vendorPortalPage.P1materialPage(test,material);
@@ -187,7 +187,7 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 			
 			vendorPortalPage.addDocuments(test, descriptionValue);
 			test.log(Status.PASS, "Document is added ");
-			addSrceenShot("Document is added", test, Capture); 
+			addScreenShot("Document is added", test, Capture); 
 			
 //open material supplier information
 			vendorPortalPage.clickOnSite(test);
@@ -195,7 +195,7 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES_MATERIAL.menu());
 			test.log(Status.INFO, "Clicked on Material menu ");
-			addSrceenShot("Clicked on Material menu ", test, Capture);
+			addScreenShot("Clicked on Material menu ", test, Capture);
 			Thread.sleep(4000);
 			
 			vendorPortalPage.P1materialPage(test,material);
@@ -204,15 +204,15 @@ public class TC001_VPColor_MaterialUpdate extends WMS_TestBase {
 //Update material supplier information			
 			vendorPortalPage.materialUpdate(test,UOM);
 			test.log(Status.PASS, "Material details are updated ");
-			addSrceenShot("Material details are updated", test, Capture); 
+			addScreenShot("Material details are updated", test, Capture); 
 			
 			vendorPortalPage.fabricMaterialUpdate(test);
 			test.log(Status.PASS, "fabric material details are not editable ");
-			addSrceenShot("fabric material details are not editable", test, Capture); 
+			addScreenShot("fabric material details are not editable", test, Capture); 
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

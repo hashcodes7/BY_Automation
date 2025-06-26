@@ -64,7 +64,7 @@ public class ColorDetailsPage extends WMS_WebDriverUtilities {
 	        new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(lscoArtworkName));
 	        String lscoartworkName = lscoArtworkName.getText();
 	        test.log(Status.INFO, "lsco Artwork Name From Color Extracted: " + lscoartworkName);
-	        addSrceenShot("lsco Artwork Name From Color Extracted", test, Capture);
+	        addScreenShot("lsco Artwork Name From Color Extracted", test, Capture);
 	        return lscoartworkName;
 	    }
 
@@ -74,7 +74,7 @@ public class ColorDetailsPage extends WMS_WebDriverUtilities {
 	        new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(lscoArtwork));
 	        String lscoartwork = lscoArtwork.getText();
 	        test.log(Status.INFO, "lsco Artwork From Color Extracted: " + lscoartwork);
-	        addSrceenShot("lsco Artwork From Color Extracted", test, Capture);
+	        addScreenShot("lsco Artwork From Color Extracted", test, Capture);
 	        return lscoartwork;
 	    }
 
@@ -84,7 +84,7 @@ public class ColorDetailsPage extends WMS_WebDriverUtilities {
 	        new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colorComboElement));
 	        String colorCombo = colorComboElement.getText();
 	        test.log(Status.INFO, "color Combo From Color Extracted: " + colorCombo);
-	        addSrceenShot("color Combo From Color Extracted", test, Capture);
+	        addScreenShot("color Combo From Color Extracted", test, Capture);
 	        return colorCombo;
 	    }
 
@@ -94,7 +94,7 @@ public class ColorDetailsPage extends WMS_WebDriverUtilities {
 	        new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(printTypeElement));
 	        String printType = printTypeElement.getText();
 	        test.log(Status.INFO, "Print Type From Color Extracted: " + printType);
-	        addSrceenShot("Print Type From Color Extracted", test, Capture);
+	        addScreenShot("Print Type From Color Extracted", test, Capture);
 	        return printType;
 	    }
 

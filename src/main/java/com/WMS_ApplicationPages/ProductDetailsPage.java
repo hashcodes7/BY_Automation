@@ -145,7 +145,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 		option.click();
 
 		test.log(Status.INFO, "Selected Colorway from menu: " + colourWayName);
-		addSrceenShot("Selected Colorway from menu", test, Capture);
+		addScreenShot("Selected Colorway from menu", test, Capture);
 	}
 
 	public void validateDetails(String Brand, String Product_Category, String Consumer_PH, String Profit_Center_APD,
@@ -164,7 +164,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 				Assert.assertTrue(isProfitCenterValid, "Profit Center APD does not match!");
 				test.log(Status.PASS, "Validated details: Brand = " + Brand + ", Product Category = " + Product_Category
 						+ ", Consumer PH = " + Consumer_PH + ", Profit Center APD = " + Profit_Center_APD);
-				addSrceenShot("Validated details", test, Capture);
+				addScreenShot("Validated details", test, Capture);
 			} else {
 				throw new AssertionError("One or more details do not match!");
 			}
@@ -172,7 +172,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 
 			System.err.println("Validation failed: " + e.getMessage());
 			test.log(Status.FAIL, "Validation failed: " + e.getMessage());
-			addSrceenShot("Validation failed", test, Capture);
+			addScreenShot("Validation failed", test, Capture);
 			throw e;
 		}
 	}
@@ -202,7 +202,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 
 		boolean isDisplayed = driver.findElement(By.xpath("//span[normalize-space()='Product Details']")).isDisplayed();
 		test.log(Status.PASS, "PC5 Details Page displayed: " + isDisplayed);
-		addSrceenShot("PC5 Details Page displayed", test, Capture);
+		addScreenShot("PC5 Details Page displayed", test, Capture);
 
 		return isDisplayed;
 //		return driver.findElement(By.xpath("//span[normalize-space()='Product Details']")).isDisplayed();
@@ -271,7 +271,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(pc9CodeElement));
 		String pc9Code = pc9CodeElement.getText();
 		test.log(Status.INFO, "Pc9 code extracted: " + pc9Code);
-		addSrceenShot("Pc9 code extracted", test, Capture);
+		addScreenShot("Pc9 code extracted", test, Capture);
 		return pc9Code;
 	}
 
@@ -281,7 +281,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colourwayNameElement));
 		String colourwayName = colourwayNameElement.getText();
 		test.log(Status.INFO, "Colorway name extracted: " + colourwayName);
-		addSrceenShot("Colorway name extracted", test, Capture);
+		addScreenShot("Colorway name extracted", test, Capture);
 		return colourwayName;
 	}
 
@@ -306,7 +306,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productNameElement));
 		String productName = productNameElement.getText();
 		test.log(Status.INFO, "Product Name extracted: " + productName);
-		addSrceenShot("Product Name extracted", test, Capture);
+		addScreenShot("Product Name extracted", test, Capture);
 		return productName;
 	}
 
@@ -316,7 +316,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productMarketingNameElement));
 		String productMarketingName = productMarketingNameElement.getText();
 		test.log(Status.INFO, "Product Marketing Name extracted: " + productMarketingName);
-		addSrceenShot("Product Marketing Name extracted", test, Capture);
+		addScreenShot("Product Marketing Name extracted", test, Capture);
 		return productMarketingName;
 	}
 
@@ -334,7 +334,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 
 		String colorwayCode = pc9CodeElement.getText();
 		test.log(Status.INFO, "Colorway code retrieved: " + colorwayCode);
-		addSrceenShot("Colorway code retrieved", test, Capture);
+		addScreenShot("Colorway code retrieved", test, Capture);
 		return colorwayCode;
 //    return pc9CodeElement.getText();
 	}
@@ -364,7 +364,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 
 		String pc5Code = pc5CodeElement.getText();
 		test.log(Status.INFO, "PC5 code retrieved: " + pc5Code);
-		addSrceenShot("PC5 code retrieved", test, Capture);
+		addScreenShot("PC5 code retrieved", test, Capture);
 		return pc5Code;
 //return pc9CodeElement.getText();
 	}
@@ -399,7 +399,7 @@ public class ProductDetailsPage extends WMS_WebDriverUtilities {
 
 		boolean isDisplayed = driver.findElement(By.xpath("//span[normalize-space()='Product Details']")).isDisplayed();
 		test.log(Status.PASS, "PC5 Details Page displayed: " + isDisplayed);
-		addSrceenShot("PC5 Details Page displayed", test, Capture);
+		addScreenShot("PC5 Details Page displayed", test, Capture);
 
 		return isDisplayed;
 	}

@@ -133,104 +133,104 @@ public class LogEntry_page extends WMS_WebDriverUtilities {
 		Assert.assertTrue(!TransactionId.getText().isEmpty());
 		System.out.println("Transaction Id is populating and the value is :  "+TransactionId.getText());
 		test.log(Status.INFO,"Transaction Id is populating and the value is :  "+TransactionId.getText());
-		addSrceenShot("Transaction Id is populating and the value is :  "+TransactionId.getText(), test, Capture);
+		addScreenShot("Transaction Id is populating and the value is :  "+TransactionId.getText(), test, Capture);
 		
 		Assert.assertTrue(lscoStatus.getText().equals("Open")|| lscoStatus.getText().equals("Success"));
 		System.out.println("Event Status is populating and the value is :  "+lscoStatus.getText());
 		test.log(Status.INFO,"Event Status is populating and the value is :  "+lscoStatus.getText());
-		addSrceenShot("Event Status is populating and the value is :  "+lscoStatus.getText(), test, Capture);
+		addScreenShot("Event Status is populating and the value is :  "+lscoStatus.getText(), test, Capture);
 		
 		Assert.assertTrue(!JSONFilename.getText().isEmpty());
 		System.out.println("JSONFilename is populating and the value is :  "+JSONFilename.getText());
 		test.log(Status.INFO,"JSONFilename  is populating and the value is :  "+JSONFilename.getText());
-		addSrceenShot("JSONFilename  is populating and the value is :  "+JSONFilename.getText(), test, Capture);
+		addScreenShot("JSONFilename  is populating and the value is :  "+JSONFilename.getText(), test, Capture);
 		
 		Assert.assertTrue(LSCOEvent.getText().equals(event));
 		System.out.println("event is populating and the value is :  "+LSCOEvent.getText());
 		test.log(Status.INFO,"event is populating and the value is :  "+LSCOEvent.getText());
-		addSrceenShot("event is populating and the value is :  "+LSCOEvent.getText(), test, Capture);
+		addScreenShot("event is populating and the value is :  "+LSCOEvent.getText(), test, Capture);
 		
 		Assert.assertTrue(!ObjectId.getText().isEmpty());
 		System.out.println("ObjectId  is populating and the value is :  "+ObjectId.getText());
 		test.log(Status.INFO,"ObjectId is populating and the value is :  "+ObjectId.getText());
-		addSrceenShot("ObjectId is populating and the value is :  "+ObjectId.getText(), test, Capture);
+		addScreenShot("ObjectId is populating and the value is :  "+ObjectId.getText(), test, Capture);
 		
 		Assert.assertTrue(!JSONFilepath.getText().isEmpty());
 		System.out.println("JSONFilepath is populating and the value is :  "+JSONFilepath.getText());
 		test.log(Status.INFO,"JSONFilepath is populating and the value is :  "+JSONFilepath.getText());
-		addSrceenShot("JSONFilepath is populating and the value is :  "+JSONFilepath.getText(), test, Capture);
+		addScreenShot("JSONFilepath is populating and the value is :  "+JSONFilepath.getText(), test, Capture);
 		
 		if (LogEntryObject.equals("Colorway")){
 			Thread.sleep(1000);
 			
 			System.out.println("Colorway  is populating and the value is :  "+Colorway.getText());
 			test.log(Status.INFO,"Colorway is populating and the value is :  "+Colorway.getText());
-			addSrceenShot("Colorway is populating and the value is :  "+Colorway.getText(), test, Capture);
+			addScreenShot("Colorway is populating and the value is :  "+Colorway.getText(), test, Capture);
 			
 		}else if(LogEntryObject.equals("Colorway Season")){
 			Thread.sleep(1000);
 			System.out.println("Colorway  is populating and the value is :  "+Colorway.getText());
 			test.log(Status.INFO,"Colorway is populating and the value is :  "+Colorway.getText());
-			addSrceenShot("Colorway is populating and the value is :  "+Colorway.getText(), test, Capture);
+			addScreenShot("Colorway is populating and the value is :  "+Colorway.getText(), test, Capture);
 			
 			System.out.println("Season  is populating and the value is :  "+Season.getText());
 			test.log(Status.INFO,"Season is populating and the value is :  "+Season.getText());
-			addSrceenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
+			addScreenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
 		}
 		else if(LogEntryObject.equals("Linesheet")){
 			Thread.sleep(1000);
 			
 			System.out.println("Season  is populating and the value is :  "+Season.getText());
 			test.log(Status.INFO,"Season is populating and the value is :  "+Season.getText());
-			addSrceenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
+			addScreenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
 			
 		}
 		else if(LogEntryObject.equals("Material")){
 			Thread.sleep(1000);
 			System.out.println("Material  is populating and the value is :  "+Material.getText());
 			test.log(Status.INFO,"Material is populating and the value is :  "+Material.getText());
-			addSrceenShot("Material is populating and the value is :  "+Material.getText(), test, Capture);
+			addScreenShot("Material is populating and the value is :  "+Material.getText(), test, Capture);
 			
 		}
 		else if(LogEntryObject.equals("Material Supplier")){
 			Thread.sleep(1000);
 			System.out.println("Material  is populating and the value is :  "+Material.getText());
 			test.log(Status.INFO,"Material is populating and the value is :  "+Material.getText());
-			addSrceenShot("Material is populating and the value is :  "+Material.getText(), test, Capture);
+			addScreenShot("Material is populating and the value is :  "+Material.getText(), test, Capture);
 			
 			System.out.println("MaterialSupplier  is populating and the value is :  "+MaterialSupplier.getText());
 			test.log(Status.INFO,"MaterialSupplier is populating and the value is :  "+MaterialSupplier.getText());
-			addSrceenShot("MaterialSupplier is populating and the value is :  "+MaterialSupplier.getText(), test, Capture);
+			addScreenShot("MaterialSupplier is populating and the value is :  "+MaterialSupplier.getText(), test, Capture);
 		}
 		else if(LogEntryObject.equals("Product")){
 			Thread.sleep(1000);
 			System.out.println("Product  is populating and the value is :  "+Product.getText());
 			test.log(Status.INFO,"Product is populating and the value is :  "+Product.getText());
-			addSrceenShot("Product is populating and the value is :  "+Product.getText(), test, Capture);
+			addScreenShot("Product is populating and the value is :  "+Product.getText(), test, Capture);
 			
 		}else if(LogEntryObject.equals("Season")){
 			Thread.sleep(1000);
 			System.out.println("Season  is populating and the value is :  "+Season.getText());
 			test.log(Status.INFO,"Season is populating and the value is :  "+Season.getText());
-			addSrceenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
+			addScreenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
 			
 		}else if(LogEntryObject.equals("Affiliate")){
 			Thread.sleep(1000);
 			System.out.println("Season  is populating and the value is :  "+Season.getText());
 			test.log(Status.INFO,"Season is populating and the value is :  "+Season.getText());
-			addSrceenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
+			addScreenShot("Season is populating and the value is :  "+Season.getText(), test, Capture);
 			
 			System.out.println("Product  is populating and the value is :  "+Product.getText());
 			test.log(Status.INFO,"Product is populating and the value is :  "+Product.getText());
-			addSrceenShot("Product is populating and the value is :  "+Product.getText(), test, Capture);
+			addScreenShot("Product is populating and the value is :  "+Product.getText(), test, Capture);
 			
 			System.out.println("Colorway  is populating and the value is :  "+Colorway.getText());
 			test.log(Status.INFO,"Colorway is populating and the value is :  "+Colorway.getText());
-			addSrceenShot("Colorway is populating and the value is :  "+Colorway.getText(), test, Capture);
+			addScreenShot("Colorway is populating and the value is :  "+Colorway.getText(), test, Capture);
 			
 			System.out.println("Season Group is populating and the value is :  "+SeasonGroup.getText());
 			test.log(Status.INFO,"Season Group is populating and the value is :  "+SeasonGroup.getText());
-			addSrceenShot("Season Group is populating and the value is :  "+SeasonGroup.getText(), test, Capture);
+			addScreenShot("Season Group is populating and the value is :  "+SeasonGroup.getText(), test, Capture);
 			
 		}
 		

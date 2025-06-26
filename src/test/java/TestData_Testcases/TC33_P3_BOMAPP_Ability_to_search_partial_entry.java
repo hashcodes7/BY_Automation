@@ -96,52 +96,52 @@ public class TC33_P3_BOMAPP_Ability_to_search_partial_entry extends WMS_TestBase
 			
 			System.out.println("Login to flex PLM application successfully ");
 			test.log(Status.INFO, "Login to flex PLM application successfully " + adimin_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			// Navigate to BOM App
 			BOMPage.navigateToBOMApp();
 			test.log(Status.INFO, "Navigated to BOM App");
-			addSrceenShot("Navigated to BOM App", test, Capture);
+			addScreenShot("Navigated to BOM App", test, Capture);
 
 			// Login to BOM App
 //			String username = "mankumar@levi.com";
 			BOMPage.login(username, password, test);
-			addSrceenShot("Logged into BOM App", test, Capture);
+			addScreenShot("Logged into BOM App", test, Capture);
 
 			// Select Season and Search for PC9 code
 //			String season = "Levi's S1 2025 Male Accessories";
 			BOMPage.selectSeason(season);
 			test.log(Status.INFO, "Season selected: " + season);
-			addSrceenShot("Season selected", test, Capture);
+			addScreenShot("Season selected", test, Capture);
 
 //			String PC9Code = "0WPOB-0001";
 			BOMPage.searchForPC9(PC9Code, test);
 			test.log(Status.INFO, "Searched for partial entry: " + PC9Code);
-			addSrceenShot("Searched for partial entry", test, Capture);
+			addScreenShot("Searched for partial entry", test, Capture);
 
 			// Verify search results
 			boolean isSearchSuccessful = BOMPage.verifySearchResults(PC9Code, test);
 			if (isSearchSuccessful) {
 				test.log(Status.PASS, "Search results are displayed correctly for partial entry: " + PC9Code);
-				addSrceenShot("Search results displayed", test, Capture);
+				addScreenShot("Search results displayed", test, Capture);
 			} else {
 				test.log(Status.FAIL, "No results found for partial entry: " + PC9Code);
-				addSrceenShot("No results found", test, Capture);
+				addScreenShot("No results found", test, Capture);
 			}
 
 			BOMPage.logout(test);
 			test.log(Status.INFO, "Logged out of BOM App");
-			addSrceenShot("Logged out of BOM App", test, Capture);
+			addScreenShot("Logged out of BOM App", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

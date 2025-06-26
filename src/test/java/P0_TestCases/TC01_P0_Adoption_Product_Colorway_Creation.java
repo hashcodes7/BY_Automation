@@ -111,147 +111,147 @@ public class TC01_P0_Adoption_Product_Colorway_Creation extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			test.log(Status.INFO, "This test case covers linesheet module from 86 to 93");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + Administrator_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			lineSheetPage.createProduct();
 			test.log(Status.INFO, "Clicked on Create New product");
-			addSrceenShot("Clicked on Create New product", test, Capture);
+			addScreenShot("Clicked on Create New product", test, Capture);
 
 //				String productName = "Test_Demo_Product_01";
 			productPage.enterProductName(productName);
 			test.log(Status.INFO, "Entered product Name successfully: " + productName);
-			addSrceenShot("Entered product Name successfully", test, Capture);
+			addScreenShot("Entered product Name successfully", test, Capture);
 			WaitforPage(4000);
 
 //			String brandHierarchy = "Red Tab Global";
 			productPage.selectBrandHierarchy(brandHierarchy);
 			test.log(Status.INFO, "Entered Brand Hierarchy value successfully: " + brandHierarchy);
-			addSrceenShot("Entered Brand Hierarchy value successfully", test, Capture);
+			addScreenShot("Entered Brand Hierarchy value successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String classValue = "Jeans";
 			productPage.selectClass(classValue);
 			test.log(Status.INFO, "Entered class product Hierarchy successfully: " + classValue);
-			addSrceenShot("Entered class product Hierarchy successfully", test, Capture);
+			addScreenShot("Entered class product Hierarchy successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String subClassValue = "Bootcut or Flare";
 			productPage.selectSubClass(subClassValue);
 			test.log(Status.INFO, "Entered sub class product Hierarchy successfully: " + subClassValue);
-			addSrceenShot("Entered sub class product Hierarchy successfully", test, Capture);
+			addScreenShot("Entered sub class product Hierarchy successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String proSubCat1 = "Alternative Lengths";
 			productPage.selectProSubCat1(proSubCat1);
 			test.log(Status.INFO, "Entered product Sub Cat 1 successfully: " + proSubCat1);
-			addSrceenShot("Entered product Sub Cat 1 successfully", test, Capture);
+			addScreenShot("Entered product Sub Cat 1 successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String proSubCat2 = "Not Applicable";
 			productPage.selectProSubCat2(proSubCat2);
 			test.log(Status.INFO, "Entered product Sub Cat 2 successfully: " + proSubCat2);
-			addSrceenShot("Entered product Sub Cat 2 successfully", test, Capture);
+			addScreenShot("Entered product Sub Cat 2 successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String consumer = "Mens";
 			productPage.selectConsumer(consumer);
 			test.log(Status.INFO, "Entered consumer successfully: " + consumer);
-			addSrceenShot("Entered consumer successfully", test, Capture);
+			addScreenShot("Entered consumer successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String consumerGrp1 = "Adult Mens";
 			productPage.selectConsumerGrp1(consumerGrp1);
 			test.log(Status.INFO, "Entered consumer Group 1 successfully: " + consumerGrp1);
-			addSrceenShot("Entered consumer Group 1 successfully", test, Capture);
+			addScreenShot("Entered consumer Group 1 successfully", test, Capture);
 			WaitforPage(5000);
 
 //			String consumerGrp2 = "Regular";
 			productPage.selectConsumerGrp2(consumerGrp2);
 			test.log(Status.INFO, "Entered consumer Group 2 successfully: " + consumerGrp2);
-			addSrceenShot("Entered consumer Group 2 successfully", test, Capture);
+			addScreenShot("Entered consumer Group 2 successfully", test, Capture);
 			WaitforPage(5000);
 
 //			productPage.selectCostomsClassification();
 //			test.log(Status.INFO, "Entered Costoms Classification successfully");
-//			addSrceenShot("Entered Costoms Classification", test, Capture);
+//			addScreenShot("Entered Costoms Classification", test, Capture);
 //			WaitforPage(2000);
 
 			productPage.clikOnSaveBtn();
 			test.log(Status.INFO, "Clicked on save button successfully");
-			addSrceenShot("Clicked on save button successfully", test, Capture);
+			addScreenShot("Clicked on save button successfully", test, Capture);
 			WaitforPage(2000);
 
 			productPage.clikOnViewProduct();
 			test.log(Status.INFO, "Clicked on view product successfully");
-			addSrceenShot("Clicked on view product successfully", test, Capture);
+			addScreenShot("Clicked on view product successfully", test, Capture);
 			WaitforPage(4000);
 
 			// Verify product name
 			String product_Name = productPage.getProductName();
 			if (product_Name.equals(productName)) {
 				test.log(Status.PASS, "Product name verification--- PC5 is created: " + product_Name);
-				addSrceenShot("Product name verification", test, Capture);
+				addScreenShot("Product name verification", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Product name verification: Failed");
-				addSrceenShot("Product name verification", test, Capture);
+				addScreenShot("Product name verification", test, Capture);
 			}
 
 			productDetailsPage.CreateColorway();
 			System.out.println("Clicked on Create Colorway");
 			test.log(Status.INFO, "Clicked on Create Colorway");
-			addSrceenShot("Clicked on Create Colorway", test, Capture);
+			addScreenShot("Clicked on Create Colorway", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.ClickColorwayLookColor();
 			System.out.println("Clicked on Colorway(Look/Color)");
 			test.log(Status.INFO, "Clicked on Colorway(Look/Color)");
-			addSrceenShot("Colorway(Look/Color)", test, Capture);
+			addScreenShot("Colorway(Look/Color)", test, Capture);
 			WaitforPage(4000);
 
 			popUpPage.select_Color(colorName, test);
 			System.out.println("Selected Color");
 			test.log(Status.INFO, "Selected  Color");
-			addSrceenShot("Selected Color", test, Capture);
+			addScreenShot("Selected Color", test, Capture);
 			WaitforPage(4000);
 
 //				String productTypeValue="Product";
 			colorWayPage.selectProductType(productTypeValue);
 			System.out.println("selected ProductType");
 			test.log(Status.INFO, "Selected Product Type: " + productTypeValue);
-			addSrceenShot("Selected Product Type", test, Capture);
+			addScreenShot("Selected Product Type", test, Capture);
 			WaitforPage(4000);
 
 //				String rigidIndicatorValue="Rigid";
 			colorWayPage.selectRigidIndicator(rigidIndicatorValue);
 			System.out.println("selected RigidIndicator");
 			test.log(Status.INFO, "Selected Rigid Indicator : " + rigidIndicatorValue);
-			addSrceenShot("Selected Product Type", test, Capture);
+			addScreenShot("Selected Product Type", test, Capture);
 			WaitforPage(4000);
 
 //				String productSegmentationLSE_Value="A11 - LM Collaborations Alt Length Bottoms";
@@ -259,7 +259,7 @@ public class TC01_P0_Adoption_Product_Colorway_Creation extends WMS_TestBase {
 			System.out.println("Selected ProductSegmentationLSE value From DropDown");
 			test.log(Status.INFO,
 					"Selected ProductSegmentationLSE value From DropDown: " + productSegmentationLSE_Value);
-			addSrceenShot("Selected ProductSegmentationLSE value From DropDown", test, Capture);
+			addScreenShot("Selected ProductSegmentationLSE value From DropDown", test, Capture);
 			WaitforPage(4000);
 
 //				String productSegmentationLSUS_Value="13 - LFM Guys Discontinued Other";
@@ -267,26 +267,26 @@ public class TC01_P0_Adoption_Product_Colorway_Creation extends WMS_TestBase {
 			System.out.println("Selected ProductSegmentationLSUS value From DropDown");
 			test.log(Status.INFO,
 					"Selected ProductSegmentationLSUS value From DropDown: " + productSegmentationLSUS_Value);
-			addSrceenShot("Selected ProductSegmentationLSUS value From DropDown", test, Capture);
+			addScreenShot("Selected ProductSegmentationLSUS value From DropDown", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.clickOnSave();
 			System.out.println("Clicked On save Button");
 			test.log(Status.INFO, "Clicked On save Button");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 			WaitforPage(4000);
 
 //				String hubOfferdToValue = "Global";
 			colorWayPage.selectHubOfferdToValue(hubOfferdToValue);
 			System.out.println("selected HubOfferd To Value");
 			test.log(Status.INFO, "selected HubOfferd To Value : " + hubOfferdToValue);
-			addSrceenShot("selected HubOfferd To Value", test, Capture);
+			addScreenShot("selected HubOfferd To Value", test, Capture);
 			WaitforPage(4000);
 
 			colorWayPage.clickOnViewProduct();
 			System.out.println("clicked On ViewProduct");
 			test.log(Status.INFO, "Clicked On View Product");
-			addSrceenShot("Clicked On View Product", test, Capture);
+			addScreenShot("Clicked On View Product", test, Capture);
 			WaitforPage(4000);
 
 			boolean isPC9Created = colorWayPage.verifyPC9Creation(test);
@@ -295,50 +295,50 @@ public class TC01_P0_Adoption_Product_Colorway_Creation extends WMS_TestBase {
 			String colorwayCode = productDetailsPage.getColorwayCode(test);
 			System.out.println("Colorway code retrieved: " + colorwayCode);
 			test.log(Status.INFO, "Colorway code retrieved");
-			addSrceenShot("Colorway code retrieved", test, Capture);
+			addScreenShot("Colorway code retrieved", test, Capture);
 			WaitforPage(4000);
 
 			dashboardPage.clickOnSiteNavigationLink();
 			System.out.println("clicked On Site Navigation Link ");
 			test.log(Status.INFO, "clicked On Site Navigation Link");
-			addSrceenShot("clicked On Site Navigation Link", test, Capture);
+			addScreenShot("clicked On Site Navigation Link", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //				String viewType ="1. Adoption";
 			lineSheetPage.selectViewDropdown(viewType);
 			System.out.println("View type is choosen");
 			test.log(Status.INFO, "View type is choosen: " + viewType);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 
 //				String filterType ="BFF Linked FG ";
 			lineSheetPage.filterProductsByColorway(filterType, colorwayCode, test);
 			System.out.println("The Product Is filtered By Its Colorway code");
 			test.log(Status.INFO, "The Product Is filtered By Its Colorway code: " + filterType + "=" + colorwayCode);
-			addSrceenShot("The Product Is filtered By Its Colorway code", test, Capture);
+			addScreenShot("The Product Is filtered By Its Colorway code", test, Capture);
 
 			lineSheetPage.displayTheFilteredProduct(colorwayCode, test);
 			System.out.println("The product Is displayed In the LineSheet: " + productName);
 			test.log(Status.PASS, "Verification: The product Is displayed In the LineSheet: " + productName);
-			addSrceenShot("The product Is displayed In the LineSheet", test, Capture);
+			addScreenShot("The product Is displayed In the LineSheet", test, Capture);
 
 			WaitforPage(4000);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

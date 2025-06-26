@@ -83,71 +83,71 @@ public class TC260_P2_RemoveSourceToColorwayAssociationFromLinesheet extends WMS
 		try {
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers P2 Sourcing module 260 to 263");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + Administrator_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String viewType = "Source Config - View/Edit/Remove Source to Colorway Link";
 			lineSheetPage.selectViewDropdown(viewType);
 			System.out.println("View type is choosen");
 			test.log(Status.PASS, "View type is choosen: " + viewType);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 
 //			String colorWayName = "0WPNU-0000 *Test_copy*";
 			lineSheetPage.filterProduct(colorWayName, test);
 			System.out.println("Filtered By Colorway Name");
 			test.log(Status.INFO, "Filtered By Col orway Name: " + colorWayName);
-			addSrceenShot("Filtered By Colorway Name: ", test, Capture);
+			addScreenShot("Filtered By Colorway Name: ", test, Capture);
 
 			sourcingPage.SelectColorway(test);
 			test.log(Status.INFO, "colorway selected");
-			addSrceenShot("colorway selected", test, Capture);
+			addScreenShot("colorway selected", test, Capture);
 
 			sourcingPage.SelectIncludeAllSources(test);
 			test.log(Status.INFO, "Include All Sources is selected");
-			addSrceenShot("Include All Sources selected", test, Capture);
+			addScreenShot("Include All Sources selected", test, Capture);
 
 			sourcingPage.clickOnApply(test);
 			test.log(Status.INFO, "clicked on apply button");
-			addSrceenShot("clicked on apply button", test, Capture);
+			addScreenShot("clicked on apply button", test, Capture);
 
 			String productName = sourcingPage.getProduct_Name(test);
 			test.log(Status.INFO, "Product Name: " + productName);
 			System.out.println("Product Name: " + productName);
-			addSrceenShot("Product Name: " + productName, test, Capture);
+			addScreenShot("Product Name: " + productName, test, Capture);
 
 			String sourceName = sourcingPage.setDelinkSourceToColorwayToYes(test);
 			if (sourceName.isEmpty()) {
 			    test.log(Status.FAIL, "Failed to set 'Delink Source to Colorway' to Yes");
-			    addSrceenShot("Failed to set 'Delink Source to Colorway' to Yes", test, Capture);
+			    addScreenShot("Failed to set 'Delink Source to Colorway' to Yes", test, Capture);
 			} else {
 			    test.log(Status.PASS, "Set 'Delink Source to Colorway' to Yes");
-			    addSrceenShot("'Delink Source to Colorway' set to Yes", test, Capture);
+			    addScreenShot("'Delink Source to Colorway' set to Yes", test, Capture);
 			}
 			
 			boolean isDlinkSourceVisible = sourcingPage.isDlinkSourceVisible(sourceName);
@@ -163,17 +163,17 @@ public class TC260_P2_RemoveSourceToColorwayAssociationFromLinesheet extends WMS
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.INFO, "PC5 Details Page is displayed: " + productName);
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 			productPage.selectSourceFromDropDown(sourceName, test);
 			System.out.println("selected Source From The Sourcing Drop Down");
 			test.log(Status.INFO, "selected Source From The Sourcing Drop Down" + sourceName);
-			addSrceenShot("selected Source From The Sourcing Drop Down", test, Capture);
+			addScreenShot("selected Source From The Sourcing Drop Down", test, Capture);
 
 			// Verify if the colorway is appearing under 'Colorway' dropdown list
 			boolean isColorwayVisible = sourcingPage.isColorwayVisibleUnderDropdown(colorWayName);
@@ -183,16 +183,16 @@ public class TC260_P2_RemoveSourceToColorwayAssociationFromLinesheet extends WMS
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

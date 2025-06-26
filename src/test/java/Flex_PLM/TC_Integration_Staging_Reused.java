@@ -88,13 +88,13 @@ public class TC_Integration_Staging_Reused extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers material module from 134 to 137");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully" + URL);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -102,13 +102,13 @@ public class TC_Integration_Staging_Reused extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Material");
 			test.log(Status.INFO, "Clicked on Material");
-			addSrceenShot("Clicked on Material", test, Capture);
+			addScreenShot("Clicked on Material", test, Capture);
 			WaitforPage(4000);	
 			
 			((JavascriptExecutor) driver).executeScript("window.open()");
@@ -117,18 +117,18 @@ public class TC_Integration_Staging_Reused extends WMS_TestBase {
 
 			driver.get(URL); 
 			Thread.sleep(4000);
-			addSrceenShot("Opened URL", test, Capture);
+			addScreenShot("Opened URL", test, Capture);
 			
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 			
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_BUSSINESS.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Business Object");
 			test.log(Status.INFO, "Clicked on Business Object");
-			addSrceenShot("Clicked on Business Object", test, Capture);
+			addScreenShot("Clicked on Business Object", test, Capture);
 			WaitforPage(4000);
 
 
@@ -136,41 +136,41 @@ public class TC_Integration_Staging_Reused extends WMS_TestBase {
 			businessObjectPage.chooseBusinessObjectType(businessObjectType);
 		    System.out.println("Business object type chosen: "+businessObjectType);
 		    test.log(Status.INFO, "Business object type chosen: "+businessObjectType);
-		    addSrceenShot("Business object type chosen", test, Capture);
+		    addScreenShot("Business object type chosen", test, Capture);
 		    WaitforPage(4000);
 
 			String actionType =  "Create";
 			businessObjectPage.chooseActionType(actionType);
 		    System.out.println("Action type chosen: "+actionType);
 		    test.log(Status.INFO, "Action type chosen: "+actionType);
-		    addSrceenShot("Action type chosen", test, Capture);
+		    addScreenShot("Action type chosen", test, Capture);
 		    WaitforPage(4000);
 		    
 			String createdDate =  "10/09/2024";
 		    businessObjectPage.enterCreatedDate(createdDate);
 		    System.out.println("Entered Created Date: " + createdDate);
 		    test.log(Status.INFO, "Entered Created Date: " + createdDate);
-		    addSrceenShot("Entered Created Date", test, Capture);
+		    addScreenShot("Entered Created Date", test, Capture);
 		    WaitforPage(4000);
 		    
 		    String messageTableValue =  "*LSCOMaterial*";
 		    businessObjectPage.enterMessageTable(messageTableValue);
 		    System.out.println("Entered Message Table: " + messageTableValue);
 		    test.log(Status.INFO, "Entered Message Table: " + messageTableValue);
-		    addSrceenShot("Entered Created Date", test, Capture);
+		    addScreenShot("Entered Created Date", test, Capture);
 		    WaitforPage(4000);
 		    
 		    String hierarchyValue =  "*LSCO\\Fabric\\Knits*";
 		    businessObjectPage.enterHierarchy(hierarchyValue);
 		    System.out.println("Entered Hierarchy: " + hierarchyValue);
 		    test.log(Status.INFO, "Entered Hierarchy: " + hierarchyValue);
-		    addSrceenShot("Entered Hierarchy", test, Capture);
+		    addScreenShot("Entered Hierarchy", test, Capture);
 		    WaitforPage(4000);
 		    
 		    businessObjectPage.clickSearch();
 		    System.out.println("Clicked on Search");
 		    test.log(Status.INFO, "Clicked on Search");
-		    addSrceenShot("Clicked on Search", test, Capture);
+		    addScreenShot("Clicked on Search", test, Capture);
 		    WaitforPage(4000);
 		    
 		 // Verify the staging row ID

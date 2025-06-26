@@ -85,52 +85,52 @@ public class TC278_P2_AppendComponentToComponentsProductList extends WMS_TestBas
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2025 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "Season selected: " + season);
-			addSrceenShot("Season selected:" + season, test, Capture);
+			addScreenShot("Season selected:" + season, test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 //			String viewType = "Techpack Generation: Garment Developer View";
 			lineSheetPage.selectViewDropdown(viewType);
 			System.out.println("View type is choosen");
 			test.log(Status.INFO, "View type is choosen: " + viewType);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 
 //			String colorWayName = "0WQ55 -  - ACCESORIOS GLOBALES, S.A.  4965   GT";
 			lineSheetPage.filterByColorway(colorWayName, test);
 			test.log(Status.INFO, "Filtered ColorWay by name: " + colorWayName);
-			addSrceenShot("Filtered ColorWay by name: ", test, Capture);
+			addScreenShot("Filtered ColorWay by name: ", test, Capture);
 
 //			String NewComponent = "002 : 832605 - IP5";
 			specificationPage.appendComponentToComponentsProductSection(test, NewComponent);
 			test.log(Status.PASS, "Test Passed: Verify Append Component to Components-Product list");
-			addSrceenShot("Verify Append Component to Components-Product list", test, Capture);
+			addScreenShot("Verify Append Component to Components-Product list", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

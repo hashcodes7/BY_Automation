@@ -90,19 +90,19 @@ public class TC02_P3_CreateMaterialSupplier_CheckLogEntry extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL " + pds_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Material");
 			test.log(Status.INFO, "Clicked on Material");
 			WaitforPage(4000);
@@ -110,24 +110,24 @@ public class TC02_P3_CreateMaterialSupplier_CheckLogEntry extends WMS_TestBase {
 			materialPage.selectMaterialType(materialType, test);
 			System.out.println("Fabric Record Type Was choosen");
 			test.log(Status.INFO, "Fabric Record Type Was choosen: " + materialType);
-			addSrceenShot("Fabric Record Type Was choosen", test, Capture);
+			addScreenShot("Fabric Record Type Was choosen", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.searchMaterial(materialName, test);
 			System.out.println("Searched for the Material");
 			test.log(Status.INFO, "Searched for the Material: " + materialName);
-			addSrceenShot("Searched for the Material", test, Capture);
+			addScreenShot("Searched for the Material", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.clickOnMaterial(materialName);
 			System.out.println("Ciicked On material: " + materialName);
 			test.log(Status.INFO, "Ciicked On material: " + materialName);
-			addSrceenShot("Ciicked On material: ", test, Capture);
+			addScreenShot("Ciicked On material: ", test, Capture);
 
 			materialPage.addSupplier(supplier, test);
 			System.out.println("Searched and selected supplier");
 			test.log(Status.INFO, "Searched and selected supplier:: " + supplier);
-			addSrceenShot("Searched and selected supplier:", test, Capture);
+			addScreenShot("Searched and selected supplier:", test, Capture);
 			WaitforPage(5000);
 
 			// Capture the current time in GMT after adding supplier
@@ -139,11 +139,11 @@ public class TC02_P3_CreateMaterialSupplier_CheckLogEntry extends WMS_TestBase {
 			if (isSupplierInDropdown) {
 				System.out.println("Supplier appears in the dropdown menu for the material.");
 				test.log(Status.PASS, "Verification: Supplier appears in the dropdown menu for the material.");
-				addSrceenShot("Supplier appears in the dropdown menu for the material", test, Capture);
+				addScreenShot("Supplier appears in the dropdown menu for the material", test, Capture);
 			} else {
 				System.out.println("Supplier does not appear in the dropdown menu for the material.");
 				test.log(Status.FAIL, "Supplier does not appear in the dropdown menu for the material.");
-				addSrceenShot("Supplier does not appear in the dropdown menu for the material", test, Capture);
+				addScreenShot("Supplier does not appear in the dropdown menu for the material", test, Capture);
 			}
 
 			boolean isNoColorInDropdown = materialPage.verifyNoColorInDropdown(test);
@@ -151,48 +151,48 @@ public class TC02_P3_CreateMaterialSupplier_CheckLogEntry extends WMS_TestBase {
 				System.out.println("'No color' created under 'Colors' tab for the material-supplier combination");
 				test.log(Status.PASS,
 						"Verification: 'No color' created under 'Colors' tab for the material-supplier combination");
-				addSrceenShot("'No color' created under 'Colors' tab for the material-supplier combination", test,
+				addScreenShot("'No color' created under 'Colors' tab for the material-supplier combination", test,
 						Capture);
 			} else {
 				System.out.println("'No color' does not appear in the Material color dropdown.");
 				test.log(Status.FAIL, "'No color' does not appear in the Material color dropdown.");
-				addSrceenShot("'No color' does not appear in the Material color dropdown", test, Capture);
+				addScreenShot("'No color' does not appear in the Material color dropdown", test, Capture);
 			}
 
 			// Log the exact date
 			test.log(Status.INFO, "material Supplier created on date: " + createddate);
 			System.out.println("material Supplier created on date: " + createddate);
-			addSrceenShot("material Supplier created on date: ", test, Capture);
+			addScreenShot("material Supplier created on date: ", test, Capture);
 
 			WaitforPage(4000);
 			driver.manage().deleteAllCookies();
 			openNewTabAndSwitch();
 			navigateToAdministratorURL();
 			test.log(Status.INFO, "Open new tab and Navigate to the Administrative User for checking Log Entry: - URL - " + admin_URL);
-			addSrceenShot("Navigate to the Administrative User", test, Capture);
+			addScreenShot("Navigate to the Administrative User", test, Capture);
 			Thread.sleep(4000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_LOG_ENTRY.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(2000);
 
 			LogEntrypage.select_LogEntryObject(LogEntryObject, test);
 			System.out.println("Log Entry Object is selected ");
 			test.log(Status.INFO, "Log Entry Object is selected");
-			addSrceenShot("Log Entry Object is selected", test, Capture);
+			addScreenShot("Log Entry Object is selected", test, Capture);
 			Thread.sleep(2000);
 
 			LogEntrypage.Add_criteria(event, createddate, test);
 			System.out.println("Criteria is added ");
 			test.log(Status.INFO, "Criteria is added");
-			addSrceenShot("Criteria is added", test, Capture);
+			addScreenShot("Criteria is added", test, Capture);
 			Thread.sleep(2000);
 
 			LogEntrypage.clickedFirst_viewdetails();
@@ -203,21 +203,21 @@ public class TC02_P3_CreateMaterialSupplier_CheckLogEntry extends WMS_TestBase {
 			LogEntrypage.validate_Logdetails(event, LogEntryObject, test);
 			System.out.println("Validation successful for Log Entry details ");
 			test.log(Status.PASS, "Validation successful for Log Entry details");
-			addSrceenShot("Validation successful for Log Entry details", test, Capture);
+			addScreenShot("Validation successful for Log Entry details", test, Capture);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

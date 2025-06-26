@@ -117,32 +117,32 @@ public class TC61_P0_Linesheet_CopyFilter extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String filterName = "TestFilter two";
 			lineSheetPage.chooseFilter(filterName,test);
 			System.out.println("filter was choosen");
 			test.log(Status.INFO, "filter was choosen: " + filterName);
-			addSrceenShot("filter was choosen", test, Capture);
+			addScreenShot("filter was choosen", test, Capture);
 
 			lineSheetPage.clickOnEditIcon(test);
 			System.out.println("clicked on edit Icon");
 			test.log(Status.INFO, "clicked on edit Icon");
-			addSrceenShot("clicked on edit Icon", test, Capture);
+			addScreenShot("clicked on edit Icon", test, Capture);
 
 			String currentFilterAttributes = lineSheetPage.getCurrentFilterAttribues(test);
 			System.out.println(currentFilterAttributes);
@@ -150,43 +150,43 @@ public class TC61_P0_Linesheet_CopyFilter extends WMS_TestBase {
 			lineSheetPage.clickCopyFilterButton(test);
 			System.out.println("Clicked On Copy filter button");
 			test.log(Status.INFO, "Clicked On Copy button");
-			addSrceenShot("Clicked On Copy button", test, Capture);
+			addScreenShot("Clicked On Copy button", test, Capture);
 
 //			String copyFilterName = "CopiedTestFilterTest4";
 			lineSheetPage.enterNewFilterName(copyFilterName,test);
 			System.out.println("Entered New filter name");
 			test.log(Status.INFO, "Entered New filter name: " + copyFilterName);
-			addSrceenShot("Entered New filter name", test, Capture);
+			addScreenShot("Entered New filter name", test, Capture);
 
 			lineSheetPage.saveCopiedFilter(test);
 			System.out.println("Clicked On Save Copied Filter ");
 			test.log(Status.INFO, "Clicked On Save Copied Filter");
-			addSrceenShot("Clicked On Save Copied Filter", test, Capture);
+			addScreenShot("Clicked On Save Copied Filter", test, Capture);
 
 			String copyfilterAttributes = lineSheetPage.getcopyFilterAttributes(test);
 			System.out.println(copyfilterAttributes);
 
 			lineSheetPage.clickUpdateButton(test);
 			test.log(Status.INFO, "Clicked on Update Button");
-			addSrceenShot("Clicked on Update Button", test, Capture);
+			addScreenShot("Clicked on Update Button", test, Capture);
 
 			lineSheetPage.clickReturnButton(test);
 			test.log(Status.INFO, "Clicked on Return Button");
-			addSrceenShot("Clicked on Return Button", test, Capture);
+			addScreenShot("Clicked on Return Button", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			lineSheetPage.clickFiltersDropdown(test);
 			test.log(Status.INFO, "Clicked on Filters dropdown");
-			addSrceenShot("Clicked on Filters dropdown", test, Capture);
+			addScreenShot("Clicked on Filters dropdown", test, Capture);
 
 			// Verify filter appears in search criteria
 			boolean isFilterPresent = lineSheetPage.isCopyFilterPresentInSearchCriteria(copyFilterName,test);
 			Assert.assertTrue(isFilterPresent, "Copy Filter is not present in search criteria");
 			test.log(Status.PASS, "Verified Copy filter appears in search criteria: " + copyFilterName);
-			addSrceenShot("Verified Copy filter appears in search criteria", test, Capture);
+			addScreenShot("Verified Copy filter appears in search criteria", test, Capture);
 
 			Assert.assertEquals(copyfilterAttributes, currentFilterAttributes, "Filter was not copied successfully");
 			System.out.println("Filter was copied successfully ");
@@ -195,16 +195,16 @@ public class TC61_P0_Linesheet_CopyFilter extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

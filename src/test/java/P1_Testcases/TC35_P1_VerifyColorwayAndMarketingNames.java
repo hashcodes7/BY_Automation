@@ -121,47 +121,47 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers P1 Colorway module from TC35");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + Global_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2023 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 //			String linesheetview = "Adoption";
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			WaitforPage(5000);
 
 //			String colorway = "0WP6W-0001 ULTRAVIOLET HEATHER";
 			Colorwaypage.SelectColorway(colorway, test);
 			test.log(Status.INFO, "Clicked on filtered colorway ");
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 
 			Colorwaypage.editColorWay();
 			test.log(Status.INFO, "Clicked On Edit Colorway from the Menu");
-			addSrceenShot("Clicked On Edit Colorway from the Menu", test, Capture);
+			addScreenShot("Clicked On Edit Colorway from the Menu", test, Capture);
 			WaitforPage(5000);
 
 //			String rigidIndicatorValue = "Normal Product";
@@ -172,7 +172,7 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 					productSegmentationLSUS_Value, test);
 			System.out.println("All mandatory fields filled");
 			test.log(Status.INFO, "All mandatory fields filled");
-			addSrceenShot("All mandatory fields filled", test, Capture);
+			addScreenShot("All mandatory fields filled", test, Capture);
 			WaitforPage(3000);
 
 //			String colorLookType = "Prints and Patterns";
@@ -180,13 +180,13 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 			Colorwaypage.selectPrintPatternColor(colorLookType, printPatternColor, test);
 			System.out.println("Selected Print and pattern type Color: " + printPatternColor);
 			test.log(Status.INFO, "Selected Print and pattern type Color: " + printPatternColor);
-			addSrceenShot("Selected Print and pattern type Color", test, Capture);
+			addScreenShot("Selected Print and pattern type Color", test, Capture);
 			WaitforPage(3000);
 
 			colorWayPage.clickOnSave();
 			System.out.println("Clicked On save Button");
 			test.log(Status.INFO, "Clicked On save Button");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 			WaitforPage(10000);
 
 			String pc9Code = productDetailsPage.getPc9Code(test);
@@ -228,13 +228,13 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}
@@ -271,7 +271,7 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 //productDetailsPage.selectCreateColorwayFromMenu();
 //System.out.println("Clicked on Colorway From Menu");
 //test.log(Status.INFO, "Clicked on Colorway From Menu");
-//addSrceenShot("Clicked on Colorway From Menu", test, Capture);
+//addScreenShot("Clicked on Colorway From Menu", test, Capture);
 
 //try {
 //
@@ -280,43 +280,43 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 //	String expectedBrand = productDetailsPage.getProductBrand();
 //	System.out.println(expectedBrand);
 //	test.log(Status.INFO, "product band captured");
-//	addSrceenShot("product band captured", test, Capture);
+//	addScreenShot("product band captured", test, Capture);
 //
 //	
 //	String expectedCategory = productDetailsPage.getProductCategory();
 //	System.out.println(expectedCategory);
 //	test.log(Status.INFO, "product category captured");
-//	addSrceenShot("product category captured", test, Capture);
+//	addScreenShot("product category captured", test, Capture);
 //
 //
 //	String expectedConsumerGroup = productDetailsPage.getConsumerGroup();
 //	System.out.println(expectedConsumerGroup);
 //	test.log(Status.INFO, "product consumer group captured");
-//	addSrceenShot("product consumer group captured", test, Capture);
+//	addScreenShot("product consumer group captured", test, Capture);
 //
 //
 //	productDetailsPage.clickOnLSEProductSegmentationLink();
 //	System.out.println("Clicked on LSEProductSegmentationLink");
 //	test.log(Status.INFO, "Clicked on LSEProductSegmentationLink");
-//	addSrceenShot("Clicked on LSEProductSegmentationLink", test, Capture);
+//	addScreenShot("Clicked on LSEProductSegmentationLink", test, Capture);
 //
 //
 //	String actualBrand = lseProductSegmentationPage.getLSEProductBrand();
 //	System.out.println(actualBrand);
 //	test.log(Status.INFO, "lse product band captured");
-//	addSrceenShot("lse product band captured", test, Capture);
+//	addScreenShot("lse product band captured", test, Capture);
 //
 //
 //	String actualCategory = lseProductSegmentationPage.getLSEProductCategory();
 //	System.out.println(actualCategory);
 //	test.log(Status.INFO, "lse product category captured");
-//	addSrceenShot("lse product category captured", test, Capture);
+//	addScreenShot("lse product category captured", test, Capture);
 //
 //
 //	String actualConsumerGroup = lseProductSegmentationPage.getLSEConsumerGroup();
 //	System.out.println(actualConsumerGroup);
 //	test.log(Status.INFO, "lse product consumer group captured");
-//	addSrceenShot("lse product consumer group captured", test, Capture);
+//	addScreenShot("lse product consumer group captured", test, Capture);
 //
 //
 //	Assert.assertEquals(actualBrand, expectedBrand, "Brand does not match!");
@@ -325,6 +325,6 @@ public class TC35_P1_VerifyColorwayAndMarketingNames extends WMS_TestBase {
 //
 //} catch (Exception e) {
 //	System.out.println("Test case failed due to application slowness" + e);
-//	test.log(Status.FAIL, "Test case failed due to application slowness");
+//	test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 //
 //}

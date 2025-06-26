@@ -70,29 +70,29 @@ public class TC29_P3_BomAPP_Search_UsingAllAttributes extends WMS_TestBase {
 			BOMPage.navigateToBOMApp();
 			test.log(Status.INFO, "Navigated to BOM App");
 			System.out.println("Navigated to BOM App");
-			addSrceenShot("Navigated to BOM App", test, Capture);
+			addScreenShot("Navigated to BOM App", test, Capture);
 
 			BOMPage.login(username, password, test);
-			addSrceenShot("Logged into BOM App", test, Capture);
+			addScreenShot("Logged into BOM App", test, Capture);
 
 			BOMPage.SearchUsingAttributes(season, colorwaycode, productcode, Merchant, material, available, carryover,
 					test);
 			System.out.println("Search using all required attributes are completed");
 			test.log(Status.INFO, "Search using all required attributes are completed");
-			addSrceenShot("Search using all required attributes are completed", test, Capture);
+			addScreenShot("Search using all required attributes are completed", test, Capture);
 
 			BOMPage.Validate_BomsDetails(test);
 			System.out.println("Validation successful for Searching in Bom APP using required attributes");
 			test.log(Status.PASS, "Validation successful for Searching in Bom APP using required attributes");
-			addSrceenShot("Validation successful for Searching in Bom APP using required attributes", test, Capture);
+			addScreenShot("Validation successful for Searching in Bom APP using required attributes", test, Capture);
 
 			BOMPage.logout(test);
 			test.log(Status.INFO, "Logged out of BOM App");
-			addSrceenShot("Logged out of BOM App", test, Capture);
+			addScreenShot("Logged out of BOM App", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

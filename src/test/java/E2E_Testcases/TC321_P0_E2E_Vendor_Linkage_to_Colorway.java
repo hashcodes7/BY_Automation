@@ -109,82 +109,82 @@ public class TC321_P0_E2E_Vendor_Linkage_to_Colorway extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched", test, Capture);
+			addScreenShot("Browser Launched", test, Capture);
 
 			test.log(Status.INFO, "This test case covers E2E module from 321 to 323");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: " + PDS_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2024 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			lineSheetPage.selectViewDropdown(viewType);
 			System.out.println("View type is choosen");
 			test.log(Status.PASS, "View type is choosen: " + viewType);
-			addSrceenShot("View type is choosen", test, Capture);
+			addScreenShot("View type is choosen", test, Capture);
 
 //			String colorWayName = "0WPK5-0003 *Test_copy*";
 			lineSheetPage.filterProduct(colorWayName, test);
 			System.out.println("Filtred By Colorway name");
 			test.log(Status.INFO, "Filtred By Colorway name: " + colorWayName);
-			addSrceenShot("Filtred By Colorway name", test, Capture);
+			addScreenShot("Filtred By Colorway name", test, Capture);
 			WaitforPage(4000);
 
 //			List<String> vendorNames = Arrays.asList("ACCESSORIES BAGS & COSMETICS");
 			sourcingPage.selectVendors_FromList(vendorNames, test);
 			test.log(Status.INFO, "Selected vendors from Vendor List");
-			addSrceenShot("Selected vendors from Vendor List", test, Capture);
+			addScreenShot("Selected vendors from Vendor List", test, Capture);
 
 			sourcingPage.clickOnSaveBtn(test);
 			System.out.println("Clicked On save button");
 			test.log(Status.INFO, "Clicked On Save button");
-			addSrceenShot("Clicked On Save button", test, Capture);
+			addScreenShot("Clicked On Save button", test, Capture);
 
 			// Verify the view page after saving the linesheet
 			boolean isVendorListBlank = sourcingPage.isVendorListBlank();
 			test.log(Status.PASS, "Verification: Vendor List is blank: " + isVendorListBlank);
-			addSrceenShot("Vendor List is blank", test, Capture);
+			addScreenShot("Vendor List is blank", test, Capture);
 			WaitforPage(4000);
 
 			// Verify success message
 			sourcingPage.verifySuccessMessage(test);
 			test.log(Status.PASS, "Verified 'Source to Colorway Association Status' set as 'Success'.");
-			addSrceenShot("'Source to Colorway Association Status' set as 'Success'", test, Capture);
+			addScreenShot("'Source to Colorway Association Status' set as 'Success'", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

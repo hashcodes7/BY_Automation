@@ -81,56 +81,56 @@ public class TC318_P0_E2E_BulkBOMURL extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "left panel opened");
-			addSrceenShot("left panel opened", test, Capture);
+			addScreenShot("left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			WaitforPage(10000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.PASS, "Techpack Garment Developer view is selected ");
-			addSrceenShot("Techpack Garment Developer view is selected ", test, Capture);
+			addScreenShot("Techpack Garment Developer view is selected ", test, Capture);
 			System.out.println("Techpack Garment Developer view is selected ");
 			
 			Thread.sleep(2000);
 			
 			Techpackpages.filterdata(sourcename);
 			test.log(Status.PASS, "Source filtered "+sourcename);
-			addSrceenShot("Source filtered "+sourcename, test, Capture);
+			addScreenShot("Source filtered "+sourcename, test, Capture);
 			System.out.println("Source filtered "+sourcename);
 			
 			Thread.sleep(5000);
 			
 			Techpackpages.Download_BULK_BOM_File(test);
 			test.log(Status.PASS, "File is generated with download URL");
-			addSrceenShot("File is generated with download URL", test, Capture);
+			addScreenShot("File is generated with download URL", test, Capture);
 			System.out.println("File is generated with download URL");
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}	

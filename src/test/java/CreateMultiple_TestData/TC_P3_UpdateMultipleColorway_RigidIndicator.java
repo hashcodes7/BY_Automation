@@ -89,41 +89,41 @@ public class TC_P3_UpdateMultipleColorway_RigidIndicator extends WMS_TestBase {
 
 				dashboardPage.openLeftPanel();
 				test.log(Status.INFO, "Left panel opened");
-				addSrceenShot("Left panel opened", test, Capture);
+				addScreenShot("Left panel opened", test, Capture);
 
 				mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 				test.log(Status.INFO, "My seasons menu clicked");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				Colorwaypage.SeasonDropdown(season, test);
 				test.log(Status.INFO, "season selected: " + season);
-				addSrceenShot("season selected", test, Capture);
+				addScreenShot("season selected", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 				WaitforPage(5000);
 				LineSheetEditPage.filter_View_Change(linesheetview, test);
 				test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-				addSrceenShot("Linesheet view is " + linesheetview, test, Capture);
+				addScreenShot("Linesheet view is " + linesheetview, test, Capture);
 				Thread.sleep(2000);
 
 				Colorwaypage.SelectColorway(colorway, test);
 				System.out.println("Colorway selected: " + colorway);
 				test.log(Status.INFO, "colorway details page opened ");
-				addSrceenShot("colorway details page opened ", test, Capture);
+				addScreenShot("colorway details page opened ", test, Capture);
 				Thread.sleep(2000);
 
 				String expectedrigidindicator = Colorwaypage.rigidIndicatorvalue(test);
 				System.out.println("Expected Rigid indicator is  " + expectedrigidindicator);
 				test.log(Status.INFO, "Expected Rigid indicator is  " + expectedrigidindicator);
-				addSrceenShot("Expected Rigid indicator is  " + expectedrigidindicator, test, Capture);
+				addScreenShot("Expected Rigid indicator is  " + expectedrigidindicator, test, Capture);
 
 				Colorwaypage.Validate_RigidIndicator_updatecolorway_AfterSetupLSE(expectedrigidindicator, test);
 				test.log(Status.PASS, "Validation Successful for rigid indicator");
 				System.out.println("Validation Successful for rigid indicator");
-				addSrceenShot("Validation Successful for rigid indicator", test, Capture);
+				addScreenShot("Validation Successful for rigid indicator", test, Capture);
 
 				if (i == testData.length - 1) {
 					// Last iteration, perform logout
@@ -131,7 +131,7 @@ public class TC_P3_UpdateMultipleColorway_RigidIndicator extends WMS_TestBase {
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 
 				} else {
 
@@ -147,7 +147,7 @@ public class TC_P3_UpdateMultipleColorway_RigidIndicator extends WMS_TestBase {
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-			test.log(Status.FAIL, "Test case failed due to application slowness");
+			test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 			throw e;
 			}
 		}

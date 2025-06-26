@@ -81,58 +81,58 @@ public class TC182_P1_addPD_GD_Designer_UpdateColorway extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 					
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Colorwaypage.SelectColorway(colorway,test);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 			
 			Colorwaypage.NavigateTo_updatecolorway();
 			System.out.println("Navigated to Edit colorway page ");
 			test.log(Status.INFO, " Navigated to Edit colorway page ");
-			addSrceenShot("Navigated to Edit colorway page ", test, Capture);
+			addScreenShot("Navigated to Edit colorway page ", test, Capture);
 			
 			Colorwaypage.Update_PDS_GD_merchant_designer_value(merchant,fieldPDS,garmentdeveloper,designer,test);
 			System.out.println("Updated Team contacts from update colorway page ");
 			test.log(Status.INFO, "Updated Team contacts from update colorway page");
-			addSrceenShot("Updated Team contacts from update colorway page ", test, Capture);
+			addScreenShot("Updated Team contacts from update colorway page ", test, Capture);
 			
 			Thread.sleep(5000);
 			Colorwaypage.Validate_TeamContactsvalue(merchant,fieldPDS,garmentdeveloper,designer,test);
 			test.log(Status.PASS, "Validation Successful for Team Contacts Attributes");
 			System.out.println("Validation Successful for Team Contacts Attributes");
-			addSrceenShot("Validation Successful for Team Contacts Attributes", test, Capture);
+			addScreenShot("Validation Successful for Team Contacts Attributes", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 					
 		} catch (Exception e) {
  			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -453,7 +453,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 						+ ", Sub Class - " + updatedSubClassValue + ", Consumer - " + updatedConsumer
 						+ ", Consumer Group 1 - " + updatedConsumerGrp1 + ", Consumer Group 2 - " + updatedConsumerGrp2
 						+ ", Customs Classification - " + updatedCustomsClassification);
-		addSrceenShot("Updated product details", test, Capture);
+		addScreenShot("Updated product details", test, Capture);
 	}
 
 
@@ -659,7 +659,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 				&& UseProductTemplateValue.equalsIgnoreCase("No")) {
 			System.out.println("LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation,BlankLinked,UseProductTemplateValue,CreateColorwayBOMsValue values are No ");
 			test.log(Status.INFO,"LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation,BlankLinked,UseProductTemplateValue,CreateColorwayBOMsValue values are No ");
-			addSrceenShot("LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation,BlankLinked,CreateColorwayBOMsValue,UseProductTemplateValue values are No ", test, Capture);
+			addScreenShot("LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation,BlankLinked,CreateColorwayBOMsValue,UseProductTemplateValue values are No ", test, Capture);
 			
 		}
 		
@@ -674,7 +674,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 			if(Attributeslist.get(i).getText().isEmpty()) {
 				System.out.println("The value of  "+ Attributesname.get(i)+"  is blank/empty");
 				test.log(Status.INFO,"The value of  "+ Attributesname.get(i)+"  is blank/empty");
-				addSrceenShot("The value of  "+ Attributesname.get(i)+"  is blank/empty", test, Capture);
+				addScreenShot("The value of  "+ Attributesname.get(i)+"  is blank/empty", test, Capture);
 				
 			}else {
 				System.out.println("The value of  "+ Attributesname.get(i)+"  is  not blank/empty");
@@ -705,7 +705,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 //					+ "SizeGridErrorMsg,Designer,FieldPDSObjRef,GarmentDeveloperObjRef,MerchantObjRef,PDSObjRef,"
 //					+ "ProductManagerObjRef,BriefCode,ChinaApproved,CarryoverComponents,OriginalBFF,SAPFeedback,BOMComments Values are"
 //					+ " set to blank ");
-//			addSrceenShot("LSEValidationReport,LSUSValidationReport,LSEStatus,LSUSStatus,Seasonal,"
+//			addScreenShot("LSEValidationReport,LSUSValidationReport,LSEStatus,LSUSStatus,Seasonal,"
 //					+ "SourcePC9Status,LinkSrcToPC9,VendorList,SizeGridCodeProcessStatus,SizeGridErrorDetails,"
 //					+ "SizeGridErrorMsg,Designer,FieldPDSObjRef,GarmentDeveloperObjRef,MerchantObjRef,PDSObjRef,"
 //					+ "ProductManagerObjRef,BriefCode,ChinaApproved,CarryoverComponents,OriginalBFF,SAPFeedback,BOMComments Values are"
@@ -715,19 +715,19 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 		if (NewCarryoverValue.equalsIgnoreCase("New") ) {
 			System.out.println("NewCarryover value is set to New ");
 			test.log(Status.INFO,"NewCarryover value is set to New  ");
-			addSrceenShot("NewCarryover value is set to New ", test, Capture);
+			addScreenShot("NewCarryover value is set to New ", test, Capture);
 		}
 
 		if (GTMTrackValue.equalsIgnoreCase("Standard") && TechPackGroupingValue.equalsIgnoreCase("Standard")) {
 			System.out.println("GTMTrack,TechPackGrouping values are Standard ");
 			test.log(Status.INFO,"GTMTrack,TechPackGrouping values are Standard ");
-			addSrceenShot("GTMTrack,TechPackGrouping values are Standard ", test, Capture);
+			addScreenShot("GTMTrack,TechPackGrouping values are Standard ", test, Capture);
 		}
 
 		if(!ColorwayCodeValue.isEmpty() || !ProductCodeValue.isEmpty() || !OrgnlDevSeasonValue.isEmpty()) {
 			System.out.println("  ColorwayCode,ProductCode and originaldevseason value is populating according to the copied product and not null ");
 			test.log(Status.INFO,"  ColorwayCode,ProductCode and originaldevseason value is populating according to the copied product and not null ");
-			addSrceenShot("  ColorwayCode,ProductCode and originaldevseason value is populating according to the copied product and not null ", test, Capture);
+			addScreenShot("  ColorwayCode,ProductCode and originaldevseason value is populating according to the copied product and not null ", test, Capture);
 		}
 
 //		String[] strings = {LSECSTriggerValue,LSECSTriggerValue,LSEValidationValue,LSUSValidationValue,
@@ -796,7 +796,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 				&& LSEValidationValue.equalsIgnoreCase("No") && LSUSValidationValue.equalsIgnoreCase("No")) {
 			System.out.println("LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation values are No ");
 			test.log(Status.INFO,"LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation values are No ");
-			addSrceenShot("LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation values are No ", test, Capture);
+			addScreenShot("LSECSTrigger,LSECSTrigger,LSEValidation,LSUSValidation values are No ", test, Capture);
 			
 			
 			
@@ -807,7 +807,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 			System.out.println(
 					"LSEValidationReport,LSUSValidationReport,LSEStatus,LSUSStatus,SAPFeedback values are set to Blank ");
 			test.log(Status.INFO,"LSEValidationReport,LSUSValidationReport,LSEStatus,LSUSStatus,SAPFeedback values are set to Blank ");
-			addSrceenShot("LSEValidationReport,LSUSValidationReport,LSEStatus,LSUSStatus,SAPFeedback values are set to Blank ", test, Capture);
+			addScreenShot("LSEValidationReport,LSUSValidationReport,LSEStatus,LSUSStatus,SAPFeedback values are set to Blank ", test, Capture);
 		}
 	}
 	
@@ -876,7 +876,7 @@ public class Copy_carryover_page extends WMS_WebDriverUtilities {
 			if(Attributeslist.get(i).getText().isEmpty()) {
 				System.out.println("The value of  "+ Attributesname.get(i)+"  is blank/empty");
 				test.log(Status.INFO,"The value of  "+ Attributesname.get(i)+"  is blank/empty");
-				addSrceenShot("The value of  "+ Attributesname.get(i)+"  is blank/empty", test, Capture);
+				addScreenShot("The value of  "+ Attributesname.get(i)+"  is blank/empty", test, Capture);
 				
 			}else if(Attributeslist.get(i).getText().equalsIgnoreCase("no")){
 				System.out.println("The value of  "+ Attributesname.get(i)+"  is No ");

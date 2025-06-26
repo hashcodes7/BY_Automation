@@ -66,48 +66,48 @@ public class TC03_P1_UpdateExistingHeather_verifyName extends WMS_TestBase{
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(3000);
 
 			Colorwaypage.select_Heathers(createdfrom);
 			test.log(Status.INFO, "Created from date selected: "+createdfrom);
 			System.out.println("Created from date selected: "+createdfrom);
-			addSrceenShot("Created from date selected", test, Capture);
+			addScreenShot("Created from date selected", test, Capture);
 			
 			Colorwaypage.filtercolor(colorname);
 			test.log(Status.INFO, "Filtered color selected: "+colorname);
 			System.out.println("Filtered color selected: "+colorname);
-			addSrceenShot("Filtered color selected", test, Capture);
+			addScreenShot("Filtered color selected", test, Capture);
 			
 			Colorwaypage.click_Heathers_color();
 			test.log(Status.INFO, "Clicked heathers color");
 			System.out.println("Clicked heathers color");
-			addSrceenShot("Clicked heathers color ", test, Capture);
+			addScreenShot("Clicked heathers color ", test, Capture);
 			
 			Colorwaypage.updateHeathercolor(newcolorname);
 			test.log(Status.INFO, "Updated heathers color name and the color name is:   "+newcolorname);
 			System.out.println("Updated heathers color name and the color name is:   "+newcolorname);
-			addSrceenShot("Updated heathers color name and the color name is:   "+newcolorname, test, Capture);
+			addScreenShot("Updated heathers color name and the color name is:   "+newcolorname, test, Capture);
 			
 			Colorwaypage.Validate_colorname_searchcode(test);
 			test.log(Status.PASS, "Validated colorname and searchcode successfully ");
 			System.out.println("Validated colorname and searchcode successfully ");
-			addSrceenShot("Validated colorname and searchcode successfully", test, Capture);
+			addScreenShot("Validated colorname and searchcode successfully", test, Capture);
 	
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, " Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

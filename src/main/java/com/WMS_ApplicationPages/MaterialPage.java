@@ -319,12 +319,12 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			String materialCode = materialCodeElement.getText();
 			System.out.println("Material code is updated correctly: " + materialCode);
 			test.log(Status.PASS, "Material code is updated correctly: " + materialCode);
-			addSrceenShot("Material code is updated correctly", test, Capture);
+			addScreenShot("Material code is updated correctly", test, Capture);
 			return materialCode;
 		} else {
 			System.out.println("Material code is not updated correctly.");
 			test.log(Status.FAIL, "Material code is not updated correctly.");
-			addSrceenShot("Material code is not updated correctly", test, Capture);
+			addScreenShot("Material code is not updated correctly", test, Capture);
 			return null;
 		}
 	}
@@ -375,7 +375,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 		test.log(Status.INFO, "Selected Fabric Mill");
 
-		addSrceenShot("Selected Fabric Mill", test, Capture);
+		addScreenShot("Selected Fabric Mill", test, Capture);
 
 	}
 
@@ -399,13 +399,13 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 				test.log(Status.PASS, "Fabric code is associated with Look Finish: " + associatedFabricCodes);
 
-				addSrceenShot("Fabric code association", test, Capture);
+				addScreenShot("Fabric code association", test, Capture);
 
 			} else {
 
 				test.log(Status.FAIL, "Fabric code is not associated with Look Finish: " + associatedFabricCodes);
 
-				addSrceenShot("Fabric code association failed", test, Capture);
+				addScreenShot("Fabric code association failed", test, Capture);
 
 			}
 
@@ -415,7 +415,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 			test.log(Status.ERROR, "Error occurred while verifying fabric code association: " + e.getMessage());
 
-			addSrceenShot("Error in fabric code association", test, Capture);
+			addScreenShot("Error in fabric code association", test, Capture);
 
 			return false;
 
@@ -652,7 +652,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 					.sendKeys(Keys.BACK_SPACE).perform();
 			actions.moveToElement(sizeSearchBox).click().sendKeys(size).build().perform();
 			test.log(Status.INFO, "Entered/updated Size: " + size);
-			addSrceenShot("Entered/updated Size", test, Capture);
+			addScreenShot("Entered/updated Size", test, Capture);
 		}
 
 	}
@@ -742,7 +742,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 					.sendKeys(Keys.BACK_SPACE).perform();
 			actions.moveToElement(sizeLengthSearchBox).click().sendKeys(sizeLength).build().perform();
 			test.log(Status.INFO, "Entered/updated Size Length: " + sizeLength);
-			addSrceenShot("Entered Size Length: ", test, Capture);
+			addScreenShot("Entered Size Length: ", test, Capture);
 
 		} else if (sundryType.equals(sundryType)) {
 			Thread.sleep(1000);
@@ -762,7 +762,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 					.sendKeys(Keys.BACK_SPACE).perform();
 			actions.moveToElement(sizeWidthSearchBox).click().sendKeys(sizeWidth).build().perform();
 			test.log(Status.INFO, "Entered/updated Size Width: " + sizeWidth);
-			addSrceenShot("Entered Size Width: ", test, Capture);
+			addScreenShot("Entered Size Width: ", test, Capture);
 		} else if (sundryType.equals(sundryType)) {
 			Thread.sleep(1000);
 		}
@@ -968,7 +968,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 		String materialCode = materialCodeElement.getText();
 		test.log(Status.INFO, "Material Code: " + materialCode);
-		addSrceenShot("Material Code", test, Capture);
+		addScreenShot("Material Code", test, Capture);
 
 		return materialCode;
 //		return materialCodeElement.getText();
@@ -982,7 +982,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 		String raymarkFiberCode = raymarkFiberCodeCodeElement.getText();
 		test.log(Status.INFO, "Raymark Fiber Code: " + raymarkFiberCode);
-		addSrceenShot("Raymark Fiber Code", test, Capture);
+		addScreenShot("Raymark Fiber Code", test, Capture);
 
 		return raymarkFiberCode;
 //		return raymarkFiberCodeCodeElement.getText();
@@ -998,22 +998,22 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			js.executeScript("arguments[0].scrollIntoView(true);", fabricTypeInput);
 			String displayedFabricType = fabricTypeInput.getText();
 			test.log(Status.INFO, "Displayed Fabric Type: " + displayedFabricType);
-			addSrceenShot("Displayed Fabric Type", test, Capture);
+			addScreenShot("Displayed Fabric Type", test, Capture);
 
 			js.executeScript("arguments[0].scrollIntoView(true);", fabricDescriptionInput);
 			String displayedFabricDescription = fabricDescriptionInput.getText();
 			test.log(Status.INFO, "Displayed Fabric Description: " + displayedFabricDescription);
-			addSrceenShot("Displayed Fabric Description", test, Capture);
+			addScreenShot("Displayed Fabric Description", test, Capture);
 
 			js.executeScript("arguments[0].scrollIntoView(true);", seasonFirstIntroducedInput);
 			String displayedSeasonFirstIntroduced = seasonFirstIntroducedInput.getText();
 			test.log(Status.INFO, "Displayed Season First Introduced: " + displayedSeasonFirstIntroduced);
-			addSrceenShot("Displayed Season First Introduced", test, Capture);
+			addScreenShot("Displayed Season First Introduced", test, Capture);
 
 			js.executeScript("arguments[0].scrollIntoView(true);", uomInput);
 			String displayedUOM = uomInput.getText();
 			test.log(Status.INFO, "Displayed UOM: " + displayedUOM);
-			addSrceenShot("Displayed UOM", test, Capture);
+			addScreenShot("Displayed UOM", test, Capture);
 
 			boolean isUpdated = displayedFabricType.equals(fabricType)
 					&& displayedSeasonFirstIntroduced.equals(seasonFirstIntroduced)
@@ -1021,16 +1021,16 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 			if (isUpdated) {
 				test.log(Status.PASS, "Material attributes updated successfully");
-				addSrceenShot("Material attributes updated successfully", test, Capture);
+				addScreenShot("Material attributes updated successfully", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Material attributes update failed");
-				addSrceenShot("Material attributes update failed", test, Capture);
+				addScreenShot("Material attributes update failed", test, Capture);
 			}
 
 			return isUpdated;
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Element not found: " + e.getMessage());
-			addSrceenShot("Element not found", test, Capture);
+			addScreenShot("Element not found", test, Capture);
 			return false;
 		}
 	}
@@ -1054,10 +1054,10 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 		boolean isCreated = actualDescription.equals(finishRecipeDescription);
 		if (isCreated) {
 			test.log(Status.PASS, "Finish record created with description: " + finishRecipeDescription);
-			addSrceenShot("Finish record created", test, Capture);
+			addScreenShot("Finish record created", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Finish record not created with description: " + finishRecipeDescription);
-			addSrceenShot("Finish record not created", test, Capture);
+			addScreenShot("Finish record not created", test, Capture);
 		}
 
 		return isCreated;
@@ -1088,16 +1088,16 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 			if (isCreated) {
 				test.log(Status.PASS, "Sundry record created with description: " + sundryDescription);
-				addSrceenShot("Sundry record created", test, Capture);
+				addScreenShot("Sundry record created", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Sundry record not created with description: " + sundryDescription);
-				addSrceenShot("Sundry record not created", test, Capture);
+				addScreenShot("Sundry record not created", test, Capture);
 			}
 
 			return isCreated;
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Error while verifying sundry record creation: " + e.getMessage());
-			addSrceenShot("Error while verifying sundry record creation", test, Capture);
+			addScreenShot("Error while verifying sundry record creation", test, Capture);
 			return false;
 		}
 //		return actualDescription.equals(sundryDescription);
@@ -1132,12 +1132,12 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			String materialCode = materialCodeElement.getText();
 			System.out.println("Material code is updated correctly: " + materialCode);
 			test.log(Status.PASS, "Material code is updated correctly: " + materialCode);
-			addSrceenShot("Material code is updated correctly", test, Capture);
+			addScreenShot("Material code is updated correctly", test, Capture);
 			return true;
 		} else {
 			System.out.println("Material code is not updated correctly.");
 			test.log(Status.FAIL, "Material code is not updated correctly.");
-			addSrceenShot("Material code is not updated correctly", test, Capture);
+			addScreenShot("Material code is not updated correctly", test, Capture);
 
 			return false;
 		}
@@ -1234,16 +1234,16 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			if (isCreated) {
 				test.log(Status.PASS, "Material created with description: " + actualMaterialName);
 				System.out.println("Material created with description: " + actualMaterialName);
-				addSrceenShot("Sundry record created", test, Capture);
+				addScreenShot("Sundry record created", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Material is  not created with description: " + actualMaterialName);
-				addSrceenShot("Sundry record not created", test, Capture);
+				addScreenShot("Sundry record not created", test, Capture);
 			}
 
 			return isCreated;
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Error while verifying Material creation: " + e.getMessage());
-			addSrceenShot("Error while verifying Material creation", test, Capture);
+			addScreenShot("Error while verifying Material creation", test, Capture);
 			return false;
 		}
 	}
@@ -1488,7 +1488,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			js.executeScript("arguments[0].click();", supChoose);
 			new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(supSelect)).click();
 			test.log(Status.INFO, "supplier was selected: " + supplier);
-			addSrceenShot("supplier was selected", test, Capture);
+			addScreenShot("supplier was selected", test, Capture);
 			System.out.println("supplier details are added to the material");
 			Thread.sleep(3000);
 			driver.switchTo().window(ParentWinhadle);
@@ -1507,7 +1507,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(supplierDropdown));
 			supplierDropdown.click();
 			test.log(Status.INFO, "Supplier dropdown values are visible");
-			addSrceenShot("Supplier dropdown values are visible", test, Capture);
+			addScreenShot("Supplier dropdown values are visible", test, Capture);
 			Thread.sleep(3000);
 
 			new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(supplierDropdownValues));
@@ -1517,17 +1517,17 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			for (WebElement option : options) {
 				if (option.getText().contains(supplier)) {
 					test.log(Status.INFO, "Supplier found in dropdown: " + supplier);
-					addSrceenShot("Supplier found in dropdown", test, Capture);
+					addScreenShot("Supplier found in dropdown", test, Capture);
 					option.click();
 					test.log(Status.INFO, "Supplier was selected fromin dropdown: " + supplier);
 					return true;
 				}
 			}
 			test.log(Status.FAIL, "Supplier not found in dropdown: " + supplier);
-			addSrceenShot("Supplier not found in dropdown", test, Capture);
+			addScreenShot("Supplier not found in dropdown", test, Capture);
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Supplier dropdown not found or interrupted: " + e.getMessage());
-			addSrceenShot("Supplier dropdown not found or interrupted", test, Capture);
+			addScreenShot("Supplier dropdown not found or interrupted", test, Capture);
 		}
 		return false;
 	}
@@ -1539,11 +1539,11 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(materialColorDropdown));
 			materialColorDropdown.click();
 			test.log(Status.INFO, "Clicked on Material color dropdown");
-			addSrceenShot("Clicked on Material color dropdown", test, Capture);
+			addScreenShot("Clicked on Material color dropdown", test, Capture);
 			Thread.sleep(3000);
 
 			test.log(Status.INFO, "Material color dropdown values are visible");
-			addSrceenShot("Material color dropdown values are visible", test, Capture);
+			addScreenShot("Material color dropdown values are visible", test, Capture);
 
 			List<WebElement> options = driver.findElements(
 					By.xpath("//div[contains(text(),'Material Color')]/following-sibling::div/following::li"));
@@ -1552,15 +1552,15 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			for (WebElement option : options) {
 				if (option.getText().contains("No Color")) {
 					test.log(Status.INFO, "'No color' found in Material color dropdown");
-					addSrceenShot("'No color' found in Material color dropdown", test, Capture);
+					addScreenShot("'No color' found in Material color dropdown", test, Capture);
 					return true;
 				}
 			}
 			test.log(Status.FAIL, "'No color' not found in Material color dropdown");
-			addSrceenShot("'No color' not found in Material color dropdown", test, Capture);
+			addScreenShot("'No color' not found in Material color dropdown", test, Capture);
 		} catch (NoSuchElementException | InterruptedException e) {
 			test.log(Status.FAIL, "Material color dropdown not found or interrupted: " + e.getMessage());
-			addSrceenShot("Material color dropdown not found or interrupted", test, Capture);
+			addScreenShot("Material color dropdown not found or interrupted", test, Capture);
 		}
 		return false;
 	}
@@ -1593,7 +1593,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 		driver.switchTo().window(ParentWinhadle);
 
 		test.log(Status.INFO, "Selected Fabric Mill");
-		addSrceenShot("Selected Fabric Mill", test, Capture);
+		addScreenShot("Selected Fabric Mill", test, Capture);
 
 	}
 
@@ -1638,20 +1638,20 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 				test.log(Status.INFO,
 						"Primary indicator on Material supplier is set to Yes for first Supplier added to Material: "
 								+ primaryIndicatorValue);
-				addSrceenShot(
+				addScreenShot(
 						"Primary indicator on Material supplier is set to Yes for first Supplier added to Material",
 						test, Capture);
 				return true;
 			} else {
 				test.log(Status.FAIL,
 						"Primary indicator on Material supplier is not set to Yes for first Supplier added to Material.");
-				addSrceenShot(
+				addScreenShot(
 						"Primary indicator on Material supplier is not set to Yes for first Supplier added to Material",
 						test, Capture);
 			}
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Primary indicator attribute not found or interrupted: " + e.getMessage());
-			addSrceenShot("Primary indicator attribute not found or interrupted", test, Capture);
+			addScreenShot("Primary indicator attribute not found or interrupted", test, Capture);
 		}
 		return false;
 	}
@@ -1666,17 +1666,17 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			if (priceUOMValue.equals(expectedUOM)) {
 				test.log(Status.INFO, "Price UOM - '" + priceUOMValue
 						+ "'on Material Supplier is updated from UOM attribute on Material - '" + expectedUOM + "'");
-				addSrceenShot("Price UOM on Material Supplier is updated from UOM attribute on Material", test,
+				addScreenShot("Price UOM on Material Supplier is updated from UOM attribute on Material", test,
 						Capture);
 				return true;
 			} else {
 				test.log(Status.FAIL, "Price UOM on Material Supplier is not updated from UOM attribute on Material.");
-				addSrceenShot("Price UOM on Material Supplier is not updated from UOM attribute on Material", test,
+				addScreenShot("Price UOM on Material Supplier is not updated from UOM attribute on Material", test,
 						Capture);
 			}
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Price UOM attribute not found or interrupted: " + e.getMessage());
-			addSrceenShot("Price UOM attribute not found or interrupted", test, Capture);
+			addScreenShot("Price UOM attribute not found or interrupted", test, Capture);
 		}
 		return false;
 	}
@@ -1721,7 +1721,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 						test.log(Status.INFO,
 								"Material supplier staging row id is updated on the Material Supplier Details Page: "
 										+ stagingRowIdValue);
-						addSrceenShot(
+						addScreenShot(
 								"Material supplier staging row id is updated on the Material Supplier Details Page",
 								test, Capture);
 						isUpdated = true;
@@ -1732,14 +1732,14 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 				if (!isUpdated) {
 					test.log(Status.INFO,
 							"Material supplier staging row id is not updated on the Material Supplier Details Page");
-					addSrceenShot(
+					addScreenShot(
 							"Material supplier staging row id is not updated on the Material Supplier Details Page",
 							test, Capture);
 				}
 			} else {
 				test.log(Status.INFO,
 						"Material supplier staging row id is not updated on the Material Supplier Details Page in PDS.");
-				addSrceenShot(
+				addScreenShot(
 						"Material supplier staging row id is not updated on the Material Supplier Details Page in PDS",
 						test, Capture);
 			}
@@ -1778,20 +1778,20 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 //					test.log(Status.INFO,
 //							"Material supplier staging row id is updated on the Material Supplier Details Page: "
 //									+ stagingRowIdValue);
-//					addSrceenShot("Material supplier staging row id is updated on the Material Supplier Details Page",
+//					addScreenShot("Material supplier staging row id is updated on the Material Supplier Details Page",
 //							test, Capture);
 //					return true;
 //				} else {
 //					test.log(Status.INFO,
 //							"Material supplier staging row id is not updated on the Material Supplier Details Page");
-//					addSrceenShot(
+//					addScreenShot(
 //							"Material supplier staging row id is not updated on the Material Supplier Details Page",
 //							test, Capture);
 //				}
 //			} else {
 //				test.log(Status.INFO,
 //						"Material supplier staging row id is not updated on the Material Supplier Details Page in PDS.");
-//				addSrceenShot(
+//				addScreenShot(
 //						"Material supplier staging row id is not updated on the Material Supplier Details Page in PDS",
 //						test, Capture);
 //			}
@@ -1812,17 +1812,17 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 				test.log(Status.PASS, "Material Country of Origin attribute is correctly updated.");
 				test.log(Status.INFO, "Material Country of Origin - " + countryOfOrigin
 						+ " attribute is updated from Country Name attribute on Supplier - " + countryCode);
-				addSrceenShot("Material Country of Origin attribute is correctly updated", test, Capture);
+				addScreenShot("Material Country of Origin attribute is correctly updated", test, Capture);
 				return true;
 			} else {
 				test.log(Status.FAIL, "Material Country of Origin attribute is not correctly updated.");
 				test.log(Status.INFO, "Material Country of Origin - " + countryOfOrigin
 						+ " attribute is not updated from Country Name attribute on Supplier - " + countryCode);
-				addSrceenShot("Material Country of Origin attribute is not correctly updated", test, Capture);
+				addScreenShot("Material Country of Origin attribute is not correctly updated", test, Capture);
 			}
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Material Country of Origin attribute not found or interrupted: " + e.getMessage());
-			addSrceenShot("Material Country of Origin attribute not found or interrupted", test, Capture);
+			addScreenShot("Material Country of Origin attribute not found or interrupted", test, Capture);
 		}
 		return false;
 	}
@@ -1851,10 +1851,10 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			actionsDropDown.click();
 			editMaterialSupplier.click();
 			test.log(Status.INFO, "Update Material/Supplier button clicked");
-			addSrceenShot("Update Material/Supplier button clicked", test, Capture);
+			addScreenShot("Update Material/Supplier button clicked", test, Capture);
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Update Material/Supplier button not found or interrupted: " + e.getMessage());
-			addSrceenShot("Update Material/Supplier button not found or interrupted", test, Capture);
+			addScreenShot("Update Material/Supplier button not found or interrupted", test, Capture);
 		}
 
 	}
@@ -1956,7 +1956,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 		}
 
 		test.log(Status.INFO, "Entered data for all material/supplier level attributes");
-		addSrceenShot("Entered data for all material/supplier level attributes", test, Capture);
+		addScreenShot("Entered data for all material/supplier level attributes", test, Capture);
 
 	}
 
@@ -1979,7 +1979,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 				actionsDropDown.click();
 				editMaterialOption.click();
 				test.log(Status.INFO, "Update Material button clicked");
-				addSrceenShot("Update Material button clicked", test, Capture);
+				addScreenShot("Update Material button clicked", test, Capture);
 				new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(fabricMillLink));
 				fabricMillLink.click();
 				String ParentWinhadle = driver.getWindowHandle();
@@ -2005,7 +2005,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 				driver.switchTo().frame(iframeContentframe);
 				Thread.sleep(2000);
 				test.log(Status.INFO, "Selected Fabric Mill: " + fabricMill);
-				addSrceenShot("Selected Fabric Mill", test, Capture);
+				addScreenShot("Selected Fabric Mill", test, Capture);
 				new WebDriverWait(driver, 30).until(ExpectedConditions.visibilityOf(saveButton));
 				saveButton.click();
 			}
@@ -2115,10 +2115,10 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 					+ leadTimeSampleCalendardays + ", Material Price - " + MaterialPrice);
 
 //	        test.log(Status.INFO, "Entered data for all material/supplier level attributes");
-			addSrceenShot("Entered data for all material/supplier level attributes", test, Capture);
+			addScreenShot("Entered data for all material/supplier level attributes", test, Capture);
 		} catch (NoSuchElementException e) {
 			test.log(Status.FAIL, "Material/Supplier attributes not found or interrupted: " + e.getMessage());
-			addSrceenShot("Material/Supplier attributes not found or interrupted", test, Capture);
+			addScreenShot("Material/Supplier attributes not found or interrupted", test, Capture);
 		}
 	}
 
@@ -2134,7 +2134,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 
 			System.out.println("Material Supplier Information is saved successfully");
 			test.log(Status.PASS, "Verification: Material Supplier Information is saved successfully");
-			addSrceenShot("Material Supplier Information is saved successfully", test, Capture);
+			addScreenShot("Material Supplier Information is saved successfully", test, Capture);
 
 			String actualPriceEach = priceEach_Element.getText();
 			Assert.assertTrue(actualPriceEach.contains(MaterialPrice),
@@ -2146,12 +2146,12 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			test.log(Status.PASS,
 					"Verification: Price /Each attribute is calculated(Auto-updated) as the Material Price Entered mutliplied with  UOM Conversion Factor defined in the Look up table: "
 							+ actualmaterialCountryOfOrigin);
-			addSrceenShot("Price /Each attribute is calculated (auto-updated) correctly", test, Capture);
+			addScreenShot("Price /Each attribute is calculated (auto-updated) correctly", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Validation failed: " + e.getMessage());
 			test.log(Status.FAIL, "Validation failed: " + e.getMessage());
-			addSrceenShot("Validation failed", test, Capture);
+			addScreenShot("Validation failed", test, Capture);
 			throw e;
 		}
 	}
@@ -2258,7 +2258,7 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 			WebElement colorRecord = driver.findElement(By.xpath("//a[text()='" + colorName + "']"));
 			String colorRecord_Name = colorRecord.getText();
 			test.log(Status.INFO, "New color record is Displayed: " + colorRecord_Name);
-			addSrceenShot("New color record is Displayed", test, Capture);
+			addScreenShot("New color record is Displayed", test, Capture);
 			return colorRecord.isDisplayed();
 		} catch (NoSuchElementException e) {
 			return false;

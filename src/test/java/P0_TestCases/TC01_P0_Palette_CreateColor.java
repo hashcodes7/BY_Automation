@@ -78,42 +78,42 @@ public class TC01_P0_Palette_CreateColor extends WMS_TestBase {
 			Thread.sleep(5000);
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("My seasons menu clicked", test, Capture);
+			addScreenShot("My seasons menu clicked", test, Capture);
 			
 			palettepage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 
 			palettepage.palettemenu();
 			test.log(Status.INFO, "Clicked on Palette");
-			addSrceenShot("Clicked on Palette", test, Capture);
+			addScreenShot("Clicked on Palette", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 						
 			palettepage.action_DD(actionvalue);
 			test.log(Status.INFO, "Create new colour seleted for "+ actionvalue);
-			addSrceenShot("create new colour seleted", test, Capture);
+			addScreenShot("create new colour seleted", test, Capture);
 			
 			WaitforPage(5000);
 
 			palettepage.heathers();
 			test.log(Status.INFO, "Heathers colore page opened");
-			addSrceenShot("Heathers colore page opened", test, Capture);
+			addScreenShot("Heathers colore page opened", test, Capture);
 
 			CNCP.EnterValues(redvalue, bluevalue, greenvalue, colorname, colorfamily, standardprovider, colorcode,
 					providercolorname,test);
 			test.log(Status.INFO, "All the required values are filled");
-			addSrceenShot("All the required values are filled", test, Capture);
+			addScreenShot("All the required values are filled", test, Capture);
 			
 			CNCP.clickcreatebutton();
 			test.log(Status.INFO, "Clicked on Create button");
-			addSrceenShot("Clicked on Create button", test, Capture);
+			addScreenShot("Clicked on Create button", test, Capture);
 					
 			WaitforPage(5000);
 			
@@ -123,15 +123,15 @@ public class TC01_P0_Palette_CreateColor extends WMS_TestBase {
 			
 			CNCP.color_validation(colorname,test);
 			test.log(Status.PASS, "Validation is successful");
-			addSrceenShot("Validation is successful", test, Capture);
+			addScreenShot("Validation is successful", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

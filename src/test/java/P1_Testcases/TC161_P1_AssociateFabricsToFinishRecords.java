@@ -69,11 +69,11 @@ public class TC161_P1_AssociateFabricsToFinishRecords extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + PDS_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -81,64 +81,64 @@ public class TC161_P1_AssociateFabricsToFinishRecords extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MATERIAL.menu(), true);
 			System.out.println("Clicked on Material");
 			test.log(Status.INFO, "Clicked on Material");
-			addSrceenShot("Clicked on Material", test, Capture);
+			addScreenShot("Clicked on Material", test, Capture);
 			WaitforPage(4000);
 
 //			String materialType = "Look Finish Recipe";
 			materialPage.selectMaterialType(materialType, test);
 			System.out.println("Finish Record Type Was choosen");
 			test.log(Status.INFO, "Finish Record Type Was choosen: " + materialType);
-			addSrceenShot("Finish Record Type Was choosen", test, Capture);
+			addScreenShot("Finish Record Type Was choosen", test, Capture);
 			WaitforPage(4000);
 
 //			String materialName = "236207 Demo_FinsihType_Material_01";
 			materialPage.searchMaterial(materialName, test);
 			System.out.println("Searched for the Material");
 			test.log(Status.INFO, "Searched for the Material: " + materialName);
-			addSrceenShot("Searched for the Material", test, Capture);
+			addScreenShot("Searched for the Material", test, Capture);
 			WaitforPage(4000);
 			
 			materialPage.clickOnMaterial(materialName);
 			System.out.println("Ciicked On material: "+materialName);
 			test.log(Status.INFO, "Ciicked On material: " + materialName);
-			addSrceenShot("Ciicked On material: ", test, Capture);
+			addScreenShot("Ciicked On material: ", test, Capture);
 
 			materialPage.clickOnEditMaterial();
 			System.out.println("clicked On Edit Material");
 			test.log(Status.INFO, "clicked On Edit Material");
-			addSrceenShot("clicked On Edit Material", test, Capture);
+			addScreenShot("clicked On Edit Material", test, Capture);
 			WaitforPage(4000);
 
 //			String fabric = "234029 demo_Material_01";
 			materialPage.selectFabric_Mill(fabric, test);
 			test.log(Status.INFO, "Selected Fabric Mill: " + fabric);
-			addSrceenShot("Selected Fabric Mill", test, Capture);
+			addScreenShot("Selected Fabric Mill", test, Capture);
 
 			materialPage.saveMaterial();
 			System.out.println("Clicked on Save");
 			test.log(Status.INFO, "Clicked on Save");
-			addSrceenShot("Clicked on Save", test, Capture);
+			addScreenShot("Clicked on Save", test, Capture);
 			WaitforPage(4000);
 
 			// Validate that the fabric is added to the General Attributes section
 			materialPage.validateFabricInGeneralAttributes(fabric, test);
 			System.out.println("Fabric found in General Attributes section");
-			addSrceenShot("Fabric found in General Attributes section", test, Capture);
+			addScreenShot("Fabric found in General Attributes section", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness: " + e);
-			test.log(Status.FAIL, "Test case failed due to application slowness");
-			addSrceenShot("Test case failed due to application slowness", test, Capture);
+			test.log(Status.FAIL, "Test case failed due to application slowness " + e);
+			addScreenShot("Test case failed due to application slowness", test, Capture);
 		}
 	}
 

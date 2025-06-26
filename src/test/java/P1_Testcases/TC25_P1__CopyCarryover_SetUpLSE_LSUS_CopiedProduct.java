@@ -85,76 +85,76 @@ public class TC25_P1__CopyCarryover_SetUpLSE_LSUS_CopiedProduct extends WMS_Test
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 					
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Colorwaypage.SelectColorway(colorway,test);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 
 			SetUpPage.ClickEditColorwayseason();
 			test.log(Status.INFO, "Colorway season edit page opened");
-			addSrceenShot("Colorway season edit page opened", test, Capture);
+			addScreenShot("Colorway season edit page opened", test, Capture);
 			
 			SetUpPage.Validate_blankSetUp_Attributes(test);
 			System.out.println("Validation successful for blank LSE and LSUS validation results");
 			test.log(Status.PASS, "Validation successful for blank LSE and LSUS validation results");
-			addSrceenShot("Validation successful for blank LSE and LSUS validation results", test, Capture);
+			addScreenShot("Validation successful for blank LSE and LSUS validation results", test, Capture);
 
 			SetUpPage.SetUpLSE(test);
 			System.out.println("SetUP LSE is Completed");
 			test.log(Status.INFO, "SetUP LSE is Completed");
-			addSrceenShot("SetUP LSE is completed", test, Capture);
+			addScreenShot("SetUP LSE is completed", test, Capture);
 			
 			SetUpPage.ClickEditColorwayseason();
 			System.out.println("Colorway season edit page opened");
 			test.log(Status.INFO, "Colorway season edit page opened");
-			addSrceenShot("Colorway season edit page opened", test, Capture);
+			addScreenShot("Colorway season edit page opened", test, Capture);
 			
 			SetUpPage.ValidationLSE(test);
 			System.out.println("Validation successful for SetUpLSE");
 			test.log(Status.PASS, "Validation successful for SetUpLSE");
-			addSrceenShot("Validation of SetUpLSE", test, Capture);
+			addScreenShot("Validation of SetUpLSE", test, Capture);
 			
 			Thread.sleep(2000);
 			SetUpPage.SetUpLSUS(test);
 			System.out.println("SetUP LSUS is Completed");
 			test.log(Status.INFO, "SetUP LSUS is completed");
-			addSrceenShot("SetUP LSUS is completed", test, Capture);
+			addScreenShot("SetUP LSUS is completed", test, Capture);
 			
 			SetUpPage.ClickEditColorwayseason();
 			test.log(Status.INFO, "Colorway season edit page opened");
-			addSrceenShot("Colorway season edit page opened", test, Capture);
+			addScreenShot("Colorway season edit page opened", test, Capture);
 			Thread.sleep(2000);
 			
 			SetUpPage.ValidationLSUS(test);
 			test.log(Status.PASS, "Validation successful for SetUpLSUS");
-			addSrceenShot("Validation of SetUpLSUS", test, Capture);
+			addScreenShot("Validation of SetUpLSUS", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

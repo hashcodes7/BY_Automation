@@ -272,7 +272,7 @@ public class SeasonPage extends WMS_WebDriverUtilities {
 		Select selectvalue3 = new Select(categoryDropDown);
 		selectvalue3.selectByVisibleText(category);
 		test.log(Status.INFO, "Selected Category: " + category);
-		addSrceenShot("Palette created", test, Capture);
+		addScreenShot("Palette created", test, Capture);
 		Thread.sleep(2000);
 		
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(createOptn));
@@ -317,18 +317,18 @@ public class SeasonPage extends WMS_WebDriverUtilities {
 			if (paletteLink.isDisplayed()) {
 				System.out.println("Palette link is present: " + paletteName);
 				test.log(Status.INFO, "Palette link is present: " + paletteName);
-				addSrceenShot("Palette link is present", test, Capture);
+				addScreenShot("Palette link is present", test, Capture);
 				return true;
 			} else {
 				System.out.println("Palette link is not displayed: " + paletteName);
 				test.log(Status.ERROR, "Palette link is not displayed: " + paletteName);
-				addSrceenShot("Palette link is not displayed", test, Capture);
+				addScreenShot("Palette link is not displayed", test, Capture);
 				return false;
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println("Palette link is not found: " + paletteName);
 			test.log(Status.ERROR, "Palette link is not found: " + paletteName);
-			addSrceenShot("Palette link is not found", test, Capture);
+			addScreenShot("Palette link is not found", test, Capture);
 			return false;
 		}
 	}
@@ -366,7 +366,7 @@ public class SeasonPage extends WMS_WebDriverUtilities {
 		Thread.sleep(2000);
 
 		test.log(Status.INFO, "Clicked on 'Add multiple colors' Option from actions DropDown");
-		addSrceenShot("Clicked on 'Add multiple colors' Option from actions DropDown", test, Capture);
+		addScreenShot("Clicked on 'Add multiple colors' Option from actions DropDown", test, Capture);
 		Thread.sleep(2000);
 		String ParentWinhadle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
@@ -392,14 +392,14 @@ public class SeasonPage extends WMS_WebDriverUtilities {
 		nameSearchField.clear();
 		nameSearchField.sendKeys(colorItem);
 		test.log(Status.INFO, "Entered color item: " + colorItem);
-		addSrceenShot("Entered color item", test, Capture);
+		addScreenShot("Entered color item", test, Capture);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(searchButton));
 		searchButton.click();
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 
 		Thread.sleep(15000);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstCheckBox);
@@ -425,18 +425,18 @@ public class SeasonPage extends WMS_WebDriverUtilities {
 			if (colorConfirmation.isDisplayed()) {
 				System.out.println("Selected colors were added to the palette under Colors tab");
 				test.log(Status.INFO, "Selected colors were added to the palette under Colors tab");
-				addSrceenShot("Colors added to palette", test, Capture);
+				addScreenShot("Colors added to palette", test, Capture);
 				return true;
 			} else {
 				System.out.println("Selected colors were not added to the palette under Colors tab");
 				test.log(Status.ERROR, "Selected colors were not added to the palette under Colors tab");
-				addSrceenShot("Colors not added to palette", test, Capture);
+				addScreenShot("Colors not added to palette", test, Capture);
 				return false;
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println("Confirmation message for added colors not found");
 			test.log(Status.ERROR, "Confirmation message for added colors not found");
-			addSrceenShot("Confirmation message not found", test, Capture);
+			addScreenShot("Confirmation message not found", test, Capture);
 			return false;
 		}
 	}
@@ -453,7 +453,7 @@ Thread.sleep(5000);
 		Thread.sleep(2000);
 
 		test.log(Status.INFO, "Clicked on 'Add Materials' Option from actions DropDown");
-		addSrceenShot("Clicked on 'Add Materials' Option from actions DropDown", test, Capture);
+		addScreenShot("Clicked on 'Add Materials' Option from actions DropDown", test, Capture);
 		Thread.sleep(2000);
 		String ParentWinhadle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
@@ -470,14 +470,14 @@ Thread.sleep(5000);
 		resetDefaults.click();
 		nameSearchField.sendKeys(materialName);
 		test.log(Status.INFO, "Entered Material: " + materialName);
-		addSrceenShot("Entered Material", test, Capture);
+		addScreenShot("Entered Material", test, Capture);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(searchButton));
 		searchButton.click();
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 
 		Thread.sleep(15000);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstCheckBox);
@@ -505,18 +505,18 @@ Thread.sleep(5000);
 			if (materialConfirmation.isDisplayed()) {
 				System.out.println("Selected Material was added to the palette under Material tab");
 				test.log(Status.INFO, "Selected Material was added to the palette under Material tab");
-				addSrceenShot("Material added to palette", test, Capture);
+				addScreenShot("Material added to palette", test, Capture);
 				return true;
 			} else {
 				System.out.println("Selected Material was not added to the palette under Material tab");
 				test.log(Status.ERROR, "Selected Material was not added to the palette under Material tab");
-				addSrceenShot("material not added to palette", test, Capture);
+				addScreenShot("material not added to palette", test, Capture);
 				return false;
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println("Confirmation message for added Material not found");
 			test.log(Status.ERROR, "Confirmation message for added Material not found");
-			addSrceenShot("Confirmation message not found", test, Capture);
+			addScreenShot("Confirmation message not found", test, Capture);
 			return false;
 		}
 	}
@@ -533,7 +533,7 @@ Thread.sleep(5000);
 		Thread.sleep(2000);
 
 		test.log(Status.INFO, "Clicked on 'Add Material Colors' Option from actions DropDown");
-		addSrceenShot("Clicked on 'Add Material Colors' Option from actions DropDown", test, Capture);
+		addScreenShot("Clicked on 'Add Material Colors' Option from actions DropDown", test, Capture);
 		Thread.sleep(2000);
 		String ParentWinhadle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
@@ -550,14 +550,14 @@ Thread.sleep(5000);
 		resetDefaults.click();
 		nameSearchField.sendKeys(materialColorName);
 		test.log(Status.INFO, "Entered Material: " + materialColorName);
-		addSrceenShot("Entered Material", test, Capture);
+		addScreenShot("Entered Material", test, Capture);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", searchButton);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(searchButton));
 		searchButton.click();
 		test.log(Status.INFO, "Clicked on search button");
-		addSrceenShot("Clicked on search button again", test, Capture);
+		addScreenShot("Clicked on search button again", test, Capture);
 
 		Thread.sleep(15000);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", firstCheckBox);
@@ -585,18 +585,18 @@ Thread.sleep(5000);
 			if (materialColorConfirmation.isDisplayed()) {
 				System.out.println("Selected Material Color was added to the palette under Material tab");
 				test.log(Status.INFO, "Selected Material Color was added to the palette under Material tab");
-				addSrceenShot("Material added to palette", test, Capture);
+				addScreenShot("Material added to palette", test, Capture);
 				return true;
 			} else {
 				System.out.println("Selected Material Color was not added to the palette under Material tab");
 				test.log(Status.ERROR, "Selected Material Color was not added to the palette under Material tab");
-				addSrceenShot("material not added to palette", test, Capture);
+				addScreenShot("material not added to palette", test, Capture);
 				return false;
 			}
 		} catch (NoSuchElementException e) {
 			System.out.println("Confirmation message for added Material Color not found");
 			test.log(Status.ERROR, "Confirmation message for added Material Color not found");
-			addSrceenShot("Confirmation message not found", test, Capture);
+			addScreenShot("Confirmation message not found", test, Capture);
 			return false;
 		}
 	}
@@ -657,7 +657,7 @@ Thread.sleep(5000);
 		} catch (Exception e) {
 			System.out.println(e);
 			test.log(Status.FAIL, "Exception occurred while verifying Affiliate values: " + e.getMessage());
-			addSrceenShot("Exception in verifying Affiliate values", test, Capture);
+			addScreenShot("Exception in verifying Affiliate values", test, Capture);
 		}
 
 	}
@@ -681,18 +681,18 @@ Thread.sleep(5000);
 				System.out.println("The dropdown options are: true");
 				test.log(Status.PASS, "Total number of Global dropdown values present: " + size);
 				test.log(Status.PASS, "Values of Global dropdown: " + option1);
-				addSrceenShot("Verified Global dropdown values", test, Capture);
+				addScreenShot("Verified Global dropdown values", test, Capture);
 
 			} else {
 				System.out.println("The dropdown options are: FAIL");
 				test.log(Status.FAIL, "Total number of Global dropdown values present: " + size);
 				test.log(Status.FAIL, "Values of Global dropdown: " + option1);
-				addSrceenShot("Failed to verify Global dropdown values", test, Capture);
+				addScreenShot("Failed to verify Global dropdown values", test, Capture);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
 			test.log(Status.FAIL, "Exception occurred while verifying Global values: " + e.getMessage());
-			addSrceenShot("Exception in verifying Global values", test, Capture);
+			addScreenShot("Exception in verifying Global values", test, Capture);
 		}
 
 	}
@@ -714,18 +714,18 @@ Thread.sleep(5000);
 				System.out.println("The dropdown options are: true" + size);
 				test.log(Status.PASS, "Total number of Local Hub dropdown values present: " + size);
 				test.log(Status.PASS, "Values of Local Hub dropdown: " + option1);
-				addSrceenShot("Verified Local Hub dropdown values", test, Capture);
+				addScreenShot("Verified Local Hub dropdown values", test, Capture);
 
 			} else {
 				System.out.println("The dropdown options are: FAIL" + size);
 				test.log(Status.FAIL, "Total number of Local Hub dropdown values present: " + size);
 				test.log(Status.FAIL, "Values of Local Hub dropdown: " + option1);
-				addSrceenShot("Failed to verify Local Hub dropdown values", test, Capture);
+				addScreenShot("Failed to verify Local Hub dropdown values", test, Capture);
 			}
 		} catch (Exception e) {
 			System.out.println(e);
 			test.log(Status.FAIL, "Exception occurred while verifying Local Hub values: " + e.getMessage());
-			addSrceenShot("Exception in verifying Local Hub values", test, Capture);
+			addScreenShot("Exception in verifying Local Hub values", test, Capture);
 		}
 
 	}
@@ -866,7 +866,7 @@ Thread.sleep(5000);
 		quickSearchText.click();
 		System.out.println("Performed quick search with value: " + value);
 		test.log(Status.INFO, "Performed quick search with value: " + value);
-		addSrceenShot("Performed quick search", test, Capture);
+		addScreenShot("Performed quick search", test, Capture);
 	}
 
 	public void selectCategory(String value) throws Exception {
@@ -940,10 +940,10 @@ Thread.sleep(5000);
 			String actualSeasonName = seasonName.getText();
 			Assert.assertEquals(actualSeasonName, expectedSeasonName, "Season Name does not match!");
 			test.log(Status.PASS, "Retrieved Season Name: " + actualSeasonName);
-			addSrceenShot("Retrieved Season Name", test, Capture);
+			addScreenShot("Retrieved Season Name", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Season Name not found: " + expectedSeasonName);
-			addSrceenShot("Season Name not found", test, Capture);
+			addScreenShot("Season Name not found", test, Capture);
 		}
 	}
 
@@ -954,7 +954,7 @@ Thread.sleep(5000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(seasonName));
 		String name = seasonName.getText();
 		test.log(Status.PASS, "Retrieved Season Name: " + name);
-		addSrceenShot("Retrieved Season Name", test, Capture);
+		addScreenShot("Retrieved Season Name", test, Capture);
 		return name;
 
 	}
@@ -966,8 +966,8 @@ Thread.sleep(5000);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(statusInput));
 		String status = statusInput.getText();
 		test.log(Status.PASS, "Retrieved Season Status: " + status);
-		addSrceenShot("Retrieved Season Status", test, Capture);
-		addSrceenShot("Retrieved Season Status", test, Capture);
+		addScreenShot("Retrieved Season Status", test, Capture);
+		addScreenShot("Retrieved Season Status", test, Capture);
 
 		return status;
 	}
@@ -978,7 +978,7 @@ Thread.sleep(5000);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(seasonCodeInput));
 		String seasonCode = seasonCodeInput.getText();
 		test.log(Status.PASS, "Retrieved Season Code: " + seasonCode);
-		addSrceenShot("Retrieved Season Code", test, Capture);
+		addScreenShot("Retrieved Season Code", test, Capture);
 
 		return seasonCodeInput.getText();
 	}
@@ -1001,13 +1001,13 @@ Thread.sleep(5000);
 		for (WebElement option : options) {
 			if (option.getText().equals(expectedSeasonName)) {
 				test.log(Status.PASS, "Season found in dropdown: " + expectedSeasonName);
-				addSrceenShot("Season found in dropdown", test, Capture);
+				addScreenShot("Season found in dropdown", test, Capture);
 
 				return true;
 			}
 		}
 		test.log(Status.FAIL, "Season not found in dropdown: " + expectedSeasonName);
-		addSrceenShot("Season not found in dropdown", test, Capture);
+		addScreenShot("Season not found in dropdown", test, Capture);
 		return false;
 	}
 
@@ -1229,7 +1229,7 @@ Thread.sleep(5000);
 
 		driver.switchTo().window(ParentWinhadle);
 		test.log(Status.INFO, "Selected Look Finish Recipe");
-		addSrceenShot("Selected Fabric Mill", test, Capture);
+		addScreenShot("Selected Fabric Mill", test, Capture);
 
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
@@ -1262,18 +1262,18 @@ Thread.sleep(5000);
 	                String fabricText = fabricCell.getText().trim();
 	                System.out.println("Fabric cell text: " + fabricText);
 	                test.log(Status.INFO, "Fabric cell text: " + fabricText);
-	                addSrceenShot("Fabric cell text", test, Capture);
+	                addScreenShot("Fabric cell text", test, Capture);
 
 	                // Check if the fabric cell is populated
 	                boolean isPopulated = !fabricText.isEmpty();
 	                if (isPopulated) {
 	                    System.out.println("Fabric is auto-populated in the Look info MOA table: "+fabricText);
 	                    test.log(Status.INFO, "Fabric is auto-populated in the Look info MOA table: "+fabricText);
-	                    addSrceenShot("Fabric is auto-populated in the Look info MOA table", test, Capture);
+	                    addScreenShot("Fabric is auto-populated in the Look info MOA table", test, Capture);
 	                } else {
 	                    System.out.println("Fabric is not auto-populated in the Look info MOA table.");
 	                    test.log(Status.FAIL, "Fabric is not auto-populated in the Look info MOA table.");
-	                    addSrceenShot("Fabric is not auto-populated in the Look info MOA table", test, Capture);
+	                    addScreenShot("Fabric is not auto-populated in the Look info MOA table", test, Capture);
 	                }
 	                return isPopulated;
 	            } catch (Exception e) {
@@ -1285,7 +1285,7 @@ Thread.sleep(5000);
 
 	    System.out.println("Look Finish Recipe is not found in the Look Info table.");
 	    test.log(Status.FAIL, "Look Finish Recipe is not found in the Look Info table.");
-	    addSrceenShot("Look Finish Recipe is not found in the Look Info table", test, Capture);
+	    addScreenShot("Look Finish Recipe is not found in the Look Info table", test, Capture);
 	    return false; // Return false if the lookFinishRecipe is not found
 	}
 
@@ -1394,85 +1394,85 @@ Thread.sleep(5000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(collectionNameInput));
 		collectionNameInput.sendKeys(seasonCollectionName);
 		test.log(Status.INFO, "Season Collection Name is entered: " + seasonCollectionName);
-		addSrceenShot("Season Collection Name is entered", test, Capture);
+		addScreenShot("Season Collection Name is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(collectionIdInput));
 		collectionIdInput.sendKeys(collectionId);
 		test.log(Status.INFO, "Collection ID is entered: " + collectionId);
-		addSrceenShot("Collection ID is entered", test, Capture);
+		addScreenShot("Collection ID is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(collectionDescInput));
 		collectionDescInput.sendKeys(collectionDesc);
 		test.log(Status.INFO, "Collection Description is entered: " + collectionDesc);
-		addSrceenShot("Collection Description is entered", test, Capture);
+		addScreenShot("Collection Description is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(seasonDescInput));
 		seasonDescInput.sendKeys(seasonDesc);
 		test.log(Status.INFO, "Season Description is entered: " + seasonDesc);
-		addSrceenShot("Season Description is entered", test, Capture);
+		addScreenShot("Season Description is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(bookBeginDateInput));
 		bookBeginDateInput.sendKeys(bookBeginDate);
 		test.log(Status.INFO, "Book Begin Date is entered: " + bookBeginDate);
-		addSrceenShot("Book Begin Date is entered", test, Capture);
+		addScreenShot("Book Begin Date is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(bookEndDateInput));
 		bookEndDateInput.sendKeys(bookEndDate);
 		test.log(Status.INFO, "Book End Date is entered: " + bookEndDate);
-		addSrceenShot("Book End Date is entered", test, Capture);
+		addScreenShot("Book End Date is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(shipBeginDateInput));
 		shipBeginDateInput.sendKeys(shipBeginDate);
 		test.log(Status.INFO, "Ship Begin Date is entered: " + shipBeginDate);
-		addSrceenShot("Ship Begin Date is entered", test, Capture);
+		addScreenShot("Ship Begin Date is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(shipEndDateInput));
 		shipEndDateInput.sendKeys(shipEndDate);
 		test.log(Status.INFO, "Ship End Date is entered: " + shipEndDate);
-		addSrceenShot("Ship End Date is entered", test, Capture);
+		addScreenShot("Ship End Date is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(themeInput));
 		themeInput.sendKeys(theme);
 		test.log(Status.INFO, "Theme is entered: " + theme);
-		addSrceenShot("Theme is entered", test, Capture);
+		addScreenShot("Theme is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(themeDescInput));
 		themeDescInput.sendKeys(themeDesc);
 		test.log(Status.INFO, "Theme Description is entered: " + themeDesc);
-		addSrceenShot("Theme Description is entered", test, Capture);
+		addScreenShot("Theme Description is entered", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(affiliateAdoptGroupInput));
 		selectValueFromDropdown(affiliateAdoptGroupInput, affiliateAdoptGroup);
 		test.log(Status.INFO, "Affiliate Adopt Group is selected: " + affiliateAdoptGroup);
-		addSrceenShot("Affiliate Adopt Group is selected", test, Capture);
+		addScreenShot("Affiliate Adopt Group is selected", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(collectionTypeInput));
 		selectValueFromDropdown(collectionTypeInput, collectionType);
 		test.log(Status.INFO, "Collection Type is selected: " + collectionType);
-		addSrceenShot("Collection Type is selected", test, Capture);
+		addScreenShot("Collection Type is selected", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(brandInput));
 		selectValueFromDropdown(brandInput, brand);
 		test.log(Status.INFO, "Brand is selected: " + brand);
-		addSrceenShot("Brand is selected", test, Capture);
+		addScreenShot("Brand is selected", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(yearInput));
 		selectValueFromDropdown(yearInput, year);
 		test.log(Status.INFO, "Year is selected: " + year);
-		addSrceenShot("Year is selected", test, Capture);
+		addScreenShot("Year is selected", test, Capture);
 		Thread.sleep(4000);
 
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(seasonInput));
@@ -1488,7 +1488,7 @@ Thread.sleep(5000);
 		
 //		create_Btn2.click();
 //		test.log(Status.INFO, "New Season Collection Created Successfully");
-//		addSrceenShot("New Season Collection Created Successfully", test, Capture);
+//		addScreenShot("New Season Collection Created Successfully", test, Capture);
 	}
 	
 	public void clikOnCreate_Btn() throws Exception {
@@ -1577,10 +1577,10 @@ Thread.sleep(5000);
 
 		if (isValid) {
 			test.log(Status.PASS, "All attributes are validated successfully");
-			addSrceenShot("All attributes are validated successfully", test, Capture);
+			addScreenShot("All attributes are validated successfully", test, Capture);
 		} else {
 			test.log(Status.FAIL, "Validation failed for one or more attributes");
-			addSrceenShot("Validation failed", test, Capture);
+			addScreenShot("Validation failed", test, Capture);
 		}
 
 		return isValid;
@@ -1594,7 +1594,7 @@ Thread.sleep(5000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(seasonCodeInput));
 		String seasonCode = seasonCodeInput.getText();
 		test.log(Status.INFO, "Retrieved Season Code: " + seasonCode);
-		addSrceenShot("Retrieved Season Code", test, Capture);
+		addScreenShot("Retrieved Season Code", test, Capture);
 
 		return seasonCode;
 	}
@@ -1627,7 +1627,7 @@ Thread.sleep(5000);
 		// Refresh the page
 		driver.navigate().refresh();
 		test.log(Status.INFO, "Page refreshed to validate SAP integration");
-		addSrceenShot("Page refreshed", test, Capture);
+		addScreenShot("Page refreshed", test, Capture);
 
 		driver.switchTo().frame(iframeLeftPanel);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(pinbutton)).click();
@@ -1666,20 +1666,20 @@ Thread.sleep(5000);
 		String sapTriggerStatus = sapTriggerReportStatus.getText();
 		Assert.assertTrue(sapTriggerStatus.contains("No Error"), "SAP Trigger Report Generated: " + sapTriggerStatus);
 		test.log(Status.PASS, "SAP Trigger Report Generated: " + sapTriggerStatus);
-		addSrceenShot("SAP Trigger Report", test, Capture);
+		addScreenShot("SAP Trigger Report", test, Capture);
 		
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(sapFeedbackStatus));
 		String sapFeedback = sapFeedbackStatus.getText();
 		Assert.assertTrue(sapFeedback.contains("Successfully"), "SAP Feedback shows an error: " + sapFeedback);
 		test.log(Status.PASS, "SAP Feedback shows successful integration: " + sapFeedback);
-		addSrceenShot("SAP Feedback", test, Capture);
+		addScreenShot("SAP Feedback", test, Capture);
 
 //		// Validate unique ID in staging
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(uniqueIdInStaging));
 		String uniqueId = uniqueIdInStaging.getText();
 		Assert.assertNotNull(uniqueId, "Unique ID in staging is not populated");
 		test.log(Status.PASS, "Unique ID in staging is populated: " + uniqueId);
-		addSrceenShot("Unique ID in staging", test, Capture);
+		addScreenShot("Unique ID in staging", test, Capture);
 	}
 	
 	public void refreshPageAndValidateNoSAPIntegration(String seasonCollectionName, ExtentTest test) throws InterruptedException {
@@ -1690,7 +1690,7 @@ Thread.sleep(5000);
 	    // Refresh the page
 	    driver.navigate().refresh();
 	    test.log(Status.INFO, "Page refreshed to validate no SAP integration");
-	    addSrceenShot("Page refreshed", test, Capture);
+	    addScreenShot("Page refreshed", test, Capture);
 
 	    driver.switchTo().frame(iframeLeftPanel);
 	    new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(pinbutton)).click();
@@ -1726,20 +1726,20 @@ Thread.sleep(5000);
 	    String sapTriggerStatus = sapTriggerReportStatus_NON_LSE.getText();
 	    Assert.assertTrue(sapTriggerStatus.isEmpty(), "SAP Trigger Report should be empty: " + sapTriggerStatus);
 	    test.log(Status.PASS, "No SAP Trigger Report generated: " + sapTriggerStatus);
-	    addSrceenShot("No SAP Trigger Report", test, Capture);
+	    addScreenShot("No SAP Trigger Report", test, Capture);
 
 	    new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(sapFeedbackStatus));
 	    String sapFeedback = sapFeedbackStatus.getText();
 	    Assert.assertTrue(sapFeedback.isEmpty(), "SAP Feedback should be empty: " + sapFeedback);
 	    test.log(Status.PASS, "No SAP Feedback generated: " + sapFeedback);
-	    addSrceenShot("No SAP Feedback", test, Capture);
+	    addScreenShot("No SAP Feedback", test, Capture);
 
 	    // Validate unique ID in staging
 	    new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(uniqueIdInStaging));
 	    String uniqueId = uniqueIdInStaging.getText();
 	    Assert.assertNotNull(uniqueId, "Unique ID in staging is not populated");
 	    test.log(Status.PASS, "Unique ID in staging is populated: " + uniqueId);
-	    addSrceenShot("Unique ID in staging", test, Capture);
+	    addScreenShot("Unique ID in staging", test, Capture);
 	}
 
 

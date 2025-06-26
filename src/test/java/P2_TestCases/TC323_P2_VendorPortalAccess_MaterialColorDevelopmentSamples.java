@@ -76,11 +76,11 @@ public class TC323_P2_VendorPortalAccess_MaterialColorDevelopmentSamples extends
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + VendorPortal_URl);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -88,33 +88,33 @@ public class TC323_P2_VendorPortalAccess_MaterialColorDevelopmentSamples extends
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 			WaitforPage(4000);
 			
 			mainMenuPage.selectsubmenu(MainMenuEnum.LIBRARIES_SAMPLE.menu());
 			System.out.println("Clicked on sample Under Material");
 			test.log(Status.INFO, "Clicked on sample Under Material");
-			addSrceenShot("Clicked on sample Under Material", test, Capture);
+			addScreenShot("Clicked on sample Under Material", test, Capture);
 			WaitforPage(5000);
 
 //			String sampleType = "Color Development";
 			vendorPage.chooseMaterialColorDevelopment(sampleType, test);
 			test.log(Status.INFO, "Clicked on the type Sample Material Color Development");
-			addSrceenShot("Clicked on the type Sample Material Color Development", test, Capture);
+			addScreenShot("Clicked on the type Sample Material Color Development", test, Capture);
 
 			vendorPage.clickOnSearchTab();
 			test.log(Status.INFO, "clicked on search tab");
-			addSrceenShot("clicked on search tab", test, Capture);
+			addScreenShot("clicked on search tab", test, Capture);
 
 //			String name = "Sample - 1";
 			vendorPage.clickOnmaterialColorSample(name);
 			test.log(Status.INFO, "Clicked On Material Color Sample: " + name);
-			addSrceenShot("Clicked On Material Color Sample", test, Capture);
+			addScreenShot("Clicked On Material Color Sample", test, Capture);
 			WaitforPage(4000);
 
 			vendorPage.clickOnUpdateIn_ActionsMenu();
 			test.log(Status.INFO, "Clicked on Update in Actions menu");
-			addSrceenShot("Clicked on Update in Actions menu", test, Capture);
+			addScreenShot("Clicked on Update in Actions menu", test, Capture);
 
 			// Step 4: Update the information on the Sample page
 //			String airwayBill = "A1B1";
@@ -124,29 +124,29 @@ public class TC323_P2_VendorPortalAccess_MaterialColorDevelopmentSamples extends
 
 			vendorPage.updateSampleInformation(airwayBill, shippedDate, vendorComments, requestName, test);
 			test.log(Status.INFO, "Updated the information on the Sample page");
-			addSrceenShot("Updated the information on the Sample page", test, Capture);
+			addScreenShot("Updated the information on the Sample page", test, Capture);
 
 			vendorPage.clickSave();
 			test.log(Status.INFO, "Clicked on Save");
-			addSrceenShot("Clicked on Save", test, Capture);
+			addScreenShot("Clicked on Save", test, Capture);
 
 			vendorPage.verifyChangesSaved(airwayBill, shippedDate, vendorComments, requestName, test);
 			test.log(Status.PASS, "Verified the changes under the Vendor Attributes are saved");
-			addSrceenShot("Verified the changes were saved", test, Capture);
+			addScreenShot("Verified the changes were saved", test, Capture);
 
 			WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

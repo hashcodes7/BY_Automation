@@ -88,48 +88,48 @@ public class TC15_P2_Linesheet_AdoptionLH_SetNO_Verify_Available extends WMS_Tes
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "left panel opened");
-			addSrceenShot("left panel opened", test, Capture);
+			addScreenShot("left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Thread.sleep(5000);
 			
 			lineSheetPage.selectSeasonGroupAsGlobal(globalValue, test);
 			System.out.println("SeasonGroup As Global choosen");
 			test.log(Status.INFO, "selected SeasonGroup As Global choosen: " + globalValue);
-			addSrceenShot("selected SeasonGroup As Global choosen", test, Capture);
+			addScreenShot("selected SeasonGroup As Global choosen", test, Capture);
 
 			Thread.sleep(5000);
 			LineSheetEditPage.changeLocalHub_Value(filtercolorway, localhub, test);
 			test.log(Status.INFO, "value for Seasonal groups Local hub selected is: " + localhub);
 			test.log(Status.INFO, "colorway value filtered: " + filtercolorway);
-			addSrceenShot("local hub selected and colorway value filtered", test, Capture);
+			addScreenShot("local hub selected and colorway value filtered", test, Capture);
 			Thread.sleep(5000);
 
 			LineSheetEditPage.Change_AdoptedLH_toNO(test);
 			test.log(Status.INFO, "Adoption GB value changed to No");
 			System.out.println("Adoption GB value changed to No");
-			addSrceenShot("Adoption GB value changed to No", test, Capture);
+			addScreenShot("Adoption GB value changed to No", test, Capture);
 			
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("document.querySelector('.ag-body-horizontal-scroll-viewport').scrollLeft=0");
@@ -137,16 +137,16 @@ public class TC15_P2_Linesheet_AdoptionLH_SetNO_Verify_Available extends WMS_Tes
 			LineSheetEditPage.Validate_Available_Attribute( test);
 			test.log(Status.PASS, "Validation Successful for Available? ");
 			System.out.println("Validation Successful for Available?");
-			addSrceenShot("Validation Successful for Available?", test, Capture);
+			addScreenShot("Validation Successful for Available?", test, Capture);
 
 			dashboardPage.Logout();
 			test.log(Status.INFO, "Logout successful");
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

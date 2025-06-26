@@ -82,121 +82,121 @@ public class TC30_P1_VerifyLookDetails_UpdatePC9 extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "season selected: "+season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 					
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Colorwaypage.SelectColorway(colorway,test);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 			
 			Colorwaypage.NavigateTo_updatecolorway();
 			System.out.println("Navigated to Edit colorway page ");
 			test.log(Status.INFO, " Navigated to Edit colorway page ");
-			addSrceenShot("Navigated to Edit colorway page ", test, Capture);
+			addScreenShot("Navigated to Edit colorway page ", test, Capture);
 			
 //          if colorsubmenu element is not there just keep blank string ----------------------			
 			String thumbnail=Colorwaypage.selectcolour(colormenu,colorsubmenu,filtercolor,test);
 			System.out.println("color/look Selected ");
 			test.log(Status.INFO, " color/look Selected");
-			addSrceenShot("color/look Selected ", test, Capture);
+			addScreenShot("color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			Colorwaypage.requiredAttributes(productsegLSUSvalue,productsegLSEvalue,test);
 			System.out.println("All required fields filled");
 			test.log(Status.INFO, "All required fields filled");
-			addSrceenShot("All required fields filled", test, Capture);
+			addScreenShot("All required fields filled", test, Capture);
 			WaitforPage(4000);
 			
 			Thread.sleep(2000);
 			Colorwaypage.Validate_Colorname_ProductMarketingName(test);
 			System.out.println("Validation successful for colorname/product marketing name");
 			test.log(Status.PASS, "Validation successful for colorname/product marketing name");
-			addSrceenShot("Validation successful for colorname/product marketing name", test, Capture);
+			addScreenShot("Validation successful for colorname/product marketing name", test, Capture);
 			Thread.sleep(2000);
 			Colorwaypage.ValidateseasonalLook_attributes(test);
 			System.out.println("Validation successful for seasonal look attributes");
 			test.log(Status.PASS, "Validation successful for seasonal look attributes");
-			addSrceenShot("Validation successful for seasonal look attributes", test, Capture);
+			addScreenShot("Validation successful for seasonal look attributes", test, Capture);
 			Thread.sleep(2000);
 			Colorwaypage.Navigate_to_firstTab();
 			System.out.println("Navigated to linesheet page");
 			test.log(Status.INFO, "Navigated to linesheet page");
-			addSrceenShot("Navigated to linesheet page", test, Capture);
+			addScreenShot("Navigated to linesheet page", test, Capture);
 			
 //			------------------------------for different season----------------------------
 			
 			Colorwaypage.SeasonDropdown(secondseason,test);
 			test.log(Status.INFO, "season selected: "+secondseason);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 					
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Colorwaypage.SelectColorway(secondcolorway,test);
 			test.log(Status.INFO, "colorway details page opened ");
-			addSrceenShot("colorway details page opened ", test, Capture);
+			addScreenShot("colorway details page opened ", test, Capture);
 			
 			Colorwaypage.NavigateTo_updatecolorway();
 			System.out.println("Navigated to Edit colorway page ");
 			test.log(Status.INFO, " Navigated to Edit colorway page ");
-			addSrceenShot("Navigated to Edit colorway page ", test, Capture);
+			addScreenShot("Navigated to Edit colorway page ", test, Capture);
 			
 //          if colorsubmenu element is not there just keep blank string ----------------------			
 			Colorwaypage.selectcolour(colormenu,colorsubmenu,filtercolor,test);
 			System.out.println("color/look Selected ");
 			test.log(Status.INFO, " color/look Selected");
-			addSrceenShot("color/look Selected ", test, Capture);
+			addScreenShot("color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			
 			Colorwaypage.requiredAttributes(productsegLSUSvalue,productsegLSEvalue,test);
 			System.out.println("All required fields filled");
 			test.log(Status.INFO, "All required fields filled");
-			addSrceenShot("All required fields filled", test, Capture);
+			addScreenShot("All required fields filled", test, Capture);
 			WaitforPage(4000);
 			
 			Thread.sleep(2000);
 			Colorwaypage.Validate_Colorname_ProductMarketingName(test);
 			System.out.println("Validation successful for colorname/product marketing name");
 			test.log(Status.PASS, "Validation successful for colorname/product marketing name");
-			addSrceenShot("Validation successful for colorname/product marketing name", test, Capture);
+			addScreenShot("Validation successful for colorname/product marketing name", test, Capture);
 			
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 					
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

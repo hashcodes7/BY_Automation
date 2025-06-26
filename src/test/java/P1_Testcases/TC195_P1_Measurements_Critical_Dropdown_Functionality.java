@@ -78,75 +78,75 @@ public class TC195_P1_Measurements_Critical_Dropdown_Functionality extends WMS_T
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL " + GarmentDeveloper_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2024 Male Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "Test060524";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.PASS, "PC5 Details Page is displayed: " + productName);
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 			MeasurementsPage.clickDetailsTab();
 			test.log(Status.INFO, "Clicked on Details tab");
-			addSrceenShot("Clicked on Details tab", test, Capture);
+			addScreenShot("Clicked on Details tab", test, Capture);
 
 //			String source = "0WOZV - Primary -";
 //			MeasurementsPage1.select_Source(source, test);
 //			System.out.println("Selected Primary source " + source);
 //			test.log(Status.INFO, "Selected Primary source " + source);
-//			addSrceenShot("Selected Primary source " + source, test, Capture);
+//			addScreenShot("Selected Primary source " + source, test, Capture);
 
 //			String specification = "S1 2024 - 0WOZV - Test060524 -";
 			MeasurementsPage.selectSpecifications(specification, test);
 			System.out.println("Selected specifications " + specification);
 			test.log(Status.INFO, "Selected specification " + specification);
-			addSrceenShot("Selected specification " + specification, test, Capture);
+			addScreenShot("Selected specification " + specification, test, Capture);
 
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
 			System.out.println("Navigated to measurement page  ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 
 //			String measurementSet = "001 : test_auto_21";
 			MeasurementsPage.selectMeasurementSet(measurementSet);
 			test.log(Status.INFO, "Selected measurement set: " + measurementSet);
-			addSrceenShot("Selected measurement set: " + measurementSet, test, Capture);
+			addScreenShot("Selected measurement set: " + measurementSet, test, Capture);
 
 			MeasurementsPage.clickUpdate();
 			test.log(Status.INFO, "Clicked on Update");
-			addSrceenShot("Clicked on Update", test, Capture);
+			addScreenShot("Clicked on Update", test, Capture);
 
 			MeasurementsPage.checkCriticalityColumn();
 			test.log(Status.INFO, "Checked Criticality column");
-			addSrceenShot("Checked Criticality column", test, Capture);
+			addScreenShot("Checked Criticality column", test, Capture);
 
 			// Select Critical from the Criticality Column drop-down update cells Under
 			// measurement Set table
@@ -163,7 +163,7 @@ public class TC195_P1_Measurements_Critical_Dropdown_Functionality extends WMS_T
 					"Selected Critical and updated cells under measurment table with values: Criticality = "
 							+ criticality + ", POM ID = " + pomID + ", POM Description = " + pomDescription
 							+ ", Tolerance Plus = " + tolPlusCell + ", Tolerance Minus = " + tolMinusCell);
-			addSrceenShot("Selected Critical And Updated cells", test, Capture);
+			addScreenShot("Selected Critical And Updated cells", test, Capture);
 
 			// Validation after Save and Check
 			Assert.assertTrue(MeasurementsPage.isCriticalityUpdated(pomID, criticality),
@@ -171,24 +171,24 @@ public class TC195_P1_Measurements_Critical_Dropdown_Functionality extends WMS_T
 			test.log(Status.INFO, "Criticality updated correctly for POM ID: " + pomID);
 			test.log(Status.PASS, "System successfully allowed the user to update the row In Measurment Set Table");
 
-			addSrceenShot("Criticality updated correctly", test, Capture);
+			addScreenShot("Criticality updated correctly", test, Capture);
 
 			// Verification for critical sizes
 			Assert.assertTrue(MeasurementsPage.areCriticalSizesSaved(pomID, tolPlusCell, tolMinusCell),
 					"Critical sizes were not saved correctly.");
 			test.log(Status.PASS, "Critical sizes saved correctly");
-			addSrceenShot("Critical sizes Were saved correctly", test, Capture);
+			addScreenShot("Critical sizes Were saved correctly", test, Capture);
 
 			MeasurementsPage.clickUpdate();
 			test.log(Status.INFO, "Clicked on Update");
-			addSrceenShot("Clicked on Update", test, Capture);
+			addScreenShot("Clicked on Update", test, Capture);
 
 			// Select Critical from the Criticality Column drop-down update cells Under
 			// measurement Set table
 
 			MeasurementsPage.clickedOnGradeRuleTab();
 			test.log(Status.INFO, "Clicked on Grade Rule Tab");
-			addSrceenShot("Clicked on Grade Rule Tab", test, Capture);
+			addScreenShot("Clicked on Grade Rule Tab", test, Capture);
 
 			MeasurementsPage.selectCriticalAndUpdateCells(criticality, pomID, pomDescription, tolPlusCell,
 					tolMinusCell, test);
@@ -196,7 +196,7 @@ public class TC195_P1_Measurements_Critical_Dropdown_Functionality extends WMS_T
 					"Selected Critical and updated cells under grade rule table with values: Criticality = "
 							+ criticality + ", POM ID = " + pomID + ", POM Description = " + pomDescription
 							+ ", Tolerance Plus = " + tolPlusCell + ", Tolerance Minus = " + tolMinusCell);
-			addSrceenShot("Selected Critical And Updated cells", test, Capture);
+			addScreenShot("Selected Critical And Updated cells", test, Capture);
 
 			// Validation after Save and Check
 			Assert.assertTrue(MeasurementsPage.isCriticalityUpdated(pomID, criticality),
@@ -208,16 +208,16 @@ public class TC195_P1_Measurements_Critical_Dropdown_Functionality extends WMS_T
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left panel");
 			test.log(Status.INFO, "Clicked on close Left panel");
-			addSrceenShot("Clicked on close Left panel", test, Capture);
+			addScreenShot("Clicked on close Left panel", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}
@@ -231,4 +231,4 @@ public class TC195_P1_Measurements_Critical_Dropdown_Functionality extends WMS_T
 
 //MeasurementsPage1.clickChooseFile();
 //test.log(Status.INFO, "Clicked on Choose File");
-//addSrceenShot("Clicked on Choose File", test, Capture);
+//addScreenShot("Clicked on Choose File", test, Capture);

@@ -90,24 +90,24 @@ public class TC_008_CopyColorway extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected:"+season, test, Capture);
+			addScreenShot("Season selected:"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(15000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview1,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview1);
-			addSrceenShot("Linesheet view changed to: "+linesheetview1, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview1, test, Capture);
 			WaitforPage(5000);
 			
 			sourcingPage.copyColorway(test,colorwayCode,colorCode);
@@ -116,12 +116,12 @@ public class TC_008_CopyColorway extends WMS_TestBase {
 			
 			LineSheetEditPage.filter_View_Change(linesheetview2,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview2);
-			addSrceenShot("Linesheet view changed to: "+linesheetview2, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview2, test, Capture);
 			WaitforPage(5000);
 			
 			sourcingPage.validateColorway(test,colorwayCode);
 			test.log(Status.PASS, "copy colorway is not associated with sources");
-			addSrceenShot("copy colorway is not associated with sources", test, Capture);
+			addScreenShot("copy colorway is not associated with sources", test, Capture);
 			WaitforPage(5000);
 			
 			vendorPortalPage.clickOnSite(test);
@@ -129,31 +129,31 @@ public class TC_008_CopyColorway extends WMS_TestBase {
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			Colorwaypage.SeasonDropdown(season,test);
 			test.log(Status.INFO, "Season selected: "+season);
-			addSrceenShot("Season selected:"+season, test, Capture);
+			addScreenShot("Season selected:"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(15000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview3,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview3);
-			addSrceenShot("Linesheet view changed to: "+linesheetview3, test, Capture);
+			addScreenShot("Linesheet view changed to: "+linesheetview3, test, Capture);
 			WaitforPage(5000);
 			
 			sourcingPage.validateLinkSourceColorwayView(test,colorwayCode2);
 			test.log(Status.PASS, "source to colorway association and vendorlist are set to blank");
-			addSrceenShot("source to colorway association and vendorlist are set to blank", test, Capture);
+			addScreenShot("source to colorway association and vendorlist are set to blank", test, Capture);
 			WaitforPage(5000);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 

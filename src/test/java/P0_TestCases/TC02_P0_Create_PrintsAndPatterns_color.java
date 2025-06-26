@@ -71,21 +71,21 @@ public  class TC02_P0_Create_PrintsAndPatterns_color extends WMS_TestBase{
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_COLOR.menu());
 			test.log(Status.INFO, "Clicked on Libraries menu");
-			addSrceenShot("Clicked on Libraries menu", test, Capture);
+			addScreenShot("Clicked on Libraries menu", test, Capture);
 
 			Thread.sleep(5000);
 
 			CNCP.clickplussign();
 			test.log(Status.INFO, "Clicked on Add color Sign");
-			addSrceenShot("Clicked on Add color Sign", test, Capture);
+			addScreenShot("Clicked on Add color Sign", test, Capture);
 			
 			CNCP.SelectColorType(colortype,test);
 			test.log(Status.INFO, "Clicked On: " +colortype+" and color page opened");
-			addSrceenShot("Clicked On: " +colortype+" and color page opened", test, Capture);
+			addScreenShot("Clicked On: " +colortype+" and color page opened", test, Capture);
 			
 			String title= driver.getTitle();
 			System.out.println(title);
@@ -96,7 +96,7 @@ public  class TC02_P0_Create_PrintsAndPatterns_color extends WMS_TestBase{
 			
 			CNCP.createcolorPrintsandPatterns(redvalue,bluevalue,greenvalue,artworkname,artworkcode,colorfamily,patterntype,colorcombo,developer,test);
 			test.log(Status.INFO, "All the required fields are filled");
-			addSrceenShot("All the required fields are filled", test, Capture);
+			addScreenShot("All the required fields are filled", test, Capture);
 			
 			CNCP.clickcreatebutton();
 			test.log(Status.INFO, "Colour created under Prints and patterns");
@@ -104,20 +104,20 @@ public  class TC02_P0_Create_PrintsAndPatterns_color extends WMS_TestBase{
 			Thread.sleep(3000);
 			CNCP.PrintsandPatterns_color_validation(artworkname,test);
 			test.log(Status.PASS, "Validation is successful");
-			addSrceenShot("Validation is successful", test, Capture);
+			addScreenShot("Validation is successful", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

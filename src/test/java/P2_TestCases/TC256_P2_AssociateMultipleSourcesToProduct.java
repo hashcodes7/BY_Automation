@@ -98,85 +98,85 @@ public class TC256_P2_AssociateMultipleSourcesToProduct extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully" + PDS_URL);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(season);
 			System.out.println("season type is choosen");
 			test.log(Status.INFO, "season type is choosen: " + season);
-			addSrceenShot("Season type is choosen", test, Capture);
+			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 //			String productName = "3107LFA";
 			lineSheetPage.filterProductByName(productName, test);
 			System.out.println("Clicked on product name");
 			test.log(Status.INFO, "Clicked on product name: " + productName);
-			addSrceenShot("Clicked on product name", test, Capture);
+			addScreenShot("Clicked on product name", test, Capture);
 
 			Assert.assertTrue(productPage.isPC5DetailsPageDisplayed(test), "PC5 Details Page is not displayed.");
 			System.out.println("PC5 Details Page is displayed");
 			test.log(Status.PASS, "PC5 Details Page is displayed: " + productName);
-			addSrceenShot("PC5 Details Page is displayed", test, Capture);
+			addScreenShot("PC5 Details Page is displayed", test, Capture);
 
 			sourcingPage.selectCreateMultipleSourcingConfiguration();
 			test.log(Status.INFO, "Navigated to Create Multiple Sourcing Configurations From Actions Drop Down");
-			addSrceenShot("Navigated to Create Multiple Sourcing Configurations From Actions Drop Down", test, Capture);
+			addScreenShot("Navigated to Create Multiple Sourcing Configurations From Actions Drop Down", test, Capture);
 
 //			String[] vendors = { "BASSO LEATHER 4415 IT", "BEALE INTL 4755 US" };
 //			String[] vendors = {"IDA GRIFFIN 5012 US", "IDEABLUE 603293 JP", "IDEAL FASTENER ASIA LTD 601350 HK"};
 			productPage.selectVendors(vendors, test);
 			test.log(Status.INFO, "Selected Vendors: " + Arrays.toString(vendors));
-			addSrceenShot("Selected Vendors", test, Capture);
+			addScreenShot("Selected Vendors", test, Capture);
 
 			productPage.clickOnSelect();
 			test.log(Status.INFO, "Clicked On Select Button ");
-			addSrceenShot("Clicked On Select Button", test, Capture);
+			addScreenShot("Clicked On Select Button", test, Capture);
 
 			productPage.clickOnSave();
 			test.log(Status.INFO, "Clicked On Save Button ");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 
 			productPage.logAndClosePopUp(test);
 			test.log(Status.INFO, "POPUP was Closed");
-			addSrceenShot("POPUP was Closed", test, Capture);
+			addScreenShot("POPUP was Closed", test, Capture);
 
 			// Validate the sources in the dropdown
 			productPage.validateSourcesInDropdown(vendors, test);
 			test.log(Status.PASS, "Verified selected sources added to the product");
-			addSrceenShot("Verified selected sources added to the product", test, Capture);
+			addScreenShot("Verified selected sources added to the product", test, Capture);
 
 			WaitforPage(4000);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

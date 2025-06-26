@@ -88,13 +88,13 @@ public class TC307_P0_E2E_MaterialCreation_YarnFabri extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers E2E module 307");
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully " + CurrentURL);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -102,59 +102,59 @@ public class TC307_P0_E2E_MaterialCreation_YarnFabri extends WMS_TestBase {
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 
 			System.out.println("logout successful");
 			test.log(Status.INFO, "logout successful");
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_Season.menu(), true);
-			addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 
 			materialPage.selectMaterial(MainMenuEnum.LIBRARIES_MATERIAL.menu());
 			System.out.println("Clicked on Material");
 			test.log(Status.INFO, "Clicked on Material");
-			addSrceenShot("Clicked on Material", test, Capture);
+			addScreenShot("Clicked on Material", test, Capture);
 			WaitforPage(4000);
 
 			materialPage.createNewMaterial();
 			System.out.println("Clicked on Create New Material");
 			test.log(Status.INFO, "Clicked on Create New Material");
-			addSrceenShot("Clicked on Create New Material", test, Capture);
+			addScreenShot("Clicked on Create New Material", test, Capture);
 			WaitforPage(4000);
 
 //			String typeOfFabric = "Knits";
 			materialPage.chooseFabricType(typeOfFabric);
 			System.out.println("Fabric type was choosen");
 			test.log(Status.INFO, "Fabric type was choosen: " + typeOfFabric);
-			addSrceenShot("Fabric type was choosen", test, Capture);
+			addScreenShot("Fabric type was choosen", test, Capture);
 			WaitforPage(4000);
 
 //			String fabricType = "Double Knit";
 			materialPage.enterFabricType(fabricType);
 			System.out.println("Entered Fabric Type: " + fabricType);
 			test.log(Status.INFO, "Entered Fabric Type: " + fabricType);
-			addSrceenShot("Entered Fabric Type", test, Capture);
+			addScreenShot("Entered Fabric Type", test, Capture);
 			WaitforPage(4000);
 
 //			String seasonFirstIntroduced = "2026 Fall";
 			materialPage.enterSeasonFirstIntroduced(seasonFirstIntroduced);
 			System.out.println("Entered Season First Introduced: " + seasonFirstIntroduced);
 			test.log(Status.INFO, "Entered Season First Introduced: " + seasonFirstIntroduced);
-			addSrceenShot("Entered Season First Introduced", test, Capture);
+			addScreenShot("Entered Season First Introduced", test, Capture);
 			WaitforPage(4000);
 
 //			String fabricDescription = "Knits_demo_Material_Aug09th_01";
 			materialPage.enterFabricDescription(fabricDescription);
 			System.out.println("Entered Fabric Description: " + fabricDescription);
 			test.log(Status.INFO, "Entered Fabric Description: " + fabricDescription);
-			addSrceenShot("Entered Fabric Description", test, Capture);
+			addScreenShot("Entered Fabric Description", test, Capture);
 			WaitforPage(4000);
 
 //			String uom = "centimeter";
 			materialPage.enterUOM(uom);
 			System.out.println("Entered UOM: " + uom);
 			test.log(Status.INFO, "Entered UOM: " + uom);
-			addSrceenShot("Entered UOM", test, Capture);
+			addScreenShot("Entered UOM", test, Capture);
 			WaitforPage(4000);
 
 //			// fabricContentType and their Percentages
@@ -166,12 +166,12 @@ public class TC307_P0_E2E_MaterialCreation_YarnFabri extends WMS_TestBase {
 //			fabricContents.put("Cotton (Generic)", "20.00");
 			materialPage.setFabricContent(fabricContents, test);
 			test.log(Status.INFO, "Fabric Contents: " + fabricContents.toString());
-			addSrceenShot("Fabric Contents", test, Capture);
+			addScreenShot("Fabric Contents", test, Capture);
 
 			materialPage.saveMaterial();
 			System.out.println("Clicked on Save");
 			test.log(Status.INFO, "Clicked on Save");
-			addSrceenShot("Clicked on Save", test, Capture);
+			addScreenShot("Clicked on Save", test, Capture);
 			WaitforPage(4000);
 
 			// Verify The new material is created
@@ -179,29 +179,29 @@ public class TC307_P0_E2E_MaterialCreation_YarnFabri extends WMS_TestBase {
 			if (isMaterial_Created) {
 				System.out.println("Material was created successfully.");
 				test.log(Status.PASS, "Material was created successfully: " + fabricDescription);
-				addSrceenShot("Material was created successfully.", test, Capture);
+				addScreenShot("Material was created successfully.", test, Capture);
 			} else {
 				System.out.println("Failed to create new material.");
 				test.log(Status.FAIL, "Failed to create new material.");
-				addSrceenShot("Failed to create new material.", test, Capture);
+				addScreenShot("Failed to create new material.", test, Capture);
 			}
 			WaitforPage(4000);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

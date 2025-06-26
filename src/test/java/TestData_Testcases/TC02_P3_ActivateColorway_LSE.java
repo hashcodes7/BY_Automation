@@ -92,35 +92,35 @@ public class TC02_P3_ActivateColorway_LSE extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 			LineSheetEditPage.filter_View_Change(linesheetview_activation, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview_activation);
-			addSrceenShot("Linesheet view is " + linesheetview_activation, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview_activation, test, Capture);
 			WaitforPage(5000);
 			
 			Techpackpages.filterdata(colorway);
 			test.log(Status.INFO, "colorway filtered " + colorway);
-			addSrceenShot("colorway filtered " + colorway, test, Capture);
+			addScreenShot("colorway filtered " + colorway, test, Capture);
 			System.out.println("colorway filtered " + colorway);
 			
 			LineSheetEditPage.Affiliate_selection(affiliate, test);
 			test.log(Status.INFO, " Affiliate Selected: " + affiliate);
 			System.out.println(" Affiliate Selected: " + affiliate);
-			addSrceenShot("Affiliate Selected", test, Capture);
+			addScreenShot("Affiliate Selected", test, Capture);
 			Thread.sleep(5000);
 
 			lineSheetPage.updateAttributes_ActivateValidation_LSE(currentPlannedLifecycleAFF, firstOnFloorMonthAFF, dlvySelectedAFF,
@@ -128,26 +128,26 @@ public class TC02_P3_ActivateColorway_LSE extends WMS_TestBase {
 
 			test.log(Status.INFO, "All mandatory attributes are filled for Activate LSE and activation is complete");
 			System.out.println("All mandatory attributes are filled for Activate LSE and activation is complete");
-			addSrceenShot("All mandatory attributes are filled for Activate LSE and activation is complete", test,
+			addScreenShot("All mandatory attributes are filled for Activate LSE and activation is complete", test,
 					Capture);
 
 			lineSheetPage.Activation_RunValidation_LSE(test);
 			test.log(Status.PASS, "Validation successful for Activate LSE");
 			System.out.println("Validation successful for Activate LSE");
-			addSrceenShot("Validation successful for Activate LSE", test, Capture);
+			addScreenShot("Validation successful for Activate LSE", test, Capture);
 			Thread.sleep(5000);
 
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -108,49 +108,49 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched", test, Capture);
+				addScreenShot("Browser Launched", test, Capture);
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully: " + global_URL);
-				addSrceenShot("Login successful", test, Capture);
+				addScreenShot("Login successful", test, Capture);
 
 				Thread.sleep(5000);
 
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.clickOnMySeasons();
 				test.log(Status.INFO, "Clicked on MySeasons");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				mainMenuPage.chooseMySeasonType(season);
 				System.out.println("season type is choosen");
 				test.log(Status.INFO, "season type is choosen: " + season);
-				addSrceenShot("Season type is choosen", test, Capture);
+				addScreenShot("Season type is choosen", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 				lineSheetPage.selectViewDropdown(viewType);
 				System.out.println("View type is choosen");
 				test.log(Status.INFO, "View type is choosen: " + viewType);
-				addSrceenShot("View type is choosen", test, Capture);
+				addScreenShot("View type is choosen", test, Capture);
 
 				// Step 1: Click on options icon
 				lineSheetPage.clickOptionsIcon(test);
 				System.out.println("Clicked on options icon");
 				test.log(Status.INFO, "Clicked on options icon");
-				addSrceenShot("Clicked on options icon", test, Capture);
+				addScreenShot("Clicked on options icon", test, Capture);
 				WaitforPage(2000);
 
 				// Step 2: Click on create new season group icon
 				lineSheetPage.clickCreateNewSeasonGroupIcon(test);
 				System.out.println("Clicked on create new season group icon");
 				test.log(Status.INFO, "Clicked on create new season group icon");
-				addSrceenShot("Clicked on create new season group icon", test, Capture);
+				addScreenShot("Clicked on create new season group icon", test, Capture);
 				WaitforPage(2000);
 
 				// Step 3: Fill attributes (give Name in name field)
@@ -158,33 +158,33 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 				lineSheetPage.fillSeasonGroupAttributes(seasonGroupName, test);
 				System.out.println("Filled season group attributes with name: " + seasonGroupName);
 				test.log(Status.INFO, "Filled season group attributes with name: " + seasonGroupName);
-				addSrceenShot("Filled season group attributes", test, Capture);
+				addScreenShot("Filled season group attributes", test, Capture);
 				WaitforPage(2000);
 
 				// Step 4: Click on create
 				lineSheetPage.clickCreateButton(test);
 				System.out.println("Clicked on create button");
 				test.log(Status.INFO, "Clicked on create button");
-				addSrceenShot("Clicked on create button", test, Capture);
+				addScreenShot("Clicked on create button", test, Capture);
 				WaitforPage(2000);
 
 				lineSheetPage.selectViewDropdown(viewType);
 				System.out.println("View type is choosen");
 				test.log(Status.INFO, "View type is choosen: " + viewType);
-				addSrceenShot("View type is choosen", test, Capture);
+				addScreenShot("View type is choosen", test, Capture);
 
 				// Step 5: Verify season group creation in season group dropdown and selected
 				lineSheetPage.verifySeasonGroupCreationAndSelect(seasonGroupName, test);
 				System.out.println("Verified season group creation in dropdown and selected");
 				test.log(Status.INFO, "Verified season group creation in dropdown and selected: " + seasonGroupName);
-				addSrceenShot("Verified season group creation in dropdown and selected", test, Capture);
+				addScreenShot("Verified season group creation in dropdown and selected", test, Capture);
 				WaitforPage(2000);
 
 				// Step 6: Click on apply
 				lineSheetPage.clickApplyButton(test);
 				System.out.println("Clicked on apply button");
 				test.log(Status.INFO, "Clicked on apply button");
-				addSrceenShot("Clicked on apply button", test, Capture);
+				addScreenShot("Clicked on apply button", test, Capture);
 				WaitforPage(2000);
 
 				// Associate colorway to season group
@@ -192,33 +192,33 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 				lineSheetPage.clickOptionsIcon(test);
 				System.out.println("Clicked on options icon");
 				test.log(Status.INFO, "Clicked on options icon");
-				addSrceenShot("Clicked on options icon", test, Capture);
+				addScreenShot("Clicked on options icon", test, Capture);
 				WaitforPage(2000);
 
 				// Step 2: Click on add colorways option
 				lineSheetPage.clickAddColorwaysOption(test);
 				System.out.println("Clicked on add colorways option");
 				test.log(Status.INFO, "Clicked on add colorways option");
-				addSrceenShot("Clicked on add colorways option", test, Capture);
+				addScreenShot("Clicked on add colorways option", test, Capture);
 				WaitforPage(2000);
 
 				lineSheetPage.select_ViewDropdown(viewType);
 				System.out.println("View type is choosen");
 				test.log(Status.INFO, "View type is choosen: " + viewType);
-				addSrceenShot("View type is choosen", test, Capture);
+				addScreenShot("View type is choosen", test, Capture);
 
 				// Step 3: Filter colorway name and click on checkbox
 //			String colorwayName = "0WPPT-0001 Test01";
 				lineSheetPage.filter_Colorway(colorwayName, test);
 				System.out.println("filtered By Colorway name: " + colorwayName);
 				test.log(Status.INFO, "filtered By Colorway name: " + colorwayName);
-				addSrceenShot("filtered By Colorway name", test, Capture);
+				addScreenShot("filtered By Colorway name", test, Capture);
 				WaitforPage(2000);
 
 				lineSheetPage.selectColorwayCheckbox(colorwayName, test);
 				System.out.println("Selected colorway checkbox: " + colorwayName);
 				test.log(Status.INFO, "Selected colorway checkbox: " + colorwayName);
-				addSrceenShot("Selected colorway checkbox", test, Capture);
+				addScreenShot("Selected colorway checkbox", test, Capture);
 				WaitforPage(2000);
 
 				// Capture the current time in GMT
@@ -237,20 +237,20 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 						+ formattedTime + " on date: " + formattedDate);
 				System.out.println("Selected colorway checkbox and select option clicked at GMT time: " + formattedTime
 						+ " on date: " + formattedDate);
-				addSrceenShot("Save button clicked", test, Capture);
+				addScreenShot("Save button clicked", test, Capture);
 
 				// Step 4: Click on select option
 				lineSheetPage.clickSelectOption(test);
 				System.out.println("Clicked on select option");
 				test.log(Status.INFO, "Clicked on select option");
-				addSrceenShot("Clicked on select option", test, Capture);
+				addScreenShot("Clicked on select option", test, Capture);
 				WaitforPage(2000);
 
 				// Step 5: Verify success message
 				lineSheetPage.verifySuccessMessage(test);
 				System.out.println("Verified success message: added successfully");
 				test.log(Status.PASS, "Verified success message: added successfully");
-				addSrceenShot("Verified success message", test, Capture);
+				addScreenShot("Verified success message", test, Capture);
 				WaitforPage(4000);
 
 				driver.manage().deleteAllCookies();
@@ -259,68 +259,68 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_BUSSINESS.menu(), true);
-				addSrceenShot("Clicked on Main menu of Libraries", test, Capture);
+				addScreenShot("Clicked on Main menu of Libraries", test, Capture);
 				System.out.println("Clicked on Business Object");
 				test.log(Status.INFO, "Clicked on Business Object");
-				addSrceenShot("Clicked on Business Object", test, Capture);
+				addScreenShot("Clicked on Business Object", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.chooseBusinessObjectType(businessObjectType);
 				System.out.println("Business object type chosen: " + businessObjectType);
 				test.log(Status.INFO, "Business object type chosen: " + businessObjectType);
-				addSrceenShot("Business object type chosen", test, Capture);
+				addScreenShot("Business object type chosen", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.chooseActionType(actionType);
 				System.out.println("Action type chosen: " + actionType);
 				test.log(Status.INFO, "Action type chosen: " + actionType);
-				addSrceenShot("Action type chosen", test, Capture);
+				addScreenShot("Action type chosen", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.enterEventHourFrom(hourFrom);
 				System.out.println("Event Hour From: " + hourFrom);
 				test.log(Status.INFO, "Event Hour From: " + hourFrom);
-				addSrceenShot("Event Hour From", test, Capture);
+				addScreenShot("Event Hour From", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.enterEventHourTo(hourTo);
 				System.out.println("Event Hour TO: " + hourTo);
 				test.log(Status.INFO, "Event Hour TO: " + hourTo);
-				addSrceenShot("Event Hour TO", test, Capture);
+				addScreenShot("Event Hour TO", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.enterCreatedDate(formattedDate);
 				System.out.println("Entered Created Date: " + formattedDate);
 				test.log(Status.INFO, "Entered Created Date: " + formattedDate);
-				addSrceenShot("Entered Created Date", test, Capture);
+				addScreenShot("Entered Created Date", test, Capture);
 				WaitforPage(4000);
 
 //			String messageTableValue = "*LSCOSeasonGroupToSKULink*";
 				businessObjectPage.enterMessageTable(messageTableValue);
 				System.out.println("Entered Message Table: " + messageTableValue);
 				test.log(Status.INFO, "Entered Message Table: " + messageTableValue);
-				addSrceenShot("Entered Created Date", test, Capture);
+				addScreenShot("Entered Created Date", test, Capture);
 				WaitforPage(4000);
 
 //			String hierarchyValue = "*LSCO\\Levis*";
 				businessObjectPage.enterHierarchy(hierarchyValue);
 				System.out.println("Entered Hierarchy: " + hierarchyValue);
 				test.log(Status.INFO, "Entered Hierarchy: " + hierarchyValue);
-				addSrceenShot("Entered Hierarchy", test, Capture);
+				addScreenShot("Entered Hierarchy", test, Capture);
 				WaitforPage(4000);
 
 				businessObjectPage.clickSearch();
 				System.out.println("Clicked on Search");
 				test.log(Status.INFO, "Clicked on Search");
-				addSrceenShot("Clicked on Search", test, Capture);
+				addScreenShot("Clicked on Search", test, Capture);
 				WaitforPage(4000);
 
 				// Verify the staging row ID
 				businessObjectPage.verifyStagingRowId(test);
-				addSrceenShot("Staging Row ID is updated in LSCOTransactionTable", test, Capture);
+				addScreenShot("Staging Row ID is updated in LSCOTransactionTable", test, Capture);
 
 
 				if (i == testData.length - 1) {
@@ -328,12 +328,12 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 					dashboardPage.closeLeftPanel();
 					System.out.println("Clicked on close Left plane");
 					test.log(Status.INFO, "Clicked on close Left plane");
-					addSrceenShot("Clicked on close Left plane", test, Capture);
+					addScreenShot("Clicked on close Left plane", test, Capture);
 
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 				} else {
 					// Delete all cookies and Refresh the browser
 					driver.manage().deleteAllCookies();
@@ -342,7 +342,7 @@ public class TC_P3_CreateMultipleSeasonGroupToSKULink_VerifyStagingRowID extends
 				
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 			}
 		}

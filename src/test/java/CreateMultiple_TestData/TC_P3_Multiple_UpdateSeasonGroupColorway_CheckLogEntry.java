@@ -158,54 +158,54 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched", test, Capture);
+				addScreenShot("Browser Launched", test, Capture);
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully: - URL -" + global_URL);
-				addSrceenShot("Login successful", test, Capture);
+				addScreenShot("Login successful", test, Capture);
 
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.clickOnMySeasons();
 				test.log(Status.INFO, "Clicked on MySeasons");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				mainMenuPage.chooseMySeasonType(season);
 				System.out.println("season type is choosen");
 				test.log(Status.INFO, "season type is choosen: " + season);
-				addSrceenShot("Season type is choosen", test, Capture);
+				addScreenShot("Season type is choosen", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 				lineSheetPage.selectViewDropdown(viewType);
 				System.out.println("View type is choosen");
 				test.log(Status.INFO, "View type is choosen: " + viewType);
-				addSrceenShot("View type is choosen", test, Capture);
+				addScreenShot("View type is choosen", test, Capture);
 
 				lineSheetPage.filterProduct(colorwayName, test);
 				System.out.println("filtered By Colorway name: " + colorwayName);
 				test.log(Status.INFO, "filtered By Colorway name: " + colorwayName);
-				addSrceenShot("filtered By Colorway name", test, Capture);
+				addScreenShot("filtered By Colorway name", test, Capture);
 
 				lineSheetPage.selectSeasonGroupAsGlobal(globalVaue, test);
 				System.out.println("value for Seasonal groups gloabl selected is: " + globalVaue);
 				test.log(Status.INFO, "value for Seasonal groups gloabl selected is: " + globalVaue);
-				addSrceenShot("value for Seasonal groups gloabl selected", test, Capture);
+				addScreenShot("value for Seasonal groups gloabl selected", test, Capture);
 
 				lineSheetPage.changeTheAdoptedGBToYes(test);
 				System.out.println("changed AdoptedGB to Yes");
 				test.log(Status.PASS, "changed AdoptedGB to Yes");
-				addSrceenShot("changed AdoptedGB to Yes", test, Capture);
+				addScreenShot("changed AdoptedGB to Yes", test, Capture);
 
 				dashboardPage.Logout();
 				System.out.println("Logout successful");
 				test.log(Status.INFO, "Logout successful");
-				addSrceenShot("Logout successful", test, Capture);
+				addScreenShot("Logout successful", test, Capture);
 
 //			--------------------------login using Local user------------------------------------------------	
 //			--------------------------for adoption at Local level-------------------------------------------
@@ -216,55 +216,55 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched", test, Capture);
+				addScreenShot("Browser Launched", test, Capture);
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully: - URL -" + localHub_URL);
-				addSrceenShot("Login successful", test, Capture);
+				addScreenShot("Login successful", test, Capture);
 
 				dashboardPage.openLeftPanel();
 				test.log(Status.INFO, "Left panel opened");
-				addSrceenShot("Left panel opened", test, Capture);
+				addScreenShot("Left panel opened", test, Capture);
 
 				mainMenuPage.clickOnMySeasons();
 				test.log(Status.INFO, "Clicked on MySeasons");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				mainMenuPage.chooseMySeasonType(season);
 				System.out.println("season type is choosen");
 				test.log(Status.INFO, "season type is choosen: " + season);
-				addSrceenShot("Season type is choosen", test, Capture);
+				addScreenShot("Season type is choosen", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 				lineSheetPage.selectViewDropdown(viewType);
 				System.out.println("View type is choosen");
 				test.log(Status.INFO, "View type is choosen: " + viewType);
-				addSrceenShot("View type is choosen", test, Capture);
+				addScreenShot("View type is choosen", test, Capture);
 
 				lineSheetPage.filterProduct(colorwayName, test);
 				System.out.println("filtered By Colorway name: " + colorwayName);
 				test.log(Status.INFO, "filtered By Colorway name: " + colorwayName);
-				addSrceenShot("filtered By Colorway name", test, Capture);
+				addScreenShot("filtered By Colorway name", test, Capture);
 				WaitforPage(5000);
 
 				LineSheetEditPage.changeSeasonalGroupsLocalHub_Value(localHubValue, test);
 				test.log(Status.INFO, "value for Seasonal groups Local hub selected is: " + localHubValue);
-				addSrceenShot("value for Seasonal groups Local hub selected", test, Capture);
+				addScreenShot("value for Seasonal groups Local hub selected", test, Capture);
 				Thread.sleep(5000);
 
 				Thread.sleep(5000);
 				LineSheetEditPage.Change_AdoptedLH_Value(test);
 				System.out.println("Adoption LH value changed to YES");
 				test.log(Status.INFO, "Adoption LH value changed to YES");
-				addSrceenShot("Adoption LH value changed to YES", test, Capture);
+				addScreenShot("Adoption LH value changed to YES", test, Capture);
 
 				Thread.sleep(5000);
 				dashboardPage.Logout();
 				System.out.println("Logout successful");
-				addSrceenShot("Clicked on Logout successful", test, Capture);
+				addScreenShot("Clicked on Logout successful", test, Capture);
 
 //			--------------------------login using affiliate user------------------------------------------------
 //			--------------------------for adoption at Affiliate level-------------------------------------------
@@ -274,49 +274,49 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 
 				System.out.println("Browser Launched successfully");
 				test.log(Status.INFO, "Browser Launched successfully");
-				addSrceenShot("Browser Launched", test, Capture);
+				addScreenShot("Browser Launched", test, Capture);
 
 				System.out.println("login to flex PLM application successfully");
 				test.log(Status.INFO, "login to flex PLM application successfully: - URL -" + affiliate_URL);
-				addSrceenShot("Login successful", test, Capture);
+				addScreenShot("Login successful", test, Capture);
 
 				dashboardPage.openLeftPanel();
 				test.log(Status.INFO, "Left panel opened");
-				addSrceenShot("Left panel opened", test, Capture);
+				addScreenShot("Left panel opened", test, Capture);
 
 				mainMenuPage.clickOnMySeasons();
 				test.log(Status.INFO, "Clicked on MySeasons");
-				addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+				addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 				mainMenuPage.chooseMySeasonType(season);
 				System.out.println("season type is choosen");
 				test.log(Status.INFO, "season type is choosen: " + season);
-				addSrceenShot("Season type is choosen", test, Capture);
+				addScreenShot("Season type is choosen", test, Capture);
 
 				lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 				test.log(Status.INFO, "Clicked on Line Sheets");
-				addSrceenShot("Clicked on Line Sheets", test, Capture);
+				addScreenShot("Clicked on Line Sheets", test, Capture);
 
 				lineSheetPage.selectViewDropdown(viewType);
 				System.out.println("View type is choosen");
 				test.log(Status.INFO, "View type is choosen: " + viewType);
-				addSrceenShot("View type is choosen", test, Capture);
+				addScreenShot("View type is choosen", test, Capture);
 
 				lineSheetPage.filterProduct(colorwayName, test);
 				System.out.println("filtered By Colorway name: " + colorwayName);
 				test.log(Status.INFO, "filtered By Colorway name: " + colorwayName);
-				addSrceenShot("filtered By Colorway name", test, Capture);
+				addScreenShot("filtered By Colorway name", test, Capture);
 				WaitforPage(5000);
 
 				LineSheetEditPage.changeSeasonalGroupsAffiliate_Value(localHubValue, affiliateValue, test);
 				test.log(Status.INFO, "value for Seasonal groups Affiliate selected is: " + affiliateValue);
-				addSrceenShot("value for Seasonal groups Affiliate selected", test, Capture);
+				addScreenShot("value for Seasonal groups Affiliate selected", test, Capture);
 				Thread.sleep(5000);
 
 				LineSheetEditPage.Change_AdoptedAFF_Value(test);
 				test.log(Status.PASS, "Adopted AFF value is changed to Yes");
 				System.out.println("Adopted AFF value is changed to Yes");
-				addSrceenShot("Adopted AFF value is changed to Yes", test, Capture);
+				addScreenShot("Adopted AFF value is changed to Yes", test, Capture);
 				WaitforPage(5000);
 
 				// Capture the current time in GMT after changing adopted AFF value to yes
@@ -327,7 +327,7 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 				// Log the exact date
 				test.log(Status.INFO, "Adopted AFF value updated on date: " + createddate);
 				System.out.println("Adopted AFF value updated on date: " + createddate);
-				addSrceenShot("Adopted AFF value updated on date: ", test, Capture);
+				addScreenShot("Adopted AFF value updated on date: ", test, Capture);
 
 				/**
 				 * Open new tab and login using Administrator user for checking LogEntry
@@ -339,30 +339,30 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 				test.log(Status.INFO,
 						"Open new tab and Navigate to the Administrative User for checking Log Entry: - URL - "
 								+ admin_URL);
-				addSrceenShot("Navigate to the Administrative User", test, Capture);
+				addScreenShot("Navigate to the Administrative User", test, Capture);
 				Thread.sleep(4000);
 
 				dashboardPage.openLeftPanel();
 				System.out.println("Clicked on open Left plane");
 				test.log(Status.INFO, "Clicked on open Left plane");
-				addSrceenShot("Clicked on open Left plane", test, Capture);
+				addScreenShot("Clicked on open Left plane", test, Capture);
 
 				mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_LOG_ENTRY.menu());
 				test.log(Status.INFO, "Clicked on Libraries menu");
-				addSrceenShot("Clicked on Libraries menu", test, Capture);
+				addScreenShot("Clicked on Libraries menu", test, Capture);
 
 				Thread.sleep(2000);
 
 				LogEntrypage.select_LogEntryObject(LogEntryObject, test);
 				System.out.println("Log Entry Object is selected ");
 				test.log(Status.INFO, "Log Entry Object is selected");
-				addSrceenShot("Log Entry Object is selected", test, Capture);
+				addScreenShot("Log Entry Object is selected", test, Capture);
 				Thread.sleep(2000);
 
 				LogEntrypage.Add_criteria(event, createddate, test);
 				System.out.println("Criteria is added ");
 				test.log(Status.INFO, "Criteria is added");
-				addSrceenShot("Criteria is added", test, Capture);
+				addScreenShot("Criteria is added", test, Capture);
 				Thread.sleep(2000);
 
 				LogEntrypage.clickedFirst_viewdetails();
@@ -373,19 +373,19 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 				LogEntrypage.validate_Logdetails(event, LogEntryObject, test);
 				System.out.println("Validation successful for Log Entry details ");
 				test.log(Status.PASS, "Validation successful for Log Entry details");
-				addSrceenShot("Validation successful for Log Entry details", test, Capture);
+				addScreenShot("Validation successful for Log Entry details", test, Capture);
 
 				if (i == testData.length - 1) {
 					// Last iteration, perform logout
 					dashboardPage.closeLeftPanel();
 					System.out.println("Clicked on close Left plane");
 					test.log(Status.INFO, "Clicked on close Left plane");
-					addSrceenShot("Clicked on close Left plane", test, Capture);
+					addScreenShot("Clicked on close Left plane", test, Capture);
 
 					dashboardPage.Logout();
 					System.out.println("Logout successful");
 					test.log(Status.INFO, "Logout successful");
-					addSrceenShot("Logout successful", test, Capture);
+					addScreenShot("Logout successful", test, Capture);
 				} else {
 				    // Not the last iteration, switch to the first tab, close the second tab, and navigate to global url
 					switchToFirstTabAndCloseSecond();
@@ -395,7 +395,7 @@ public class TC_P3_Multiple_UpdateSeasonGroupColorway_CheckLogEntry extends WMS_
 				
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-				test.log(Status.FAIL, "Test case failed due to application slowness");
+				test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 				throw e;
 			}finally {
 				stopKeepScreenAwake();

@@ -79,41 +79,41 @@ public class TC69_P2_Placement_VerifyPlacementAttributes_Carryover extends WMS_T
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "left panel opened");
-			addSrceenShot("left panel opened", test, Capture);
+			addScreenShot("left panel opened", test, Capture);
 			
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 			
 			LineSheetEditPage.SeasonDropdown(season);
 			test.log(Status.INFO, "Season value seleted:"+season);
-			addSrceenShot("Season value seleted"+season, test, Capture);
+			addScreenShot("Season value seleted"+season, test, Capture);
 			
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 			
 			WaitforPage(5000);
 			
 			LineSheetEditPage.filter_View_Change(linesheetview,test);
 			test.log(Status.INFO, "Linesheet view changed to: "+linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			
 			Thread.sleep(5000);
 			
 			LineSheetEditPage.remove_filters();
 			test.log(Status.INFO, "Removed Filter");
 			System.out.println("Removed Filter");
-			addSrceenShot("Removed Filter", test, Capture);
+			addScreenShot("Removed Filter", test, Capture);
 			
 			customLoadersPage.Prerequisite_Carryover(filtercolorway,test);
 			test.log(Status.INFO, "Validation successful for pre-requisite");
 			System.out.println("Validation successful for pre-requisite");
-			addSrceenShot("Validation successful for pre-requisite", test, Capture);
+			addScreenShot("Validation successful for pre-requisite", test, Capture);
 			Thread.sleep(3000);
 			
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -123,17 +123,17 @@ public class TC69_P2_Placement_VerifyPlacementAttributes_Carryover extends WMS_T
 			customLoadersPage.Validate_PlacementAttributes_CarryoverColorway_linesheet(filtercolorway, vendor_Id, AusGdv_value, MALAGdv_value, usagevalue, changereason_value,changecomments_value,test);
 			test.log(Status.PASS, "Validation successful for Placement Attributes after carryover");
 			System.out.println("Validation successful for Placement Attributes after carryover");
-			addSrceenShot("Validation successful for Placement Attributes after carryover", test, Capture);
+			addScreenShot("Validation successful for Placement Attributes after carryover", test, Capture);
 			
 			
 			dashboardPage.Logout();
 			test.log(Status.INFO, "Logout successful");
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

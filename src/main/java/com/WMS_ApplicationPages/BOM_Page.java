@@ -489,7 +489,7 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 
 		System.out.println("Bom details is present ");
 		test.log(Status.INFO, "Bom details is present ");
-		addSrceenShot("Bom details is present", test, Capture);
+		addScreenShot("Bom details is present", test, Capture);
 		Thread.sleep(2000);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(review_mode));
@@ -498,7 +498,7 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 
 		System.out.println("Review mode details is present and the name is:  " + review_mode_details.getText());
 		test.log(Status.INFO, "Review mode details is present and the name is:  " + review_mode_details.getText());
-		addSrceenShot("Review mode details is present and the name is:  " + review_mode_details.getText(), test,
+		addScreenShot("Review mode details is present and the name is:  " + review_mode_details.getText(), test,
 				Capture);
 
 	}
@@ -776,7 +776,7 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 //			new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(pc9CodeSearchBox)).sendKeys(PC9Code);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(pc9_code)).sendKeys(PC9Code);
 		Thread.sleep(1000);
-		addSrceenShot("PC9", test, Capture);
+		addScreenShot("PC9", test, Capture);
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(searchBOMsOptn)).click();
 		Thread.sleep(5000);
@@ -798,7 +798,7 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 			WebElement bomTextElement = driver.findElement(By.xpath("//div[@class='SelectAllLink']//following::input"));
 			String searchResultValue = bomTextElement.getAttribute("value");
 			test.log(Status.PASS, "Search result for partial entry is: " + searchResultValue);
-			addSrceenShot("earch result for partial entry is", test, Capture);
+			addScreenShot("earch result for partial entry is", test, Capture);
 			return true;
 		} else {
 			System.out.println("BOM not updated in BOM app");
@@ -907,7 +907,7 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 	public void clickAddSubsection(ExtentTest test) throws InterruptedException {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(addFabricSection)).click();
 		test.log(Status.INFO, "Clicked to add subsection");
-		addSrceenShot("Clicked to add subsection", test, Capture);
+		addScreenShot("Clicked to add subsection", test, Capture);
 	}
 
 	public void findMaterialByName(String materialName, ExtentTest test) throws InterruptedException {
@@ -916,16 +916,16 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(materialLocator)).sendKeys(materialName);
 		test.log(Status.INFO, "Entered material name: " + materialName);
-		addSrceenShot("Entered material name", test, Capture);
+		addScreenShot("Entered material name", test, Capture);
 		Thread.sleep(5000);
 		materialLocator.sendKeys(Keys.ARROW_DOWN);
 		materialLocator.sendKeys(Keys.ENTER);
 		test.log(Status.INFO, "Selected material from dropdown");
-		addSrceenShot("Selected material from dropdown", test, Capture);
+		addScreenShot("Selected material from dropdown", test, Capture);
 		Thread.sleep(2000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(next)).click();
 		test.log(Status.INFO, "Clicked next");
-		addSrceenShot("Clicked next", test, Capture);
+		addScreenShot("Clicked next", test, Capture);
 		Thread.sleep(3000);
 	}
 
@@ -936,11 +936,11 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 		Actions actions = new Actions(driver);
 		actions.dragAndDrop(material, drop).perform();
 		test.log(Status.INFO, "Dragged material: " + materialName + " into subsection");
-		addSrceenShot("Dragged material", test, Capture);
+		addScreenShot("Dragged material", test, Capture);
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(addMaterial)).click();
 		test.log(Status.INFO, "Clicked to add material");
-		addSrceenShot("Clicked to add material", test, Capture);
+		addScreenShot("Clicked to add material", test, Capture);
 		Thread.sleep(3000);
 	}
 
@@ -958,17 +958,17 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 		materialLocator.clear();
 		materialLocator.sendKeys(materialName);
 		test.log(Status.INFO, "Entered replace material name: " + materialName);
-		addSrceenShot("Entered replace material name: ", test, Capture);
+		addScreenShot("Entered replace material name: ", test, Capture);
 		Thread.sleep(5000);
 		materialLocator.sendKeys(Keys.ARROW_DOWN);
 		materialLocator.sendKeys(Keys.ENTER);
 		test.log(Status.INFO, "Selected replace material from dropdown");
-		addSrceenShot("Selected replace material from dropdown", test, Capture);
+		addScreenShot("Selected replace material from dropdown", test, Capture);
 
 		Thread.sleep(2000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(next)).click();
 		test.log(Status.INFO, "Clicked next");
-		addSrceenShot("Clicked next", test, Capture);
+		addScreenShot("Clicked next", test, Capture);
 		Thread.sleep(3000);
 	}
 
@@ -980,13 +980,13 @@ public class BOM_Page extends WMS_WebDriverUtilities {
 		Actions actions = new Actions(driver);
 		actions.dragAndDrop(material, drop).perform();
 		test.log(Status.INFO, "Dragged replace material: " + materialName + " into drop zone");
-		addSrceenShot("Dragged replace material", test, Capture);
+		addScreenShot("Dragged replace material", test, Capture);
 		Thread.sleep(3000);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(replaceMaterial)).click();
 		test.log(Status.INFO, "Clicked to replace material");
 		Thread.sleep(3000);
 		test.log(Status.PASS, "Material replaced successfully");
-		addSrceenShot("Material replaced successfully", test, Capture);
+		addScreenShot("Material replaced successfully", test, Capture);
 	}
 
 	@FindBy(xpath = "//*[contains(text(),'Quantity')]//following-sibling::div//div//div")

@@ -220,40 +220,40 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			WaitforPage(5000);
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			System.out.println("Linesheet view changed to: " + linesheetview);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view is " + linesheetview, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview, test, Capture);
 
 			Colorwaypage.SelectProduct(product, test);
 			test.log(Status.INFO, "product selected");
-			addSrceenShot("product selected", test, Capture);
+			addScreenShot("product selected", test, Capture);
 
 			Colorwaypage.Create_colorwayLink();
 			System.out.println("Colorway page displayed");
 			test.log(Status.INFO, "Colorway page displayed");
-			addSrceenShot("Colorway page displayed", test, Capture);
+			addScreenShot("Colorway page displayed", test, Capture);
 
 //         if colorsubmenu element is not there just keep blank string ----------------------			
 			String thumbnail = Colorwaypage.selectcolour(colormenu, colorsubmenu, filtercolor, test);
 			System.out.println("color/look Selected ");
 			test.log(Status.INFO, " color/look Selected");
-			addSrceenShot("color/look Selected ", test, Capture);
+			addScreenShot("color/look Selected ", test, Capture);
 			WaitforPage(4000);
 			String profitCenterAPD="- Levi s Male Accessories Belts";
 			Colorwaypage.MandatoryColorwayDetails_ForAPDSetUP(productsegLSUSvalue, productsegLSEvalue, classification,
@@ -262,25 +262,25 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 					test);
 			System.out.println("All mandatory fields filled");
 			test.log(Status.INFO, "All mandatory fields filled");
-			addSrceenShot("All mandatory fields filled", test, Capture);
+			addScreenShot("All mandatory fields filled", test, Capture);
 			WaitforPage(4000);
 ////			
 			Colorwaypage.MandatoryFields_colorwaySeason_SetUpLSE(hubofferedto, productlifecyclegroup, lastseasonoffered,
 					productpricepositioning, createddate, filtermaterial, sizeGridCode, currentPlannedLifecycle, primaryfabric, test);
 			System.out.println("Colorway season fields selected and view product clicked");
 			test.log(Status.INFO, "Colorway season fields selected and view product clicked");
-			addSrceenShot("Colorway season fields selected and view product clicked", test, Capture);
+			addScreenShot("Colorway season fields selected and view product clicked", test, Capture);
 
 			Thread.sleep(2000);
 			String colorwayname = Colorwaypage.validateColorway_creation(filtercolor, test);
 			System.out.println("Validated Colorway creation");
 			test.log(Status.PASS, "Validated Colorway creation");
-			addSrceenShot("Validated Colorway creation", test, Capture);
+			addScreenShot("Validated Colorway creation", test, Capture);
 
 			Colorwaypage.Navigate_to_firstTab();
 			System.out.println("Navigated to linesheet page");
 			test.log(Status.INFO, "Navigated to linesheet page");
-			addSrceenShot("Navigated to linesheet page", test, Capture);
+			addScreenShot("Navigated to linesheet page", test, Capture);
 //
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -288,7 +288,7 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view is " + linesheetview, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview, test, Capture);
 			WaitforPage(5000);
 			
 			LineSheetEditPage.setting_colorway();
@@ -296,7 +296,7 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 //			String colorwayname="0wpn3-0012 Black Bird heather";
 			Techpackpages.filterdata(colorwayname);
 			test.log(Status.INFO, "Colorway filtered " + colorwayname);
-			addSrceenShot("Colorway filtered " + colorwayname, test, Capture);
+			addScreenShot("Colorway filtered " + colorwayname, test, Capture);
 			System.out.println("Colorway filtered " + colorwayname);
 
 			Thread.sleep(5000);
@@ -306,18 +306,18 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 			lineSheetPage.selectSeasonGroupAsGlobal(globalVaue, test);
 			System.out.println("SeasonGroup As Global choosen");
 			test.log(Status.INFO, "selected SeasonGroup As Global choosen: " + globalVaue);
-			addSrceenShot("selected SeasonGroup As Global choosen", test, Capture);
+			addScreenShot("selected SeasonGroup As Global choosen", test, Capture);
 			Thread.sleep(3000);
 
 			LineSheetEditPage.Change_AdoptedGB_value(test);
 			System.out.println("Adopted GB value is changed to Yes");
 			test.log(Status.INFO, "Adopted GB value is changed to Yes ");
-			addSrceenShot("Adopted GB value is changed to Yes", test, Capture);
+			addScreenShot("Adopted GB value is changed to Yes", test, Capture);
 //
 			Thread.sleep(5000);
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 //			--------------------------login using Local user------------------------------------------------	
 //			--------------------------for adoption at Local level-------------------------------------------
@@ -331,46 +331,46 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view is " + linesheetview, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview, test, Capture);
 			WaitforPage(5000);
 
 			LineSheetEditPage.changeLocalHub_Value(colorwayname, localhub, test);
 			test.log(Status.INFO, "value for Seasonal groups Local hub selected is: " + localhub);
 			test.log(Status.INFO, "colorway value filtered: " + colorwayname);
-			addSrceenShot("local hub selected and colorway value filtered", test, Capture);
+			addScreenShot("local hub selected and colorway value filtered", test, Capture);
 			Thread.sleep(5000);
 
 			Thread.sleep(5000);
 			LineSheetEditPage.Change_AdoptedLH_Value(test);
 			System.out.println("Adoption LH value changed to YES");
 			test.log(Status.INFO, "Adoption LH value changed to YES");
-			addSrceenShot("Adoption LH value changed to YES", test, Capture);
+			addScreenShot("Adoption LH value changed to YES", test, Capture);
 
 			Thread.sleep(5000);
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 
 //			--------------------------login using affiliate user------------------------------------------------
 //			--------------------------for adoption at Affiliate level-------------------------------------------
@@ -384,47 +384,47 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 			dashboardPage.closeLeftPanel();
 			test.log(Status.INFO, "Closed Left panel");
-			addSrceenShot("Closed Left panel", test, Capture);
+			addScreenShot("Closed Left panel", test, Capture);
 
 			WaitforPage(5000);
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view is " + linesheetview, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview, test, Capture);
 			WaitforPage(5000);
 
 			LineSheetEditPage.changeLocalHub_Value(colorwayname, localhub, test);
 			test.log(Status.INFO, "value for Seasonal groups Local hub selected is: " + localhub);
 			test.log(Status.INFO, "colorway value filtered: " + colorwayname);
-			addSrceenShot("local hub selected and colorway value filtered", test, Capture);
+			addScreenShot("local hub selected and colorway value filtered", test, Capture);
 			Thread.sleep(5000);
 
 			LineSheetEditPage.Affiliate_selection(affiliate, test);
 			test.log(Status.INFO, " Affiliate Selected: " + affiliate);
 			System.out.println(" Affiliate Selected: " + affiliate);
-			addSrceenShot("Affiliate Selected", test, Capture);
+			addScreenShot("Affiliate Selected", test, Capture);
 			Thread.sleep(5000);
 			
 			LineSheetEditPage.Change_AdoptedAFF_Value(test);
 			test.log(Status.PASS, "Adopted AFF value is changed to Yes");
 			System.out.println("Adopted AFF value is changed to Yes");
-			addSrceenShot("Adopted AFF value is changed to Yes", test, Capture);
+			addScreenShot("Adopted AFF value is changed to Yes", test, Capture);
 
 			WaitforPage(5000);
 			
@@ -440,48 +440,48 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			WaitforPage(5000);
 			LineSheetEditPage.filter_View_Change(linesheetview_APD, test);
 			System.out.println("Linesheet view changed to: " + linesheetview_APD);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview_APD);
-			addSrceenShot("Linesheet view is " + linesheetview_APD, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview_APD, test, Capture);
 			
 			WaitforPage(5000);
 			LineSheetEditPage.changeLocalHub_Value(colorwayname, localhub, test);
 			test.log(Status.INFO, "value for Seasonal groups Local hub selected is: " + localhub);
 			test.log(Status.INFO, "colorway value filtered: " + colorwayname);
-			addSrceenShot("local hub selected and colorway value filtered", test, Capture);
+			addScreenShot("local hub selected and colorway value filtered", test, Capture);
 			Thread.sleep(5000);
 
 			LineSheetEditPage.Affiliate_selection(affiliate, test);
 			test.log(Status.INFO, " Affiliate Selected: " + affiliate);
 			System.out.println(" Affiliate Selected: " + affiliate);
-			addSrceenShot("Affiliate Selected", test, Capture);
+			addScreenShot("Affiliate Selected", test, Capture);
 			Thread.sleep(5000);
 			
 			E2EPages.Linesheet_SetUpAPD(ProfitcenterAPD,test);
 			test.log(Status.PASS, " APD setup completed ");
 			System.out.println(" APD setup completed ");
-			addSrceenShot(" APD setup completed ", test, Capture);
+			addScreenShot(" APD setup completed ", test, Capture);
 			Thread.sleep(3000);
 			
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
-			addSrceenShot("Clicked on Logout successful", test, Capture);
+			addScreenShot("Clicked on Logout successful", test, Capture);
 			
 //			--------------------------login using affiliate user------------------------------------------------	
 			driver.close();
@@ -494,56 +494,56 @@ public class TC_SetUp_And_Activate_APD_Linesheet extends WMS_TestBase {
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
-			addSrceenShot("Left panel opened", test, Capture);
+			addScreenShot("Left panel opened", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "season selected: " + season);
-			addSrceenShot("season selected", test, Capture);
+			addScreenShot("season selected", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(5000);
 
 			LineSheetEditPage.filter_View_Change(linesheetview_activation, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview_activation);
-			addSrceenShot("Linesheet view is " + linesheetview_activation, test, Capture);
+			addScreenShot("Linesheet view is " + linesheetview_activation, test, Capture);
 			WaitforPage(5000);
 			
 			Techpackpages.filterdata(colorwayname);
 			test.log(Status.INFO, "source filtered " + colorwayname);
-			addSrceenShot("source filtered " + colorwayname, test, Capture);
+			addScreenShot("source filtered " + colorwayname, test, Capture);
 			System.out.println("source filtered " + colorwayname);
 			
 			LineSheetEditPage.Affiliate_selection(affiliate, test);
 			test.log(Status.INFO, " Affiliate Selected: " + affiliate);
 			System.out.println(" Affiliate Selected: " + affiliate);
-			addSrceenShot("Affiliate Selected", test, Capture);
+			addScreenShot("Affiliate Selected", test, Capture);
 			Thread.sleep(5000);
 
 			lineSheetPage.updateAttributes_ActivateAPD(currentPlannedLifecycleAFF, firstOnFloorMonthAFF, dlvySelectedAFF, targetAFFMSRP, priceWhslAFF, test);
 
 			test.log(Status.INFO, "All mandatory attributes are filled for Activate APD and activation is complete");
 			System.out.println("All mandatory attributes are filled for Activate APD and activation is complete");
-			addSrceenShot("All mandatory attributes are filled for Activate APD and activation is complete", test,
+			addScreenShot("All mandatory attributes are filled for Activate APD and activation is complete", test,
 					Capture);
 			
 
 			lineSheetPage.verifyActivation_APD(test);
 			test.log(Status.PASS, "Validation successful for Activate APD");
 			System.out.println("Validation successful for Activate APD");
-			addSrceenShot("Validation successful for Activate APD", test, Capture);
+			addScreenShot("Validation successful for Activate APD", test, Capture);
 			Thread.sleep(10000);
 
 			
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

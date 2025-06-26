@@ -494,7 +494,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		if (!Colorwaycheck.isDisplayed()) {
 			System.out.println("Colorway is not present in Linesheet ");
 			test.log(Status.INFO, "Colorway is not present in Linesheet");
-			addSrceenShot("Colorway is not present in Linesheet ", test, Capture);
+			addScreenShot("Colorway is not present in Linesheet ", test, Capture);
 
 		}
 	}
@@ -507,7 +507,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		if (ComponentsColorway_value.isDisplayed()) {
 			System.out.println("Components colorway value is " + ComponentsColorway_value.getText());
 			test.log(Status.INFO, "Components colorway value is " + ComponentsColorway_value.getText());
-			addSrceenShot("Components colorway value is " + ComponentsColorway_value.getText(), test, Capture);
+			addScreenShot("Components colorway value is " + ComponentsColorway_value.getText(), test, Capture);
 		}
 		Thread.sleep(2000);
 	}
@@ -738,13 +738,13 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		if (SelectedMerchant_value.getText().equals(merchant)) {
 			System.out.println("Merchant value is updated and the value is: " + SelectedMerchant_value.getText());
 			test.log(Status.INFO, "Merchant value is updated and the value is: " + SelectedMerchant_value.getText());
-			addSrceenShot("Merchant value is updated and the value is: " + SelectedMerchant_value.getText(), test,
+			addScreenShot("Merchant value is updated and the value is: " + SelectedMerchant_value.getText(), test,
 					Capture);
 		}
 		if (SelectedPDS_value.getText().equals(PDS)) {
 			System.out.println("PDS value is updated and the value is: " + SelectedPDS_value.getText());
 			test.log(Status.INFO, "PDS value is updated and the value is: " + SelectedPDS_value.getText());
-			addSrceenShot("PDS value is updated and the value is: " + SelectedPDS_value.getText(), test, Capture);
+			addScreenShot("PDS value is updated and the value is: " + SelectedPDS_value.getText(), test, Capture);
 
 		}
 		if (SelectedGarmentDeveloper_value.getText().equals(garmentdeveloper)) {
@@ -752,7 +752,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 					+ SelectedGarmentDeveloper_value.getText());
 			test.log(Status.INFO, "Garmment developer value is updated and the value is: "
 					+ SelectedGarmentDeveloper_value.getText());
-			addSrceenShot(
+			addScreenShot(
 					"Garmment developer value is updated and the value is: " + SelectedGarmentDeveloper_value.getText(),
 					test, Capture);
 
@@ -760,7 +760,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		if (SelectedDesigner_value.getText().equals(designer)) {
 			System.out.println("Designer value is updated and the value is: " + SelectedDesigner_value.getText());
 			test.log(Status.INFO, "Designer value is updated and the value is: " + SelectedDesigner_value.getText());
-			addSrceenShot("Designer value is updated and the value is: " + SelectedDesigner_value.getText(), test,
+			addScreenShot("Designer value is updated and the value is: " + SelectedDesigner_value.getText(), test,
 					Capture);
 		}
 	}
@@ -882,13 +882,13 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 
 		System.out.println("Available value prepopulated is : " + Available_placement.getText());
 		test.log(Status.INFO, "Available value prepopulated is : " + Available_placement.getText());
-		addSrceenShot("Available value prepopulated is : " + Available_placement.getText(), test, Capture);
+		addScreenShot("Available value prepopulated is : " + Available_placement.getText(), test, Capture);
 
 		System.out.println(
 				"Authorized for placement value prepopulated is : " + AuthorizedforPlacement_placement.getText());
 		test.log(Status.INFO,
 				"Authorized for placement value prepopulated is : " + AuthorizedforPlacement_placement.getText());
-		addSrceenShot("Authorized for placement value prepopulated is : " + AuthorizedforPlacement_placement.getText(),
+		addScreenShot("Authorized for placement value prepopulated is : " + AuthorizedforPlacement_placement.getText(),
 				test, Capture);
 
 		ApplyChanges.click();
@@ -1167,7 +1167,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 
 		System.out.println("Filter criteria is : " + Filter_criteria.getAttribute("title"));
 		test.log(Status.INFO, "Filter criteria is : " + Filter_criteria.getAttribute("title"));
-		addSrceenShot("Filter criteria is : " + Filter_criteria.getAttribute("title"), test, Capture);
+		addScreenShot("Filter criteria is : " + Filter_criteria.getAttribute("title"), test, Capture);
 
 	}
 
@@ -1178,7 +1178,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		if (Activate_Attribute.getText().equalsIgnoreCase(expectedAttributes)) {
 			System.out.println(" Activate Attribute is present in UI for Data validation filter ");
 			test.log(Status.INFO, " Activate Attribute is present in UI for Data validation filter ");
-			addSrceenShot("Activate Attribute is present in UI for Data validation filter ", test, Capture);
+			addScreenShot("Activate Attribute is present in UI for Data validation filter ", test, Capture);
 
 		}
 	}
@@ -1315,7 +1315,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		if (Available_value.getText().equalsIgnoreCase("Yes")) {
 			test.log(Status.PASS, "Available? value is : " + Available_value.getText());
 			System.out.println("Available? value is : " + Available_value.getText());
-			addSrceenShot("Available? value is : " + Available_value.getText(), test, Capture);
+			addScreenShot("Available? value is : " + Available_value.getText(), test, Capture);
 		}
 	}
 
@@ -1379,7 +1379,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 				if (adoptedLHvalue.equalsIgnoreCase("Dropped")) {
 					test.log(Status.PASS, "Adopted LH value is autopopulated and the value is: " + adoptedLHvalue);
 					System.out.println("Adopted LH value autopopulated and the value is:  " + adoptedLHvalue);
-					addSrceenShot("Adopted LH value autopopulated and the value is:  " + adoptedLHvalue, test, Capture);
+					addScreenShot("Adopted LH value autopopulated and the value is:  " + adoptedLHvalue, test, Capture);
 				} else {
 					test.log(Status.FAIL, "Adopted LH value is not autopopulating to Dropped ");
 					System.out.println("Adopted LH value is not autopopulating to Dropped");
@@ -2022,18 +2022,18 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		SeasonGroups_Global.click();
 		SeasonGroups_Global_value.click();
 		test.log(Status.INFO, "Season Group As Global chosen");
-		addSrceenShot("Season Group As Global chosen", test, Capture);
+		addScreenShot("Season Group As Global chosen", test, Capture);
 		Thread.sleep(2000);
 		SeasonGroups_LocalHub.click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//li[@role='option']/span[@title='" + localHubValue + "']")).click();
 		test.log(Status.INFO, "Local Hub selected: " + localHubValue + "in setting menu");
-		addSrceenShot("Season Group As LH chosen", test, Capture);
+		addScreenShot("Season Group As LH chosen", test, Capture);
 		Thread.sleep(2000);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(applyButton));
 		ApplyChanges.click();
 		test.log(Status.INFO, "Clicked On Apply Button");
-		addSrceenShot("Clicked On Apply Button", test, Capture);
+		addScreenShot("Clicked On Apply Button", test, Capture);
 		Thread.sleep(4000);
 	}
 
@@ -2048,7 +2048,7 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		SeasonGroups_Global.click();
 		SeasonGroups_Global_value.click();
 		test.log(Status.INFO, "Season Group As Global chosen");
-		addSrceenShot("Season Group As Global chosen", test, Capture);
+		addScreenShot("Season Group As Global chosen", test, Capture);
 		Thread.sleep(2000);
 		SeasonGroups_LocalHub.click();
 		Thread.sleep(2000);
@@ -2059,11 +2059,11 @@ public class LineSheet_Edit_Page extends WMS_WebDriverUtilities {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//li[@aria-label='" + affiliateValue + "']")).click();
 		test.log(Status.INFO, "Local Hub selected: " + affiliateValue + "in setting menu");
-		addSrceenShot("Season Group As Affiliate chosen", test, Capture);
+		addScreenShot("Season Group As Affiliate chosen", test, Capture);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(applyButton));
 		ApplyChanges.click();
 		test.log(Status.INFO, "Clicked On Apply Button");
-		addSrceenShot("Clicked On Apply Button", test, Capture);
+		addScreenShot("Clicked On Apply Button", test, Capture);
 		Thread.sleep(4000);
 	}
 

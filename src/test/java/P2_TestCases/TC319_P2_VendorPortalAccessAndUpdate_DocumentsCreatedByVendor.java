@@ -75,11 +75,11 @@ public class TC319_P2_VendorPortalAccessAndUpdate_DocumentsCreatedByVendor exten
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL - " + VendorPortal_URl);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			System.out.println("login successful");
 			test.log(Status.INFO, "login successful");
@@ -87,33 +87,33 @@ public class TC319_P2_VendorPortalAccessAndUpdate_DocumentsCreatedByVendor exten
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left plane");
 			test.log(Status.INFO, "Clicked on open Left plane");
-			addSrceenShot("Clicked on open Left plane", test, Capture);
+			addScreenShot("Clicked on open Left plane", test, Capture);
 			WaitforPage(5000);
 
 			mainMenuPage.selectsubmenu(MainMenuEnum.LIBRARIES_RETAILDOCUMENT.menu());
 			test.log(Status.INFO, "Clicked on Retail Document");
-			addSrceenShot("Clicked on Retail Document", test, Capture);
+			addScreenShot("Clicked on Retail Document", test, Capture);
 			WaitforPage(5000);
 			
 			System.out.println("Clicked on Retail Document Under Material");
 			test.log(Status.INFO, "Clicked on Retail Document Under Material");
-			addSrceenShot("Clicked on Retail Document Under Material", test, Capture);
+			addScreenShot("Clicked on Retail Document Under Material", test, Capture);
 			WaitforPage(4000);
 			
 
 			vendorPage.selectvendorDocumentsAndclickOnSearch(documentType, test);
 			test.log(Status.INFO, "Vendor Document Search page opened");
-			addSrceenShot("Vendor Document Search page opened", test, Capture);
+			addScreenShot("Vendor Document Search page opened", test, Capture);
 
 //			String vendorDOCName = "Concept Presentations Test6";
 			vendorPage.clickOnDocumentName(vendorDOCName);
 			test.log(Status.INFO, "Clicked on Vendor Document Name");
-			addSrceenShot("Clicked on Vendor Document Name", test, Capture);
+			addScreenShot("Clicked on Vendor Document Name", test, Capture);
 			
 
 			vendorPage.clickOnUpdateInActionsMenu();
 			test.log(Status.INFO, "Clicked on Update in Actions menu");
-			addSrceenShot("Clicked on Update in Actions menu", test, Capture);
+			addScreenShot("Clicked on Update in Actions menu", test, Capture);
 
 //			String newVendorName = "ARVIND LIMITED 5151 IN";
 //			String newDescription = "Test10";
@@ -122,30 +122,30 @@ public class TC319_P2_VendorPortalAccessAndUpdate_DocumentsCreatedByVendor exten
 
 			vendorPage.updateAttributes(newVendorName, newDescription, newDocumentType, newLSCoDeveloper, test);
 			test.log(Status.INFO, "Updated all the required attributes");
-			addSrceenShot("Updated all the required attributes", test, Capture);
+			addScreenShot("Updated all the required attributes", test, Capture);
 
 			WaitforPage(2000);
 			vendorPage.clickOnSaveButton();
 			test.log(Status.INFO, "Clicked on Save button");
-			addSrceenShot("Clicked on Save button", test, Capture);
+			addScreenShot("Clicked on Save button", test, Capture);
 
 			vendorPage.verifyUpdatedAttributes(newVendorName, newDescription, newDocumentType, newLSCoDeveloper);
 			test.log(Status.PASS, "Verified all the updated attributes on the Document update page");
-	        addSrceenShot("Verified all the updated attributes on the Document update page", test, Capture);
+	        addScreenShot("Verified all the updated attributes on the Document update page", test, Capture);
 	        
 	    	WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 	        
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

@@ -68,49 +68,49 @@ public  class TC191_P1_Measurements_Update_POM extends WMS_TestBase{
 			
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully "+ GarmentDeveloper_URL);
-			addSrceenShot("login to flex PLM application successfully", test, Capture);
+			addScreenShot("login to flex PLM application successfully", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 			
 			mainMenuPage.LibraryMenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_MEASUREMENTS.menu());
 			test.log(Status.INFO, "Clicked on Measurements menu ");
-			addSrceenShot("Clicked on Measurements menu ", test, Capture);
+			addScreenShot("Clicked on Measurements menu ", test, Capture);
 			
 			Thread.sleep(5000);
 
 //			String template = "POM Library";
 	        MeasurementsPage.SelectTemplate(template);
 	        test.log(Status.INFO, "Template is selected: " + template);
-	        addSrceenShot("Template is selected ", test, Capture);
+	        addScreenShot("Template is selected ", test, Capture);
 	        
 //			String pomDescription = "POM_Demo_AUG_01";
 //			String updatedPOMDescription = "POM_Demo_02";
 //			String updatedId = "341";
 	        MeasurementsPage.Update_POMpoints(pomDescription,updatedPOMDescription, updatedId, test);
 	        test.log(Status.INFO, "Updated POM template from " + pomDescription + " to " + updatedPOMDescription + " with ID " + updatedId);	        
-	        addSrceenShot("POM template updated ", test, Capture);
+	        addScreenShot("POM template updated ", test, Capture);
 
 	        MeasurementsPage.Validate_POMpoints(updatedPOMDescription, test);
 	        test.log(Status.PASS, "Validated updated POM template: " + updatedPOMDescription);
-	        addSrceenShot("Validated updated POM template ", test, Capture);
+	        addScreenShot("Validated updated POM template ", test, Capture);
 	        
 	        WaitforPage(4000);
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 	        
 	        
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

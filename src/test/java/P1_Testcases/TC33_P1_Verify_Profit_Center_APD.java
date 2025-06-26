@@ -82,55 +82,55 @@ public class TC33_P1_Verify_Profit_Center_APD extends WMS_TestBase {
 		try {
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			test.log(Status.INFO, "This test case covers P1 Colorway module TC33");
 
 			System.out.println("login to flex PLM application successfully ");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL -  " + global_URL);
-			addSrceenShot("login successful", test, Capture);
+			addScreenShot("login successful", test, Capture);
 
 			test.log(Status.INFO, "This test case covers P1 profit center module");
 
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "opened left panel");
-			addSrceenShot("opened left panel", test, Capture);
+			addScreenShot("opened left panel", test, Capture);
 
 			mainMenuPage.ClickSeasonMenu(MainMenuEnum.SESSION.menu());
 			test.log(Status.INFO, "My seasons menu clicked");
-			addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String season = "Levi's S1 2023 Male Accessories";
 			Colorwaypage.SeasonDropdown(season, test);
 			test.log(Status.INFO, "Season selected: " + season);
-			addSrceenShot("Season selected:" + season, test, Capture);
+			addScreenShot("Season selected:" + season, test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
 			test.log(Status.INFO, "Clicked on Line Sheets");
-			addSrceenShot("Clicked on Line Sheets", test, Capture);
+			addScreenShot("Clicked on Line Sheets", test, Capture);
 			WaitforPage(4000);
 
 //			String linesheetview = "Adoption";
 			LineSheetEditPage.filter_View_Change(linesheetview, test);
 			test.log(Status.INFO, "Linesheet view changed to: " + linesheetview);
-			addSrceenShot("Linesheet view changed", test, Capture);
+			addScreenShot("Linesheet view changed", test, Capture);
 			WaitforPage(5000);
 
 //			String colorWay = "0WPGZ-0011 LUCEE TEST213";
 			Colorwaypage.SelectColorway(colorWay, test);
 			test.log(Status.INFO, "colorway selected is " + colorWay);
-			addSrceenShot("colorway selected", test, Capture);
+			addScreenShot("colorway selected", test, Capture);
 			WaitforPage(5000);
 
 			Colorwaypage.editColorWay();
 			test.log(Status.INFO, "Clicked On Edit Colorway from the Menu" + colorWay);
-			addSrceenShot("Clicked On Edit Colorway from the Menu", test, Capture);
+			addScreenShot("Clicked On Edit Colorway from the Menu", test, Capture);
 			WaitforPage(5000);
 
 			// Store all profit center APD values in a list
 			List<String> apdValues = Colorwaypage.getAPDValues(test);
 			test.log(Status.INFO, "Stored APD values: " + String.join(", ", apdValues));
-			addSrceenShot("Stored APD values", test, Capture);
+			addScreenShot("Stored APD values", test, Capture);
 
 			String Brand = Colorwaypage.getBrand();
 			System.out.println("Brand Value: " + Brand);
@@ -147,24 +147,24 @@ public class TC33_P1_Verify_Profit_Center_APD extends WMS_TestBase {
 			Colorwaypage.openNewTabAndNavigateToBusinessObject(global_URL, test);
 			System.out.println("Opened new tab and navigated to the Business Object Library");
 			test.log(Status.INFO, "Opened new tab and navigated to the Business Object Library");
-			addSrceenShot("Opened new tab and navigated to the Business Object Library", test, Capture);
+			addScreenShot("Opened new tab and navigated to the Business Object Library", test, Capture);
 			WaitforPage(4000);
 
 //			String businessObject = "Profit Center";
 			Colorwaypage.selctBusinessObject(businessObject);
 			System.out.println("Selected Business Object: " + businessObject);
 			test.log(Status.INFO, "Selected Business Object: " + businessObject);
-			addSrceenShot("Selected Business Object: ", test, Capture);
+			addScreenShot("Selected Business Object: ", test, Capture);
 			WaitforPage(4000);
 
 			Colorwaypage.fillProfitCenterDetails(Brand, ProductCategory, ConsumerPH, test);
 			test.log(Status.INFO, "Filled in Profit Center details");
-			addSrceenShot("Filled in Profit Center details", test, Capture);
+			addScreenShot("Filled in Profit Center details", test, Capture);
 			WaitforPage(4000);
 
 			List<String> tableValues = Colorwaypage.getProfitCenterTableValues(test);
 			test.log(Status.INFO, "Lookup Tables\\Profit Center table values: " + String.join(", ", tableValues));
-			addSrceenShot("Lookup Tables\\Profit Center table values", test, Capture);
+			addScreenShot("Lookup Tables\\Profit Center table values", test, Capture);
 
 			boolean allValuesPresent = true;
 			List<String> missingValues = new ArrayList<>();
@@ -183,10 +183,10 @@ public class TC33_P1_Verify_Profit_Center_APD extends WMS_TestBase {
 				test.log(Status.PASS, "All APD values are present in the Lookup Tables\\Profit Center table");
 				test.log(Status.PASS, "Profit Center [APD] values are derived from Brand: " + Brand
 						+ ", Product Category: " + ProductCategory + ", Consumer PH: " + ConsumerPH);
-				addSrceenShot("All APD values are present in the Lookup Tables\\Profit Center table", test, Capture);
+				addScreenShot("All APD values are present in the Lookup Tables\\Profit Center table", test, Capture);
 			} else {
 				test.log(Status.FAIL, "Some APD values are missing in the Lookup Tables\\Profit Center table");
-				addSrceenShot("Some APD values are missing in the Lookup Tables\\Profit Center table", test, Capture);
+				addScreenShot("Some APD values are missing in the Lookup Tables\\Profit Center table", test, Capture);
 				test.log(Status.INFO, "Missing APD values: " + String.join(", ", missingValues));
 
 			}
@@ -195,16 +195,16 @@ public class TC33_P1_Verify_Profit_Center_APD extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left plane");
 			test.log(Status.INFO, "Clicked on close Left plane");
-			addSrceenShot("Clicked on close Left plane", test, Capture);
+			addScreenShot("Clicked on close Left plane", test, Capture);
 
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

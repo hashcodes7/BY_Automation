@@ -79,19 +79,19 @@ public class TC01_P3_Check_MeasurementType extends WMS_TestBase {
 
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");
-			addSrceenShot("Browser Launched successfully", test, Capture);
+			addScreenShot("Browser Launched successfully", test, Capture);
 
 			System.out.println("login to flex PLM application successfully");
 			test.log(Status.INFO, "login to flex PLM application successfully: URL " + garmentDeveloper_URL);
-			addSrceenShot("Login successful", test, Capture);
+			addScreenShot("Login successful", test, Capture);
 
 			dashboardPage.openLeftPanel();
 			System.out.println("Clicked on open Left panel");
 			test.log(Status.INFO, "Clicked on open Left panel");
-			addSrceenShot("Clicked on open Left panel", test, Capture);
+			addScreenShot("Clicked on open Left panel", test, Capture);
 
 			mainMenuPage.openSubMenu1(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PRODUCT.menu(), true);
-			addSrceenShot("Clicked on Product Under Main menu of Libraries", test, Capture);
+			addScreenShot("Clicked on Product Under Main menu of Libraries", test, Capture);
 			System.out.println("Clicked on Product Under Main menu of Libraries ");
 			test.log(Status.INFO, "Clicked on Product Under Main menu of Libraries ");
 			WaitforPage(4000);
@@ -99,53 +99,53 @@ public class TC01_P3_Check_MeasurementType extends WMS_TestBase {
 //			String product = "2706LFA";
 			MeasurementsPage.selectProduct(product);
 			test.log(Status.INFO, "Product selected: " + product);
-			addSrceenShot("Product selected: " + product, test, Capture);
+			addScreenShot("Product selected: " + product, test, Capture);
 
 			MeasurementsPage.clickDetailsTab();
 			test.log(Status.INFO, "Clicked on Details tab");
-			addSrceenShot("Clicked on Details tab", test, Capture);
+			addScreenShot("Clicked on Details tab", test, Capture);
 
 //			String season = "Levi's S1 2025 Female Accessories";
 			MeasurementsPage.selectSeason(season, test);
 			System.out.println("Selected season " + season);
 			test.log(Status.INFO, "Selected season " + season);
-			addSrceenShot("Selected season " + season, test, Capture);
+			addScreenShot("Selected season " + season, test, Capture);
 
 //			String source = "Primary";
 			MeasurementsPage.select_Source(source, test);
 			System.out.println("Selected Primary source " + source);
 			test.log(Status.INFO, "Selected Primary source " + source);
-			addSrceenShot("Selected Primary source " + source, test, Capture);
+			addScreenShot("Selected Primary source " + source, test, Capture);
 
 //			String specification = "S1 2025 - 0WP6Y - 2706LFA -";
 			MeasurementsPage.selectSpecifications(specification, test);
 			System.out.println("Selected specifications " + specification);
 			test.log(Status.INFO, "Selected specification " + specification);
-			addSrceenShot("Selected specification " + specification, test, Capture);
+			addScreenShot("Selected specification " + specification, test, Capture);
 
 			MeasurementsPage.NavigateTo_measurement();
 			test.log(Status.INFO, "Navigated to measurement page ");
 			System.out.println("Navigated to measurement page  ");
-			addSrceenShot("Navigated to measurement page  ", test, Capture);
+			addScreenShot("Navigated to measurement page  ", test, Capture);
 
 //			String measurementSet = "004 : Test_auto_05";
 			MeasurementsPage.selectMeasurementSet(measurementSet);
 			test.log(Status.INFO, "Selected measurement set: " + measurementSet);
-			addSrceenShot("Selected measurement set: " + measurementSet, test, Capture);
+			addScreenShot("Selected measurement set: " + measurementSet, test, Capture);
 
 			// Check the measurement type
 			String measurementType = MeasurementsPage.getMeasurementType();
 			test.log(Status.INFO, "Measurement type: " + measurementType);
-			addSrceenShot("Measurement type: " + measurementType, test, Capture);
+			addScreenShot("Measurement type: " + measurementType, test, Capture);
 
 			// Validate the measurement type is not empty
 			if (measurementType == null || measurementType.isEmpty()) {
 				test.log(Status.FAIL, "Measurement type is empty");
-				addSrceenShot("Measurement type is empty", test, Capture);
+				addScreenShot("Measurement type is empty", test, Capture);
 				throw new AssertionError("Measurement type should not be empty");
 			} else {
 				test.log(Status.PASS, "Measurement type is not empty: " + measurementType);
-				addSrceenShot("Measurement type is not empty: " + measurementType, test, Capture);
+				addScreenShot("Measurement type is not empty: " + measurementType, test, Capture);
 			}
 
 			// Wait and close left panel
@@ -153,16 +153,16 @@ public class TC01_P3_Check_MeasurementType extends WMS_TestBase {
 			dashboardPage.closeLeftPanel();
 			System.out.println("Clicked on close Left panel");
 			test.log(Status.INFO, "Clicked on close Left panel");
-			addSrceenShot("Clicked on close Left panel", test, Capture);
+			addScreenShot("Clicked on close Left panel", test, Capture);
 
 			// Logout
 			dashboardPage.Logout();
 			System.out.println("Logout successful");
 			test.log(Status.INFO, "Logout successful");
-			addSrceenShot("Logout successful", test, Capture);
+			addScreenShot("Logout successful", test, Capture);
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 	}

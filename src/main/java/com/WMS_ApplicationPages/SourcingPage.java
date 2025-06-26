@@ -378,7 +378,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(newBtn));
-		addSrceenShot("Clicked on Main menu of My Seasons", test, Capture);
+		addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 		clickElement(newBtn);
 	}
 
@@ -395,7 +395,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 
 		test.log(Status.PASS, "Clicked On Save Button");
 
-		addSrceenShot("Clicked On Save Button", test, Capture);
+		addScreenShot("Clicked On Save Button", test, Capture);
 
 	}
 
@@ -417,7 +417,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 
 			test.log(Status.PASS, "Success message is displayed: " + messageText);
 
-			addSrceenShot("Success message is displayed", test, Capture);
+			addScreenShot("Success message is displayed", test, Capture);
 
 		} else {
 
@@ -433,7 +433,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			driver.switchTo().frame(iframeContentframe);
 			driver.findElement(By.xpath("//div[@class='dropdown menu-icon']")).click();
 			driver.findElement(By.xpath("//span[normalize-space()='Edit Product']")).click();
-			addSrceenShot("Clicked Edit Product dropdown", test, Capture);
+			addScreenShot("Clicked Edit Product dropdown", test, Capture);
 			System.out.println("string menu" + ":");
 		} catch (Exception e) {
 			System.out.println("string menu" + ":");
@@ -468,7 +468,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		option.click();
 
 		test.log(Status.INFO, "Selected Colorway from menu: " + colourWayName);
-		addSrceenShot("Selected Colorway from menu", test, Capture);
+		addScreenShot("Selected Colorway from menu", test, Capture);
 	}
 
 	public void clickOnColorDetailsLink() throws InterruptedException {
@@ -484,7 +484,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(pc9CodeElement));
 		String pc9Code = pc9CodeElement.getText();
 		test.log(Status.INFO, "Pc9 code extracted: " + pc9Code);
-		addSrceenShot("Pc9 code extracted", test, Capture);
+		addScreenShot("Pc9 code extracted", test, Capture);
 		return pc9Code;
 	}
 
@@ -494,7 +494,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colourwayNameElement));
 		String colourwayName = colourwayNameElement.getText();
 		test.log(Status.INFO, "Colorway name extracted: " + colourwayName);
-		addSrceenShot("Colorway name extracted", test, Capture);
+		addScreenShot("Colorway name extracted", test, Capture);
 		return colourwayName;
 	}
 
@@ -504,7 +504,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productNameElement));
 		String productName = productNameElement.getText();
 		test.log(Status.INFO, "Product Name extracted: " + productName);
-		addSrceenShot("Product Name extracted", test, Capture);
+		addScreenShot("Product Name extracted", test, Capture);
 		return productName;
 	}
 
@@ -514,7 +514,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(productMarketingNameElement));
 		String productMarketingName = productMarketingNameElement.getText();
 		test.log(Status.INFO, "Product Marketing Name extracted: " + productMarketingName);
-		addSrceenShot("Product Marketing Name extracted", test, Capture);
+		addScreenShot("Product Marketing Name extracted", test, Capture);
 		return productMarketingName;
 	}
 
@@ -524,7 +524,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(merchFabricTypeElement));
 		String merchFabricTypeName = merchFabricTypeElement.getText();
 		test.log(Status.INFO, "Merch FabricType extracted: " + merchFabricTypeName);
-		addSrceenShot("Merch FabricType extracted", test, Capture);
+		addScreenShot("Merch FabricType extracted", test, Capture);
 		return merchFabricTypeName;
 	}
 
@@ -534,7 +534,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(lscoArtworkName));
 		String lscoartworkName = lscoArtworkName.getText();
 		test.log(Status.INFO, "lsco Artwork Name From Color Extracted: " + lscoArtworkName);
-		addSrceenShot("lsco Artwork Name From Color Extracted", test, Capture);
+		addScreenShot("lsco Artwork Name From Color Extracted", test, Capture);
 		return lscoartworkName;
 	}
 
@@ -544,7 +544,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(lscoArtwork));
 		String lscoartwork = lscoArtwork.getText();
 		test.log(Status.INFO, "lsco Artwork From Color Extracted: " + lscoArtwork);
-		addSrceenShot("lsco Artwork From Color Extracted", test, Capture);
+		addScreenShot("lsco Artwork From Color Extracted", test, Capture);
 		return lscoartwork;
 	}
 
@@ -554,7 +554,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(colorComboElement));
 		String colorCombo = colorComboElement.getText();
 		test.log(Status.INFO, "color Combo From Color Extracted: " + colorCombo);
-		addSrceenShot("color Combo From Color Extracted", test, Capture);
+		addScreenShot("color Combo From Color Extracted", test, Capture);
 		return colorCombo;
 	}
 
@@ -564,7 +564,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(printTypeElement));
 		String printType = printTypeElement.getText();
 		test.log(Status.INFO, "Print Type From Color Extracted: " + printType);
-		addSrceenShot("Print Type From Color Extracted", test, Capture);
+		addScreenShot("Print Type From Color Extracted", test, Capture);
 		return printType;
 	}
 
@@ -715,12 +715,12 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			sizeField.sendKeys(size);
 			sizeField.click();
 			test.log(Status.INFO, "Entered Size: " + size);
-			addSrceenShot("Entered Size", test, Capture);
+			addScreenShot("Entered Size", test, Capture);
 
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(addButton));
 			clickElement(addButton);
 			test.log(Status.INFO, "Clicked Add button for Size: " + size);
-			addSrceenShot("Clicked Add button", test, Capture);
+			addScreenShot("Clicked Add button", test, Capture);
 		}
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(saveAndCheckIn));
 		saveAndCheckIn.click();
@@ -908,7 +908,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			}
 		}
 		test.log(Status.INFO, "Selected vendors from Vendor List: " + String.join(", ", vendorNames)); // names
-		addSrceenShot("Selected vendors from Vendor List", test, Capture);
+		addScreenShot("Selected vendors from Vendor List", test, Capture);
 		Thread.sleep(2000);
 
 	}
@@ -947,15 +947,15 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(sourceContainer));
 		test.log(Status.INFO, "Located Vendor List dropdown element");
-		addSrceenShot("Located Vendor List dropdown element", test, Capture);
+		addScreenShot("Located Vendor List dropdown element", test, Capture);
 
 		sourceContainer.click();
 		test.log(Status.INFO, "Clicked on Vendor List dropdown to expand it");
-		addSrceenShot("Expanded Vendor List dropdown", test, Capture);
+		addScreenShot("Expanded Vendor List dropdown", test, Capture);
 
 		List<WebElement> options = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
 		test.log(Status.INFO, "Located all options within the Vendor List dropdown");
-		addSrceenShot("Located options in Vendor List dropdown", test, Capture);
+		addScreenShot("Located options in Vendor List dropdown", test, Capture);
 
 //		// Check if each vendor name is present in the options
 //		for (String vendorName : vendorNames) {
@@ -980,11 +980,11 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			}
 			if (!vendorFound) {
 				test.log(Status.FAIL, "Vendor name not found: " + vendorName);
-				addSrceenShot("Vendor name not found: " + vendorName, test, Capture);
+				addScreenShot("Vendor name not found: " + vendorName, test, Capture);
 			}
 		}
 		test.log(Status.PASS, "All specified vendor names are present in the Vendor List");
-		addSrceenShot("All specified vendor names are present", test, Capture);
+		addScreenShot("All specified vendor names are present", test, Capture);
 		driver.switchTo().window(ParentWinhadle);
 
 	}
@@ -1007,15 +1007,15 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 //
 //		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(sourceContainer));
 //		test.log(Status.INFO, "Located Vendor List dropdown element");
-//		addSrceenShot("Located Vendor List dropdown element", test, Capture);
+//		addScreenShot("Located Vendor List dropdown element", test, Capture);
 //
 //		sourceContainer.click();
 //		test.log(Status.INFO, "Clicked on Vendor List dropdown to expand it");
-//		addSrceenShot("Expanded Vendor List dropdown", test, Capture);
+//		addScreenShot("Expanded Vendor List dropdown", test, Capture);
 //
 //		List<WebElement> options = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
 //		test.log(Status.INFO, "Located all options within the Vendor List dropdown");
-//		addSrceenShot("Located options in Vendor List dropdown", test, Capture);
+//		addScreenShot("Located options in Vendor List dropdown", test, Capture);
 //
 //		// Store the text of all options in a list
 //		List<String> optionTexts = new ArrayList<>();
@@ -1027,11 +1027,11 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 //		for (String vendorName : vendorNames) {
 //			if (!optionTexts.contains(vendorName)) {
 //				test.log(Status.FAIL, "Vendor name not found: " + vendorName);
-//				addSrceenShot("Vendor name not found: " + vendorName, test, Capture);
+//				addScreenShot("Vendor name not found: " + vendorName, test, Capture);
 //			}
 //		}
 //		test.log(Status.PASS, "All specified vendor names are present in the Vendor List");
-//		addSrceenShot("All specified vendor names are present", test, Capture);
+//		addScreenShot("All specified vendor names are present", test, Capture);
 //	}
 
 	public void clickOnSaveBtn() throws Exception {
@@ -1073,7 +1073,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 //					action.sendKeys(Keys.ENTER).perform();
 //					Thread.sleep(2000);
 //	                test.log(Status.INFO, "Delinked Source-Colorway: " + vendorName);
-//	                addSrceenShot("Delinked vendor: " + vendorName, test, Capture);
+//	                addScreenShot("Delinked vendor: " + vendorName, test, Capture);
 //	                Thread.sleep(2000);
 //	            }
 //	        }
@@ -1081,7 +1081,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 //            Thread.sleep(10000);
 //
 //            test.log(Status.INFO, "Clicked On save Button");
-//            addSrceenShot("Clicked On save Button" + vendorName, test, Capture);
+//            addScreenShot("Clicked On save Button" + vendorName, test, Capture);
 //	        
 //	    }
 //	}
@@ -1124,7 +1124,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 					action.sendKeys(Keys.ENTER).perform();
 					Thread.sleep(4000);
 					test.log(Status.INFO, "Delinked Source-Colorway: " + vendorName);
-					addSrceenShot("Delinked vendor: " + vendorName, test, Capture);
+					addScreenShot("Delinked vendor: " + vendorName, test, Capture);
 					Thread.sleep(2000);
 				}
 			}
@@ -1134,7 +1134,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			Thread.sleep(10000);
 
 			test.log(Status.INFO, "Clicked On save Button");
-			addSrceenShot("Clicked On save Button", test, Capture);
+			addScreenShot("Clicked On save Button", test, Capture);
 	}
 
 	private boolean containsAllLetters(String text, String subText) {
@@ -1157,15 +1157,15 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(sourceContainer));
 		Thread.sleep(4000);
 		test.log(Status.INFO, "Located Vendor List dropdown element");
-		addSrceenShot("Located Vendor List dropdown element", test, Capture);
+		addScreenShot("Located Vendor List dropdown element", test, Capture);
 
 		sourceContainer.click();
 		test.log(Status.INFO, "Clicked on Vendor List dropdown to expand it");
-		addSrceenShot("Expanded Vendor List dropdown", test, Capture);
+		addScreenShot("Expanded Vendor List dropdown", test, Capture);
 
 		List<WebElement> options = driver.findElements(By.xpath("//ul[@role='listbox']/li"));
 		test.log(Status.INFO, "Located all options within the Vendor List dropdown");
-		addSrceenShot("Located options in Vendor List dropdown", test, Capture);
+		addScreenShot("Located options in Vendor List dropdown", test, Capture);
 
 //		// Check if each vendor name is NOT present in the options
 //		for (String vendorName : vendorNames) {
@@ -1190,10 +1190,10 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			}
 			if (vendorFound) {
 				test.log(Status.FAIL, "Vendor name still found: " + vendorName);
-				addSrceenShot("Vendor name still found: " + vendorName, test, Capture);
+				addScreenShot("Vendor name still found: " + vendorName, test, Capture);
 			} else {
 				test.log(Status.PASS, "Vendor name successfully delinked: " + vendorName);
-				addSrceenShot("Vendor name successfully delinked: " + vendorName, test, Capture);
+				addScreenShot("Vendor name successfully delinked: " + vendorName, test, Capture);
 			}
 		}
 		driver.switchTo().window(ParentWinhadle);
@@ -1799,15 +1799,15 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			if (primaryAttributeValue.equals("No")) {
 				System.out.println("Primary attribute value is set to 'No'.");
 				test.log(Status.PASS, "Validation: Primary attribute value is set to 'No'.");
-				addSrceenShot("Primary Attribute Validation", test, Capture);
+				addScreenShot("Primary Attribute Validation", test, Capture);
 			} else {
 				System.out.println("Primary attribute value is not set to 'No'.");
 				test.log(Status.FAIL, "Validation: Primary attribute value is not set to 'No'.");
-				addSrceenShot("Primary Attribute Validation Failed", test, Capture);
+				addScreenShot("Primary Attribute Validation Failed", test, Capture);
 			}
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Validation: Primary attribute value check failed due to an exception.");
-			addSrceenShot("Primary Attribute Validation Exception", test, Capture);
+			addScreenShot("Primary Attribute Validation Exception", test, Capture);
 		}
 	}
 
@@ -1827,15 +1827,15 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 								+ sourceConfigNameValue);
 				test.log(Status.PASS,
 						"Validation: Source Configuration Name is correctly derived: " + sourceConfigNameValue);
-				addSrceenShot("Source Config Name Validation", test, Capture);
+				addScreenShot("Source Config Name Validation", test, Capture);
 			} else {
 				System.out.println("Source Configuration Name is not correctly derived.");
 				test.log(Status.FAIL, "Validation: Source Configuration Name is not correctly derived.");
-				addSrceenShot("Source Config Name Validation Failed", test, Capture);
+				addScreenShot("Source Config Name Validation Failed", test, Capture);
 			}
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Validation: Source Configuration Name check failed due to an exception.");
-			addSrceenShot("Source Config Name Validation Exception", test, Capture);
+			addScreenShot("Source Config Name Validation Exception", test, Capture);
 		}
 	}
 
@@ -1849,15 +1849,15 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 				System.out.println("New Source is correctly associated with the product.");
 				test.log(Status.PASS,
 						"Validation: New Source is correctly associated with the product: " + sourceConfigNameValue);
-				addSrceenShot("New Source Association Validation", test, Capture);
+				addScreenShot("New Source Association Validation", test, Capture);
 			} else {
 				System.out.println("New Source is not correctly associated with the product.");
 				test.log(Status.FAIL, "Validation: New Source is not correctly associated with the product.");
-				addSrceenShot("New Source Association Validation Failed", test, Capture);
+				addScreenShot("New Source Association Validation Failed", test, Capture);
 			}
 		} catch (Exception e) {
 			test.log(Status.FAIL, "Validation: New Source association check failed due to an exception.");
-			addSrceenShot("New Source Association Validation Exception", test, Capture);
+			addScreenShot("New Source Association Validation Exception", test, Capture);
 		}
 	}
 
@@ -1915,10 +1915,10 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 
 				String actSrcVal = sourceValue.getText();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(edit)).click();
-				addSrceenShot("Clicked on edit", test, Capture);
+				addScreenShot("Clicked on edit", test, Capture);
 
 				new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(removeSrc)).click();
-				addSrceenShot("Clicked on remove source", test, Capture);
+				addScreenShot("Clicked on remove source", test, Capture);
 				test.log(Status.INFO,
 						"Clicked on 'Remove Source From Season' from 'Actions:' drop down of 'Sourcing Details' Page");
 
@@ -1936,7 +1936,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 				} else {
 					System.out.println("No alert was present");
 					test.log(Status.PASS, "Source Is Not Removed from Season");
-					addSrceenShot("No alert was present", test, Capture);
+					addScreenShot("No alert was present", test, Capture);
 
 				}
 			}
@@ -2084,7 +2084,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		new WebDriverWait(driver, 40).until(ExpectedConditions.visibilityOf(saveBtnn));
 		saveBtnn.click();
 		test.log(Status.INFO, "Saved the linesheet");
-		addSrceenShot("Saved the linesheet", test, Capture);
+		addScreenShot("Saved the linesheet", test, Capture);
 		Thread.sleep(60000);
 	}
 
@@ -2169,7 +2169,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			String vendorName = Vendor_Value.getText();
 			test.log(Status.INFO, "Source Name: " + vendorName);
 			System.out.println("Source Name: " + vendorName);
-			addSrceenShot("Source Name", test, Capture);
+			addScreenShot("Source Name", test, Capture);
 			vendorName = extractVendorName(vendorName);
 
 			Actions action = new Actions(driver);
@@ -2183,12 +2183,12 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 			saveBtnn.click();
 			Thread.sleep(7000);
 			test.log(Status.INFO, "Saved the linesheet");
-			addSrceenShot("Saved the linesheet", test, Capture);
+			addScreenShot("Saved the linesheet", test, Capture);
 
 			return vendorName;
 		} catch (Exception e) {
 			test.log(Status.FAIL, "delink_Source To Colorway Header is not found: " + e.getMessage());
-			addSrceenShot("delink_Source To Colorway Header is not found", test, Capture);
+			addScreenShot("delink_Source To Colorway Header is not found", test, Capture);
 			return ""; // Stop further execution
 		}
 	}
@@ -2283,7 +2283,7 @@ public class SourcingPage extends WMS_WebDriverUtilities {
 		action.sendKeys(Keys.ENTER).perform();
 		Thread.sleep(3000);
 		test.log(Status.INFO, "Selected vendors from Vendor List: " + String.join(", ", vendorNames)); // names
-		addSrceenShot("Selected vendors from Vendor List", test, Capture);
+		addScreenShot("Selected vendors from Vendor List", test, Capture);
 		Thread.sleep(2000);
 
 	}

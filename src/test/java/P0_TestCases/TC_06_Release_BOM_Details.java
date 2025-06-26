@@ -84,17 +84,17 @@ public class TC_06_Release_BOM_Details extends WMS_TestBase {
 
 			BOMPage.openBomApp(test);
 			test.log(Status.PASS, "BOM App is opened");
-			addSrceenShot("BOM App is opened", test, Capture); 
+			addScreenShot("BOM App is opened", test, Capture); 
 			
 			BOMPage.releaseBomDetails(test,season,PC9_2);
 			test.log(Status.PASS, "BOM Details are released in bulk");
-			addSrceenShot("BOM Details are released in bulk", test, Capture); 
+			addScreenShot("BOM Details are released in bulk", test, Capture); 
 			
 			
 			
 		} catch (Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness");
+		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
 		throw e;
 		}
 
