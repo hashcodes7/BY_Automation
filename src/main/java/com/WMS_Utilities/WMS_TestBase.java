@@ -71,7 +71,7 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 	//0--------------------------------------------------------------------------------------------------------
 	@BeforeTest
 	public void CreateSummary() {
-		System.out.println("Starting test");
+	    System.out.println("🚀 🚀 🚀 🚀 🚀 🚀 Starting test 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 ");
 	}
 
 	@AfterMethod
