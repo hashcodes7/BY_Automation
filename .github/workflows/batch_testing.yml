@@ -137,7 +137,7 @@ jobs:
           ENCODED_REPORT_NAME=$(printf "%s" "$REPORT_NAME" | jq -sRr @uri)
           echo "Final Report Name: $REPORT_NAME"
           echo "Encoded Report Name: $ENCODED_REPORT_NAME"
-          echo "live_report_url=https://hashcodes7.github.io/Levi_Automation/Reports/$ENCODED_REPORT_NAME" >> $GITHUB_ENV
+          echo "live_report_url=https://hashcodes7.github.io/BY_Automation/Reports/$ENCODED_REPORT_NAME" >> $GITHUB_ENV
 
       - name: Find Latest Report
         id: report_path

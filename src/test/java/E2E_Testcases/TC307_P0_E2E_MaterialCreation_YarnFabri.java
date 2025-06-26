@@ -60,7 +60,7 @@ public class TC307_P0_E2E_MaterialCreation_YarnFabri extends WMS_TestBase {
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL("https://wcadmin:wcadmindev12@flexplmdev3.levi.com/Windchill/rfa/jsp/main/Main.jsp");
+			LaunchSpecific_URL(CurrentURL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			seasonPage = new SeasonPage(driver);
@@ -93,7 +93,7 @@ public class TC307_P0_E2E_MaterialCreation_YarnFabri extends WMS_TestBase {
 			test.log(Status.INFO, "This test case covers E2E module 307");
 
 			System.out.println("login to flex PLM application successfully");
-			test.log(Status.INFO, "login to flex PLM application successfully" + PDS_URL);
+			test.log(Status.INFO, "login to flex PLM application successfully " + CurrentURL);
 			addSrceenShot("login to flex PLM application successfully", test, Capture);
 
 			System.out.println("login successful");

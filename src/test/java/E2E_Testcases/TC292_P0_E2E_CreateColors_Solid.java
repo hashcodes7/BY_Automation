@@ -32,7 +32,7 @@ public class TC292_P0_E2E_CreateColors_Solid extends WMS_TestBase{
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL("https://wcadmin:wcadmindev12@flexplmdev.levi.com/Windchill/rfa/jsp/main/Main.jsp");
+			LaunchSpecific_URL(CurrentURL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);
@@ -56,7 +56,7 @@ public class TC292_P0_E2E_CreateColors_Solid extends WMS_TestBase{
 			System.out.println("Browser Launched successfully");
 			test.log(Status.INFO, "Browser Launched successfully");	
 			System.out.println("login to flex PLM application successfully");
-			test.log(Status.INFO, "login to flex PLM application successfully"+URL);
+			test.log(Status.INFO, "login to flex PLM application successfully "+CurrentURL);
 			
 			dashboardPage.openLeftPanel();
 			test.log(Status.INFO, "Left panel opened");
