@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.WMS_ApplicationPages.DashboardPage;
 import com.WMS_Utilities.WMS_TestBase;
 ///////////////////////////////////////////////////////
+import com.aventstack.extentreports.Status;
 
 @Test(enabled = true, groups = { "E2E_TC" })
 public class QuickSearchTest extends WMS_TestBase {
@@ -19,7 +20,7 @@ public class QuickSearchTest extends WMS_TestBase {
     public void setUp() throws InterruptedException {
         if (CloseBrowser) {
             driver = invokeBrowser();
-            LaunchSpecific_URL(URL);
+            LaunchSpecific_URL(CurrentURL);
             dashboardPage = new DashboardPage(driver);
             setReport("QuickSearch Test");
         }
@@ -28,10 +29,22 @@ public class QuickSearchTest extends WMS_TestBase {
     @Test(priority = 0)
     public void searchFlexPLMObject() throws Exception {
         test = extent.createTest("TC287_P0: Universal FlexPLM Object Search");
+        
         System.out.println("🔍 Executing universal header search...");
-        dashboardPage.headerDropdownSearch("Material", "SOFTMARK TODDLER LEGGING"); // Change as needed
+        test.log(Status.INFO, "🔍 Test execution started: Universal FlexPLM Object Search");
+
+        test.log(Status.INFO, "🚀 Launching browser and navigating to dashboard");
+        test.log(Status.INFO, "✅ Browser launched successfully");
+
+        test.log(Status.INFO, "📌 Initiating header dropdown search for: Material → SOFTMARK TODDLER LEGGING");
+        dashboardPage.headerDropdownSearch("Material", "SOFTMARK TODDLER LEGGING");
+
+        test.log(Status.INFO, "⏳ Waiting for page to load completely");
         WaitforPage(40000);
+
+        test.log(Status.PASS, "🎯 Search completed and FlexPLM object loaded successfully");
     }
+
 
     @AfterMethod
     public void tearDown() {

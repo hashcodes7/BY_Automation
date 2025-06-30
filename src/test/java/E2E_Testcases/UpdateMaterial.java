@@ -43,7 +43,7 @@ public class UpdateMaterial extends WMS_TestBase{
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL(URL);
+			LaunchSpecific_URL(CurrentURL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);
@@ -61,27 +61,37 @@ public class UpdateMaterial extends WMS_TestBase{
 		long startTime = System.nanoTime();
 		
 		try {
-			test.log(Status.INFO, "This Testcase covers TC_292");
-			
-			System.out.println("Browser Launched successfully");
-			test.log(Status.INFO, "Browser Launched successfully");	
-			System.out.println("login to flex PLM application successfully");
-			test.log(Status.INFO, "login to flex PLM application successfully "+CurrentURL);
-			
-			dashboardPage.headerDropdownSearch("Material", "FA773301 Knits_demo_Mat_stg_03"); // Change as needed
-			Thread.sleep(5000);
-			System.out.println("1");
-			materialPage.editmaterialonPage();
-			
-			dashboardPage.Logout();
-			System.out.println("Logout successful");
-			addScreenShot("Clicked on Logout successful", test, Capture);
-				
-			
-		}catch (Exception e) {
-			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
-		throw e;
+		    test.log(Status.INFO, "🚀 Starting execution of Test Case: TC_292 - FlexPLM Material Edit Flow");
+
+		    System.out.println("Browser Launched successfully");
+		    test.log(Status.INFO, "✅ Browser launched successfully");
+
+		    System.out.println("login to flex PLM application successfully");
+		    test.log(Status.INFO, "🔐 Logged into FlexPLM application at: " + CurrentURL);
+
+		    test.log(Status.INFO, "📌 Executing header dropdown search for Material → FA773301 Knits_demo_Mat_stg_03");
+		    dashboardPage.headerDropdownSearch("Material", "FA773301 Knits_demo_Mat_stg_03");
+
+		    test.log(Status.INFO, "⏳ Waiting briefly before attempting edit operation");
+		    Thread.sleep(5000);
+		    System.out.println("1");
+
+		    test.log(Status.INFO, "✏️ Initiating material page edit");
+		    materialPage.editmaterialonPage();
+		    test.log(Status.PASS, "🎯 Material edited successfully (assuming no exceptions occurred)");
+
+		    test.log(Status.INFO, "🚪 Logging out of application");
+		    dashboardPage.Logout();
+		    System.out.println("Logout successful");
+		    test.log(Status.INFO, "✅ Logged out successfully");
+
+		    addScreenShot("📸 Clicked on Logout successful", test, Capture);
+		    test.log(Status.INFO, "📎 Screenshot captured post logout");
+
+		} catch (Exception e) {
+		    System.out.println("Test case failed due to application slowness" + e);
+		    test.log(Status.FAIL, "⚠️ Test case failed due to application slowness: " + e);
+		    throw e;
 		}
 	}
 	

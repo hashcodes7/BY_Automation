@@ -46,7 +46,7 @@ public class TC287_P0_E2E_ProductCreation extends WMS_TestBase {
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL(URL);
+			LaunchSpecific_URL(CurrentURL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			seasonPage = new SeasonPage(driver);
