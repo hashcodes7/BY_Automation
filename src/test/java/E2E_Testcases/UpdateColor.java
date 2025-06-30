@@ -46,7 +46,7 @@ public class UpdateColor extends WMS_TestBase{
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);
 			CNCP = new CreateNewColorPage(driver);
-			setReport("TC292_P0_E2E Create colors- create solid color ");
+			setReport("UpdateColor Report");
 		}
 	}
 	@Test(priority = 0,dataProvider = "TC292_P0_E2E_CreateColors_Solid", dataProviderClass = DataProviders.class)

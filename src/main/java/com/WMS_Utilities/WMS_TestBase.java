@@ -114,8 +114,9 @@ public WebDriver invokeBrowser() throws InterruptedException {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--no-sandbox");
     options.addArguments("--disable-dev-shm-usage");
-//    options.addArguments("--headless=new");
+    options.addArguments("--headless=new");
     options.addArguments("--disable-gpu");
+    options.addArguments("--incognito");
     String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
     options.addArguments("--user-data-dir=" + uniqueUserDataDir);
     WebDriverManager.chromedriver().setup(); // Setup first
