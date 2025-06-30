@@ -433,7 +433,37 @@ public class ProductPage extends WMS_WebDriverUtilities {
 
 		return productSubCat2;
 	}
+public void addcolorway() {
+	driver.switchTo().defaultContent();
+	driver.switchTo().frame(iframeLeft);
+	WebElement CreateMultiplecolorwayButton = driver.findElement(By.id("colorwayPanelNewColorways"));
+	CreateMultiplecolorwayButton.click();
+	new WebDriverWait(driver,10)
+    .until(driver -> driver.getWindowHandles().size() > 1);
+String originalWindow = driver.getWindowHandle();
+for (String windowHandle : driver.getWindowHandles()) {
+    if (!windowHandle.equals(originalWindow)) {
+        driver.switchTo().window(windowHandle);
+        break;
+    }
+}
 
+System.out.println("Title of new window: " + driver.getTitle());
+WebDriverWait wait = new WebDriverWait(driver, 10);
+WebElement searchInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("quickSearchText")));
+searchInput.clear(); // Clears any existing text
+searchInput.sendKeys("ADNVY AFTER DARK NAVY");
+WebElement searchButton = driver.findElement(By.xpath("//span[text()='Search']/parent::button"));
+searchButton.click();
+WebElement checkbox = driver.findElement(By.id("ag-206-input"));
+if (!checkbox.isSelected()) {
+    checkbox.click();
+}
+WebElement selectButton = driver.findElement(By.xpath("//span[text()='Select']/parent::button"));
+selectButton.click();
+
+// 6. Close new window and return to the original
+driver.switchTo().window(originalWindow);}
 	public void updateProduct(String updatedProductName, String updatedBrandHierarchy, String updatedClassValue,
 			String updatedSubClassValue, String updatedProSubCat1, String updatedProSubCat2, String updatedConsumer,
 			String updatedConsumerGrp1, String updatedConsumerGrp2, String updatedCustomsClassification,

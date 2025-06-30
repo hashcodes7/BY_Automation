@@ -281,7 +281,13 @@ public class CreateNewColorPage extends WMS_WebDriverUtilities{
 				colorname+",colorfamily: " +colorfamily+",standardprovider: "+standardprovider+",colorcode: "+colorcode+
 				",providercolorname: "+providercolorname);
 	}
-	
+	public void EnterSingleValue(ExtentTest test) throws Exception {
+
+WebElement minusTenButton = driver.findElement(By.xpath("//input[@type='button' and @value=' - 10']"));
+minusTenButton.click();
+minusTenButton.click();
+
+	}
 //	public void EnterValues() {
 //		RedValue.sendKeys("120");
 //		GreenValue.sendKeys("200");

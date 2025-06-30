@@ -1,26 +1,14 @@
 package E2E_Testcases;
 
-import java.awt.AWTException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+///////////////////////////////////////////////////////Pages
 import com.WMS_ApplicationPages.CreateNewProductPage;
 import com.WMS_ApplicationPages.DashboardPage;
 import com.WMS_ApplicationPages.LineSheetPage;
@@ -29,7 +17,7 @@ import com.WMS_ApplicationPages.MainMenuPage;
 import com.WMS_ApplicationPages.ProductPage;
 import com.WMS_ApplicationPages.SeasonPage;
 import com.WMS_Utilities.WMS_TestBase;
-import com.WMS_Utilities.WMS_WebDriverUtilities;
+///////////////////////////////////////////////////////
 import com.aventstack.extentreports.Status;
 
 import Excel_Utilities.DataProviders;
@@ -83,69 +71,71 @@ public class TC287_P0_E2E_ProductCreation extends WMS_TestBase {
 
 		// ...............................browser launched time starts
 
-		long startTime = System.nanoTime();
-
 		try {
 
-			System.out.println("Browser Launched successfully");
+			System.out.println("Browser Launched successfully(log by testfile 1) ");
 			test.log(Status.INFO, "Browser Launched successfully");
 			addScreenShot("Browser Launched", test, Capture);
 
 			test.log(Status.INFO, "This test case covers E2E module 287");
 
-			System.out.println("login to flex PLM application successfully");
-			test.log(Status.INFO, "login to flex PLM application successfully: "+Global_URL);
+			System.out.println("login to flex PLM application successfully (log by testfile 2) ");
+			test.log(Status.INFO, "login to flex PLM application successfully: "+ URL +"(log by testfile) ");
 			addScreenShot("Login successful", test, Capture);
 
 			Thread.sleep(5000);
 
 			dashboardPage.openLeftPanel();
-			System.out.println("Clicked on open Left plane");
+			System.out.println("Clicked on open Left plane (log by testfile 3) ");
 			test.log(Status.INFO, "Clicked on open Left plane");
 			addScreenShot("Clicked on open Left plane", test, Capture);
+			
 			mainMenuPage.libraryColurmenu(MainMenuEnum.LIBRARIES.menu(), MainMenuEnum.LIBRARIES_PRODUCT.menu());
 			test.log(Status.INFO, "In libraries Product menu clicked");
 			addScreenShot("In libraries Product clicked", test, Capture);
 
-			test.log(Status.INFO, "Clicked on Add color sign");
-			addScreenShot("Clicked on Add color sign", test, Capture);
-
 			mainMenuPage.clickOnMySeasons();
 			test.log(Status.INFO, "Clicked on MySeasons");
+			System.out.println("Clicked on MySeasons (log by testfile 4) ");
 			addScreenShot("Clicked on Main menu of My Seasons", test, Capture);
 
 //			String mySeasonType = "Levi's S1 2025 Female Accessories";
 			mainMenuPage.chooseMySeasonType(mySeasonType);
-			System.out.println("season type is choosen");
+			System.out.println("season type is choosen (log by testfile 5) ");
 			test.log(Status.INFO, "season type is choosen: " + mySeasonType);
 			addScreenShot("Season type is choosen", test, Capture);
 
 			lineSheetPage.selectLineSheet(MainMenuEnum.SESSION_LINE_SHEET.menu());
+			System.out.println("Clicked on Line Sheets (log by testfile 6) ");
 			test.log(Status.INFO, "Clicked on Line Sheets");
 			addScreenShot("Clicked on Line Sheets", test, Capture);
 
 			try {
-
+				WaitforPage(4000);
 				lineSheetPage.createProduct();
 				test.log(Status.INFO, "Clicked on Create New product");
+				System.out.println("Clicked on Create New product (log by testfile 7) ");
 				addScreenShot("Clicked on Create New product", test, Capture);
 				WaitforPage(4000);
 
 //				String productName = "Demo_Product_aug06";
 				productPage.enterProductName(productName);
 				test.log(Status.INFO, "Entered product Name successfully");
+				System.out.println("Entered product Name successfully (log by testfile 8) ");
 				addScreenShot("Entered product Name successfully", test, Capture);
 				WaitforPage(4000);
 
 //				String brandHierarchy = "Red Tab Global";
 				productPage.selectBrandHierarchy(brandHierarchy);
 				test.log(Status.INFO, "Entered Brand Hierarchy value successfully: " + brandHierarchy);
+				System.out.println("Entered Brand Hierarchy value successfully: " + brandHierarchy+" (log by testfile 9) ");
 				addScreenShot("Entered Brand Hierarchy value successfully", test, Capture);
 				WaitforPage(5000);
 
 //				String proSubCat1 = "Bags";
 				productPage.selectProSubCat1(proSubCat1);
 				test.log(Status.INFO, "Entered product Sub Cat 1 successfully: " + proSubCat1);
+				System.out.println("Entered product Sub Cat 1 successfully:  (log by testfile 9) ");
 				addScreenShot("Entered product Sub Cat 1 successfully", test, Capture);
 				WaitforPage(5000);
 

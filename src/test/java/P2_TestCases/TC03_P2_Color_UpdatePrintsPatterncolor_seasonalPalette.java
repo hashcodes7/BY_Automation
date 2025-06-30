@@ -48,7 +48,7 @@ public class TC03_P2_Color_UpdatePrintsPatterncolor_seasonalPalette  extends WMS
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL(Design_URL_STG);
+			LaunchSpecific_URL(URL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);

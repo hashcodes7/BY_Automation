@@ -32,7 +32,7 @@ public class TC292_P0_E2E_CreateColors_Solid extends WMS_TestBase{
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL(CurrentURL);
+			LaunchSpecific_URL(URL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);

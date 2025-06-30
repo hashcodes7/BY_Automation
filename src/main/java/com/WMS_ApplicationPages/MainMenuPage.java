@@ -152,12 +152,8 @@ public class MainMenuPage extends WMS_WebDriverUtilities {
 			ExtentUtility.getTest().log(LogStatus.INFO, logMessage);
 			System.out.println("Clicked on open Left plane");
 		} catch (Exception exc) {
-			/*
-			 * ExtentUtility.getTest().log(LogStatus.FAIL, "Exception on scroll to element"
-			 * + element, ExtentUtility.getTest().addScreenCapture(takeScreenShot()));
-			 */throw new Exception(exc + "Exception on scroll to element" + element);
+				throw new Exception(exc + "Exception on scroll to element" + element);
 		}
-
 	}
 
 	public WebElement findElementByXPath(String using) {
@@ -284,9 +280,6 @@ public class MainMenuPage extends WMS_WebDriverUtilities {
 		driver.switchTo().frame(iframeLeft);
 		new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOf(MySeasonsOption));
 		MySeasonsOption.click();
-
-		
-		
 	}
 	
 	public void chooseMySeasonType(String mySeasonType) throws Exception {

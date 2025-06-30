@@ -1,26 +1,20 @@
 package com.WMS_ApplicationPages;
 
-import java.io.File;
+import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.By;
-
-import com.PLM_Utilities.ExtentUtility;
 import com.WMS_Utilities.WMS_WebDriverUtilities;
-import com.aventstack.extentreports.Status;
-import com.relevantcodes.extentreports.LogStatus;
 
 public class DashboardPage extends WMS_WebDriverUtilities {
 		WebDriver driver;
@@ -31,7 +25,9 @@ public class DashboardPage extends WMS_WebDriverUtilities {
 			PageFactory.initElements(driver, this);
 		}
 		
-
+	@FindBy(xpath = "//iframe[@id='contentframe']")
+	private WebElement iframeContentframe;
+	
 	@FindBy(xpath = "//iframe[@name='sidebarframe']")
 	private WebElement iframeLeftPanel;
 
@@ -61,6 +57,7 @@ public class DashboardPage extends WMS_WebDriverUtilities {
 	@FindBy(xpath = "//select[@id='quickLinkSelectionId']")
 	private WebElement logout;
 
+
 	@FindBy(xpath = "//center[contains(text(),'Logged Out')]")
 	private WebElement logoutText;
 	
@@ -75,16 +72,36 @@ public class DashboardPage extends WMS_WebDriverUtilities {
 				driver.switchTo().frame(iframeLeftPanel);
 				new WebDriverWait(driver,20).until(ExpectedConditions.visibilityOf(pinbutton));
 				clickElement(pinbutton);
-				//return new MainMenuPage(driver);
-				
-				
-	
+				//return new MainMenuPage(driver);			
 }
+	
 	public void closeLeftPanel() throws InterruptedException {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeLeftPanel);
 		new WebDriverWait(driver,20).until(ExpectedConditions.visibilityOf(pinbuttonclose));
 		clickElement(pinbuttonclose);
+}
+	public void updatebutton() throws InterruptedException {
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(iframeContentframe);
+
+WebElement dropdown = driver.findElement(By.xpath("//select[@onchange='evalList(this)']"));
+System.out.println("2");
+
+Select select = new Select(dropdown);
+select.selectByVisibleText("Update"); // Clean and exact text
+System.out.println("3");
+Thread.sleep(5000);
+
+}
+
+	public void saveButton() throws InterruptedException {
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(iframeContentframe);
+
+WebElement saveButton = driver.findElement(By.id("saveButton"));
+saveButton.click();
+
 
 }
 	
@@ -98,28 +115,64 @@ public class DashboardPage extends WMS_WebDriverUtilities {
 				Select logoutvalue = new Select(quickLinkDropdown);
 				logoutvalue.selectByVisibleText("Logout");
 				logoutvalue.selectByValue("logout");
-				//clickElement(quickLinkDropdown);
 			} catch (Exception e) {
-				
 				Select logoutvalue = new Select(driver.findElement(By.name("Logout")));
 				logoutvalue.selectByVisibleText("Logout");
-				/*
-				 * JavascriptExecutor js = (JavascriptExecutor) driver;
-				 * js.executeScript("arguments[0].click();", packStationDropdownElement);
-				 */
-			//}
 		}
 
+	}
+	@FindBy(xpath = "//select[@id='searchDropDownSelect']")
+	private WebElement Material;
+	public void headerDropdownSearch(String dropdownOption, String searchText) throws Exception {
+	    driver.switchTo().defaultContent();
+	    driver.switchTo().frame(iframeHeader);
+	    System.out.println("🔄 Switched to iframeHeader");
+
+	    // Locate the dropdown and select the option dynamically
+	    WebElement dropdown = driver.findElement(By.id("searchDropDownSelect"));
+	    selectValueFromDropdown(dropdown, dropdownOption);
+
+	    // Locate the search field and send input dynamically
+	    WebElement searchField = driver.findElement(By.id("searchField"));
+	    System.out.println("✅ Dropdown selected: " + dropdownOption);
+	    sendInputToTextField(searchField, searchText, "Search Field");
+	}
+	public void sendInputToTextField(WebElement element, String enterText, String elementName) throws Exception {
+	    System.out.println("📩 Sending input to: " + elementName);
+	    Thread.sleep(500);
+	    try {
+	        element.clear();
+	        String wrappedText = "*" + enterText + "*";
+	        element.sendKeys(wrappedText);
+	        Thread.sleep(1000);
+	        element.sendKeys(Keys.ENTER);
+	    } catch (Exception e) {
+	        String message = "Text entry for " + elementName + " was unsuccessful ❌";
+	        throw new Exception(message);
+	    }
+	}
+
+	
+	public void listElementsInFrame() {
+	        driver.switchTo().defaultContent();
+			driver.switchTo().frame(iframeHeader);
+	        System.out.println("switched to ");
+	        // Fetch all elements inside the frame
+	        List<WebElement> elements = driver.findElements(By.xpath("//*"));
+	        System.out.println("Total elements inside frame header: " + elements.size());
+
+	        // Print tag and trimmed text for each element
+	        for (WebElement elem : elements) {
+	            String tag = elem.getTagName();
+	            String text = elem.getText().trim();
+	            System.out.println("Tag: " + tag + (text.isEmpty() ? "" : ", Text: " + text));
+	        }
 	}
 	
 	public void Logout() throws Exception {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeHeader);
 		System.out.println("string menu");
-		/*
-		 * driver.findElement(By.xpath("//label[@title='" + menu + "']")).click();
-		 * driver.findElement(By.xpath("//a[text()='" + submenu + "']")).click();
-		 */
 		Alert a1 = null;
 		try {
 			this.selectValueFromDropdown(logout, "Logout");

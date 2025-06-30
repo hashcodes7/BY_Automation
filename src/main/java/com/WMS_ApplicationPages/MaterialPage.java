@@ -496,14 +496,46 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 	}
 
 	public void clickOnEditMaterial() throws Exception {
-
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(iframeContentframe);
 		new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOf(actionsDropDown));
 		actionsDropDown.click();
 		editMaterialOption.click();
+	}
+	public void editmaterialonPage() {
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(iframeContentframe);
+		System.out.println("2");
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	 WebElement editMaterialButton = wait.until(
+	ExpectedConditions.elementToBeClickable(By.id("editMaterial")));
+		System.out.println("3");
+	 editMaterialButton.click();
+		System.out.println("4");
+	 editRaymarkCode();
+	 
 
 	}
+	public void editRaymarkCode() {
+		System.out.println("5");
+		WebElement fiberCodeInput =new WebDriverWait(driver, 60).until(ExpectedConditions.visibilityOfElementLocated(By.id("ptc_str_12")));
+		System.out.println("6");
+		fiberCodeInput.clear();
+		System.out.println("7");
+fiberCodeInput.sendKeys("10640");
+System.out.println("8");
+try {
+	System.out.println("9");
+	saveMaterial();
+} catch (Exception e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
+	}
+
+
+
 
 	public void createNewMaterial() throws Exception {
 		driver.switchTo().defaultContent();
