@@ -134,8 +134,12 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 		driver.get(Administrator_URL);
 	}
 
-	public void LaunchSpecific_URL(String specificurl) {
-		driver.get(specificurl);
+	// In WMS_TestBase.java
+	public void LaunchSpecific_URL(String url) {
+	    if (driver == null) {
+	        throw new IllegalStateException("WebDriver is not initialized!");
+	    }
+	    driver.get(url);
 	}
 
 
