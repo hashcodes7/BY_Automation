@@ -124,25 +124,13 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 	    return driver;
 	}
 
-	public void launchUrl() {
 
-		driver.get(URL);
-
-	}
-
-	public void Administratorlaunchurl() {
-		driver.get(Administrator_URL);
-	}
 
 	public void LaunchSpecific_URL(String url) {
 		driver.get(url);
 	}
 
-	public void launchUr2() {
 
-		driver.get(URL);
-
-	}
 
 	public void URLTimeStamp() {
 

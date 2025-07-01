@@ -7,7 +7,7 @@ public interface WMS_GlobalProperties {
 
 //	String URL="https://wcadmin:wcadminps11@flexplmstg.levi.com/Windchill/rfa/jsp/main/Main.jsp";
 	//String URL="https://wcadmin:wcadminqa12@flexplmqa.levi.com/Windchill/rfa/jsp/main/Main.jsp";
-	String URL="https://wcadmin:wcadmindev12@flexplmdev.levi.com/Windchill/rfa/jsp/main/Main.jsp";
+//	String URL="https://wcadmin:wcadmindev12@flexplmdev.levi.com/Windchill/rfa/jsp/main/Main.jsp";
 //	String CurrentURL="https://wcadmin:wcadmindev12@flexplmdev.levi.com/Windchill/rfa/jsp/main/Main.jsp";
 	String CurrentURL = System.getProperty("CurrentURL");
 	
