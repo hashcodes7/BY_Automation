@@ -118,7 +118,7 @@ public WebDriver invokeBrowser() throws InterruptedException {
     options.addArguments("--disable-gpu");
     options.addArguments("--incognito");
     String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
-    options.addArguments("--user-data-dir=" + uniqueUserDataDir);
+//    options.addArguments("--user-data-dir=" + uniqueUserDataDir);
     WebDriverManager.chromedriver().setup(); // Setup first
     driver = new ChromeDriver(options); // Then instantiate
     driver.manage().window().maximize();
