@@ -110,19 +110,19 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 	}
 	
 	
-public WebDriver invokeBrowser() throws InterruptedException {
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--no-sandbox");
-    options.addArguments("--disable-dev-shm-usage");
-//    options.addArguments("--headless=new");
-    options.addArguments("--disable-gpu");
-    options.addArguments("--incognito");
-    WebDriverManager.chromedriver().setup(); // Setup first
-    driver = new ChromeDriver(options); // Then instantiate
-    driver.manage().window().maximize();
-    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    return driver;
-}
+	public WebDriver invokeBrowser() throws InterruptedException {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-dev-shm-usage");
+	    options.addArguments("--disable-gpu");
+	    options.addArguments("--incognito");
+	    options.addArguments("--headless=new");
+	    WebDriver driver = new ChromeDriver(options);
+	    driver = new ChromeDriver(options); // Then instantiate
+	    driver.manage().window().maximize();
+	    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	    return driver;
+	}
 
 	public void launchUrl() {
 
