@@ -238,6 +238,22 @@ public class MainMenuPage extends WMS_WebDriverUtilities {
 
 		}
 }
+	public void libraryMaterialMenu(String menu, String submenu) throws Exception {
+	    try {
+	        System.out.println("Attempting to navigate to: " + menu + " > " + submenu);
+	        
+	        driver.switchTo().defaultContent();
+	        driver.switchTo().frame(iframeLeft);
+	        driver.findElement(By.xpath("//label[@title='" + menu + "']")).click();
+	        driver.findElement(By.xpath("//a[contains(text(),'Material')]")).click();
+	        System.out.println(submenu + " clicked successfully");
+	    } catch (Exception e) {
+	        System.out.println("⚠️ Failed to click: " + menu + " > " + submenu);
+	        e.printStackTrace();
+	        throw e; // Re-throwing helps your test catch this failure
+	    }
+	}
+	
 	public void ClickSeasonMenu(String menu) {
 		System.out.println("string menu" + menu);
 		driver.switchTo().defaultContent();

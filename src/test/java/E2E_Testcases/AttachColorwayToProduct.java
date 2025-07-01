@@ -54,7 +54,7 @@ public class AttachColorwayToProduct extends WMS_TestBase{
 			setReport("TC292_P0_E2E Create colors- create solid color ");
 		}
 	}
-	@Test(priority = 0,dataProvider = "TC292_P0_E2E_CreateColors_Solid", dataProviderClass = DataProviders.class)
+    @Test(priority = 0)
 	public void P0_TC_292_E2E_CreateColors_Solid(String TestType,String colortype,String redvalue, String bluevalue, String greenvalue, 
 			String colorfamily,String standardprovider, String colorcode, String colorname, String providercolorname) throws Exception {
 			test = extent.createTest(":::TC292_P0_E2E Create colors- create solid color :::");

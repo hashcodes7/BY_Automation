@@ -2,8 +2,8 @@
 <suite name="E2ETestCases_Suite" verbose="1">
   <test name="E2E_TestCases">
     <classes>
-      <class name="E2E_Testcases.TC292_P0_E2E_CreateColors_Solid" />
-      <class name="E2E_Testcases.TC307_P0_E2E_MaterialCreation_YarnFabri" />
+      <class name="smoketests.ST_TC01_Create_Color" />
+      <class name="smoketests.ST_TC02_Update_Color" />
     </classes>
   </test>
 </suite>

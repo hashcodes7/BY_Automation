@@ -89,9 +89,9 @@ public class MaterialPage extends WMS_WebDriverUtilities {
 	// div[normalize-space()='* Fabric Type']/following-sibling::div
 	private WebElement fabricTypeDropdown;
 
-	@FindBy(xpath = "//input[@role='searchbox']")
+	@FindBy(className = "select2-search__field")
 	private WebElement searchField;
-
+	
 	@FindBy(xpath = "//input[@role='searchbox']/following::li[@role='option']")
 	private WebElement searchResult;
 

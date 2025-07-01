@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [E2ETestCases_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="E2E_TestCases(failed)">
+    <classes>
+      <class name="smoketests.ST_TC31_Create_Product">
+        <methods>
+          <include name="setUp"/>
+          <include name="ST_TC31_Create_Product_" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="setUpend"/>
+          <include name="CreateSummary"/>
+        </methods>
+      </class> <!-- smoketests.ST_TC31_Create_Product -->
+      <class name="smoketests.ST_TC21_Create_Material">
+        <methods>
+          <include name="ST_TC21_Create_Material_" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="CreateSummary"/>
+          <include name="setUpend"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- smoketests.ST_TC21_Create_Material -->
+    </classes>
+  </test> <!-- E2E_TestCases(failed) -->
+</suite> <!-- Failed suite [E2ETestCases_Suite] -->
