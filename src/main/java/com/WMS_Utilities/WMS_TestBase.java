@@ -71,7 +71,7 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 	//0--------------------------------------------------------------------------------------------------------
 	@BeforeTest
 	public void CreateSummary() {
-	    System.out.println("🚀 🚀 🚀 🚀 🚀 🚀 Starting test 🚀 🚀 🚀 🚀 🚀 🚀 🚀 🚀 ");
+		System.out.println("Starting test");
 	}
 
 	@AfterMethod
@@ -110,26 +110,20 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 	}
 	
 	
-	public WebDriver invokeBrowser() throws InterruptedException {
-	    WebDriverManager.chromedriver().setup(); // Setup ChromeDriver using WebDriverManager
-	    ChromeOptions options = new ChromeOptions();
-	    options.addArguments("--no-sandbox");
-	    options.addArguments("--disable-dev-shm-usage");
-	    options.addArguments("--headless=new");
-	    options.addArguments("--disable-gpu");
-	    WebDriver driver = new ChromeDriver(options);
-	    driver.manage().window().maximize();
-	    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-	    return driver;
-	}
-	
-	public void LaunchSpecific_URL(String url) {
-	    if (driver == null) {
-	        throw new IllegalStateException("WebDriver is not initialized!");
-	    }
-	    driver.get(url);
-	}
-
+public WebDriver invokeBrowser() throws InterruptedException {
+    ChromeOptions options = new ChromeOptions();
+    options.addArguments("--no-sandbox");
+    options.addArguments("--disable-dev-shm-usage");
+    options.addArguments("--headless=new");
+    options.addArguments("--disable-gpu");
+    String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
+    options.addArguments("--user-data-dir=" + uniqueUserDataDir);
+    WebDriverManager.chromedriver().setup(); // Setup first
+    driver = new ChromeDriver(options); // Then instantiate
+    driver.manage().window().maximize();
+    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    return driver;
+}
 
 	public void launchUrl() {
 
@@ -141,9 +135,15 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 		driver.get(Administrator_URL);
 	}
 
-	// In WMS_TestBase.java
+	public void LaunchSpecific_URL(String url) {
+		driver.get(url);
+	}
 
+	public void launchUr2() {
 
+		driver.get(URL);
+
+	}
 
 	public void URLTimeStamp() {
 

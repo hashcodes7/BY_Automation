@@ -19,7 +19,6 @@ import Excel_Utilities.DataProviders;
 @Test(enabled = true, groups = { "E2E_TC" })
 public class ST_TC11_Create_Color extends WMS_TestBase{
 	
-	WebDriver driver;
 	DashboardPage dashboardPage;
 	MainMenuPage mainMenuPage;
 	Palette_Page palettepage;
