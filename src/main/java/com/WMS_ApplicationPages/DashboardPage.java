@@ -121,8 +121,7 @@ saveButton.click();
 		}
 
 	}
-	@FindBy(xpath = "//select[@id='searchDropDownSelect']")
-	private WebElement Material;
+
 	public void headerDropdownSearch(String dropdownOption, String searchText) throws Exception {
 	    driver.switchTo().defaultContent();
 	    driver.switchTo().frame(iframeHeader);
