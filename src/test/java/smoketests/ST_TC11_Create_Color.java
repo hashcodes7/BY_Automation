@@ -36,7 +36,7 @@ public class ST_TC11_Create_Color extends WMS_TestBase{
 			}
 			else
 				System.out.println("driver 1 started successfully");
-			LaunchSpecific_URL("https://wcadmin:wcadmindev12@flexplmdev3.levi.com/Windchill/rfa/jsp/main/Main.jsp");
+			LaunchSpecific_URL(CurrentURL);
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);
