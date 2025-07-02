@@ -191,7 +191,7 @@ public class ST_TC21_Create_Material extends WMS_TestBase {
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
+			test.log(Status.FAIL, "Test case failed due, check system reports");
 		throw e;
 		}
 	}

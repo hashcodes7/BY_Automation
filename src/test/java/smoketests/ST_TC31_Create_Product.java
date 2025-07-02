@@ -196,7 +196,7 @@ public class ST_TC31_Create_Product extends WMS_TestBase{
 
 			} catch (Exception e) {
 				System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
+		test.log(Status.FAIL, "Could not Create Product, Check System logs for detailed report.");
 		throw e;
 
 			}
@@ -205,7 +205,7 @@ public class ST_TC31_Create_Product extends WMS_TestBase{
 
 		Exception e) {
 			System.out.println("Test case failed due to application slowness" + e);
-		test.log(Status.FAIL, "Test case failed due to application slowness " + e);
+			test.log(Status.FAIL, "Test case failed due, check system reports");
 		throw e;
 		}
 	}

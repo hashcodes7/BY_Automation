@@ -1,84 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T04:56:05 IST" name="Default suite" finished-at="2025-07-02T04:59:18 IST" duration-ms="192770">
+  <suite started-at="2025-07-02T06:40:57 IST" name="Default suite" finished-at="2025-07-02T06:42:22 IST" duration-ms="85295">
     <groups>
       <group name="E2E_TC">
-        <method signature="ST_TC21_Create_Material.ST_TC21_Create_Material_(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Map)[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" name="ST_TC21_Create_Material_" class="smoketests.ST_TC21_Create_Material"/>
+        <method signature="ST_TC12_Update_Color.ST_TC12_Update_Color_()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" name="ST_TC12_Update_Color_" class="smoketests.ST_TC12_Update_Color"/>
       </group> <!-- E2E_TC -->
     </groups>
-    <test started-at="2025-07-02T04:56:05 IST" name="Default test" finished-at="2025-07-02T04:59:18 IST" duration-ms="192770">
-      <class name="smoketests.ST_TC21_Create_Material">
-        <test-method is-config="true" signature="CreateSummary()[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" started-at="2025-07-02T04:56:05 IST" name="CreateSummary" finished-at="2025-07-02T04:56:05 IST" duration-ms="13" status="PASS">
+    <test started-at="2025-07-02T06:40:57 IST" name="Default test" finished-at="2025-07-02T06:42:22 IST" duration-ms="85295">
+      <class name="smoketests.ST_TC12_Update_Color">
+        <test-method is-config="true" signature="CreateSummary()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:40:57 IST" name="CreateSummary" finished-at="2025-07-02T06:40:57 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateSummary -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" started-at="2025-07-02T04:56:06 IST" name="setUp" finished-at="2025-07-02T04:56:27 IST" duration-ms="20575" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:40:57 IST" name="setUp" finished-at="2025-07-02T06:41:18 IST" duration-ms="21251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ST_TC21_Create_Material_(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Map)[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" started-at="2025-07-02T04:56:27 IST" name="ST_TC21_Create_Material_" data-provider="materialCreationData" finished-at="2025-07-02T04:59:17 IST" duration-ms="170338" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC307_P0_E2E_MaterialCreation_YarnFabri]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Knits]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Double Knit]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[2026 Fall]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Knits_demo_Mat_stg_03]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[centimeter]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[{Cotton (Generic)=20, Polyester (Coolmax All Season)=10, Cashmere=23, Polyester (Aerolite)=5, Elastane=42}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="ST_TC12_Update_Color_()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:41:18 IST" name="ST_TC12_Update_Color_" finished-at="2025-07-02T06:42:22 IST" duration-ms="63705" status="FAIL">
+          <exception class="java.lang.Exception">
+            <message>
+              <![CDATA[Text entry for Search Field was unsuccessful ❌]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Exception: Text entry for Search Field was unsuccessful ❌
+at com.WMS_ApplicationPages.DashboardPage.sendInputToTextField(DashboardPage.java:159)
+at com.WMS_ApplicationPages.DashboardPage.headerDropdownSearch(DashboardPage.java:138)
+at smoketests.ST_TC12_Update_Color.ST_TC12_Update_Color_(ST_TC12_Update_Color.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Exception -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ST_TC21_Create_Material_ -->
-        <test-method is-config="true" signature="setUpend()[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" started-at="2025-07-02T04:59:17 IST" name="setUpend" finished-at="2025-07-02T04:59:18 IST" duration-ms="413" status="PASS">
+        </test-method> <!-- ST_TC12_Update_Color_ -->
+        <test-method is-config="true" signature="setUpend()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:42:22 IST" name="setUpend" finished-at="2025-07-02T06:42:22 IST" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpend -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" started-at="2025-07-02T04:59:18 IST" name="afterMethod" finished-at="2025-07-02T04:59:18 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:42:22 IST" name="afterMethod" finished-at="2025-07-02T06:42:22 IST" duration-ms="3" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ST_TC21_Create_Material_ status=SUCCESS method=ST_TC21_Create_Material.ST_TC21_Create_Material_(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.Map)[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810] output={null}]]]>
+                <![CDATA[[TestResult name=ST_TC12_Update_Color_ status=FAILURE method=ST_TC12_Update_Color.ST_TC12_Update_Color_()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810] output={null}]]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+at com.WMS_Utilities.WMS_WebDriverUtilities.takeScreenshot(WMS_WebDriverUtilities.java:339)
+at com.WMS_Utilities.WMS_TestBase.afterMethod(WMS_TestBase.java:83)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoketests.ST_TC21_Create_Material@66ea810]" started-at="2025-07-02T04:59:18 IST" name="tearDown" finished-at="2025-07-02T04:59:18 IST" duration-ms="270" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:42:22 IST" name="tearDown" finished-at="2025-07-02T06:42:22 IST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- smoketests.ST_TC21_Create_Material -->
+      </class> <!-- smoketests.ST_TC12_Update_Color -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

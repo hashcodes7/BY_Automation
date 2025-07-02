@@ -76,7 +76,7 @@ public class ST_TC22_Update_Material extends WMS_TestBase{
 
 	} catch (Exception e) {
 	    System.out.println("Test case failed due to application slowness" + e);
-	    test.log(Status.FAIL, "⚠️ Test case failed due to application slowness: " + e);
+	    test.log(Status.FAIL, "Test case failed due, check system reports");
 	    throw e;
 	}
 	}

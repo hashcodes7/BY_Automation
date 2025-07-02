@@ -136,6 +136,7 @@ saveButton.click();
 	    WebElement searchField = driver.findElement(By.id("searchField"));
 	    System.out.println("✅ Dropdown selected: " + dropdownOption);
 	    sendInputToTextField(searchField, searchText, "Search Field");
+        Thread.sleep(2000);
 	}
 	public void sendInputToTextField(WebElement element, String enterText, String elementName) throws Exception {
 	    System.out.println("📩 Sending input to: " + elementName);
@@ -146,6 +147,13 @@ saveButton.click();
 	        element.sendKeys(wrappedText);
 	        Thread.sleep(1000);
 	        element.sendKeys(Keys.ENTER);
+			driver.switchTo().defaultContent();
+			driver.switchTo().frame(iframeContentframe);
+			WebElement h1 = driver.findElement(By.tagName("h1"));
+			if (h1.getText().contains("Internal Server Error")) {
+			    System.out.println("Detected 500 Internal Server Error via <h1>");
+			}	Thread.sleep(1000);
+			element.sendKeys(Keys.ENTER);
 	    } catch (Exception e) {
 	        String message = "Text entry for " + elementName + " was unsuccessful ❌";
 	        throw new Exception(message);
