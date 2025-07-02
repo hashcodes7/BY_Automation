@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\2276537\AppData\Local\Temp\testng-eclipse-2088695486\testng-customsuite.xml</span>
+                    <span>C:\Users\2276537\AppData\Local\Temp\testng-eclipse-1753405695\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="smoketests.ST_TC12_Update_Color" class="method navigator-link" hash-for-method="ST_TC12_Update_Color_">ST_TC12_Update_Color_</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="smoketests.QuickSearchTest" class="method navigator-link" hash-for-method="searchFlexPLMObject">searchFlexPLMObject</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,18 +121,18 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">smoketests.ST_TC12_Update_Color</span>
+              <span class="class-name">smoketests.QuickSearchTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ST_TC12_Update_Color_">
-                  </a> <!-- ST_TC12_Update_Color_ -->
-                  <span class="method-name">ST_TC12_Update_Color_</span>
+                  <a name="searchFlexPLMObject">
+                  </a> <!-- searchFlexPLMObject -->
+                  <span class="method-name">searchFlexPLMObject</span>
                   <div class="stack-trace">java.lang.Exception: Text entry for Search Field was unsuccessful ❌
-	at com.WMS_ApplicationPages.DashboardPage.sendInputToTextField(DashboardPage.java:159)
-	at com.WMS_ApplicationPages.DashboardPage.headerDropdownSearch(DashboardPage.java:138)
-	at smoketests.ST_TC12_Update_Color.ST_TC12_Update_Color_(ST_TC12_Update_Color.java:65)
+	at com.WMS_ApplicationPages.DashboardPage.sendInputToTextField(DashboardPage.java:158)
+	at com.WMS_ApplicationPages.DashboardPage.headerDropdownSearch(DashboardPage.java:137)
+	at smoketests.QuickSearchTest.searchFlexPLMObject(QuickSearchTest.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -170,7 +170,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\2276537\AppData\Local\Temp\testng-eclipse-2088695486\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\2276537\AppData\Local\Temp\testng-eclipse-1753405695\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -179,7 +179,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;smoketests.ST_TC12_Update_Color&quot;/&gt;
+      &lt;class name=&quot;smoketests.QuickSearchTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -207,7 +207,7 @@
               <span class="test-group-name">E2E_TC</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ST_TC12_Update_Color_</span>
+                <span class="method-in-group-name">searchFlexPLMObject</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -229,14 +229,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ST_TC12_Update_Color_')
-data.setCell(0, 2, 'smoketests.ST_TC12_Update_Color')
-data.setCell(0, 3, 63705);
+data.setCell(0, 1, 'searchFlexPLMObject')
+data.setCell(0, 2, 'smoketests.QuickSearchTest')
+data.setCell(0, 3, 4026);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -262,35 +262,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">smoketests.ST_TC12_Update_Color</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">smoketests.QuickSearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">CreateSummary</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">46 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">ST_TC12_Update_Color_</span>
-                <span class="method-start">21298 ms</span>
+                <span class="method-name">searchFlexPLMObject</span>
+                <span class="method-start">20556 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">setUpend</span>
-                <span class="method-start">85008 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">24586 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">afterMethod([TestResult name=ST_TC12_Update_Color_ status=FAILURE method=ST_TC12_Update_Color.ST_TC12_Update_Col...)</span>
-                <span class="method-start">85271 ms</span>
+                <span class="method-name">afterMethod([TestResult name=searchFlexPLMObject status=FAILURE method=QuickSearchTest.searchFlexPLMObject()[pri...)</span>
+                <span class="method-start">24587 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-suite after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">85315 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="smoketests.ST_TC12_Update_Color">
+      <class name="smoketests.QuickSearchTest">
         <methods>
-          <include name="afterMethod"/>
           <include name="tearDown"/>
-          <include name="ST_TC12_Update_Color_"/>
-          <include name="CreateSummary"/>
+          <include name="afterMethod"/>
           <include name="setUp"/>
-          <include name="setUpend"/>
+          <include name="searchFlexPLMObject"/>
+          <include name="CreateSummary"/>
         </methods>
-      </class> <!-- smoketests.ST_TC12_Update_Color -->
+      </class> <!-- smoketests.QuickSearchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

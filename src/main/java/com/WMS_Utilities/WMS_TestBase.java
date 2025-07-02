@@ -116,7 +116,8 @@ public WebDriver invokeBrowser() throws InterruptedException {
     options.addArguments("--disable-dev-shm-usage");
 //    options.addArguments("--headless=new");
     options.addArguments("--disable-gpu");
-    String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
+    String timestamp = String.valueOf(System.currentTimeMillis());
+    String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + timestamp + "-" + UUID.randomUUID();
     options.addArguments("--user-data-dir=" + uniqueUserDataDir);
     WebDriverManager.chromedriver().setup(); // Setup first
     driver = new ChromeDriver(options); // Then instantiate

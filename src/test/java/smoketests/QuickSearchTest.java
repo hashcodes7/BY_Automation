@@ -28,7 +28,7 @@ public class QuickSearchTest extends WMS_TestBase {
 
     @Test(priority = 0)
     public void searchFlexPLMObject() throws Exception {
-        test = extent.createTest("TC287_P0: Universal FlexPLM Object Search");
+        test = extent.createTest("T");
         
         System.out.println("🔍 Executing universal header search...");
         test.log(Status.INFO, "🔍 Test execution started: Universal FlexPLM Object Search");
@@ -37,17 +37,19 @@ public class QuickSearchTest extends WMS_TestBase {
         test.log(Status.INFO, "✅ Browser launched successfully");
 
         test.log(Status.INFO, "📌 Initiating header dropdown search for: Material → SOFTMARK TODDLER LEGGING");
-        dashboardPage.headerDropdownSearch("Material", "SOFTMARK TODDLER LEGGING");
+        dashboardPage.headerDropdownSearch("Product", "SOFTMARK TODDLER LEGGING");
 
         test.log(Status.INFO, "⏳ Waiting for page to load completely");
-        WaitforPage(40000);
+        WaitforPage(4000);
 
         test.log(Status.PASS, "🎯 Search completed and FlexPLM object loaded successfully");
     }
 
 
-    @AfterMethod
-    public void tearDown() {
-    }
+	@AfterMethod
+	public void setUpend() {
+		
+		driver.quit();
+	}
 }
 

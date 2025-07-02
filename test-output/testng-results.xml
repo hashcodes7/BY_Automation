@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T06:40:57 IST" name="Default suite" finished-at="2025-07-02T06:42:22 IST" duration-ms="85295">
+  <suite started-at="2025-07-02T07:21:24 IST" name="Default suite" finished-at="2025-07-02T07:21:49 IST" duration-ms="24779">
     <groups>
       <group name="E2E_TC">
-        <method signature="ST_TC12_Update_Color.ST_TC12_Update_Color_()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" name="ST_TC12_Update_Color_" class="smoketests.ST_TC12_Update_Color"/>
+        <method signature="QuickSearchTest.searchFlexPLMObject()[pri:0, instance:smoketests.QuickSearchTest@1f9e9475]" name="searchFlexPLMObject" class="smoketests.QuickSearchTest"/>
       </group> <!-- E2E_TC -->
     </groups>
-    <test started-at="2025-07-02T06:40:57 IST" name="Default test" finished-at="2025-07-02T06:42:22 IST" duration-ms="85295">
-      <class name="smoketests.ST_TC12_Update_Color">
-        <test-method is-config="true" signature="CreateSummary()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:40:57 IST" name="CreateSummary" finished-at="2025-07-02T06:40:57 IST" duration-ms="13" status="PASS">
+    <test started-at="2025-07-02T07:21:24 IST" name="Default test" finished-at="2025-07-02T07:21:49 IST" duration-ms="24779">
+      <class name="smoketests.QuickSearchTest">
+        <test-method is-config="true" signature="CreateSummary()[pri:0, instance:smoketests.QuickSearchTest@1f9e9475]" started-at="2025-07-02T07:21:24 IST" name="CreateSummary" finished-at="2025-07-02T07:21:24 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateSummary -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:40:57 IST" name="setUp" finished-at="2025-07-02T06:41:18 IST" duration-ms="21251" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:smoketests.QuickSearchTest@1f9e9475]" started-at="2025-07-02T07:21:24 IST" name="setUp" finished-at="2025-07-02T07:21:44 IST" duration-ms="20517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ST_TC12_Update_Color_()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:41:18 IST" name="ST_TC12_Update_Color_" finished-at="2025-07-02T06:42:22 IST" duration-ms="63705" status="FAIL">
+        <test-method signature="searchFlexPLMObject()[pri:0, instance:smoketests.QuickSearchTest@1f9e9475]" started-at="2025-07-02T07:21:44 IST" name="searchFlexPLMObject" finished-at="2025-07-02T07:21:48 IST" duration-ms="4026" status="FAIL">
           <exception class="java.lang.Exception">
             <message>
               <![CDATA[Text entry for Search Field was unsuccessful ❌]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.Exception: Text entry for Search Field was unsuccessful ❌
-at com.WMS_ApplicationPages.DashboardPage.sendInputToTextField(DashboardPage.java:159)
-at com.WMS_ApplicationPages.DashboardPage.headerDropdownSearch(DashboardPage.java:138)
-at smoketests.ST_TC12_Update_Color.ST_TC12_Update_Color_(ST_TC12_Update_Color.java:65)
+at com.WMS_ApplicationPages.DashboardPage.sendInputToTextField(DashboardPage.java:158)
+at com.WMS_ApplicationPages.DashboardPage.headerDropdownSearch(DashboardPage.java:137)
+at smoketests.QuickSearchTest.searchFlexPLMObject(QuickSearchTest.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -61,37 +61,32 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.Exception -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ST_TC12_Update_Color_ -->
-        <test-method is-config="true" signature="setUpend()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:42:22 IST" name="setUpend" finished-at="2025-07-02T06:42:22 IST" duration-ms="263" status="PASS">
+        </test-method> <!-- searchFlexPLMObject -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoketests.QuickSearchTest@1f9e9475]" started-at="2025-07-02T07:21:48 IST" name="tearDown" finished-at="2025-07-02T07:21:48 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpend -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:42:22 IST" name="afterMethod" finished-at="2025-07-02T06:42:22 IST" duration-ms="3" status="FAIL">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:smoketests.QuickSearchTest@1f9e9475]" started-at="2025-07-02T07:21:48 IST" name="afterMethod" finished-at="2025-07-02T07:21:49 IST" duration-ms="176" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ST_TC12_Update_Color_ status=FAILURE method=ST_TC12_Update_Color.ST_TC12_Update_Color_()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810] output={null}]]]>
+                <![CDATA[[TestResult name=searchFlexPLMObject status=FAILURE method=QuickSearchTest.searchFlexPLMObject()[pri:0, instance:smoketests.QuickSearchTest@1f9e9475] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <exception class="java.io.FileNotFoundException">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[C:\Users\2276537\OneDrive - Cognizant\Desktop\Automation\Levi_Automation-main\Failed_Screenshots\searchFlexPLMObject20250702072148.png (The system cannot find the path specified)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LTIN496259', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-at com.WMS_Utilities.WMS_WebDriverUtilities.takeScreenshot(WMS_WebDriverUtilities.java:339)
+              <![CDATA[java.io.FileNotFoundException: C:\Users\2276537\OneDrive - Cognizant\Desktop\Automation\Levi_Automation-main\Failed_Screenshots\searchFlexPLMObject20250702072148.png (The system cannot find the path specified)
+at java.base/java.io.FileOutputStream.open0(Native Method)
+at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+at org.openqa.selenium.io.FileHandler.copyFile(FileHandler.java:138)
+at org.openqa.selenium.io.FileHandler.copy(FileHandler.java:117)
+at com.WMS_Utilities.WMS_WebDriverUtilities.takeScreenshot(WMS_WebDriverUtilities.java:343)
 at com.WMS_Utilities.WMS_TestBase.afterMethod(WMS_TestBase.java:83)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
@@ -128,15 +123,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.io.FileNotFoundException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:smoketests.ST_TC12_Update_Color@66ea810]" started-at="2025-07-02T06:42:22 IST" name="tearDown" finished-at="2025-07-02T06:42:22 IST" duration-ms="247" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- smoketests.ST_TC12_Update_Color -->
+      </class> <!-- smoketests.QuickSearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
