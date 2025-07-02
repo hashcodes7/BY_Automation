@@ -32,6 +32,11 @@ public class ST_TC11_Create_Color extends WMS_TestBase{
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
+			if (driver == null) {
+			    throw new IllegalStateException("WebDriver failed to initialize! 111111111111111");
+			}
+			else
+				System.out.println("driver 1 started successfully");
 			LaunchSpecific_URL("https://wcadmin:wcadmindev12@flexplmdev3.levi.com/Windchill/rfa/jsp/main/Main.jsp");
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
