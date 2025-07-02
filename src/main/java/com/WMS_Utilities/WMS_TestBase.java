@@ -112,22 +112,17 @@ public class WMS_TestBase implements WMS_GlobalProperties {
 	
 	public WebDriver invokeBrowser() throws InterruptedException {
 	    WebDriverManager.chromedriver().setup(); // Setup ChromeDriver using WebDriverManager
-
 	    ChromeOptions options = new ChromeOptions();
 	    options.addArguments("--no-sandbox");
 	    options.addArguments("--disable-dev-shm-usage");
 	    options.addArguments("--headless=new");
 	    options.addArguments("--disable-gpu");
-
-//	    // Generate a unique user data directory for each browser session
-//	    String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + UUID.randomUUID();
-//	    options.addArguments("--user-data-dir=" + uniqueUserDataDir);
-
 	    WebDriver driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	    return driver;
 	}
+	
 	public void LaunchSpecific_URL(String url) {
 	    if (driver == null) {
 	        throw new IllegalStateException("WebDriver is not initialized!");

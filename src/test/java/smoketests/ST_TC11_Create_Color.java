@@ -32,7 +32,7 @@ public class ST_TC11_Create_Color extends WMS_TestBase{
 	public void setUp() throws InterruptedException {
 		if (CloseBrowser) {
 			driver = invokeBrowser();
-			LaunchSpecific_URL(CurrentURL);
+			LaunchSpecific_URL("https://wcadmin:wcadmindev12@flexplmdev3.levi.com/Windchill/rfa/jsp/main/Main.jsp");
 			dashboardPage = new DashboardPage(driver);
 			mainMenuPage = new MainMenuPage(driver);
 			palettepage = new Palette_Page(driver);
