@@ -23,7 +23,7 @@ public class ST_TC11_Create_Color extends WMS_TestBase{
 	MainMenuPage mainMenuPage;
 	Palette_Page palettepage;
 	CreateNewColorPage CNCP;
-	
+	WebDriver driver;
 	boolean Capture = true;
 
 	
