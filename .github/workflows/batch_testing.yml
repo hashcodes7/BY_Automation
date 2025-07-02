@@ -132,18 +132,15 @@ jobs:
 
       - name: Print Report Link
         run: |
-          REPORT_PATH=$(find Reports -name "*.html" -type f -exec stat --format='%Y %n' {} \; | sort -n | tail -n 1 | cut -d' ' -f2-)
-          REPORT_NAME=$(basename "$REPORT_PATH" | sed -E 's/\.html.*/.html/')
+          REPORT_PATH=$(find Reports -type f -name "*.html" | sort | tail -n 1)
+          REPORT_NAME=$(basename "$REPORT_PATH")
           ENCODED_REPORT_NAME=$(printf "%s" "$REPORT_NAME" | jq -sRr @uri)
+      
           echo "Final Report Name: $REPORT_NAME"
           echo "Encoded Report Name: $ENCODED_REPORT_NAME"
           echo "live_report_url=https://hashcodes7.github.io/BY_Automation/Reports/$ENCODED_REPORT_NAME" >> $GITHUB_ENV
 
-      - name: Find Latest Report
-        id: report_path
-        run: |
-          LATEST_REPORT=$(find Reports -name "*.html" -type f -exec stat --format='%Y %n' {} \; | sort -n | tail -n 1 | cut -d' ' -f2-)
-          echo "latest_report=$LATEST_REPORT" >> $GITHUB_OUTPUT
+
 
       - name: Set email flag
         run: |
